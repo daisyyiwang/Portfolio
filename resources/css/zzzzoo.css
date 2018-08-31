@@ -578,7 +578,7 @@ a {
   font-weight: 400;
 }
 
-.yellow-highlight:hover {
+.footer a:hover > p .yellow-highlight {
     background-position: -100% 0px;
     position: relative;
     background-image: linear-gradient(to right, transparent 50% , #ffebc5 50%);
