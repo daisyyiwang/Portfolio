@@ -44,7 +44,7 @@ h2 {
 }
 
 .content01 {
-  padding: 6.5rem 0 6.5rem 4.5rem;
+  padding: 6.5rem 0 6.5rem 7.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +57,7 @@ h2 {
 }
 
 .content01 h2 {
-  width: 26rem;
+  width: 30rem;
   font-size: 2em;
   font-weight: 700;
   text-align: center;
@@ -75,13 +75,12 @@ h2 {
 
 .content01 .device {
   display: flex;
-  justify-content: space-between;
-  height: auto;
-  width: 25%;
+  justify-content: center;
 }
 
 .content01 .device .image-container {
   padding: 0 0.1rem;
+  width: 2rem;
 }
 
 .sc-intro .image-container {
@@ -110,9 +109,6 @@ h2 {
   .sc-intro .content01 {
     padding: 1rem 0;
   }
-  .sc-intro .content01 .device {
-      width: 15%;
-  }
   .sc-intro .content01 h2 {
     font-size: 1.5rem;
     text-align: center;
@@ -131,6 +127,11 @@ h2 {
   padding: 2rem 4.5rem;
   max-width: 75rem;
   margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #8E07FF;
 }
 
 #h {
@@ -288,8 +289,8 @@ h2 {
 }
 
 .flow h3 {
-  font-size: 1.25rem;
-  padding: 2rem 1.5rem;
+  font-size: 1.5rem;
+  padding: 1rem 0;
 }
 
 .flow h2 {
@@ -319,7 +320,11 @@ h2 {
   .flow h2 {
     padding: 1rem 1.5rem;
     font-size: 1.5rem;
-    padding: 0 0 0 1.5rem;
+    padding: 0 0 1rem 1.5rem;
+  }
+  .flow h3 {
+    font-size: 1.25rem;
+    padding: 0 1.5rem .75rem 1.5rem;
   }
   .flow p {
     padding: 0 1.5rem;
@@ -430,16 +435,30 @@ h2 {
   width: 45%;
 }
 
+.circle {
+  padding: 0 2rem;
+}
+
 /*smartphones for landscape and portrait for design walkthrough section*/
-@media only screen and (min-width: 320px) and (max-width: 1024px) {
+@media only screen and (min-width: 320px) and (max-width: 800px) {
   .storybox {
-    display: inline;
+    display: flex;
+    flex-flow: row wrap;
   }
   .story {
     width: 100%;
+    max-width: 30rem;
+    margin: auto;
     padding: 1rem 0;
   }
+  .circle {
+    flex: 1 0 40%;
+    padding: 0 1.2rem;
+    max-width: 15rem;
+  }
 }
+
+
 
 /*large screen for landscape and portrait for design walkthrough */
 @media only screen and (min-width: 1024px) {
@@ -538,6 +557,7 @@ h2 {
 .footer h3 {
   font-size: 1.2rem;
   padding-bottom: 1rem;
+  font-weight: 400;
 }
 
 .footer p {
@@ -556,6 +576,14 @@ h2 {
   color: #000000;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
+}
+
+.yellow-highlight:hover {
+    background-position: -100% 0px;
+    position: relative;
+    background-image: linear-gradient(to right, transparent 50% , #ffebc5 50%);
+    background-size: 200% 100%;
+    transition: all 0.2s ease-out;
 }
 
 .home {
@@ -599,4 +627,121 @@ h2 {
   .home .copyright-style {
     font-size: 0.75rem;
   }
+}
+
+/*generic left and right walkthrough section */
+.leftright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.leftright h3 {
+  font-size: 1.75rem;
+  padding-left: 0;
+}
+
+.leftright p {
+  color: #787878;
+}
+
+.text-right {
+  min-width: 18rem;
+  margin: 1rem 2rem 0 4rem;
+  padding: 2rem 3rem 0 4rem;
+  border-style: dashed;
+  border-color: white;
+  border-width: 0.4rem 0.4rem 0 0;
+}
+
+.text-left {
+  min-width: 18rem;
+  border-style: dashed;
+  border-color: white;
+  border-width: 0.4rem 0rem 0 0.4rem;
+  margin: 1rem 4rem 0 2rem;
+  padding: 2rem 0 0 3rem;
+
+}
+
+.dash-line {
+  border-color: #FFFAD5;
+}
+
+.leftright video {
+  box-shadow: -2px 2px 4px 0 rgba(205,205,205,0.50), 3px 2px 8px 0 rgba(231,231,231,0.50);
+}
+
+/*smartphones for landscape and portrait for genric left and right walkthrough section*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+ .leftright {
+   flex-direction: column;
+   width: 100%;
+   padding: 0 0;
+ }
+
+ .leftright h3 {
+   font-size: 1.25rem;
+   padding: 1rem 0 1rem 0;
+ }
+
+ .leftright p {
+   font-size: 1rem;
+   padding: 0;
+ }
+
+ .reverse{
+    flex-direction: column-reverse;
+ }
+
+ .text-left, .text-right {
+   width: auto;
+   border-width: 0;
+   margin: 0;
+   padding: 0 1.5rem 0 1.5rem;
+   align-self: flex-start;
+ }
+
+ .leftright video, .leftright img {
+   margin: 2rem 0 0 0;
+   align-self: center;
+ }
+}
+
+/*quote section */
+.quote {
+  color: #B2824F;
+  padding: 3rem 0;
+  margin: auto;
+  width: auto;
+  max-width: 60%;
+  min-width: 20rem;
+  border-style: dashed;
+  border-color: #FFFAD5;
+  border-width: 0.4rem 0rem 0.4rem 0;
+}
+
+/* password */
+.pass-form {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.pass-form form {
+    margin: 1rem 0;
+}
+
+.pass-form button:after {
+    content:'view';
+}
+.wrong {
+    background: #BC473F;
+    color: white;
+}
+.pass-form button.wrong:after {
+    content:'try again';
+}
+.hidden {
+    display: none;
 }

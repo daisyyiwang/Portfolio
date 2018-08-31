@@ -8,28 +8,36 @@
       <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif" rel="stylesheet">
       <!-- Stylesheets -->
       <link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
-      <link rel="stylesheet" type="text/css" href="../resources/css/inventory.css">
+      <link rel="stylesheet" type="text/css" href="../resources/css/zzzzoo.css">
     </head>
     <body>
       <!-- introduction card -->
       <div class="mobile-intro">
+          <div class="image-container">
         <img src="../resources/images/inventorycover.svg" alt="cover image">
+          </div>
       </div>
 
+    <div class="max-width-border">
       <div class="sc-intro">
         <div class="content01">
           <h3>Kohl's Connented Store</h3>
-          <h2>Inventory Counting 2.0</h2>
-          <p>Efficient &amp accurate inventory management</p>
+          <h2>Inventory Count 2.0</h2>
+          <p>Efficient &amp; accurate inventory management</p>
           <div class="device">
-            <img src="../resources/images/desktopIcon.png" alt="desktop" />
-            <img src="../resources/images/storeIcon.png" alt="in-store" />
+            <div class="image-container">
+              <img src="../resources/images/desktopIcon.png" alt="desktop" title="desktop" />
+            </div>
+            <div class="image-container">
+              <img src="../resources/images/storeIcon.png" alt="in-store" title="in-store"/>
+            </div>
           </div>
         </div>
-        <div class="image-container">
+        <div class="image-container" id="cover-image">
           <img src="../resources/images/inventorycover.svg" alt="cover image">
         </div>
       </div>
+    </div>
 
       <!-- overview section -->
       <div class="sc-overview">
@@ -63,8 +71,12 @@
       </div>
 
       <!-- understand flow section -->
-      <div class="flow">
-        <h2> Understand the terms, device &amp current experience </h2>
+
+     <div class="max-width">
+      <div class="max-width-box">
+        <div class="flow">
+        <p class="header">PLACEHOLDER</p>
+        <h2> Understand the terms, device &amp; current experience </h2>
         <p>Our lack of domain knowledge in inventory management meant we needed
           to understand the current process of inventory counting in the stores
           thoroughly and quickly. At the begining phase of the project, we
@@ -80,11 +92,16 @@
         <br />😵Associates are memerizing "Yes or No" choices to avoid big mistakes.
       </p>
       </div>
+     </div>
+    </div>
 
       <!-- Spot the Commonground-->
-      <div class="flow">
+    <div class="max-width">
+      <div class="max-width-box">
+        <div class="flow">
+        <p class="header">PLACEHOLDER</p>
         <h2> Spot the Commonground</h2>
-        <div class="image-container" id="flow">
+        <div class="image-container">
           <img src="../resources/images/ic-coreflow.svg" alt="core experience flow">
         </div>
         <br />
@@ -95,22 +112,26 @@
         reduce unnecessary trainings for associates. This early design decision
         had a major impact on the quality of the end result throughout the design
         process.</p>
-        <h3>Current Experience Flow</h3>
-        <div class="image-container" id="flow">
+        <p class="header" id="header-center">Current Experience Flow</p>
+        <div class="image-container">
           <img src="../resources/images/ic-currentscreen.png" alt="Current experience flow">
         </div>
+       </div>
       </div>
+    </div>
 
       <!-- upgraded experience -->
-      <div class="highlights">
-        <h2>Propose an Upgraged Experience</h2>
-        <div class="hl">
-          <video width="200" height="355.73" autoplay>
+    <div class="max-width">
+      <div class="max-width-box">
+        <div class="flow">
+        <p class="header">PLACEHOLDER</p>
+        <h2>Propose an Upgraded Experience</h2>
+
+        <div class="leftright">
+          <video width="200" height="355.73" autoplay loop>
             <source src="../resources/videos/ic-clip01.mov" />
-            <source src="movie.ogg" type="video/ogg">
-              Your browser does not support the video tag.
           </video>
-          <div class="hlc" id="hlc01">
+          <div class="text-right dash-line">
             <h3>A Clear Start</h3>
             <p>Associate will be able to start with a clear estimation of workload
             with 1 click, instead of tapping 3 times to access the "ready to scan"
@@ -119,36 +140,24 @@
           </div>
         </div>
 
-        <div class="hl-mobile">
-          <video width="200" height="355.73" autoplay>
-            <source src="../resources/videos/ic-clip01.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
-          <div class="hlc" id="hlc01">
+        <div class="leftright reverse">
+          <div class="text-left dash-line">
             <h3>Scan in the Know</h3>
             <p>A one hand free design to make sure that associates scan without
             stopping even if there is an error occured.</p>
           </div>
-        </div>
-
-        <div class="hl" id="hl02-desktop">
-          <div class="hlc" id="hlc02">
-            <h3>Scan in the Know</h3>
-            <p>A one hand free design to make sure that associates scan without
-            stopping even if there is an error occured.</p>
-          </div>
-          <video width="200" height="355.73" autoplay>
+          <video width="200" height="355.73" autoplay loop>
             <source src="../resources/videos/ic-movie02.mp4" type="video/mp4">
               Your browser does not support the video tag.
           </video>
         </div>
 
-        <div class="hl">
-          <video width="200" height="355.73" autoplay>
+        <div class="leftright">
+          <video width="200" height="355.73" autoplay loop>
             <source src="../resources/videos/ic-movie03.mp4" type="video/mp4">
               Your browser does not support the video tag.
           </video>
-          <div class="hlc" id="hlc03">
+          <div class="text-right">
             <h3>Submit with Clear Confirmation</h3>
             <p>Instead of tapping 4 times without knowing for sure what they are
             selecting, with the upgraged design, associates will be able to
@@ -157,24 +166,29 @@
           </div>
         </div>
       </div>
+    </div>
+</div>
 
       <!-- Testing Photo -->
-      <div class="user">
-        <h2>Going Back to End Users</h2>
-        <div class="userimage">
-          <div class="image-container">
+<div class="max-width">
+    <div class="max-width-box">
+        <div class="flow">
+          <p class="header">PLACEHOLDER</p>
+          <h2>Going Back to End Users</h2>
+          <div class="storybox">
+          <div class="story circle image-container">
            <img src="../resources/images/ic-store01.png" alt="store testing images" />
           </div>
-          <div class="image-container">
+          <div class="story circle image-container">
            <img src="../resources/images/ic-store02.png" alt="store testing images" />
           </div>
-          <div class="image-container">
+          <div class="story circle image-container">
            <img src="../resources/images/ic-store03.png" alt="store testing images" />
           </div>
-          <div class="image-container">
+          <div class="story circle image-container">
            <img src="../resources/images/ic-store04.png" alt="store testing images" />
           </div>
-        </div>
+    </div>
         <p>Within 2 weeks, with the support from my research partner, we were
         able to test out our design in 2 store locations, with 3 associates in
         different roles. We had 100% pass rate for the main flow and overall 80%
@@ -183,7 +197,7 @@
         associate love the experience so much that she ended the test by saying
         "I like it!" 3 times!😉</p>
         <br />
-        <h3>Save the Count First</h3>
+        <h3>Design Iteration: Save the Count First</h3>
         <p>When we put our proposed design in front of our associates, one thing
         we realised immediately was, we overlooked the environment/context they
         are in when they start to work on the counts. With so many boxes /
@@ -205,14 +219,19 @@
           save the count until everything is scanned in and then submit all the
           counts together.
         </p>
+        <p class="header" id="header-center">Design Deliverable Sample</p>
         <div class="image-container">
           <img src="../resources/images/ic-wiresample.svg" alt="process map" />
         </div>
-        <p id="legend">Design Deliverable Sample</p>
-      </div>
+        </div>
+    </div>
+</div>
 
       <!-- store continue section -->
-      <div class="process">
+      <div class="max-width">
+          <div class="max-width-box">
+              <div class="flow">
+        <p class="header">PLACEHOLDER</p>
         <h2>Story to be Continued</h2>
         <h3>Design the User Experience</h3>
         <p>Part of the work here is to educate our partners about user experience
@@ -222,7 +241,7 @@
         the stakeholders and the product partners what we have learned from current
         experience in the store after talking to associates, and how we are reflecting
         these insights in our design. Suprisingly, we realized how big a gap it was
-        between our store associates and people work in the office. The photos &amp
+        between our store associates and people work in the office. The photos &amp;
         insights we shared out helped us greatly to build the trust between the
         teams and to start a real conversation about timeline and features.
         </p>
@@ -237,17 +256,19 @@
         <br />
         So after this project, I created a bluebird pattern library to help better
         support the other designers working on similar projects. And till today,
-        our team had been working on over 10 bluebird apps for different projects&amp
-        features, and gradually, we can see how this design process &amp pattern
+        our team had been working on over 10 bluebird apps for different projects&amp;
+        features, and gradually, we can see how this design process &amp; pattern
         library are impacting more and more people working at Kohl's.</p>
+        </div>
       </div>
+    </div>
 
       <!-- toolset section -->
       <div class="toolset">
         <div class="tools">
           <h3>Tools</h3>
           <ul>
-            <li>Paper &amp Pencil</li>
+            <li>Paper &amp; Pencil</li>
             <li>Sketch</li>
             <li>Invision</li>
           </ul>
@@ -280,14 +301,28 @@
           Chat!</p>
       </div>
 
-      <!-- footer section -->
-      <div class="footer">
-        <div class="c">
-          <h3>Next Project</h3>
-          <a href="../zzzzoo.html"><p>ZzzZoo: A better in-store shopping experience with kids</p></a>
-          <a href="../index.html">Back to Home</a>
+    <!-- footer section -->
+    <div class="footer">
+      <div class="link-page">
+        <div class="c" id="previous">
+          <a href="./boss.html">
+            <h3> &#60; Previous Project</h3>
+              <p><span class="yellow-highlight">Buy Online Ship to Store</span></p>
+          </a>
+        </div>
+        <div class="c" id="next">
+          <a href="./rewards.html">
+            <h3>Next Project &gt;</h3>
+              <p><span class="yellow-highlight">Redesign the Rewards Experience</span></p>
+          </a>
         </div>
       </div>
+      <div class="home">
+        <a href="../index.html">Back to Home</a>
+        <p class="copyright-style">&copy; Design &amp; Coded by Daisy Yi Wang, All Rights Reserved.</p>
+      </div>
+  </div>
+
 
     </body>
   </html>
