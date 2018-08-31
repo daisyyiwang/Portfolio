@@ -1,0 +1,63 @@
+/* Universal Styles */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  line-height: 1.6;
+}
+
+/*introduction card*/
+.rw-intro {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: -2px 2px 4px 0 rgba(205,205,205,0.50), 3px 2px 8px 0 rgba(231,231,231,0.50);
+}
+
+.content01 {
+  padding-top: 6.5rem;
+  padding-left: 2.5rem;
+}
+
+.content01 h3 {
+  color: #b2824f;
+  font-size: 1.125rem;
+}
+
+.content01 h2 {
+  width: 24rem;
+  font-size: 1.75em;
+  padding-bottom: 1rem;
+}
+
+.content01 .device {
+  display: flex;
+  justify-content: space-between;
+  width: 19.25rem;
+}
+
+/*Project overview*/
+.content-box {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 3.75rem;
+  margin: 0 2rem 0 0;
+}
+.header {
+  width: 5rem;
+  height: 1.5rem;
+  background-color: #8AFFBB;
+  margin-right: 1rem;
+}
+.copy h2 {
+  font-size: 1.75rem;
+  padding-bottom: 1rem;
+}
+
+p {
+  font-family: "PT Serif", serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+}

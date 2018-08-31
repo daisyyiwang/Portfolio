@@ -1,0 +1,602 @@
+/* Universal Styles */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  line-height: 1.6;
+  margin: auto;
+}
+
+p {
+  font-size: 1.25rem;
+  font-family: "PT Serif", Serif;
+}
+
+.image-container {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  padding-top: 4rem;
+}
+
+/*introduction card*/
+.max-width-border {
+  box-shadow: -2px 2px 4px 0 rgba(205,205,205,0.50), 3px 2px 8px 0 rgba(231,231,231,0.50);
+}
+.sc-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 75rem;
+  margin: auto;
+
+}
+
+.content01 {
+  padding: 6.5rem 0 6.5rem 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content01 h3 {
+  color: #b2824f;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.content01 h2 {
+  width: 26rem;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 0.25rem;
+  padding-top: 0.5rem;
+}
+
+.content01 p {
+  color:#787878;
+  text-align: center;
+  font-size: 1rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.content01 .device {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  width: 25%;
+}
+
+.content01 .device .image-container {
+  padding: 0 0.1rem;
+}
+
+.sc-intro .image-container {
+  padding-right: 4.5rem;
+  width: 44.5%;
+}
+
+.mobile-intro {
+  display: none;
+}
+/*smartphones for landscape and portrait for title and intro section*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .mobile-intro {
+    display: flex;
+    justify-content: center;
+  }
+  .mobile-intro .image-container {
+    width: 100%;
+  }
+  #cover-image {
+    display: none;
+  }
+  .sc-intro {
+    display: block;
+  }
+  .sc-intro .content01 {
+    padding: 1rem 0;
+  }
+  .sc-intro .content01 .device {
+      width: 15%;
+  }
+  .sc-intro .content01 h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 0;
+  }
+  .sc-intro .content01 p {
+    font-size: 1rem;
+  }
+}
+
+/*Overview section*/
+.sc-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4.5rem;
+  max-width: 75rem;
+  margin: auto;
+}
+
+#h {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.sc-overview01 {
+  width: 60%;
+}
+
+.sc-overveiw02 {
+  padding-left: 6.25%;
+}
+
+.sc-overview02 p {
+  font-size: 1.25rem;
+}
+
+.time {
+  color: #787878;
+}
+
+.sc-overview02 .box {
+  width: 100%;
+  border-style: solid;
+  border-color: #979797;
+  border-width: 0 0 0 0.07rem;
+  padding-left: 6.25%;
+}
+
+/*smartphones for landscape and portrait for overview section*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .sc-overview {
+    display: block;
+    padding: 1rem 1.5rem;
+  }
+  .sc-overview01 {
+    width: 100%;
+    padding-bottom: 1.5rem;
+  }
+  .sc-overview01 p {
+    font-size: 1rem;
+  }
+  #h {
+    font-size: 1.75rem;
+  }
+  .sc-overview02 .box {
+    border-width: 0 0;
+    padding-left: 0;
+  }
+  .sc-overview02 .box p {
+    font-size: 1rem;
+  }
+}
+
+/*large screen for landscape and portrait for overview */
+@media only screen and (min-width: 1024px) {
+  .sc-overview {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 8.5rem 0 8.5rem;
+  }
+}
+
+/*role section*/
+.role {
+  padding: 0 4.5rem 4rem 4.5rem;
+  max-width: 75rem;
+  margin: auto;
+}
+/*smartphones for landscape and portrait for role section*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+ .role {
+   padding: 1rem 1.5rem;
+ }
+ .role h2 {
+   font-size: 1.5rem;
+   padding: 0 0;
+ }
+ .role p {
+   font-size: 1rem;
+ }
+}
+
+/*large screen for landscape and portrait for role */
+@media only screen and (min-width: 1024px) {
+  .role {
+    padding: 0 8.5rem 4rem 8.5rem;
+  }
+}
+
+/*design highlithgs*/
+.max-width-bg {
+  background-color: #fff8f0;
+  width: 100%;
+}
+.lights {
+  max-width: 75rem;
+  margin: auto;
+  padding-top: 2.5rem;
+}
+
+.lights-content h2 {
+  padding-top: 0;
+  line-height: 1.4;
+}
+
+.header {
+  font-size: 1rem;
+  font-family: "PT-sans", sans-serif;
+  color: #B2824F;
+  letter-spacing: 2.6px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/*smartphones for landscape and portrait for design highlights section*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .lights-content .header {
+    font-size: 0.75rem;
+  }
+
+  .lights-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .lights{
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+  }
+}
+
+/*large screen for landscape and portrait for design highlights */
+@media only screen and (min-width: 1024px) {
+  .lights .image-container {
+    width: 85%;
+  }
+  .lights{
+    padding-left: 8.5rem;
+    padding-right: 8.5rem;
+    padding-bottom: 4rem;
+    margin: auto;
+  }
+}
+
+/*research highlights section*/
+.max-width {
+  margin: auto;
+}
+.max-width-box {
+  max-width: 75rem;
+}
+
+.flow h3 {
+  font-size: 1.25rem;
+  padding: 2rem 1.5rem;
+}
+
+.flow h2 {
+  padding-top: 0;
+}
+
+.credit {
+  font-size: 0.75rem;
+  color: #9b9b9b;
+}
+
+.flow-content-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flow-content-box .image-container {
+  width: 23%;
+}
+
+/*smartphones for landscape and portrait for research highlights section*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .flow {
+    padding: 1.5rem 0 0rem 0;
+  }
+  .flow h2 {
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    padding: 0 0 0 1.5rem;
+  }
+  .flow p {
+    padding: 0 1.5rem;
+    font-size: 1rem;
+  }
+  .flow .header {
+    font-size: 0.75rem;
+  }
+  #research01 {
+    padding-top: 0.5rem;
+  }
+}
+
+/*large screen for landscape and portrait for research highlights */
+@media only screen and (min-width: 1024px) {
+  .flow-content-box {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .max-width {
+    margin: auto;
+  }
+  .max-width-box {
+    margin: auto;
+    padding-right: 8.5rem;
+    padding-left: 8.5rem;
+  }
+  .flow .header {
+    padding-top: 4rem;
+  }
+}
+
+/*design process*/
+.process-image {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  width: 60%;
+}
+
+.process-image .image-container {
+  padding-right: 1rem;
+}
+
+#header-center {
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.list-2col {
+  display: flex;
+  justify-content: space-around;
+  background-color: #FFF8F0;
+  padding: 1rem 0;
+}
+
+.list-2col .col {
+  width: 35%;
+}
+
+.list-2col .col ul li {
+  list-style-image: url('../images/list_triangle.svg');
+  padding: 0.5rem 0;
+}
+
+/*smartphones for landscape and portrait for design process section*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .process-image {
+    padding: 1rem 0 1rem 1.5rem;
+  }
+  .list-2col ,col ul li {
+    line-height: 1.2;
+    font-size: 0.75rem;
+    list-style-image: url('../images/list_triangle_mobile.svg');
+  }
+}
+
+/*data analysis*/
+.pic2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*smartphones for landscape and portrait for data analysis section*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .pic2 {
+    padding:1rem 0 0.5rem 0;
+  }
+}
+
+/*large screen for landscape and portrait for data analysis and design ideation */
+@media only screen and (min-width: 1024px) {
+  .pic2, #large-screen {
+    padding: 2rem 8.5rem 0.5rem 8.5rem;
+    width: 60%;
+    margin: auto;
+  }
+}
+/*design walkthrough section*/
+.storybox {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+.story {
+  width: 45%;
+}
+
+/*smartphones for landscape and portrait for design walkthrough section*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .storybox {
+    display: inline;
+  }
+  .story {
+    width: 100%;
+    padding: 1rem 0;
+  }
+}
+
+/*large screen for landscape and portrait for design walkthrough */
+@media only screen and (min-width: 1024px) {
+  .redbox {
+    width: 100%;
+    background-color: #EE4855;
+  }
+  .redbox-padding {
+    padding:1rem 8.5rem;
+  }
+  .redbox .image-container {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+/*toolset section*/
+.toolset {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4.5rem;
+}
+
+.tools h3 {
+  font-size: 1.5rem;
+}
+
+.tools ul li {
+  font-size: 1.25rem;
+  color: #787878;
+}
+
+.tools {
+  padding: 0 3%;
+}
+/*smartphones for landscape and portrait for toolset section*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .toolset {
+    padding: 1rem 1rem;
+  }
+  .tools h3 {
+    font-size: 1rem;
+  }
+  .tools ul li {
+    font-size: 0.75rem;
+  }
+}
+
+/*large screen for landscape and portrait for toolset */
+@media only screen and (min-width: 1024px) {
+  .toolset {
+    padding: 4.5rem 8.5rem;
+  }
+}
+/*contact section*/
+.contact {
+  max-width: 58%;
+  text-align: center;
+  margin: auto;
+  padding: 8rem 0;
+  line-height: 1.6;
+}
+
+.contact a {
+  color: #8e07ff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/*smartphones for landscape and portrait for contact section*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .contact {
+    padding: 4rem 0;
+  }
+  .contact a {
+    font-size: 1rem;
+  }
+  .contact p {
+    font-size: 1rem;
+  }
+}
+/*footer section*/
+.footer {
+  background-color: #FFF8F0;
+  padding: 3.5rem 4.5rem;
+}
+
+.footer .link-page {
+  display: flex;
+  justify-content: space-between;
+}
+.c {
+  width: 33%;
+}
+
+.footer h3 {
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+.footer p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 2.5rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #AD932E;
+  font-weight: 700;
+}
+
+.footer .c p {
+  color: #000000;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+}
+
+.home {
+  margin: auto;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+#previous {
+  text-align: left;
+}
+
+#next {
+  text-align: right;
+}
+
+.home .copyright-style {
+  color: #787878;
+  font-family: "PT Serif", serif;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/*smartphones for landscape and portrait for footer section*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .footer h3 {
+    font-size: 0.75rem;
+  }
+  .footer p {
+    font-size: 1rem;
+    padding-bottom: 2rem;
+  }
+  .footer {
+    padding: 1.5rem 1.5rem;
+  }
+  .c {
+    width: 45%;
+  }
+  .home .copyright-style {
+    font-size: 0.75rem;
+  }
+}
