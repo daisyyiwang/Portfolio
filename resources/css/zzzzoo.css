@@ -746,3 +746,15 @@ a {
 .hidden {
     display: none;
 }
+
+@keyframes hl {
+  from {background-position: right bottom;}
+  to {background-position: left bottom;}
+}
+
+.paragraph-highlight {
+    background-size: 200% 100%;
+    position: relative;
+    background-image: linear-gradient(to left, transparent 50% , #ffebc5 50%);
+    animation: hl 0.8s ease-out;
+}

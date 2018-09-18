@@ -19,6 +19,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/zzzzoo.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/animate.css">
   </head>
   <body>
 
@@ -83,8 +84,8 @@
          <br/>
          To simplify this points system, Kohl's loyalty team approached us with an exciting proposal:
          <br/>
-         Build a unified rewards platform based on Kohl's cash.
-         </p>
+         <span class="ph" data-scroll-class="paragraph-highlight">Build a unified rewards platform based on Kohl's cash.
+        </span></p>
       </div>
       <div class="sc-overview02">
         <div class="box">
@@ -147,7 +148,7 @@
           <p>How to introduce the new rewards program? How to seamlessly provide the updated rewards info into the current flow? And how would this project impact the
           other ongoing projects? Based on the insights and takeaways from the design workshop, I created multiple design concepts to provide an initial look and feel
           for the core mobile experience.</p>
-        </div>
+          <br />
         <div class="image-container">
           <img src="../resources/images/loyalty-explore.png" alt="please refresh or change a browser to view">
         </div>
@@ -164,6 +165,7 @@
         </div>
       </div>
     </div>
+  </div>
 
     <!-- define the scope -->
     <div class="max-width">
@@ -211,8 +213,8 @@
           <p>One key insights we had from the design workshop was about introducing the celebrative
           elements to the experience. So one design for order confirmation page was to first show this celebrative modal. When
           this concept first proposed, it was well reveived internally. However, when we tested it out in the lab, our customers
-          reacted a little more confused than feeling celebrative. This finding leads to a better alignment within the team and
-          I later replace this modal with a brief in-page animation design. This was one of the many stories about how we
+          reacted a little more confused than feeling celebrative. <span class="ph" data-scroll-class="paragraph-highlight">This finding leads to a better alignment within the team and
+          I later replace this modal with a brief in-page animation design.</span> This was one of the many stories about how we
           iteratively refined the design concepts based on customers' feedback.</p>
         </div>
       </div>
@@ -235,7 +237,7 @@
               <br />
               Hi-fi wires is more suitable for design concept pitching to business stakeholders, if there is a brainding team, work
               with them to get a more accurate look and feel. Hi-fi wires are also very necessary for usability testing to get more
-              accurate feedbacks. When presented toproduct or engineer team, low-fi wires with water marks are better suited to avoid
+              accurate feedbacks. When presented to product or engineer team, low-fi wires with water marks are better suited to avoid
               confusing them with future deliverables.</p>
             </div>
             <br />
@@ -249,9 +251,9 @@
             <div class="flow">
               <p class="bold">Explore as a Discussion Point</p>
               <p>We have 2 design studios at Kohl's. So oftern times, remote collaboration is inevitable. It can be challenging for deisgners
-              to pitch ideas without visualize them in this scenario. Plus, I find it very difficult to propose good concepts without really
-              exploring "bad" ideas. To make a strong design argument, oftern times, working on those "bad" ideas and go through them with your
-              partners could make your design proposal more convincing.</p>
+              to pitch ideas without visualize them in this scenario. Plus, I find it <span class="ph" data-scroll-class="paragraph-highlight">very difficult to propose good concepts without really
+              exploring "bad" ideas.</span> To make a strong design argument, oftern times, working on those "bad" ideas and go through them with your
+              partnerscould make your design proposal more convincing.</p>
             </div>
           </div>
         </div>
@@ -328,7 +330,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script>
     $(document).ready(function(){
-            $('.pass-form form').submit(function (e) {
+      $('.pass-form form').submit(function (e) {
         e.preventDefault();
         if ($('.pass-form input').val() === 'devilindetail') {
           $('.pass-form button').removeClass('wrong');
@@ -338,8 +340,28 @@
         } else {
           $('.pass-form button').addClass('wrong');
         }
-        });
-    });
+      });
+  });
+  $(window).scroll(function(){
+  $('.ph').each(function(){
+    if(isScrolledIntoView($(this))){
+      $(this).addClass('paragraph-highlight');
+    }
+  });
+});
+
+function isScrolledIntoView(elem){
+    var $elem = $(elem);
+    var $window = $(window);
+
+    var docViewTop = $window.scrollTop();
+    var docViewBottom = docViewTop + $window.height();
+
+    var elemTop = $elem.offset().top;
+    var elemBottom = elemTop + $elem.height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
       </script>
   </body>
 </html>

@@ -53,8 +53,8 @@
       <div class="sc-overview">
         <div class="sc-overview01">
           <p><span id="h">T</span>o help simplify the inventory management, in
-          2016, Kohl's decides to move its inventory counting process from a
-          dedicated RF device into a smart enterprise mobile device, bluebird.
+          2016, <span class="ph" data-scroll-class="paragraph-highlight">Kohl's decides to move its inventory counting process from a
+          dedicated RF device into a smart enterprise mobile device, bluebird.</span>
           This is a story of how I made this transition as easy as possible for
           Kohl's associates at over 1100 stores.</p>
         </div>
@@ -95,11 +95,6 @@
           research methods also helped us to have a better view of the complexity
           side of inventory management
         <br />
-        <br />Some challenges of the inventory counting we disovered:
-        <br />🧑👱🏃It takes at least 2 person and 4 trips to get an estimated
-        count number
-        <br />🙀Accidently scan twice? You may have to rescan everthing.
-        <br />😵Associates are memerizing "Yes or No" choices to avoid big mistakes.
       </p>
       </div>
      </div>
@@ -117,15 +112,22 @@
         <br />
         <p>One thing we agreed on from day one within the customer experience team
         is that this is a transitional experience. This is NOT to design something
-        completely new from scratch. We should keep the experience from the RF
+        completely new from scratch. <span class="ph" data-scroll-class="paragraph-highlight">We should keep the experience from the RF
         device to the enterprise mobile phone, Bluebird as similar as possible to
-        reduce unnecessary trainings for associates. This early design decision
+        reduce unnecessary trainings for associates.</span> This early design decision
         had a major impact on the quality of the end result throughout the design
         process.</p>
         <p class="header" id="header-center">Current Experience Flow</p>
         <div class="image-container">
           <img src="../resources/images/ic-currentscreen.png" alt="Current experience flow">
         </div>
+        <p>
+        <br />Some challenges of the inventory counting we disovered:
+        <br />🧑👱🏃It takes at least 2 person and 4 trips to get an estimated
+        count number
+        <br />🙀Accidently scan twice? You may have to rescan everthing.
+        <br />😵Associates are memerizing "Yes or No" choices to avoid big mistakes.
+        </p>
        </div>
       </div>
     </div>
@@ -201,16 +203,16 @@
     </div>
         <p>Within 2 weeks, with the support from my research partner, we were
         able to test out our design in 2 store locations, with 3 associates in
-        different roles. We had 100% pass rate for the main flow and overall 80%
-        success rate based on the key experience measurement. It was a really
+        different roles. <span class="ph" data-scroll-class="paragraph-highlight">We had 100% pass rate for the main flow and overall 80%
+        success rate based on the key experience measurement. </span>It was a really
         rewarding experience for me personally, especially when I heard from one
         associate love the experience so much that she ended the test by saying
         "I like it!" 3 times!😉</p>
         <br />
         <h3>Design Iteration: Save the Count First</h3>
         <p>When we put our proposed design in front of our associates, one thing
-        we realised immediately was, we overlooked the environment/context they
-        are in when they start to work on the counts. With so many boxes /
+        we realised immediately was, <span class="ph" data-scroll-class="paragraph-highlight">we overlooked the environment/context they
+        are in when they start to work on the counts.</span> With so many boxes /
         merchandieses around, often times things will be misplaced. A sweater
         will end up in the shoe department, a missing jean will probably be
         "rescued" in the T-shirt piles. With the current design, when things
@@ -265,10 +267,10 @@
         the windows 10 dev documents in order to achieve a better experience result.
         <br />
         So after this project, I created a bluebird pattern library to help better
-        support the other designers working on similar projects. And till today,
+        support the other designers working on similar projects. <span class="ph" data-scroll-class="paragraph-highlight">Till recently,
         our team had been working on over 10 bluebird apps for different projects&amp;
         features, and gradually, we can see how this design process &amp; pattern
-        library are impacting more and more people working at Kohl's.</p>
+        library are impacting more and more people working at Kohl's.</span></p>
         </div>
       </div>
     </div>
@@ -337,6 +339,30 @@
       </div>
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+  });
+  $(window).scroll(function(){
+  $('.ph').each(function(){
+    if(isScrolledIntoView($(this))){
+      $(this).addClass('paragraph-highlight');
+    }
+  });
+});
 
+function isScrolledIntoView(elem){
+    var $elem = $(elem);
+    var $window = $(window);
+
+    var docViewTop = $window.scrollTop();
+    var docViewBottom = docViewTop + $window.height();
+
+    var elemTop = $elem.offset().top;
+    var elemBottom = elemTop + $elem.height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+  </script>
     </body>
   </html>
