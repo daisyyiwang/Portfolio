@@ -755,6 +755,6 @@ a {
 .paragraph-highlight {
     background-size: 200% 100%;
     position: relative;
-    background-image: linear-gradient(to left, transparent 50% , #ffebc5 50%);
+    background-image: linear-gradient(to left, transparent 50% , #FFFAD5 50%);
     animation: hl 0.8s ease-out;
 }
