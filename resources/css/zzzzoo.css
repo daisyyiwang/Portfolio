@@ -421,8 +421,8 @@ a {
 /*large screen for landscape and portrait for data analysis and design ideation */
 @media only screen and (min-width: 1024px) {
   .pic2, #large-screen {
-    padding: 2rem 8.5rem 0.5rem 8.5rem;
-    width: 60%;
+    padding: 2rem 0rem 0.5rem 0rem;
+    width: 100%;
     margin: auto;
   }
 }
