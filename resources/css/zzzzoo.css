@@ -58,7 +58,7 @@ h2 {
 }
 
 .content01 h2 {
-  width: 20rem;
+  width: 21rem;
   font-size: 2em;
   font-weight: 700;
   text-align: center;
@@ -639,6 +639,13 @@ a {
   padding: 1.5rem 0;
 }
 
+.leftright02 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
 .leftright h3 {
   font-size: 1.75rem;
   padding-left: 0;
@@ -655,6 +662,11 @@ a {
   border-style: dashed;
   border-color: white;
   border-width: 0.4rem 0.4rem 0 0;
+}
+
+.text-right02 {
+  width: 40%;
+  padding: 2rem 3rem 0 4rem;
 }
 
 .text-left {
@@ -681,6 +693,16 @@ a {
    flex-direction: column;
    width: 100%;
    padding: 0 0;
+ }
+
+ .leftright02 {
+   display: block;
+   padding: 1.5rem 0;
+ }
+ 
+ .text-right02 {
+   width: 100%;
+   padding: 2rem 0;
  }
 
  .leftright h3 {
