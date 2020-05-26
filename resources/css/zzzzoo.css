@@ -399,6 +399,18 @@ a {
   padding: 0.5rem 0;
 }
 
+.col-kohls {
+  border-top: 2px solid #00c648;
+  padding: 1rem 0;
+  width: 85%;
+}
+
+.col-customer {
+  border-top: 2px solid #AB763F;
+  padding: 1rem 0;
+  width: 85%;
+}
+
 /*smartphones for landscape and portrait for design process section*/
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
   .process-image {
@@ -436,7 +448,7 @@ a {
 .storybox {
   display: flex;
   justify-content: space-around;
-  padding: 1rem 0;
+  padding: 1rem 3rem;
 }
 
 .story {
@@ -488,6 +500,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 0 4.5rem;
+  background-color: #FFF8F0;
 }
 
 .tools h3 {
@@ -526,7 +539,7 @@ a {
   max-width: 58%;
   text-align: center;
   margin: auto;
-  padding: 8rem 0;
+  padding: 3rem 0;
   line-height: 1.6;
 }
 
@@ -550,7 +563,6 @@ a {
 }
 /*footer section*/
 .footer {
-  background-color: #FFF8F0;
   padding: 3.5rem 4.5rem;
 }
 
@@ -786,4 +798,37 @@ a {
     position: relative;
     background-image: linear-gradient(to left, transparent 50% , #FFFAD5 50%);
     animation: hl 0.8s ease-out;
+}
+
+/* tab style */
+.tab {
+  overflow: hidden;
+  border: none;
+  background-color: #ffffff;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: 0.3s;
+  font-size: 1.2rem;
+  font-family: "PT Serif", Serif;
+}
+
+.tab button:hover {
+  background-color: #E7FEF1;
+}
+
+.tab button.active {
+  border-bottom: 3px solid #00c648;
+  font-weight: bold;
+}
+
+.tabcontent {
+  display: none;
+  padding: 0.2rem 1rem;
 }
