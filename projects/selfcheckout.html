@@ -22,9 +22,11 @@
     </head>
     <body>
       <!-- introduction card -->
-      <div class="mobile-intro">
-        <img src="../resources/images/self-checkoutcover.svg" alt="cover image">
+    <div class="mobile-intro">
+      <div class="image-container">
+        <img src="../resources/images/sc-cover.svg" alt="cover image">
       </div>
+    </div>
 
     <div class="max-width-border">
       <div class="sc-intro">
@@ -33,15 +35,20 @@
           <h2>In-store Checkout Experience</h2>
           <p>Scan, add offers, pay and go</p>
           <div class="device">
-            <img src="../resources/images/desktopIcon.png" alt="desktop" />
-            <img src="../resources/images/storeIcon.png" alt="in-store" />
+            <div class="image-container">
+              <img src="../resources/images/desktopIcon.png" alt="desktop" />
+            </div>
+            <div class="image-container">
+              <img src="../resources/images/storeIcon.png" alt="in-store" />
+            </div>
           </div>
         </div>
-        <div class="image-container">
-          <img src="../resources/images/self-checkoutcover.svg" alt="cover image">
+        <div class="image-container" id="cover-image">
+          <img src="../resources/images/sc-cover.svg" alt="cover image">
         </div>
       </div>
     </div>
+
       <!-- overview section -->
       <div class="sc-overview">
         <div class="sc-overview01">
@@ -65,39 +72,58 @@
         As the lead experience designer, I worked very closely with customer research,
         product manager and project planning team. Together we collaboared with a cross-
         functional team of engineer, store operations, business, loss and prevention, etc
-        to ctraft this Kohl's customer tailered shopping experience from ideation to
-        implementation.</p>
+        to craft this experience from ideation to implementation.</p>
       </div>
+
+      <!-- password protection
+        <div class="pass-form flow">
+            <p>This project is password protected under NDA. Please <a href="mailto:daisyyiwang@gmail.com" target="_blank">contact me</a> for the password.</p>
+            <form>
+              <input type="password" placeholder="Enter password">
+              <button></button>
+            </form>
+        </div>
+  <div class="pass-protected hidden">
+  -->
 
       <!-- design principle -->
-      <div class="image-container" id="principle">
-        <img src="../resources/images/sc-designprinciple.svg" alt="design principle" />
-      </div>
-      <div class="principle-mobile">
-        <img src="../resources/images/sc-designprinciple-mobile.svg" alt="design principle" />
-      </div>
-
-
-      <!-- core experience flow -->
-      <div class="flow">
-        <h2> Core Experience Flow </h2>
-        <div class="image-container" id="flow">
-          <img src="../resources/images/sc-coreflow.svg" alt="core experience flow">
+      <div class="max-width">
+        <div class="max-width-box">
+          <div class="flow">
+            <p class="header">DESIGN PRINCIPLE</p>
+            <h2>Looking at the core experience</h2>
+          <p>Communication was the most challenging part when we first start.
+            There were at least 8 core teams involved, at 2 locations. Plus,
+            <span class="ph" data-scroll-class="paragraph-highlight">unlike other
+            projects, to design a self-checkout system, we have to communicate
+            with the store-related teams on top of product, research and engineer
+            team.</span> To setup a good foundation, first thing I did was to align
+            design expectations. I shared this 3 design principles across the
+            core partners and talked through the main experience flow. This really
+            helped to on-board everyone and set a healthy and open tune at the beginning.</p>
+            <div class="image-container" id="principle">
+              <img src="../resources/images/sc-principle.svg" alt="design principle image" />
+            </div>
+          <p>A survey was then send out by our research team to understand customers'
+            expectations and concerns. Together with a competitve analysis, we learned that
+            two main concerns customers have are</p>
+          <p>1. 72% of customers had difficult <span class="ph" data-scroll-class="paragraph-highlight">
+            finding an associate for help.</span></p>
+          <p>2. 56% needed associate assistance due to difficulty with
+            <span class="ph" data-scroll-class="paragraph-highlight">applying coupons.</span></p>
+          <br/>
+          <div class="image-container" id="principle">
+            <img src="../resources/images/sc-coreflow.svg" alt="core experience flow image" />
+          </div>
         </div>
-        <p>To understand Kohl's customers' expectations and concerns about self-check,
-        when we first started this project, we sent out a national-wide survey. Together
-        with a competitive analysis, we learned that two main concerns Kohl's customers
-        have about self-checkout are:
-        <br />
-        <br />1. 72% of customers had difficult finding an associate for help.
-        <br />2. 56% needed associate assistance due to difficulty with applying coupons.</p>
       </div>
+    </div>
 
       <!-- design highlights -->
     <div class="max-width">
       <div class="max-width-box">
         <div class="flow">
-        <p class="header">PLACEHOLDER</p>
+        <p class="header">OVERVIEW</p>
         <h2>Design Highlights</h2>
         <div class="leftright">
           <img src="../resources/images/sc-01.svg" alt="welcome screen">
@@ -124,114 +150,120 @@
         </div>
       </div>
     </div>
-</div>
-
-      <!-- process map -->
-      <div class="process">
-        <h2>Process Map</h2>
-        <div class="image-container">
-          <img src="../resources/images/sc-process.svg" alt="process map" />
-        </div>
-      </div>
+  </div>
 
       <!-- closer look -->
-      <h2 class="padding">A Closer Look at Design</h2>
-      <div class="closer">
-        <div class="padding">
-          <ul>
-            <li>Logic Design for Experience Flow</li>
-          </ul>
-          <div class="cl">
-            <h3><span class="abc">A.</span> When &amp how to sign in as a rewards member?</h3>
-            <div class="clc">
-              <div class="clc01">
-                <h4>Design Explorations</h4>
-                <img src="../resources/images/sc-04.svg" alt="sign in section" />
-              </div>
-              <div class="clc02">
-                <h4>Final Design</h4>
-                <img src="../resources/images/sc-05.svg" alt="modal sign in section" />
-              </div>
-            </div>
-            <p>While checking out, theoratically, there are 3 ways for customers to sign in and
-            identify themselves as a rewards member. So initially all the design concepts are
-            displaying these 3 sign-in methods on a side panel of the checkout screen. However,
-            out lab test results show that majority of our users are used to sign in with phone
-            number and they will overlook this sign-in information, which end up with checking
-            out without maximize their offers as a rewards member. To avoid this frustration,
-            the redesigned flow ensured that a modal with a clear sign-in message will display
-            after customers scan all their items and decide to pay.</p>
-          </div>
-
-          <div class="cl">
-            <h3><span class="abc">B.</span> How to design the order confirmation flow within constraints?</h3>
-            <div class="clc">
-              <div class="clc01">
-                <h4>Design Explorations</h4>
-                <img src="../resources/images/sc-06.svg" alt="order confirmation" />
-              </div>
-              <div class="clc02">
-                <h4>Final Design</h4>
-                <img src="../resources/images/sc-07.svg" alt="modal order confirmation" />
-              </div>
-            </div>
-            <p>In order to push this self-checkout prior to black friday, we will have to design
-              the experience without a paper receipt people usually get in their shopping experience.
-              So how to design the ending part of this experience become a very instesting challenge.
-              This is a seemly simple but rather complicated flow to work with. There are
-              at least 8 different scenarios for the order confirmation flow. It depends on whether
-              or not a purchase has: <br/><br/>
-              1. earned Kohl's Cash? <br/>
-              2. made by a Rewards member? <br/>
-              3. security tags? <br/><br/>
-            Plus, whether or not a customer would like to keep an e-receipt? To design a more
-            intuitive experience, we selected some of the most complicated scenario to test with
-            our customers. After rounds of design iterations and close discussions with stakeholders,
-            the second last design achived an 100% success rate and a 76% overall success rate during
-            usability test.</p>
-          </div>
-
-          <ul>
-            <li>Interaction Design</li>
-          </ul>
-          <div class="hl">
-            <img src="../resources/images/sc-08.svg" alt="associate login" />
-            <div class="hlc" id="hlc04">
-              <h3>Associate Support Anytime</h3>
-              <p>The help and associate login button are always placed in the same position so that
-              users can seek support anytime and associate can tap on login without looking at
-              customer's screen.</p>
-            </div>
-          </div>
-
-          <div class="hl" id="hl05-desktop">
-            <div class="hlc" id="hlc05">
-              <h3>Give Control Back to User</h3>
-              <p>While offers are preselected, all the Kohl's cash will not be preselected so customers
-              can control when and how much Kohl's cash they would like to apply.</p>
-            </div>
-            <img src="../resources/images/sc-09.svg" alt="offers panel">
-          </div>
-
-          <div class="hl-mobile">
-            <img src="../resources/images/sc-09.svg" alt="offers panel">
-            <div class="hlc" id="hlc05">
-              <h3>Give Control Back to User</h3>
-              <p>While offers are preselected, all the Kohl's cash will not be preselected so customers
-              can control when and how much Kohl's cash they would like to apply.</p>
-            </div>
-          </div>
-
-          <div class="hl">
-            <img src="../resources/images/sc-10.svg" alt="earnings modal" />
-            <div class="hlc" id="hlc06">
-              <h3>Always Know What to Expect</h3>
-              <p>Intentionally, this modal hides the close button and adds a "I don't want Kohl's cash"
-              button here to make sure that customers fully understand their choice.</p>
-            </div>
-          </div>
+  <div class="max-width">
+    <div class="max-width-box">
+      <div class="flow">
+        <p class="header">DESIGN DECISIONS</p>
+        <h2>A Closer Look</h2>
+        <div class="list-style">
+          <div id="rectangle"></div>
+          <h4>When &amp how to sign in as a rewards member?</h4>
         </div>
+        <div class="image-container" id="principle">
+          <img src="../resources/images/sc-proposal.svg" alt="design proposal image" />
+        </div>
+        <p>While checking out, theoratically, there are 3 ways for customers to
+          sign in and identify themselves as a rewards member. So initially all
+          the design concepts are about how to display these 3 sign-in methods on
+          a side panel of the checkout screen. However, our lab test results shows that
+          <br/>
+          1. Most customers are <span class="ph" data-scroll-class="paragraph-highlight">
+            used to sign in with phone number.</span>
+          <br/>
+          2. They usually start checkout without looking at the screen first.
+             Instead, <span class="ph" data-scroll-class="paragraph-highlight">
+             they will simply start scanning items.</span>
+          <br/>
+          This means that most customers will have a difficult time to apply their coupons,
+          which based on our early survey, is people’s main concern when they
+          learned that Kohl’s will be providing the self-checkout line.
+          <br/>
+          Based on the findings, I re-examined the flow and proposed something
+          different this time:</p>
+          <div class="image-container" id="principle">
+            <img src="../resources/images/sc-flow.svg" alt="main flow image" />
+          </div>
+          <p>As shown above, the new design will provide the sign-in information
+            after customer start to scan, and it will also remind the customers
+            to apply their coupons once they finish scaning and ready to pay. We
+            got quite positive feedbacks on this new flow, it makes sure that:
+            <br/>
+            1. Customers can <span class="ph" data-scroll-class="paragraph-highlight">
+              start checking out right away</span> without too much
+            information upfront.
+            <br/>
+            2. The sign-in information is <span class="ph" data-scroll-class="paragraph-highlight">
+              always available</span> while checking out.
+            <br/>
+            3. We will remind customers <span class="ph" data-scroll-class="paragraph-highlight">
+              proactively</span> about the coupons right before they are ready to pay.</p>
+            <div class="image-container" id="principle">
+              <img src="../resources/images/sc-signinfinal.svg" alt="final design image" />
+            </div>
+            <p>And once they signed in, we will clearly show available Kohl’s
+              cash and coupons for customers on the right panel.</p>
+            <div class="image-container" id="principle">
+              <img src="../resources/images/sc-signinfinal02.svg" alt="final design image cont." />
+            </div>
+            <p>This is how we setup the lab using the same cashier checkout
+              system and an eye-tracking device to learn how our customers
+              interact with the design proposals.</p>
+            <div class="image-container" id="principle">
+              <img src="../resources/images/sc-testphoto.svg" alt="testing room image" />
+            </div>
+
+            <!--design details part 2 -->
+            <div class="list-style">
+              <div id="rectangle"></div>
+              <h4>How to clearly show and celebrate the earned rewards?</h4>
+            </div>
+            <p>Kohl’s is known for its Kohl’s cash. We have many customers come to
+              shopping with Kohl's because they would like to spend or earn Kohl’s cash.
+              When considering self-checkout, the complicated calculation of Kohl’s cash
+              is people’s main complaint.
+              To solve this problem, I worked with the marketing team closely to
+              list out all the scenarios for Kohl’s cash and run through rounds
+              of iterations to make sure the savings is easy, clear and delightful
+              for customers.</p>
+              <div class="image-container" id="principle">
+                <img src="../resources/images/sc-senario.svg" alt="user senario image" />
+              </div>
+              <p>To help communicate with product, engineer and marketing team,
+                and algin on how many different design scenarios we need, I created
+                this user flow map. After I listed out all the scenarios, it becomes
+                much clearer on how should we design this experience for users with
+                different preference.</p>
+              <div class="image-container" id="principle">
+                <img src="../resources/images/sc-earnkc.svg" alt="final design for earned kohl's cash image" />
+              </div>
+              <p>Based on the flow map, the experience is designed to make sure
+                that customers are aware of their savings all the time while
+                scanning items. After they finish scanning, a dialoge box will
+                inform customers how much Kohl’s cash they have earned.
+                Lastly, the confirmation screen will once again celebrate what
+                they earned in this purchase.</p>
+              <div class="image-container" id="principle">
+                <img src="../resources/images/sc-pilot.svg" alt="store pilot testing image" />
+              </div>
+              <p>This pilot testing photo shows a common scene: customers come to
+                shop at Kohl’s with all the coupons collected and would like to
+                make sure that she has maximized her coupons and get the rewards
+                she earned.
+                <br/>
+                During the pilot rollout, we have:
+                <br/>
+                > <span class="bold">92%</span> of customers chose “Likely or Very Likely” to use again.
+                <br/>
+                > <span class="bold">75%</span> of customers indicated the time it took was either “Quick/Very Quick.”
+              </p>
+
+
       </div>
+    </div>
+  </div>
 
       <!-- toolset section -->
       <div class="toolset">
@@ -283,7 +315,31 @@
         </div>
       </div>
 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+        $(document).ready(function(){
+      });
+      $(window).scroll(function(){
+      $('.ph').each(function(){
+        if(isScrolledIntoView($(this))){
+          $(this).addClass('paragraph-highlight');
+        }
+      });
+    });
 
+    function isScrolledIntoView(elem){
+        var $elem = $(elem);
+        var $window = $(window);
+
+        var docViewTop = $window.scrollTop();
+        var docViewBottom = docViewTop + $window.height();
+
+        var elemTop = $elem.offset().top;
+        var elemBottom = elemTop + $elem.height();
+
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
+      </script>
 
     </body>
   </html>

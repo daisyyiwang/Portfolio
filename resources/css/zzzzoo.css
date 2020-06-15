@@ -93,6 +93,23 @@ h2 {
   display: none;
 }
 
+.list-style {
+  display: inline-flex;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-left: 0.5rem;
+}
+
+#rectangle {
+  background: #B2824F;
+  border-radius: 1px;
+  width: 0.5rem;
+  height: 1.75rem;
+}
+
 /*smartphones for landscape and portrait for title and intro section*/
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
   .mobile-intro {
@@ -341,6 +358,12 @@ a {
   .flow .header {
     font-size: 0.75rem;
   }
+  .flow ul {
+    padding:0 1.5rem;
+  }
+  .flow .list-style {
+    padding: 0 1.5rem;
+  }
   #research01 {
     padding-top: 0.5rem;
   }
@@ -416,11 +439,6 @@ a {
   .process-image {
     padding: 1rem 0 1rem 1.5rem;
   }
-  .list-2col ,col ul li {
-    line-height: 1.2;
-    font-size: 0.75rem;
-    list-style-image: url('../images/list_triangle_mobile.svg');
-  }
 }
 
 /*data analysis*/
@@ -448,7 +466,7 @@ a {
 .storybox {
   display: flex;
   justify-content: space-around;
-  padding: 1rem 3rem;
+  padding: 1rem 0;
 }
 
 .story {
@@ -501,6 +519,7 @@ a {
   justify-content: space-between;
   padding: 0 4.5rem;
   background-color: #FFF8F0;
+  margin-top: 1rem;
 }
 
 .tools h3 {
@@ -513,7 +532,7 @@ a {
 }
 
 .tools {
-  padding: 0 3%;
+  padding:0 3%;
 }
 /*smartphones for landscape and portrait for toolset section*/
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
