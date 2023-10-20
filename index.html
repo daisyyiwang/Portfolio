@@ -27,27 +27,24 @@
       <img src="./resources/images/intro.svg" />
     </div>
   -->
-  <div class="nav">
-    <input type="checkbox" id="nav-check">
-    <div class="nav-header">
-      <div class="nav-title">
-        <img src="resources/images/logo2023.png">
-      </div>
+  <header class="header">
+    <div class="mobileHeader">
+      <img src="./resources/images/logo2023.png" alt="logo">
+      <button onclick="{openMenu()}" class="hamburger">Menu</button>
     </div>
-    <div class="nav-btn">
-      <label for="nav-check">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-    </div>
+    <nav class="menu" role="navigation">
+     <div id="menuToggle"><input type="checkbox"/>
+      <span></span>
+      <span></span>
+      <span></span>
     
-    <div class="nav-links">
-      <a href="projects/about.html">About</a>
-      <a href="index.html" class="highlight">Work</a>
-      <a href="resources/images/DaisyYi Wang-ProductDesign.pdf" target="_blank">Resume</a>
-    </div>
-  </div>
+      <ul class="list">
+        <li><a class="listItem heading_L" href="./projects/about.html">About</a></li>
+        <li><a class="heading_L highlight" href=".index.html">Work</a></li>
+        <li><a class="heading_L" href="#">Resume</a></li>
+      </div>
+      </nav>
+    </header>
       <!--
       <div class="title-logo"><img src="./resources/images/logo2023.png" alt="logo"></div>
       <div class="title-content">
