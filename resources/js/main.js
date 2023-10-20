@@ -1,13 +1,7 @@
-const hamb = document.querySelector(".hamburger");
-const menu = document.querySelector(".menu");
-let open;
+import { Gradient } from "./Gradient.js";
 
-function openMenu() {
-    if (open) {
-       menu.style.display = "none";
-       open = false;
-    } else if (!open) {
-       menu.style.display = "block";
-       open = true;
-    }
-  }
+// Create your instance
+const gradient = new Gradient()
+
+// Call `initGradient` with the selector to your canvas
+gradient.initGradient('#gradient-canvas')
