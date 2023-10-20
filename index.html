@@ -2,16 +2,14 @@
 <html>
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125029320-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125029320-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      gtag('config', 'UA-125029320-1');
-    </script> 
-    <!-- main.js -->
-    <script type="module" src="resources/js/main.js"></script>
+  gtag('config', 'UA-125029320-1');
+</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daisy, Yi Wang | Product Designer</title>
@@ -24,256 +22,358 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
   <body>
-    <!--Start of header nav-->
-    <div class="nav">
-      <input type="checkbox" id="nav-check">
-      <div class="nav-header">
-        <div class="nav-title">
-          <img src="resources/images/logo2023.png">
-        </div>
+    <!--
+    <div class="mobile-intro-image">
+      <img src="./resources/images/intro.svg" />
+    </div>
+  -->
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <img src="resources/images/logo2023.png">
       </div>
-      <div class="nav-btn">
-        <label for="nav-check">
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
         <span></span>
         <span></span>
         <span></span>
-        </label>
-      </div>
+      </label>
+    </div>
     
-      <div class="nav-links">
-        <a href="./projects/about.html">About</a>
-        <a href="index.html" class="highlight">Work</a>
-        <a href="resources/images/DaisyYi Wang-ProductDesign.pdf" target="_blank">Resume</a>
-      </div>
+    <div class="nav-links">
+      <a href="projects/about.html">About</a>
+      <a href="index.html" class="highlight">Work</a>
+      <a href="resources/images/DaisyYi Wang-ProductDesign.pdf" target="_blank">Resume</a>
     </div>
-    <!--End of header nav-->
-
-    <!--Start of intro section-->
-    <div class="dsk-intro">
-      <div class="intro-content">
-        <p class="heading-XXL">Daisy, Yi Wang</p>
-        <p class="body-XXXL">A seasoned product designer based in San Francisco bay area with over 7 years of experience. 
-          I design both consumer facing products and enterprise tools for various platforms. As a product designer at Adobe 
-          Document Cloud today, my work helps to empower X users and X orgs to democratize knowledge and collaborate more 
-          efficiently with their day to day work.</p>
-        <a class="links padding-bottom-1rem">More about me</a>
-        <form>
-          <input type="password" placeholder="Please enter password">
-          <input type="submit" class="btn btn-primary" value="Unlock full site">
-        </form>
+  </div>
+      <!--
+      <div class="title-logo"><img src="./resources/images/logo2023.png" alt="logo"></div>
+      <div class="title-content">
+          <div><span class="name">YI WANG</span></div>
+          <div><span class="nickname">Nicknamed Daisy</span></div>
       </div>
-      <canvas id="gradient-canvas" data-transition-in></canvas>
+      -->
     </div>
-    <!--End of intro section pwd section TBD-->
 
-    <!--Start of projects section-->
-    <!--Start of 1st MPIP card-->
-      <div class="work">
-        <a href="./projects/mpip.html">
-        <div class="content">
-          <div class="content-left">
-            <div class="heading-M">Protecting PDF across platforms within Acrobat </div>
-            <div class="tag-group">
-              <span class="tag-yellow">B2B</span>
-              <span class="tag-pink">Data security</span>
+    <div class="mobile-intro">
+      <p>Hi there! I’m a product designer based in San Francisco Bay Area.Currently, I’m empowering the creative community at Adobe Document Cloud.<br/>I believe good design should be asthetic, humanistic and systematic. It is essentially an ongoing conversation between the designer, users and this world. We inspire each other.😋 </p>
+        <a class="resume" href="./projects/about.html"><h3 class="resume">More</h3></a>
+    </div>
+
+    <!--introduction card-->
+    <div class="intro-background">
+      <div class="yellow-card">
+        <div class="white-card">
+          <div class="intro-content">
+            <div class ="intro">
+              <h1>Hi there,</h1>
+              <p>Hi there! I’m a product designer based in San Francisco Bay Area.Currently, I’m empowering the creative community at Adobe Document Cloud.<br/>I believe good design should be asthetic, humanistic and systematic. It is essentially an ongoing conversation between the designer, users and this world. We inspire each other. 😋</p>
+                <a class="resume" href="./projects/about.html"><h3 class="resume">More</h3></a>
             </div>
-            <p class="body-XL">Lead design from ideation to implementation, across Acrobat desktop and mobile.</p>
-            <div class="box">
-            <p class="btn-primary">Read more</p>
+            <div class="intro-image">
+              <img src="./resources/images/intro.svg"/>
             </div>
           </div>
-
-          <div class="content-right">
-            <div class="image-container">
-              <img src="./resources/images/mpip-cards.svg" alt="project cover image">
-            </div>
-          </div>
-        </div>
-        </a>
       </div>
-    <!--End of 1st MPIP card-->
-    <!--Start of 2nd Sign in Teams card-->
+      </div>
+    </div>
+
+    <div class="mobile-selected">
+      <h2>Selected Works</h2>
+    </div>
+
+    <!--0st self-checkout card-->
+    <!--
+    <div class="mobile-work">
+      <div class="image-container">
+        <img src="./resources/images/self-checkoutcover.svg" alt="cover image">
+      </div>
+      <div class="content">
+        <h3>Kohl's Your Store</h3>
+        <a href="./projects/selfcheckout.html"><h2>In-store Checkout Experience</h2></a>
+        <p>No more waiting in the lines</p>
+      </div>
+    </div>
+
     <div class="work">
-      <a href="./projects/sit.html">
+      <div class="work-title">
+        <h3>Kohl's Your Store</h3>
+      </div>
       <div class="content">
         <div class="content-left">
-          <div class="heading-M">Adobe Acrobat Sign for Microsoft Teams</div>
-          <div class="tag-group">
-            <span class="tag-yellow">B2B</span>
-            <span class="tag-green">Intergration security</span>
-          </div>
-          <p class="body-XL">Make it possible to have your document signed in one collaborative place.</p>
-          <div class="box">
-          <p class="btn-primary">Read more</p>
+          <a href="./projects/selfcheckout.html"><h2>No more waiting in the lines</h2></a>
+          <div class="device">
+            <img src="./resources/images/tabletIcon.png" alt="tablet" />
+            <img src="./resources/images/storeIcon.png" alt="in-store" />
           </div>
         </div>
+        <div class="content-right" id="self-checkout">
+          <img src="./resources/images/self-checkoutcover.svg" alt="cover image">
+        </div>
+    </div>
+    </div> -->
 
-        <div class="content-right">
-          <div class="image-container sit-cover">
-            <img src="./resources/images/sit-card.svg" alt="project cover image">
-          </div>
+
+    <!--1st BOSS card-->
+    <div class="mobile-work">
+      <a href="./projects/boss.html">
+        <div class="image-container">
+          <img src="./resources/images/bosscover.svg" alt="cover image">
         </div>
-      </div>
+        <div class="content">
+          <h3>OMNI-CHANNEL EXPERIENCE</h3>
+          <h2>Buy Online Ship to Store</h2>
+          <p>Design to empower a stronger connection between online browsing and in-store shopping.</p>
+        </div>
       </a>
     </div>
-    <!--End of 2nd Sign in Teams card-->
-    <!--Start of 3rd BOSS card-->
+
     <div class="work">
       <a href="./projects/boss.html">
       <div class="content">
         <div class="content-left">
-          <div class="heading-M">Buy online ship to store</div>
-          <div class="tag-group">
-            <span class="tag-orange">B2C</span>
-            <span class="tag-blue">eCommerce</span>
-            <span class="tag-purple">Logistics</span>
-          </div>
-          <p class="body-XL">Design to help bridge the gap between online and in-store shopping.</p>
-          <div class="box">
-          <p class="btn-primary">Read more</p>
+          <h3>OMNI-CHANNEL EXPERIENCE</h3>
+          <h2>Buy Online Ship to Store</h2>
+          <p>Design to empower a stronger connection between online browsing and in-store shopping.</p>
+          <div class="device">
+            <div class="image-container" id="01">
+              <img src="./resources/images/tabletIcon.png" alt="tablet" />
+            </div>
+            <div class="image-container">
+              <img src="./resources/images/desktopIcon.png" alt="desktop" />
+            </div>
+            <div class="image-container">
+              <img src="./resources/images/iphoneIcon.png" alt="mobile" />
+            </div>
           </div>
         </div>
-
         <div class="content-right">
-          <div class="image-container boss-cover">
-            <img src="./resources/images/BOSS2023-card.svg" alt="project cover image">
+          <div class="image-container">
+            <img src="./resources/images/bosscover.svg" alt="cover image">
           </div>
         </div>
-      </div>
+    </div>
+  </a>
+</div>
+
+    <!--2nd inventory card-->
+    <div class="mobile-work">
+        <a href="./projects/inventory.html">
+          <div class="image-container">
+            <img src="./resources/images/inventorycover.svg" alt="cover image">
+          </div>
+          <div class="content">
+            <h3>ASSOCIATE TOOLS</h3>
+            <h2>Inventory Management</h2>
+            <p>To simplify the inventory management process for Kohl's associates at over 1100 stores.</p>
+          </div>
       </a>
     </div>
-    <!--End of 3rd BOSS card-->
-    <!--Start of 4th SC card-->
+
     <div class="work">
-      <a href="./projects/selfcheckout.html">
+      <a href="./projects/inventory.html">
       <div class="content">
         <div class="content-left">
-          <div class="heading-M">In-store self checkout</div>
-          <div class="tag-group">
-            <span class="tag-orange">B2C</span>
-            <span class="tag-gray">Payment</span>
-          </div>
-          <p class="body-XL">A self-checkout system designed for department stores, with both customers and associates in mind.</p>
-          <div class="box">
-          <p class="btn-primary">Read more</p>
+          <h3>ASSOCIATE TOOLS</h3>
+          <h2>Inventory Management</h2>
+          <p>To simplify the inventory management process for Kohl's associates at over 1100 stores.</p>
+          <div class="device">
+            <div class="image-container">
+              <img src="./resources/images/iphoneIcon.png" alt="mobile" />
+            </div>
+            <div class="image-container">
+              <img src="./resources/images/storeIcon.png" alt="in-store" />
+            </div>
           </div>
         </div>
-
         <div class="content-right">
-          <div class="image-container SC-cover">
-            <img src="./resources/images/SC-card.svg" alt="project cover image">
+          <div class="image-container">
+            <img src="./resources/images/inventorycover.svg" alt="cover image">
           </div>
         </div>
       </div>
+    </a>
+  </div>
+
+    <!--3rd rewards card-->
+    <div class="mobile-work">
+      <a href="./projects/rewards.html">
+        <div class="image-container">
+          <img src="./resources/images/rewardscover.svg" alt="cover image">
+        </div>
+        <div class="content">
+          <h3>IN-STORE &amp; ONLINE</h3>
+          <h2>Rewards Program</h2>
+          <p>To simplify Kohl's loyalty system, pitched and built an unified rewards platform based on Kohl's cash.</p>
+        </div>
       </a>
     </div>
-    <!--End of 4th SC card-->
 
-    <div class="heading-XL mp"> More projects </div>
-    <div class="m-morework">
-      <div class="m-morework-card">
-        <a href="/projects/inventory.html">
-        <div class="m-horizontal-image-container ic-card">
-         <img src="./resources/images/ic-card.svg" alt="project cover image">
+  <div class="work" >
+      <a href="./projects/rewards.html">
+      <div class="content">
+        <div class="content-left">
+          <h3>IN-STORE &amp; ONLINE</h3>
+          <h2>Rewards Program</h2>
+          <p>To simplify Kohl's loyalty system, pitched and built an unified rewards platform based on Kohl's cash.</p>
+          <div class="device">
+            <div class="image-container">
+              <img src="./resources/images/lockIcon.svg" alt="lock" />
+            </div>
+            <div class="image-container">
+              <img src="./resources/images/iphoneIcon.png" alt="mobile" />
+            </div>
+            <div class="image-container">
+              <img src="./resources/images/storeIcon.png" alt="in-store" />
+            </div>
+            <div class="image-container">
+              <img src="./resources/images/tabletIcon.png" alt="tablet" />
+            </div>
+            <div class="image-container">
+              <img src="./resources/images/desktopIcon.png" alt="desktop" />
+            </div>
+          </div>
         </div>
-        <div class="m-horizontal-content">
-          <p class="heading-M padding-bottom-1rem">Store inventory management for Kohl's associates</p>
-          <p class="body-S gray-300">2019 | Experience design</p>
-          <p class="body-XL">Simplify the inventory management process for Kohl's associates at over 1100 stores.</p>
+        <div class="content-right">
+          <div class="image-container">
+            <img src="./resources/images/rewardscover.svg" alt="cover image">
+          </div>
         </div>
-        </a>
       </div>
-  
-      <div class="m-morework-card">
-        <a href="/projects/rewards.html">
-        <div class="m-horizontal-image-container reward-card">
-          <img src="./resources/images/rewards-card.svg" alt="project cover image">
-        </div>
-        <div class="m-horizontal-content">
-          <p class="heading-M padding-bottom-1rem">A unified rewards program based on Kohl's cash</p>
-          <p class="body-S gray-300">2018 | Experience design</p>
-          <p class="body-XL">Designed a seamless E2E experiencee to onboard more potential customers via Y2Y rewards program.</p>
-        </div>
-        </a>
+    </a>
+  </div>
+
+  <!--5th associate card-->
+  <div class="mobile-work">
+    <a href="./projects/assoc.html">
+      <div class="image-container">
+        <img src="./resources/images/assoccover.svg" alt="cover image">
       </div>
-  
-      <div class="m-morework-card">
-        <a href="/projects/assoc.html">
-        <div class="m-horizontal-image-container map-card">
-          <img src="./resources/images/map-card.svg" alt="project cover image">
-        </div>
-        <div class="m-horizontal-content">
-          <p class="heading-M padding-bottom-1rem">Mapping out the store associates' experience in store</p>
-          <p class="body-S gray-300">2016 | Design strategy</p>
-          <p class="body-XL">Shadowed, collected and visualized the store associates’ experience across 4 territories, re-imaging the roadmap in a user-centered approach.</p>
-        </div>
-        </a>
+      <div class="content">
+        <h3>UX STRATEGY &amp; DATA VISUALIZATION</h3>
+        <h2>Associate Journey Mapping</h2>
+        <p>Understand the interrelationship between people, process, payroll and equipment and technology.</p>
       </div>
-    </div>
-    <!--End of mobile part for more projects-->
-    <!--Start of desktop part for more projects-->
-    <div class="morework">
-      <div class="morework-card">
-        <a href="/projects/inventory.html">
-        <div class="horizontal-image-container ic-card">
-          <img src="./resources/images/ic-card.svg" alt="project cover image">
+    </a>
+  </div>
+
+<div class="work" >
+    <a href="./projects/assoc.html">
+    <div class="content">
+      <div class="content-left">
+        <h3> UX STRATEGY &amp; DATA VISUALIZATION</h3>
+        <h2>Associate Journey Map</h2>
+        <p>Understand the interrelationship between people, process, payroll and equipment and technology.</p>
+        <div class="device">
+          <div class="image-container">
+            <img src="./resources/images/lockIcon.svg" alt="lock" />
+          </div>
+          <div class="image-container">
+            <img src="./resources/images/storeIcon.png" alt="in-store" />
+          </div>
         </div>
-        <div class="horizontal-content">
-          <p class="heading-M padding-bottom-1rem">Store inventory management for Kohl's associates</p>
-          <p class="body-S gray-300">2019 | Experience design</p>
-          <p class="body-XL">Simplify the inventory management process for Kohl's associates at over 1100 stores.</p>
-        </div>
-        </a>
       </div>
-      <div class="morework-card">
-        <a href="/projects/rewards.html">
-        <div class="horizontal-image-container reward-card">
-          <img src="./resources/images/rewards-card.svg" alt="project cover image">
+      <div class="content-right">
+        <div class="image-container">
+          <img src="./resources/images/assoccover.svg" alt="cover image">
         </div>
-        <div class="horizontal-content">
-          <p class="heading-M padding-bottom-1rem">A unified rewards program based on Kohl's cash</p>
-          <p class="body-S gray-300">2018 | Experience design</p>
-          <p class="body-XL">Designed a seamless E2E experiencee to onboard more potential customers via Y2Y rewards program.</p>
-        </div>
-        </a>
-      </div>
-      <div class="morework-card">
-        <a href="/projects/assoc.html">
-        <div class="horizontal-image-container map-card">
-        <img src="./resources/images/map-card.svg" alt="project cover image">
-        </div>
-        <div class="horizontal-content">
-          <p class="heading-M padding-bottom-1rem">Mapping out the store associates' experience in store</p>
-          <p class="body-S gray-300">2016 | Design strategy</p>
-          <p class="body-XL">Shadowed, collected and visualized the store associates’ experience across 4 territories, re-imaging the roadmap in a user-centered approach.</p>
-        </div>
-        </a>
       </div>
     </div>
-    <!--End of desktop part for more projects-->
-    <!--End of more projects section horizontal-->
+  </a>
+</div>
+
+    <!--4th ZzzZoo card-->
+    <!-- <div class="mobile-work">
+        <a href="./projects/zzzzoo.html">
+          <div class="image-container">
+            <img src="./resources/images/zzzzoo.svg" alt="cover image">
+          </div>
+          <div class="content">
+            <h3>IN-STORE GAMIFICATION</h3>
+            <h2>Kohl's ZzzZoo</h2>
+            <p>A kid-friendly ecosystem designed for an upgraded family-based shopping experience in-store.</p>
+          </div>
+      </a>
+    </div>
+
+  <div class="work">
+    <a href="./projects/zzzzoo.html">
+      <div class="content">
+        <div class="content-left">
+          <h3>IN-STORE GAMIFICATION</h3>
+          <h2>Kohl's ZzzZoo</h2>
+          <p>A kid-friendly ecosystem designed for an upgraded family-based shopping experience in-store.</p>
+          <div class="device">
+            <div class="image-container">
+              <img src="./resources/images/tabletIcon.png" alt="tablet" />
+            </div>
+            <div class="image-container">
+              <img src="./resources/images/storeIcon.png" alt="in-store" />
+            </div>
+          </div>
+        </div>
+        <div class="content-right" id="ZzzZoo">
+          <img src="./resources/images/zzzzoo.svg" alt="cover image">
+        </div>
+      </div>
+    </a>
+  </div> -->
+
+  <!--5th SC card-->
+  <div class="mobile-work">
+        <div class="image-container">
+          <img src="./resources/images/sccover.svg">
+        </div>
+        <div class="content">
+          <h3>IN-STORE</h3>
+          <h2>In-Store Checkout</h2>
+          <p>A self-checkout system designed for department stores.</p>
+        </div>
+    </a>
+  </div>
+
+<div class="work">
+  <a href="./projects/selfcheckout.html">
+    <div class="content">
+      <div class="content-left">
+        <h3>IN-STORE</h3>
+        <h2>In-Store Checkout</h2>
+        <p>A self-checkout system designed for department stores.</p>
+      </div>
+      <div class="content-right" id="ZzzZoo">
+        <img src="./resources/images/sccover.svg" alt="cover image">
+      </div>
+    </div>
+    </div>
+  </a>
+</div>
+
 
     <!-- get in touch section -->
+
     <!-- footer section -->
     <div class="contact">
-      <div class="contact-icons">
-        <div class="icon">
-          <a href="mailto:daisyyiwang@gmail.com"><i class="fas fa-envelope" title="Email"></i></a>
+        <div class="contact-icons">
+            <div class="icon">
+                <a href="mailto:daisyyiwang@gmail.com"><i class="fas fa-envelope" title="Email"></i>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://www.linkedin.com/in/daisyyiwang" target="_blank">
+                <i class="fab fa-linkedin" title="LinkedIn"></i>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://dribbble.com/Daisywang" target="_blank">
+                <i class="fab fa-dribbble-square" title="Dribbble"></i>
+                </a>
+            </div>
         </div>
-        <div class="icon">
-          <a href="https://www.linkedin.com/in/daisyyiwang" target="_blank">
-          <i class="fab fa-linkedin" title="LinkedIn"></i>
-          </a>
-        </div>
-        <div class="icon">
-          <a href="https://dribbble.com/Daisywang" target="_blank">
-          <i class="fab fa-dribbble-square" title="Dribbble"></i>
-          </a>
-        </div>
-      </div>
     </div>
 
     <div class="footer">
       <p>&copy; 2023 Designed &amp; Coded with love by Daisy Yi Wang, All Rights Reserved.</p>
     </div>
-  </body>
+</body>
