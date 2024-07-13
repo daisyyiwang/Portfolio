@@ -1,0 +1,175 @@
+/* Start of Navigation */
+.nav {
+    padding: 1rem 2rem;
+    width: calc(100% - 4rem);
+    background-color: #ffffff;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    box-shadow: 3px 2px 8px 0 rgba(231,231,231,0.50);
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #232323;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: flex;
+    float: right;
+    font-size: 1.75rem;
+    font-weight: 600;
+    gap: 1rem;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    color: #232323;
+    margin: auto;
+  }
+  
+  .nav > .nav-links > a:hover {
+    color: #000000;
+    background-color:#FFDE8B;
+    border-radius: 2px;
+  }
+  
+  .nav > .nav-links > .highlight {
+    box-shadow:0px -1.25rem 0px 0px #FFDE8B inset;
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  .body-XXXL-Serif {
+    font-family: PT Serif;
+    font-size: 1.5625rem;
+    color: #4b4b4b;
+  }
+  .body-M {
+    font-family: PT sans;
+    font-size: 1rem;
+  }
+  
+  @media (max-width:800px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      padding: 1.5rem 1rem 1rem 1rem;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: #ffffff;
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      
+      background: #232323;
+      border-radius: 3px;
+      
+      z-index: 1;
+      
+      transform-origin: 4px 0px;
+      
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.55s ease;
+    }
+  
+    .nav > .nav-btn > label > span:first-child
+    {
+      transform-origin: 0% 0%;
+    }
+  
+    .nav > .nav-btn > label > span:nth-last-child(2)
+    {
+      transform-origin: 0% 100%;
+    }
+  
+    /* 
+    * Transform all the slices of hamburger
+    * into a crossmark.
+    */
+    .nav > #nav-check:checked ~ .nav-btn > label > span
+    {
+      transform: rotate(-45deg) translate(0px, -1px);
+      background: #232323;
+    }
+  
+    /*
+    * But let's hide the middle one.
+    */
+    .nav > #nav-check:checked ~ .nav-btn > label > span:nth-last-child(3)
+    {
+      opacity: 1;
+      transform: rotate(45deg) translate(0px, -4px);
+      background: #232323;
+    }
+  
+    /*
+    * Ohyeah and the last one should go the other direction
+    */
+    .nav > #nav-check:checked ~ .nav-btn > label > span:nth-last-child(2)
+    {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+  
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #ffffff;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 6.75rem;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 1rem 0;
+      width: 90%;
+      border-bottom: 0.1rem solid #E4E4E4;
+    }
+    .nav > .nav-links > a:last-child {
+      border-bottom: none;
+    }
+    .nav > .nav-links > .highlight {
+      font-weight: 600;
+      box-shadow: none;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: 160px;
+      padding: 0.5rem 0;
+      overflow-y: auto;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+    }
+  }
+  /* End of Navigation */

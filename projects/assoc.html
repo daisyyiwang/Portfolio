@@ -13,42 +13,71 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daisy, Yi Wang | Product Designer</title>
-    <link rel="icon" href="../favicon.png" type="image/x-icon">
+    <link rel="icon" href="../favicon2023.png" type="image/x-icon">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700" rel="stylesheet">
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/zzzzoo.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/style2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
   <body>
-
+    <!--Start of header nav-->
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="../index.html">
+          <img src="../resources/images/logo2023.png">
+          </a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+        </label>
+      </div>
+    
+      <div class="nav-links">
+        <a href="../projects/about.html">About</a>
+        <a href="../index.html" class="highlight">Work</a>
+        <a href="../resources/images/DaisyYi Wang-ProductDesign.pdf" target="_blank">Resume</a>
+      </div>
+    </div>
+    <!--End of header nav-->
     <!-- introduction card -->
-    <div class="mobile-intro">
-      <div class="image-container">
-        <img src="../resources/images/assoccover.svg" alt="cover image">
+    <div style="background-color: #FEFAF3; padding-top: 6rem;">
+      <div class="mobile-intro">
+        <div class="image-container">
+          <img src="../resources/images/assoc-interactive.png" alt="cover image">
+        </div>
+      </div>
+
+      <div class="max-width-border">
+        <div class="sc-intro">
+          <div class="content01">
+            <h3>UX strategy & data visulization</h3>
+            <h1 class="heading-XL">Mapping out the associates’ experience in store</h1>
+            <p class="body-M padding-top-bottom-1"> Understand the interrelationship between people, process, payroll and devices</p>
+            <div id="project-tag-group">
+              <span class="tag-yellow">B2B</span>
+              <span class="tag-blue">eCommerce</span>
+              <span class="tag-purple">Logistics</span>
+            </div>
+          </div>
+          <div class="image-container" id="cover-image">
+            <img src="../resources/images/assoc-interactive.png" alt="cover image">
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="max-width-border">
-      <div class="sc-intro">
-        <div class="content01">
-          <h3>UX Strategy &amp; Data Visualization</h3>
-          <h2>Associate Journey Mapping</h2>
-          <p>Understand the interrelationship between people, process, payroll and equipment and technology.</p>
-          <div class="device">
-            <div class="image-container">
-              <img src="../resources/images/storeIcon.png" alt="in-store" />
-            </div>
-          </div>
-        </div>
-        <div class="image-container" id="cover-image">
-          <img src="../resources/images/assoccover.svg" alt="cover image">
-        </div>
-      </div>
-  </div>
-
-    <!-- password protection -->
+    <!-- password protection 
       <div class="pass-form flow">
           <p>This project is password protected under NDA. Please <a href="mailto:daisyyiwang@gmail.com" target="_blank">contact me</a> for the password.</p>
           <form>
@@ -56,12 +85,12 @@
             <button></button>
           </form>
       </div>
-<div class="pass-protected hidden">
+<div class="pass-protected hidden">-->
 
     <!-- overview section -->
     <div class="sc-overview">
       <div class="sc-overview01">
-        <p><span id="h">A</span> cross-functional team embarked on a journey to different regions within Kohl's territory,
+        <p class="body-M padding-top-6rem"><span id="h">A</span> cross-functional team embarked on a journey to different regions within Kohl's territory,
           in order to <span class="ph" data-scroll-class="paragraph-highlight">shadow and track a day-in-the-life of the Kohl's sales associates.</span>
         <br/>
         The journey taught us how dynamic our store environment can be, how flexible and fantastic our associates are, and
@@ -69,17 +98,17 @@
       </div>
       <div class="sc-overview02">
         <div class="box">
-          <p>Experience Designer</p>
-          <p class="time"> Oct, 2016 - April 2017</p>
-          <p class="time">In-store, Data Visualization</p>
+          <p class="heading-XS gray-500">🎨 Experience Designer</p>
+          <p class="heading-XS gray-500">⏱️ Oct, 2016 - April 2017</p>
+          <p class="heading-XS gray-500">📄 In-store, Data Visualization</p>
         </div>
       </div>
     </div>
 
     <!-- role section -->
-    <div class="role">
-      <h2>My Role</h2>
-      <p>I was part of the core team of 12, including experience designers, store
+    <div class="role padding-top-6rem">
+      <p class="heading-L gray-700">My Role</h2>
+      <p class="body-M">I was part of the core team of 12, including experience designers, store
       operation engineers, and ux researchers. <span class="ph" data-scroll-class="paragraph-highlight">I was involved in this entire project
       starting from research plan proposal, in-store data collection, data analysis,
       visualization, to stakeholder presentations. </span>An associate journey map,
@@ -90,8 +119,8 @@
 
     <!-- goal section -->
     <div class="role">
-      <h2>Goal</h2>
-      <p>1. Understand how store associates in different roles spend their shift on the salesfloor.
+      <p class="heading-L gray-700">Goal</h2>
+      <p class="body-M">1. Understand how store associates in different roles spend their shift on the salesfloor.
       <br />
       2. Identify friction points within process to improve technology for associates and drive in-store conversion.
       <br />
@@ -103,12 +132,12 @@
     <div class="max-width">
       <div class="max-width-box">
         <div class="flow">
-          <p class="header">IN-STORE RESEARCH</p>
-          <h2>Step 1: Shadowing</h2>
+          <p class="body-M gold">IN-STORE RESEARCH</p>
+          <h2 class="heading-L">Step 1: Shadowing</h2>
           <div class="image-container">
             <img src="../resources/images/assoc-shadow.svg" alt="please refresh or change a browser to view">
           </div>
-          <p>
+          <p class="body-M">
             <br />
             Based on a plan research team has drafted out, we are divided into 4 groups, each group has three
             members from ux research, design and store operation engineer. And each team was dedicated to one
@@ -129,15 +158,15 @@
     <br />
 
     <!-- step 2 data analysis-->
-    <div class="max-width">
+    <div class="max-width padding-top-6rem">
       <div class="max-width-box">
         <div class="flow">
-          <p class="header">AFFINITY DIAGRAM</p>
-          <h2>Step 2: Data Analysis</h2>
+          <p class="body-M gold">AFFINITY DIAGRAM</p>
+          <h2 class="heading-L">Step 2: Data Analysis</h2>
           <div class="image-container">
             <img src="../resources/images/assoc-ad.png" alt="please refresh or change a browser to view">
           </div>
-          <p>
+          <p class="body-M">
             <br />
             It was a large amount of data to clean up. As soon as we all got back to the office, we start
             the conversation about how to clean, organize and further analyze the data we have. There are
@@ -152,12 +181,12 @@
   </div>
 
     <!-- step 3: Information Visualization -->
-    <div class="max-width">
+    <div class="max-width padding-top-6rem">
       <div class="max-width-box">
         <div class="flow">
-          <p class="header">DESIGN SOLUTION</p>
-          <h2>Step 3: Information Visualization</h2>
-          <p>Now we have most of the data cleaned up based on different criterias.
+          <p class="body-M gold">DESIGN SOLUTION</p>
+          <h2 class="heading-L">Step 3: Information Visualization</h2>
+          <p class="body-M">Now we have most of the data cleaned up based on different criterias.
             The design team start to explore different ways to present the data to our stakeholders.
             There were a lot back and forth with the research team to make sure the data is easy to
             understand but at the same time, accurate. In the end, We delivered three main pieces in
@@ -190,7 +219,7 @@
           <div class="image-container">
             <img src="../resources/images/assoc-cards.png">
           </div>
-          <p>
+          <p class="body-M">
             <br />We documented all the associates we had shadowed with into the journey map. These cards provide a good
             idea of what we have considered - roles, departments, timelines, store sizes and locations. All above have
             been factored in the associate journey map deliverable package.</p>
@@ -208,7 +237,7 @@
           <div class="image-container">
             <img src="../resources/images/assoc-interactive.png">
           </div>
-          <p>
+          <p class="body-M">
             <br />I designed this interactive map piece with the focus on demonstrating one associate’s one shift at one store using Axure.
             This map documents and visualizes one associate’s walking path for one shift. Each point reprents one task. Color is used
             here to indicate whether or not this associate feels frustrated. More details (task, emotions &amp; highlights) can be
@@ -234,12 +263,12 @@
 
 
     <!--presentation -->
-    <div class="max-width">
+    <div class="max-width padding-top-6rem">
       <div class="max-width-box">
         <div class="flow">
-          <p class="header">PRESENTATIONS</p>
-          <h2>Step 4: Stakeholder Shareouts &amp; Iterations</h2>
-          <p>Presenting this journey map was a great learning experience for me.
+          <p class="body-M gold">PRESENTATIONS</p>
+          <h2 class="heading-L">Step 4: Stakeholder Shareouts &amp; Iterations</h2>
+          <p class="body-M">Presenting this journey map was a great learning experience for me.
             Since there are so many aspects and stories in the map, I have prepared
             different versions of stories based on the audience. For store operations
             team, I will empathsize mostly on the data patterns we found through
@@ -256,12 +285,12 @@
 
 
     <!-- impact & more -->
-    <div class="max-width">
+    <div class="max-width padding-top-6rem">
       <div class="max-width-box">
         <div class="flow">
-          <p class="header">REFLECTION</p>
-          <h2>Impact &amp; More</h2>
-          <p>
+          <p class="gold body-M">REFLECTION</p>
+          <h2 class="heading-L">Experience impact &amp; what's beyond</h2>
+          <p class="body-M">
             <br />
             I feel really fortunate to be part of a foundamental project like this.
             I also really really appreciate that Kohl’s are willing to take the time
@@ -322,36 +351,45 @@
       </div>
     </div>
 
-    <!-- contact section -->
-    <div class="contact">
-      <p>Interested in more details about this project? Feel free to shoot me an
-        <a href="mailto:daisyyiwang@gmail.com">email</a> or connect with me on
-        <a href="https://www.linkedin.com/in/daisyyiwang/">Linkedin</a>. Let's
-        Chat!</p>
+    <!--next project section-->
+    <div class="background-gray60 full-width-box">
+      <div class="card max-width-box">
+          <a href="/projects/mpip02.html">
+          <p class="heading-XS gray-700">Next project ></p>
+          <p class="heading-L-serif gray-700 padding-top-bottom-1">Protecting PDF across platforms within Acrobat</p>
+          </a>
+        </div>
+      </div>
     </div>
-</div>
 
     <!-- footer section -->
-    <div class="footer">
-      <div class="link-page">
-        <div class="c" id="previous">
-          <a href="./rewards.html">
-            <h3>&#60; Previous Project</h3>
-            <p><span class="yellow-highlight">Rewards Program</span></p>
-          </a>
-        </div>
-        <div class="c" id="next">
-          <a href="./zzzzoo.html">
-            <h3>Next Project &gt;</h3>
-              <p><span class="yellow-highlight">Kohl's ZzzZoo</span></p>
-          </a>
+    <div class="max-width footer-parent">
+      <div class="max-width-box">
+        <div class="contact2">
+          <div class="contact2-icons">
+            <div class="icon">
+              <a href="mailto:daisyyiwang@gmail.com"><i class="fas fa-envelope" title="Email"></i></a>
+            </div>
+            <div class="icon">
+              <a href="https://www.linkedin.com/in/daisyyiwang" target="_blank">
+              <i class="fab fa-linkedin" title="LinkedIn"></i>
+              </a>
+            </div>
+            <div class="icon">
+              <a href="https://dribbble.com/Daisywang" target="_blank">
+              <i class="fab fa-dribbble-square" title="Dribbble"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer2">
+            <p>&copy; 2024 Designed &amp; Coded with love by Daisy Yi Wang, All Rights Reserved.</p>
+          </div>
         </div>
       </div>
-      <div class="home">
-        <a href="../index.html">Back to Home</a>
-        <p class="copyright-style">&copy; Designed &amp; Coded with love by Daisy Yi Wang, All Rights Reserved.</p>
-      </div>
-  </div>
+    </div>
+
+
+<!--</div> removed password div end-->
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script>
