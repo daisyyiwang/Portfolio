@@ -5,9 +5,10 @@ html {
   
 body {
   font-family: "PT Sans", sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
   margin: auto;
   overflow-x: hidden;
+  font-size: 1.2rem;
 } 
   
 h2 {
@@ -18,8 +19,12 @@ h2 {
 }
 h4 {
     font-size: 1.25rem;
-    font-weight: bold;
+    font-weight: 700;
     padding-left: 0.5rem;
+}
+p {
+  font-size: 1.2rem;
+  line-height: 1.7;
 }
 .body-M {
     font-family: PT sans;
@@ -87,7 +92,7 @@ h4 {
   text-align: center;
 }  
 .content01 h2 {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 700;
   text-align: center;
   padding-bottom: 0.25rem;
@@ -255,13 +260,13 @@ h4 {
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem 4.5rem;
-    max-width: 60rem;
+    max-width: 48rem;
     margin: auto;
   }
   /*large screen for landscape and portrait for problem*/
   @media only screen and (min-width: 1024px) {
     .quote .body-M {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         padding: 1.5rem;
     }
     .card {
@@ -269,7 +274,8 @@ h4 {
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 3rem 8.5rem;
+        padding: 3rem 4rem;
+        max-width: 48rem;
     }
   }
   /*what's mpip*/
@@ -426,7 +432,7 @@ h4 {
   }
   
   .footer h3 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     padding-bottom: 1rem;
     font-weight: 400;
   }
@@ -473,7 +479,7 @@ h4 {
   
   .home .copyright-style {
     color: #787878;
-    font-family: "PT Serif", serif;
+    font-family: "PT Sans", sans-serif;
     text-align: center;
     padding: 1.5rem 0;
     font-size: 1rem;
@@ -601,8 +607,8 @@ h4 {
     cursor: pointer;
     padding: 0.5rem 1rem;
     transition: 0.3s;
-    font-size: 1.2rem;
-    font-family: "PT Serif", Serif;
+    font-size: 1.25rem;
+    font-family: "PT Sans", sans-serif;
   }
   
   .tab button:hover {
@@ -611,7 +617,7 @@ h4 {
   
   .tab button.active {
     border-bottom: 3px solid #00c648;
-    font-weight: bold;
+    font-weight: 700;
   }
   
   .tabcontent {

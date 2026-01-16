@@ -10,82 +10,27 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.body-S {
-  font-size: 0.875rem;
-}
-.body-M {
-  font-family: PT sans;
-  font-size: 1rem;
-}
 .body-XXXL {
-  font-size: 1.2rem ;
-  font-weight: 400;
   padding-bottom: 0.5rem;
   color:#3E3E3E;
 }
 .body-XXXL-Serif {
-  font-family: PT Serif;
-  font-size: 1.5625rem;
+  font-family: PT Sans;
   color: #4b4b4b;
 }
 .body-XL {
   font-family: PT Sans;
-  font-size: 1.25rem;
   padding-top: 1rem;
   max-width: 60ch;
 }
-.heading-M {
-  font-size: 1.375rem;
-  font-weight: 550;
-}
-.heading-L {
-  font-size: 1.75rem;
-  font-weight: 550;
-}
 .heading-XXL {
-  font-size: 2.8125rem ;
-  font-weight: 600;
   padding-bottom: 2rem;
   color: #232323;
 }
 .heading-XL {
-font-size: 2.25rem ;
-font-weight: 550;
-font-family: PT-Serif;
+font-family: PT Sans;
 color: #232323;
 padding-bottom: 0.5rem;
-}
-.heading-XS {
-font-size: 1rem ;
-font-weight: 550;
-font-family: PT Sans;
-}
-.gray-60 {
-  color: #f9f9f9;
-}
-.gray-300 {
-  color: #9d9d9d;
-}
-.gray-500 {
-  color: #676767;
-}
-.gray-900 {
-  color: #232323;
-}
-.blue-600 {
-  color: #262FE7;
-}
-.purple-600 {
-  color: #594DCD;
-}
-a {
-  text-decoration: none;
-}
-.padding-bottom-1rem {
-  padding-bottom: 1rem;
-}
-.text-center {
-  text-align: center;
 }
 .tag-group {
   display:flex;
@@ -137,172 +82,6 @@ a {
   padding: 0.2rem 1rem;
 }
 /* End of universal styles*/
-/* Start of Navigation */
-.nav {
-  padding: 1rem 2rem;
-  width: calc(100% - 2rem);
-  background-color: #ffffff;
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  vertical-align: middle;
-  box-shadow: 3px 2px 8px 0 rgba(231,231,231,0.50);
-}
-
-.nav > .nav-header {
-  display: inline;
-}
-
-.nav > .nav-header > .nav-title {
-  display: inline-block;
-  font-size: 22px;
-  color: #232323;
-  padding: 10px 10px 10px 10px;
-}
-
-.nav > .nav-btn {
-  display: none;
-}
-
-.nav > .nav-links {
-  display: flex;
-  float: right;
-  font-size: 1.75rem;
-  font-weight: 600;
-  gap: 1rem;
-}
-
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
-  text-decoration: none;
-  color: #232323;
-  margin: auto;
-}
-
-.nav > .nav-links > a:hover {
-  color: #000000;
-  background-color:#FFDE8B;
-  border-radius: 2px;
-}
-
-.nav > .nav-links > .highlight {
-  box-shadow:0px -1.25rem 0px 0px #FFDE8B inset;
-}
-
-.nav > #nav-check {
-  display: none;
-}
-
-@media (max-width:800px) {
-  .nav > .nav-btn {
-    display: inline-block;
-    right: 0px;
-    top: 0px;
-  }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    padding: 1.5rem 1rem 1rem 1rem;
-  }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: #ffffff;
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    
-    background: #232323;
-    border-radius: 3px;
-    
-    z-index: 1;
-    
-    transform-origin: 4px 0px;
-    
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                opacity 0.55s ease;
-  }
-
-  .nav > .nav-btn > label > span:first-child
-  {
-    transform-origin: 0% 0%;
-  }
-
-  .nav > .nav-btn > label > span:nth-last-child(2)
-  {
-    transform-origin: 0% 100%;
-  }
-
-  /* 
-  * Transform all the slices of hamburger
-  * into a crossmark.
-  */
-  .nav > #nav-check:checked ~ .nav-btn > label > span
-  {
-    transform: rotate(-45deg) translate(0px, -1px);
-    background: #232323;
-  }
-
-  /*
-  * But let's hide the middle one.
-  */
-  .nav > #nav-check:checked ~ .nav-btn > label > span:nth-last-child(3)
-  {
-    opacity: 1;
-    transform: rotate(45deg) translate(0px, -4px);
-    background: #232323;
-  }
-
-  /*
-  * Ohyeah and the last one should go the other direction
-  */
-  .nav > #nav-check:checked ~ .nav-btn > label > span:nth-last-child(2)
-  {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-  }
-
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #ffffff;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 6.75rem;
-    left: 0px;
-  }
-  .nav > .nav-links > a {
-    display: block;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 1rem 0;
-    width: 90%;
-    border-bottom: 0.1rem solid #E4E4E4;
-  }
-  .nav > .nav-links > a:last-child {
-    border-bottom: none;
-  }
-  .nav > .nav-links > .highlight {
-    font-weight: 600;
-    box-shadow: none;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: 160px;
-    padding: 0.5rem 0;
-    overflow-y: auto;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
-  }
-}
-/* End of Navigation */
 
 /*Start of intro section*/
   .dsk-intro {
@@ -313,22 +92,27 @@ a {
   align-items: center;
   justify-content: center;
   padding: 15rem 0 10rem 0;
-  z-index: -1;
+  width: 100%;
+  z-index: 0;
   }
   .intro-content {
   display: flex;
   flex-direction: column;
   width: 80%;
+  max-width: 50rem;
+  padding: 0 3rem;
   }
   /* Whatamesh gradient CSS*/
   #gradient-canvas {
   position: absolute;
   left: 0;
-  top: 0;
+  right: 0;
+  top: 6.75rem;
   bottom: 0;
-  z-index: -3;
-  width:100%;
-  height:100%;
+  z-index: -1;
+  width: 100%;
+  height: calc(100% - 6.75rem);
+  pointer-events: none;
   --gradient-color-1: #E8D3FF; 
   --gradient-color-2: #C6CFFF; 
   --gradient-color-3: #d7e7fd;  
@@ -370,6 +154,9 @@ a {
   display: flex;
   flex-direction: column;
   padding: 0 1.5rem;
+}
+.content-left .heading-M {
+  font-size: 1.75rem;
 }
 .content-left .body-XL {
   color:#2f2f2f;
@@ -489,6 +276,7 @@ a {
   }
   .m-horizontal-content .body-XL {
     color: #232323;
+    font-size: 1.25rem;
   }
   .mp {
     padding-top: 6rem;
@@ -545,6 +333,7 @@ a {
 }
 .horizontal-content .body-XL {
   color: #232323;
+  font-size: 1.25rem;
 }
 }
 
@@ -557,7 +346,7 @@ a {
 
 .footer p {
   color: #cfcfcf;
-  font-family: "PT Serif", serif;
+  font-family: "PT Sans", sans-serif;
   text-align: center;
   padding: 1.5rem 0;
   font-size: 0.75rem
@@ -570,7 +359,7 @@ a {
     width: 100%;
 }
 .contact p{
-    font-family: "PT Serif", serif;
+    font-family: "PT Sans", sans-serif;
 }
 .contact-icons {
     display: flex;
@@ -592,4 +381,3 @@ a {
     color: #5E5EF0;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
-

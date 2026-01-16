@@ -6,14 +6,16 @@ html {
 body {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.7;
   margin: auto;
   overflow-x: hidden;
+  font-size: 1.2rem;
 }
 
 p {
-  font-size: 1.25rem;
-  //*font-family: "PT Serif", Serif;*//
+  font-size: 1.2rem;
+  line-height: 1.7;
+  //*font-family: "PT Sans", sans-serif;*//
 }
 
 .image-container {
@@ -59,7 +61,7 @@ h2 {
 
 .content01 h2 {
   width: 21rem;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 700;
   text-align: center;
   padding-bottom: 0.25rem;
@@ -99,7 +101,7 @@ h2 {
 
 h4 {
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 700;
   padding-left: 0.5rem;
 }
 
@@ -320,13 +322,13 @@ a {
 
 .header {
   font-size: 1rem;
-  font-family: "PT-sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #B2824F;
   letter-spacing: 2.6px;
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /*smartphones for landscape and portrait for design highlights section*/
@@ -363,7 +365,7 @@ a {
   margin: auto;
 }
 .max-width-box {
-  max-width: 50rem;
+  max-width: 48rem;
   padding: 1rem 3.5rem;
 }
 
@@ -438,8 +440,9 @@ a {
   }
   .max-width-box {
     margin: auto;
-    padding-right: 8.5rem;
-    padding-left: 8.5rem;
+    max-width: 48rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
   }
   .flow .header {
     padding-top: 4rem;
@@ -651,7 +654,7 @@ a {
 }
 
 .footer h3 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   padding-bottom: 1rem;
   font-weight: 400;
 }
@@ -698,7 +701,7 @@ a {
 
 .home .copyright-style {
   color: #787878;
-  font-family: "PT Serif", serif;
+  font-family: "PT Sans", sans-serif;
   text-align: center;
   padding: 1.5rem 0;
   font-size: 1rem;
@@ -737,7 +740,7 @@ a {
 
 .footer2 p {
   color: #cfcfcf;
-  font-family: "PT Serif", serif;
+  font-family: "PT Sans", sans-serif;
   text-align: center;
   padding: 1.5rem 0;
   font-size: 0.75rem
@@ -748,7 +751,7 @@ a {
     width: 100%;
 }
 .contact2 p{
-    font-family: "PT Serif", serif;
+    font-family: "PT Sans", sans-serif;
 }
 .contact2-icons {
     display: flex;
@@ -938,8 +941,8 @@ a {
   cursor: pointer;
   padding: 0.5rem 1rem;
   transition: 0.3s;
-  font-size: 1.2rem;
-  font-family: "PT Serif", Serif;
+  font-size: 1.25rem;
+  font-family: "PT Sans", sans-serif;
 }
 
 .tab button:hover {
@@ -948,7 +951,7 @@ a {
 
 .tab button.active {
   border-bottom: 3px solid #00c648;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .tabcontent {
