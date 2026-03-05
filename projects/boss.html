@@ -13,89 +13,65 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daisy, Yi Wang | Product Designer</title>
-    <link rel="icon" href="../favicon2023.png" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700" rel="stylesheet">
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="../resources/css/site.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/zzzzoo.css">
-    <link rel="stylesheet" type="text/css" href="../resources/css/animate.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-      <script src="../resources/js/access-guard.js"></script>
   </head>
   <body>
-    <!--Start of header nav-->
-    <div class="nav">
-      <input type="checkbox" id="nav-check">
-      <div class="nav-header">
-        <div class="nav-title">
-          <a href="../index.html">
-          <img src="../resources/images/logo2023.png">
-          </a>
-        </div>
-      </div>
-      <div class="nav-btn">
-        <label for="nav-check">
-        <span></span>
-        <span></span>
-        <span></span>
-        </label>
-      </div>
-    
-      <div class="nav-links">
-        <a href="../projects/about.html">About</a>
-        <a href="../index.html" class="highlight">Work</a>
-        <a href="#" onclick="alert('Resume is available upon request'); return false;">Resume</a>
+    <!-- introduction card -->
+    <div class="mobile-intro">
+      <div class="image-container">
+        <img src="../resources/images/bosscover.svg" alt="cover image">
       </div>
     </div>
-    <!--End of header nav-->
-    <!-- introduction card -->
-    <div style="background-color: #FEFAF3; padding-top: 6rem;">
-      <div class="mobile-intro">
-        <div class="image-container">
+
+    <div class="max-width-border">
+      <div class="sc-intro">
+        <div class="content01">
+          <h3>Omni-Channel Experience</h3>
+          <h2>Buy Online Ship to Store</h2>
+          <p>Make more products available in store</p>
+          <div class="device">
+            <div class="image-container">
+              <img src="../resources/images/tabletIcon.png" alt="tablet" />
+            </div>
+            <div class="image-container">
+              <img src="../resources/images/desktopIcon.png" alt="in-store" />
+            </div>
+            <div class="image-container">
+              <img src="../resources/images/iphoneIcon.png" alt="in-store" />
+            </div>
+          </div>
+        </div>
+        <div class="image-container" id="cover-image">
           <img src="../resources/images/bosscover.svg" alt="cover image">
         </div>
       </div>
-
-      <div class="max-width-border">
-        <div class="sc-intro">
-          <div class="content01">
-            <h3>Omni-Channel Experience</h3>
-            <h1 class="heading-XL">Buy Online Ship to Store</h1>
-            <p class="body-M padding-top-bottom-1">Make more products available in store</p>
-            <div id="project-tag-group">
-              <span class="tag-orange">B2C</span>
-              <span class="tag-blue">eCommerce</span>
-              <span class="tag-purple">Logistics</span>
-            </div>
-          </div>
-          <div class="image-container" id="cover-image">
-            <img src="../resources/images/bosscover.svg" alt="cover image">
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
 
     <!-- overview section -->
     <div class="sc-overview">
       <div class="sc-overview01">
-        <p class="body-M"><span id="h">K</span>ohl's now provides this new buy online ship to store service to improve
+        <p><span id="h">K</span>ohl's now provides this new buy online ship to store service to improve
           the shopping experience online and in-store. This is an omni-channel project impacting 4 channels:
           desktop, mobile browser, native app and tablet. The desktop experience is currently available online.
           Feel free to <a href="https://www.kohls.com/catalog.jsp?CN=InStoreOnline:Pick%20Up%20in%20Store&icid=hpmf-bopus" target="blank">check out.</a>
       </div>
       <div class="sc-overview02">
         <div class="box">
-          <p class="heading-XS gray-500">🎨 Experience Designer</p>
-          <p class="heading-XS gray-500 space-top-1">⏱️ Pilot Launched in 08.2018</p>
-          <p class="heading-XS gray-500 space-top-1">📄 Omni-channel Experience</p>
+          <p>Experience Designer</p>
+          <p class="time"> Pilot Launched in 08.2018</p>
+          <p class="time">Omni-channel Experience</p>
         </div>
       </div>
     </div>
 
     <!-- role section -->
-    <div class="role padding-top-6rem">
-      <h2 class="heading-L gray-700">My Role</h2>
+    <div class="role">
+      <h2>My Role</h2>
       <p>I <span class="bold">explored</span> various wire concept content strategy to best translate this new buy online and ship to store concept to all level of customers across channels.
       <br />
       <br />
@@ -113,8 +89,8 @@
     <div class="max-width">
       <div class="max-width-box">
         <div class="flow">
-          <p class="body-M gold">CUSTOMER REVIEW</P>
-          <h2 class="heading-L">People think it is...</h2>
+          <p class="header">CUSTOMER REVIEW</P>
+          <h2>People think it is...</h2>
           <p>"Perfect solution to obtaining a blouse in my favourite color where my size wasn't available in store. Efficient
           and reasonably fast."
           <br />
@@ -122,6 +98,8 @@
           "I love it! It was quick easy and I was able to get my size even though it was not in stock at the local store."
           </p>
           <br />
+          <br />
+          <p class="credit">For confidential reasons, only part of the story is available now. For a lot more fun details, feel free to reach out!😉</p>
         </div>
       </div>
     <br />
@@ -129,7 +107,7 @@
     <br />
     <br />
 
-    <!-- password protection 
+    <!-- password protection -->
       <div class="pass-form flow">
           <p>This project is password protected under NDA. Please <a href="mailto:daisyyiwang@gmail.com" target="_blank">contact me</a> for the password.</p>
           <form>
@@ -137,7 +115,7 @@
             <button></button>
           </form>
       </div>
-<div class="pass-protected hidden">-->
+<div class="pass-protected hidden">
 
   <!-- screen show -->
   <div class="max-width">
@@ -152,8 +130,8 @@
   <div class="max-width">
     <div class="max-width-box">
       <div class="flow">
-        <p class="body-M gold padding-top-6rem">DESIGN OPPORTUNITY</p>
-        <h2 class="heading-L">Bridge the gap between customers and business</h2>
+        <p class="header">DESIGN OPPORTUNITY</p>
+        <h2>Bridge the gap between customers and business</h2>
       </div>
     <div class="storybox">
       <div class="story">
@@ -162,12 +140,12 @@
         </div>
         <div class="col02">
           <ul>
-            <li class="body-M">"We have lots of merchandise <span class="ph" data-scroll-class="paragraph-highlight">sitting in the shopping cart</span> and never being checked out."</li>
+            <li>"We have lots of merchandise <span class="ph" data-scroll-class="paragraph-highlight">sitting in the shopping cart</span> and never being checked out."</li>
             <br>
             <div class="col-kohls">
-              <li class="body-M">> Make more merchandise available to customers.</li>
-              <li class="body-M"> Lower the distribution cost.</li>
-              <li class="body-M"> Increase store traffic.</li>
+              <li>> Make more merchandise available to customers.</li>
+              <li>> Lower the distribution cost.</li>
+              <li>> Increase store traffic.</li>
             </div>
           </ul>
         </div>
@@ -178,11 +156,11 @@
         </div>
         <div class="col02">
           <ul>
-            <li class="body-M">"I find a really nice pair of boots online the other day, but Idon't want to order it until I get <span class="ph" data-scroll-class="paragraph-highlight">free shipping</span>."</li>
+            <li>"I find a really nice pair of boots online the other day, but Idon't want to order it until I get <span class="ph" data-scroll-class="paragraph-highlight">free shipping</span>."</li>
             <br>
             <div class="col-customer">
-              <li class="body-M"> Don't have to worry about the shipping threshold.</li>
-              <li class="body-M"> More choices at Kohl's.</li>
+              <li>> Don't have to worry about the shipping threshold.</li>
+              <li>> More choices at Kohl's.</li>
             </div>
           </ul>
         </div>
@@ -195,9 +173,9 @@
   <div class="max-width">
     <div class="max-width-box">
       <div class="flow">
-        <p class="body-M gold padding-top-6rem">DESIGN TOUCHPOINTS</p>
-        <h2 class="heading-L">Mapping out the customer journey</h2>
-        <p class="body-M">After defining the problem space and see the business value,
+        <p class="header">DESIGN TOUCHPOINTS</p>
+        <h2>Mapping out the customer journey</h2>
+        <p>After defining the problem space and see the business value,
           we stepped back looking at the customer's journey map to determine
           where are the key touchpoints for them during online shopping. To
           provide a basic idea here, I have simplified the customer journey
@@ -217,15 +195,15 @@
   <div class="max-width">
     <div class="max-width-box">
       <div class="flow">
-        <p class="body-M gold">DESIGN WALKTHROUGH</p>
-        <h2 class="heading-L">First stop: browsing</h2>
-        <p class="body-M">Product matrix page is the first stop when customers considering purchasing with Kohl's.
+        <p class="header">DESIGN WALKTHROUGH</p>
+        <h2>First stop: browsing</h2>
+        <p>Product matrix page is the first stop when customers considering purchasing with Kohl's.
         So the design goal here is quite straightforward: <span class="ph" data-scroll-class="paragraph-highlight">to make this service visible for customers
         in the very beginning to influence their purchase decisions.</span></p>
       <div class="image-container" id="principle">
         <img src="../resources/images/boss-pmp.svg" alt="product matrix page showcase" />
       </div>
-      <div class="tab padding-top-6rem">
+      <div class="tab">
         <button class="tab1 tablinks" onclick="openDesign(event, 'Before')">Before</button>
         <button class="tab1 tablinks" onclick="openDesign(event, 'Iteration')">Iterations</button>
         <button class="tab1 tablinks" onclick="openDesign(event, 'Final')" id="defaultOpen">Final Design</button>
@@ -249,7 +227,7 @@
         </div>
       </div>
 
-      <p class="body-M">Since mobile screen has limited space, when we design the omni-channel experience,
+      <p>Since mobile screen has limited space, when we design the omni-channel experience,
         we firsty focusing on how to include the BOSS experience in mobile. We have explored
         rounds of designs and also invited our customers to the testing lab for feedbacks. I
         have picked some main concepts we tested and provided the rationals alongside.</p>
@@ -261,18 +239,18 @@
   <div class="max-width">
     <div class="max-width-box">
       <div class="flow">
-        <p class="body-M gold padding-top-6rem">DESIGN WALKTHROUGH</p>
-        <h2 class="heading-L">Second stop: placing an order</h2>
-        <p class="body-M">Product details page is designed to help customers to make a purchase decision.
+        <p class="header">DESIGN WALKTHROUGH</p>
+        <h2>Second stop: placing an order</h2>
+        <p>Product details page is designed to help customers to make a purchase decision.
           At Kohl's, when we look into our customer profile, we found that many of them
           are senior customers or customers is not that tech-savvy. This is something we
           often obligated when living in the silicon valley. Here is a good example when
           we designning the product details page, how we empathize with our customers.</p>
-        <div class="image-container padding-top-6rem" id="principle">
-          <img src="../resources/images/boss-pdp.svg" alt="product details page showcase" />
-        </div>
-        <p class="body-M padding-top-6rem">Due to the operations' constraints in product details page, we are not able to display
-        the shipping options until a certain size and color is selected. Instead of disabling
+      <div class="image-container" id="principle">
+        <img src="../resources/images/boss-pdp.svg" alt="product details page showcase" />
+      </div>
+      <p>Due to the operations' constraints in product details page, we are not able to display
+      the shipping options until a certain size and color is selected. Instead of disabling
         "Add to Cart" button, we decide to have it always enabled and show the size and option
         panel when it's not specified. This helped our customers to make their purchase decisions
         without interrupting their workflow. Because we found that some of them will get confused
@@ -285,14 +263,14 @@
               Your browser does not support the video tag.
           </video>
           <div class="text-right">
-            <h3 class="heading-L">Seamless interaction to purchase</h3>
-            <p><span class="bold gray-900">Show</span> "ship to store" when color/size selected</p>
+            <h3>Seamless interaction to purchase</h3>
+            <p><span class="bold">Show</span> "ship to store" when color/size selected</p>
             <p><span class="bold">Display</span> with radio button</p>
             <p><span class="bold">CTA</span> button always in active state</p>
           </div>
-        </div>  
-        <br>  
-        <p class="heading-XS padding-top-6rem">Below are the variations on different shipping options for customers.</p>
+        </div>
+        <br>
+        <p>Below are the variations on different shipping options for customers.</p>
         <div class="image-container" id="principle">
           <img src="../resources/images/boss-card.svg" alt="ship to store card showcase" />
         </div>
@@ -304,14 +282,14 @@
   <div class="max-width">
     <div class="max-width-box">
       <div class="flow">
-        <p class="body-M gold padding-top-6rem">DESIGN WALKTHROUGH</p>
-        <h2 class="heading-L">Last stop: confirming</h2>
-        <p class="body-M">Order details page is to ensure that the experience is seamless from end to end.
+        <p class="header">DESIGN WALKTHROUGH</p>
+        <h2>Last stop: confirming</h2>
+        <p>Order details page is to ensure that the experience is seamless from end to end.
           After placing the order, the most relevant information would be available right away
           at a glance. The hierachy of the information is based on the user feedback: where to
           pickup, when the store is open, how long the store will keep my package, etc.</p>
       </div>
-      <div class="tab padding-top-6rem">
+      <div class="tab">
         <button class="tab2 tablinks" onclick="openDesign02(event, 'Before02')">Before</button>
         <button class="tab2 tablinks" onclick="openDesign02(event, 'Final02')" id="defaultOpen02">Final Design</button>
       </div>
@@ -334,52 +312,76 @@
   <div class="max-width">
     <div class="max-width-box">
       <div class="flow">
-        <p class="body-M gold">DESIGN IMPACT</p>
-        <h2 class="heading-L">Win-win for business and customers</h2>
+        <p class="header">DESIGN IMPACT</p>
+        <h2>Win-win for business and customers</h2>
       </div>
       <div class="image-container" id="principle">
         <img src="../resources/images/boss-impact.svg" alt="design impact showcase" />
       </div>
     </div>
   </div>
-<!--</div>-->
 
-<!--next project section-->
-<div class="background-gray60 full-width-box">
-  <div class="card max-width-box">
-      <a href="/projects/selfcheckout.html">
-      <p class="heading-XS gray-700">Next project ></p>
-      <p class="heading-L-serif gray-700 padding-top-bottom-1">In-store self checkout</p>
-      </a>
-    </div>
-  </div>
 </div>
 
-<!-- footer section -->
-<div class="max-width footer-parent">
-  <div class="max-width-box">
-    <div class="contact2">
-      <div class="contact2-icons">
-        <div class="icon">
-          <a href="mailto:daisyyiwang@gmail.com"><i class="fas fa-envelope" title="Email"></i></a>
+    <!-- toolset section -->
+        <div class="toolset">
+          <div class="tools">
+            <h3>Tools</h3>
+            <ul>
+              <li>Paper &amp; Pencil</li>
+              <li>Axure</li>
+              <li>Google slides</li>
+            </ul>
+          </div>
+          <div class="tools">
+            <h3>Methods</h3>
+            <ul>
+              <li>Interview</li>
+              <li>Usability Testing</li>
+            </ul>
+          </div>
+          <div class="tools">
+            <h3>Skills</h3>
+            <ul>
+              <li>System Thinking</li>
+              <li>Presentation</li>
+              <li>UX Research</li>
+              <li>Experience Mapping</li>
+              <li>Rapid Prototyping</li>
+            </ul>
+          </div>
         </div>
-        <div class="icon">
-          <a href="https://www.linkedin.com/in/daisyyiwang" target="_blank">
-          <i class="fab fa-linkedin" title="LinkedIn"></i>
+
+    <!-- contact section -->
+    <div class="contact">
+      <p>Feel free to shoot me an
+        <a href="mailto:daisyyiwang@gmail.com">email</a> or connect with me on
+        <a href="https://www.linkedin.com/in/daisyyiwang/">Linkedin</a>. Let's
+        Chat!</p>
+    </div>
+
+    <!-- footer section -->
+    <hr style="height:1px;border-width:0;width: 95%;color:#AD932E;background-color:#AD932E">
+    <div class="footer">
+      <div class="link-page">
+        <div class="c" id="previous">
+          <a href="./selfcheckout.html">
+            <h3>&#60; Previous Project</h3>
+              <p><span class="yellow-highlight">In-store Checkout</span></p>
           </a>
         </div>
-        <div class="icon">
-          <a href="https://dribbble.com/Daisywang" target="_blank">
-          <i class="fab fa-dribbble-square" title="Dribbble"></i>
+        <div class="c" id="next">
+          <a href="./inventory.html">
+            <h3>Next Project &gt;</h3>
+              <p><span class="yellow-highlight">Inventory Count 2.0</span></p>
           </a>
         </div>
       </div>
-      <div class="footer2">
-        <p>&copy; 2024 Designed &amp; Coded with love by Daisy Yi Wang, All Rights Reserved.</p>
+      <div class="home">
+        <a href="../index.html">Back to Home</a>
+        <p class="copyright-style">&copy; Designed &amp; Coded with love by Daisy Yi Wang, All Rights Reserved.</p>
       </div>
-    </div>
   </div>
-</div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
