@@ -13,46 +13,72 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Daisy, Yi Wang | Product Designer</title>
-      <link rel="icon" href="../favicon.png" type="image/x-icon">
+      <link rel="icon" href="../favicon2023.png" type="image/x-icon">
       <!-- Google Fonts -->
       <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif" rel="stylesheet">
       <!-- Stylesheets -->
-      <link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
+      <link rel="stylesheet" type="text/css" href="../resources/css/site.css">
       <link rel="stylesheet" type="text/css" href="../resources/css/zzzzoo.css">
-    </head>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <script src="../resources/js/access-guard.js"></script>
+  </head>
     <body>
+      <!--Start of header nav-->
+      <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            <a href="../index.html">
+            <img src="../resources/images/logo2023.png">
+            </a>  
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+          </label>
+        </div>
+      
+        <div class="nav-links">
+          <a href="../projects/about.html">About</a>
+          <a href="../index.html" class="highlight">Work</a>
+          <a href="#" onclick="alert('Resume is available upon request'); return false;">Resume</a>
+        </div>
+      </div>
+      <!--End of header nav-->
       <!-- introduction card -->
-      <div class="mobile-intro">
+      <div style="background-color: #FEFAF3; padding-top: 8rem;">
+        <div class="mobile-intro">
           <div class="image-container">
-        <img src="../resources/images/inventorycover.svg" alt="cover image">
+            <img src="../resources/images/inventorycover.svg" alt="cover image">
           </div>
-      </div>
+        </div>
 
-    <div class="max-width-border">
-      <div class="sc-intro">
-        <div class="content01">
-          <h3>Kohl's Connented Store</h3>
-          <h2>Inventory Count 2.0</h2>
-          <p>Efficient &amp; accurate inventory management</p>
-          <div class="device">
-            <div class="image-container">
-              <img src="../resources/images/desktopIcon.png" alt="desktop" title="desktop" />
+        <div class="max-width-border">
+          <div class="sc-intro">
+            <div class="content01">
+              <h3>Kohl's connected store</h3>
+              <h1 class="heading-XL">Store inventory management for Kohl's associates</h1>
+              <p class="body-M padding-top-bottom-1">Efficient & accurate inventory management for department stores</p>
+              <div id="project-tag-group">
+                <span class="tag-yellow">B2B</span>
+                <span class="tag-blue">eCommerce</span>
+                <span class="tag-purple">Logistics</span>
+              </div>
             </div>
-            <div class="image-container">
-              <img src="../resources/images/storeIcon.png" alt="in-store" title="in-store"/>
+            <div class="image-container" id="cover-image">
+              <img src="../resources/images/inventorycover.svg" alt="cover image">
             </div>
           </div>
         </div>
-        <div class="image-container" id="cover-image">
-          <img src="../resources/images/inventorycover.svg" alt="cover image">
-        </div>
       </div>
-    </div>
 
       <!-- overview section -->
       <div class="sc-overview">
         <div class="sc-overview01">
-          <p><span id="h">T</span>o help simplify the inventory management, in
+          <p class="body-M padding-top-6rem"><span id="h">T</span>o help simplify the inventory management, in
           2016, <span class="ph" data-scroll-class="paragraph-highlight">Kohl's decides to move its inventory counting process from a
           dedicated RF device into a smart enterprise mobile device, bluebird.</span>
           This is a story of how I made this transition as easy as possible for
@@ -60,17 +86,17 @@
         </div>
         <div class="sc-overview02">
           <div class="box">
-            <p>Lead Designer</p>
-            <p class="time">Launched May, 2017</p>
-            <p class="time">In-store, Enterprise Mobile Bluebird</p>
+            <p class="heading-XS gray-500">🎨 Lead Designer</p>
+            <p class="heading-XS gray-500">⏱️ Launched May, 2017</p>
+            <p class="heading-XS gray-500">📄 In-store, Enterprise Mobile Bluebird</p>
           </div>
         </div>
       </div>
 
       <!-- role section -->
-      <div class="role">
-        <h2>My Role</h2>
-        <p>I led the UX design process in November,2016 until its full release
+      <div class="role padding-top-6rem">
+        <h2 class="heading-L gray-700">My Role</h2>
+        <p class="body-M">I led the UX design process in November,2016 until its full release
         in May, 2017. I worked alongside with a researcher, a design manager, a
         project manager and couple engineers working on bluebird windows 10.</p>
       </div>
@@ -86,12 +112,12 @@
 
       <!-- understand flow section -->
 
-     <div class="max-width">
+      <div class="max-width padding-top-6rem">
       <div class="max-width-box">
         <div class="flow">
-        <p class="header">USER RESEARCH</p>
-        <h2> Understand the terms, device &amp; current experience </h2>
-        <p>Our lack of domain knowledge in inventory management meant we needed
+        <p class="body-M gold">USER RESEARCH</p>
+        <h2 class="heading-L"> Understand the terms, device &amp; current experience </h2>
+        <p  class="body-M">Our lack of domain knowledge in inventory management meant we needed
           to understand the current process of inventory counting in the stores
           thoroughly and quickly. At the begining phase of the project, we
           conducted contextual inquiry with the store associates to understand
@@ -101,217 +127,217 @@
         <br />
       </p>
       </div>
-     </div>
-    </div>
+      </div>
+      </div>
 
       <!-- Spot the Commonground-->
-    <div class="max-width">
-      <div class="max-width-box">
-        <div class="flow">
-        <p class="header">EXPERIENCE MAPPING</p>
-        <h2> Spot the Commonground</h2>
-        <div class="image-container">
-          <img src="../resources/images/ic-coreflow.svg" alt="core experience flow">
+      <div class="max-width padding-top-6rem">
+        <div class="max-width-box">
+          <div class="flow">
+          <p class="body-M gold">EXPERIENCE MAPPING</p>
+          <h2 class="heading-L"> Spot the Commonground</h2>
+          <div class="image-container padding-top-6rem">
+            <img src="../resources/images/ic-coreflow.svg" alt="core experience flow">
+          </div>
+          <br />
+          <p  class="body-M">One thing we agreed on from day one within the customer experience team
+          is that this is a transitional experience. This is NOT to design something
+          completely new from scratch. <span class="ph" data-scroll-class="paragraph-highlight">We should keep the experience from the RF
+          device to the enterprise mobile phone, Bluebird as similar as possible to
+          reduce unnecessary trainings for associates.</span> This early design decision
+          had a major impact on the quality of the end result throughout the design
+          process.</p>
+          <p class="header" id="header-center">Current Experience Flow</p>
+          <div class="image-container padding-top-bottom-1">
+            <img src="../resources/images/ic-currentscreen.png" alt="Current experience flow">
+          </div>
+          <p class="heading-L padding-top-6rem">
+          <br />Some challenges of the inventory counting we disovered:
+          <!--<br />🧑👱🏃It takes at least 2 person and 4 trips to get an estimated
+          count number
+          <br />🙀Accidently scan twice? You may have to rescan everthing.
+          <br />😵Associates are memerizing "Yes or No" choices to avoid big mistakes.
+        --><br />
+            <br /></p>
+          <div class="image-container">
+            <img src="../resources/images/ic-challenge.png">
+          </div>
+          </div>
         </div>
-        <br />
-        <p>One thing we agreed on from day one within the customer experience team
-        is that this is a transitional experience. This is NOT to design something
-        completely new from scratch. <span class="ph" data-scroll-class="paragraph-highlight">We should keep the experience from the RF
-        device to the enterprise mobile phone, Bluebird as similar as possible to
-        reduce unnecessary trainings for associates.</span> This early design decision
-        had a major impact on the quality of the end result throughout the design
-        process.</p>
-        <p class="header" id="header-center">Current Experience Flow</p>
-        <div class="image-container">
-          <img src="../resources/images/ic-currentscreen.png" alt="Current experience flow">
-        </div>
-        <p>
-        <br />Some challenges of the inventory counting we disovered:
-        <!--<br />🧑👱🏃It takes at least 2 person and 4 trips to get an estimated
-        count number
-        <br />🙀Accidently scan twice? You may have to rescan everthing.
-        <br />😵Associates are memerizing "Yes or No" choices to avoid big mistakes.
-      --><br />
-         <br /></p>
-        <div class="image-container">
-          <img src="../resources/images/ic-challenge.png">
-        </div>
-       </div>
       </div>
-    </div>
 
       <!-- upgraded experience -->
-    <div class="max-width">
-      <div class="max-width-box">
-        <div class="flow">
-        <p class="header">DESIGN HIGHLIGHTS</p>
-        <h2>Propose an Upgraded Experience</h2>
+      <div class="max-width padding-top-6rem">
+        <div class="max-width-box">
+          <div class="flow">
+          <p class="body-M gold">DESIGN HIGHLIGHTS</p>
+          <h2 class="heading-L">Propose an Upgraded Experience</h2>
 
-        <div class="leftright">
-          <video width="200" height="355.73" autoplay loop>
-            <source src="../resources/videos/ic-clip01.mov" />
-          </video>
-          <div class="text-right dash-line">
-            <h3>A Clear Start</h3>
-            <p>Associate will be able to start with a clear estimation of workload
-            with 1 click, instead of tapping 3 times to access the "ready to scan"
-            screen.
-            </p>
-          </div>
-        </div>
-
-        <div class="leftright reverse">
-          <div class="text-left dash-line">
-            <h3>Scan in the Know</h3>
-            <p>A one hand free design to make sure that associates scan without
-            stopping even if there is an error occured.</p>
-          </div>
-          <video width="200" height="355.73" autoplay loop>
-            <source src="../resources/videos/ic-movie02.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <div class="leftright">
-          <video width="200" height="355.73" autoplay loop>
-            <source src="../resources/videos/ic-movie03.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
-          <div class="text-right">
-            <h3>Submit with Clear Confirmation</h3>
-            <p>Instead of tapping 4 times without knowing for sure what they are
-            selecting, with the upgraged design, associates will be able to
-            review what they scanned before submission to avoid risking into
-            rescan everything for just one misscan/double scan.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
-
-      <!-- Testing Photo -->
-<div class="max-width">
-    <div class="max-width-box">
-        <div class="flow">
-          <p class="header">DESIGN ITERATION</p>
-          <h2>Going Back to End Users</h2>
-          <div class="storybox">
-          <div class="story circle image-container">
-           <img src="../resources/images/ic-store01.png" alt="store testing images" />
-          </div>
-          <div class="story circle image-container">
-           <img src="../resources/images/ic-store02.png" alt="store testing images" />
-          </div>
-          <div class="story circle image-container">
-           <img src="../resources/images/ic-store03.png" alt="store testing images" />
-          </div>
-          <div class="story circle image-container">
-           <img src="../resources/images/ic-store04.png" alt="store testing images" />
-          </div>
-    </div>
-        <p>Within 2 weeks, with the support from my research partner, we were
-        able to test out our design in 2 store locations, with 3 associates in
-        different roles. <span class="ph" data-scroll-class="paragraph-highlight">We had 100% pass rate for the main flow and overall 80%
-        success rate based on the key experience measurement. </span>It was a really
-        rewarding experience for me personally, especially when I heard from one
-        associate love the experience so much that she ended the test by saying
-        "I like it!" 3 times!😉</p>
-        <br />
-      </div>
-  </div>
-</div>
-
-<div class="max-width-bg-ic">
-  <div class="lights">
-    <div class="image-container">
-      <img src="../resources/images/ic-process.png" alt="design evolvement" />
-    </div>
-  </div>
-</div>
-
-
-<div class="max-width">
-    <div class="max-width-box">
-        <div class="flow">
-          <h3>Design Iteration: Save the Count First</h3>
-          <p>When we put our proposed design in front of our associates, one thing
-          we realised immediately was, <span class="ph" data-scroll-class="paragraph-highlight">we overlooked the environment/context they
-          are in when they start to work on the counts.</span> With so many boxes /
-          merchandieses around, often times things will be misplaced. A sweater
-          will end up in the shoe department, a missing jean will probably be
-          "rescued" in the T-shirt piles. With the current design, when things
-          like that happens, associate will have to ask store manager to reopen
-          the count to make an update.</p>
-          <br />
-          <div class="quote">
-            <p>"With so many boxes/merchandises around, often times things will
-            be misplaced. A sweater will end up in the shoe department, a missing
-            jean will probably be "rescued" in the T-shirt piles. </p>
-          </div>
-          <br />
-          <div class="leftright02">
-            <div class="image-container">
-              <img src="../resources/images/ic-save.png" />
-            </div>
-            <div class="text-right02 ">
-              <p>To save the back and forth, I introduced this "Save" function in the
-                final design so that when one count was completed, an associate doesn't
-                have to submit the count to continue the next one. She/he can simply
-                save the count until everything is scanned in and then submit all the
-                counts together.
+          <div class="leftright padding-top-6rem">
+            <video width="200" height="355.73" autoplay loop>
+              <source src="../resources/videos/ic-clip01.mov" />
+            </video>
+            <div class="text-right dash-line">
+              <h3 class="padding-top-bottom-1">A Clear Start</h3>
+              <p class="body-M">Associate will be able to start with a clear estimation of workload
+              with 1 click, instead of tapping 3 times to access the "ready to scan"
+              screen.
               </p>
             </div>
           </div>
-        </div>
-    </div>
-</div>
 
-  <!-- store continue section -->
-    <div class="max-width">
-      <div class="max-width-box">
-        <div class="flow">
-        <p class="header">DESIGN REFLECTION</p>
-        <h2>Story to be Continued</h2>
-        <h3>Design the User Experience</h3>
-        <p>Part of the work here is to educate our partners about user experience
-        instead of playing catching up game with feature release. We were initially
-        given 2 weeks for this project in order to leave enough time for the
-        development cycle. The conversation really open up when we start to present
-        the stakeholders and the product partners what we have learned from current
-        experience in the store after talking to associates, and how we are reflecting
-        these insights in our design. Suprisingly, we realized how big a gap it was
-        between our store associates and people work in the office. The photos &amp;
-        insights we shared out helped us greatly to build the trust between the
-        teams and to start a real conversation about timeline and features.
-        </p>
-        <br />
-        <h3>Design for Bluebird Windows 10</h3>
-        <p>One of the biggest challenge for me was to design for bluebird, prior
-        to that, I have never been exposed to the mobile windows 10 device since
-        it is a retail tailored enterprise only device. And because of that,
-        after we delivered this project, we had a lot back and forth conversations
-        with the engineer team related to that, which requires me to read through
-        the windows 10 dev documents in order to achieve a better experience result.
-        <br />
-        <br />
-        After this project, I created a bluebird pattern library to help better
-        support the other designers working on similar projects. <span class="ph" data-scroll-class="paragraph-highlight">Till recently,
-        our team had been working on over 10 bluebird apps for different projects&amp;
-        features, and gradually, we can see how this design process &amp; pattern
-        library are impacting more and more people working at Kohl's.</span></p>
-        </div>
-        <div class="image-container">
-          <img src="../resources/images/ic-beforeafter.png" alt="process map" />
-        </div>
-        <p class="header" id="header-center">Design Deliverable Sample</p>
-        <div class="image-container">
-          <img src="../resources/images/ic-wiresample.svg" alt="process map" />
+          <div class="leftright reverse">
+            <div class="text-left dash-line">
+              <h3 class="padding-top-bottom-1">Scan in the Know</h3>
+              <p class="body-M">A one hand free design to make sure that associates scan without
+              stopping even if there is an error occured.</p>
+            </div>
+            <video width="200" height="355.73" autoplay loop>
+              <source src="../resources/videos/ic-movie02.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="leftright">
+            <video width="200" height="355.73" autoplay loop>
+              <source src="../resources/videos/ic-movie03.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="text-right">
+              <h3 class="padding-top-bottom-1">Submit with Clear Confirmation</h3>
+              <p class="body-M">Instead of tapping 4 times without knowing for sure what they are
+              selecting, with the upgraged design, associates will be able to
+              review what they scanned before submission to avoid risking into
+              rescan everything for just one misscan/double scan.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      </div>
+
+      <!-- Testing Photo -->
+      <div class="max-width padding-top-6rem">
+          <div class="max-width-box">
+              <div class="flow">
+                <p class="body-M gold">DESIGN ITERATION</p>
+                <h2 class="heading-L">Going Back to End Users</h2>
+                <div class="storybox padding-top-6rem">
+                <div class="story circle image-container">
+                <img src="../resources/images/ic-store01.png" alt="store testing images" />
+                </div>
+                <div class="story circle image-container">
+                <img src="../resources/images/ic-store02.png" alt="store testing images" />
+                </div>
+                <div class="story circle image-container">
+                <img src="../resources/images/ic-store03.png" alt="store testing images" />
+                </div>
+                <div class="story circle image-container">
+                <img src="../resources/images/ic-store04.png" alt="store testing images" />
+                </div>
+          </div>
+              <p class="body-M padding-top-bottom-4">Within 2 weeks, with the support from my research partner, we were
+              able to test out our design in 2 store locations, with 3 associates in
+              different roles. <span class="ph" data-scroll-class="paragraph-highlight">We had 100% pass rate for the main flow and overall 80%
+              success rate based on the key experience measurement. </span>It was a really
+              rewarding experience for me personally, especially when I heard from one
+              associate love the experience so much that she ended the test by saying
+              "I like it!" 3 times!😉</p>
+              <br />
+            </div>
+        </div>
+      </div>
+
+      <div class="max-width-bg-ic">
+        <div class="lights">
+          <div class="image-container">
+            <img src="../resources/images/ic-process.png" alt="design evolvement" />
+          </div>
+        </div>
+      </div>
+
+
+      <div class="max-width padding-top-6rem">
+          <div class="max-width-box">
+              <div class="flow">
+                <h3 class="heading-L">Design Iteration: Save the Count First</h3>
+                <p class="body-M padding-top-bottom-1">When we put our proposed design in front of our associates, one thing
+                we realised immediately was, <span class="ph" data-scroll-class="paragraph-highlight">we overlooked the environment/context they
+                are in when they start to work on the counts.</span> With so many boxes /
+                merchandieses around, often times things will be misplaced. A sweater
+                will end up in the shoe department, a missing jean will probably be
+                "rescued" in the T-shirt piles. With the current design, when things
+                like that happens, associate will have to ask store manager to reopen
+                the count to make an update.</p>
+                <br />
+                <div class="quote">
+                  <p class="gray-700 heading-M">"With so many boxes/merchandises around, often times things will
+                  be misplaced. A sweater will end up in the shoe department, a missing
+                  jean will probably be "rescued" in the T-shirt piles. </p>
+                </div>
+                <br />
+                <div class="leftright02">
+                  <div class="image-container">
+                    <img src="../resources/images/ic-save.png" />
+                  </div>
+                  <div class="text-right02 ">
+                    <p class="body-M">To save the back and forth, I introduced this "Save" function in the
+                      final design so that when one count was completed, an associate doesn't
+                      have to submit the count to continue the next one. She/he can simply
+                      save the count until everything is scanned in and then submit all the
+                      counts together.
+                    </p>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- store continue section -->
+      <div class="max-width padding-top-6rem">
+        <div class="max-width-box">
+          <div class="flow">
+          <p class="body-M gold">DESIGN REFLECTION</p>
+          <h2 class="heading-L">Story to be Continued</h2>
+          <h3 class="heading-XS padding-top-bottom-1">Design the User Experience</h3>
+          <p class="body-M">Part of the work here is to educate our partners about user experience
+          instead of playing catching up game with feature release. We were initially
+          given 2 weeks for this project in order to leave enough time for the
+          development cycle. The conversation really open up when we start to present
+          the stakeholders and the product partners what we have learned from current
+          experience in the store after talking to associates, and how we are reflecting
+          these insights in our design. Suprisingly, we realized how big a gap it was
+          between our store associates and people work in the office. The photos &amp;
+          insights we shared out helped us greatly to build the trust between the
+          teams and to start a real conversation about timeline and features.
+          </p>
+          <br />
+          <h3 class="heading-XS padding-top-bottom-1">Design for Bluebird Windows 10</h3>
+          <p class="body-M">One of the biggest challenge for me was to design for bluebird, prior
+          to that, I have never been exposed to the mobile windows 10 device since
+          it is a retail tailored enterprise only device. And because of that,
+          after we delivered this project, we had a lot back and forth conversations
+          with the engineer team related to that, which requires me to read through
+          the windows 10 dev documents in order to achieve a better experience result.
+          <br />
+          <br />
+          After this project, I created a bluebird pattern library to help better
+          support the other designers working on similar projects. <span class="ph" data-scroll-class="paragraph-highlight">Till recently,
+          our team had been working on over 10 bluebird apps for different projects&amp;
+          features, and gradually, we can see how this design process &amp; pattern
+          library are impacting more and more people working at Kohl's.</span></p>
+          </div>
+          <div class="image-container padding-top-bottom-4">
+            <img src="../resources/images/ic-beforeafter.png" alt="process map" />
+          </div>
+          <p class="header" id="header-center">Design Deliverable Sample</p>
+          <div class="image-container">
+            <img src="../resources/images/ic-wiresample.svg" alt="process map" />
+          </div>
+        </div>
+      </div>
 
       <!-- toolset section -->
-    <div class="max-width">
+      <div class="max-width">
       <div class="max-width-box">
         <div class="toolset">
           <div class="tools">
@@ -342,37 +368,44 @@
           </div>
         </div>
       </div>
-    </div>
-
-      <!-- contact section -->
-      <div class="contact">
-        <p>Interested in more details about this project? Feel free to shoot me an
-          <a href="mailto:daisyyiwang@gmail.com">email</a> or connect with me on
-          <a href="https://www.linkedin.com/in/daisyyiwang/">Linkedin</a>. Let's
-          Chat!</p>
       </div>
 
-    <!-- footer section -->
-    <div class="footer">
-      <div class="link-page">
-        <div class="c" id="previous">
-          <a href="./boss.html">
-            <h3> &#60; Previous Project</h3>
-              <p><span class="yellow-highlight">Buy Online Ship to Store</span></p>
-          </a>
-        </div>
-        <div class="c" id="next">
-          <a href="./rewards.html">
-            <h3>Next Project &gt;</h3>
-              <p><span class="yellow-highlight">Redesign the Rewards Experience</span></p>
-          </a>
+      <!--next project section-->
+      <div class="background-gray60 full-width-box">
+        <div class="card max-width-box">
+            <a href="/projects/rewards.html">
+            <p class="heading-XS gray-700">Next project ></p>
+            <p class="heading-L-serif gray-700 padding-top-bottom-1 max-width-60">A unified rewards program based on Kohl's cash</p>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="home">
-        <a href="../index.html">Back to Home</a>
-        <p class="copyright-style">&copy; Designed &amp; Coded with love by Daisy Yi Wang, All Rights Reserved.</p>
+
+      <!-- footer section -->
+      <div class="max-width footer-parent">
+        <div class="max-width-box">
+          <div class="contact2">
+            <div class="contact2-icons">
+              <div class="icon">
+                <a href="mailto:daisyyiwang@gmail.com"><i class="fas fa-envelope" title="Email"></i></a>
+              </div>
+              <div class="icon">
+                <a href="https://www.linkedin.com/in/daisyyiwang" target="_blank">
+                <i class="fab fa-linkedin" title="LinkedIn"></i>
+                </a>
+              </div>
+              <div class="icon">
+                <a href="https://dribbble.com/Daisywang" target="_blank">
+                <i class="fab fa-dribbble-square" title="Dribbble"></i>
+                </a>
+              </div>
+            </div>
+            <div class="footer2">
+              <p>&copy; 2024 Designed &amp; Coded with love by Daisy Yi Wang, All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
       </div>
-  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
