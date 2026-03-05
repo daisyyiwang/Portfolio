@@ -140,6 +140,10 @@
 
 **Assistant:** Published latest updates to the live deployment branch by merging `2026` into `master` and pushing `master` to `origin` (`b94e266` on `master`). Returned to branch `2026` afterward.
 
+**User:** No. My github pages were using 2023-update branch as the branch to publish to Github Pages. Please undo the change on master.
+
+**Assistant:** Reverted the master publish merge by reverting commit `b94e266` on `master` and pushed the undo commit `ee94231` to `origin/master`, then switched back to branch `2026`.
+
 **User:** the button should hug the content with 16px paddng and the label should use regular font weight, left aligned, with a radius of 24 px
 
 **Assistant:** Updated `.btn` in `resources/css/style.css` to `padding: 16px`, `font-weight: 400`, `justify-content: flex-start`, and `border-radius: 24px` so the button hugs content with the requested alignment and shape.
