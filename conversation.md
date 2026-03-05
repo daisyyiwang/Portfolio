@@ -136,6 +136,10 @@
 
 **Assistant:** Added reusable button variant classes in `resources/css/style.css` (`.btn`, `.btn--filled-black`) and applied them to `More about me` links in `index.html` and `unlock.html` for a black filled button with white label.
 
+**User:** can you push the latesest change to the live url daiswang.design?
+
+**Assistant:** Published latest updates to the live deployment branch by merging `2026` into `master` and pushing `master` to `origin` (`b94e266` on `master`). Returned to branch `2026` afterward.
+
 **User:** the button should hug the content with 16px paddng and the label should use regular font weight, left aligned, with a radius of 24 px
 
 **Assistant:** Updated `.btn` in `resources/css/style.css` to `padding: 16px`, `font-weight: 400`, `justify-content: flex-start`, and `border-radius: 24px` so the button hugs content with the requested alignment and shape.
