@@ -4,32 +4,90 @@ html {
   }
   
   body {
-    font-family: "PT Sans", sans-serif;
+    font-family: var(--font-sans);
     line-height: 1.7;
-    font-size: 1.2rem;
+    font-size: 16px;
+    color: var(--color-text);
     display: flex;
     align-items: center;
     flex-direction: column;
   }
   .body-XL {
-    font-family: PT Sans;
+    font-family: var(--font-sans);
     padding-top: 1rem;
-    color: #4B4B4B;
+    color: var(--color-text);
   }
   .heading-M {
-    color: #232323;
+    color: var(--color-text);
   }
   .heading-XL {
-    color: #4B4B4B;
-    font-family: PT Sans;
+    color: var(--color-text);
+    font-family: var(--font-sans);
   }
   .body-XXXL-Serif {
-    font-family: PT Sans;
-    color: #4b4b4b;
+    font-family: var(--font-sans);
+    color: var(--color-text);
   }
   .body-M {
-    font-family: PT sans;
-    color: #4b4b4b;
+    font-family: var(--font-sans);
+    color: var(--color-text);
+  }
+
+  .recent-work-section {
+    background: var(--color-section-bg);
+    border: 1px solid var(--color-section-border);
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    padding: 3rem 0;
+  }
+
+  .recent-work-inner {
+    width: 67%;
+    margin: 0 auto;
+    padding-right: 2rem;
+    box-sizing: border-box;
+  }
+
+  .recent-work-section .card-title {
+    color: var(--color-text);
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: normal;
+    margin-top: 0.85rem !important;
+  }
+
+  .recent-work-section .card-sub {
+    color: var(--color-text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-top: 0.6rem !important;
+  }
+
+  .read-more-link {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    white-space: nowrap;
+    display: block;
+    padding-top: 0.6rem;
+  }
+
+  .recent-work-section .recent-cards {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem !important;
+    width: 100%;
+  }
+
+  .recent-work-section .card-frame {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.35rem 1rem !important;
   }
   
   @media (max-width:800px) {
@@ -43,7 +101,7 @@ html {
       padding: 1.5rem 1rem 1rem 1rem;
     }
     .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      background-color: #ffffff;
+      background-color: var(--color-white);
     }
     .nav > .nav-btn > label > span {
       display: block;
@@ -52,7 +110,7 @@ html {
       margin-bottom: 5px;
       position: relative;
       
-      background: #232323;
+      background: var(--color-heading);
       border-radius: 3px;
       
       z-index: 1;
@@ -81,7 +139,7 @@ html {
     .nav > #nav-check:checked ~ .nav-btn > label > span
     {
       transform: rotate(-45deg) translate(0px, -1px);
-      background: #232323;
+      background: var(--color-heading);
     }
   
     /*
@@ -91,7 +149,7 @@ html {
     {
       opacity: 1;
       transform: rotate(45deg) translate(0px, -4px);
-      background: #232323;
+      background: var(--color-heading);
     }
   
     /*
@@ -107,7 +165,7 @@ html {
       position: absolute;
       display: block;
       width: 100%;
-      background-color: #ffffff;
+      background-color: var(--color-white);
       height: 0px;
       transition: all 0.3s ease-in;
       overflow-y: hidden;
@@ -121,7 +179,7 @@ html {
       font-weight: 500;
       padding: 1rem 0;
       width: 90%;
-      border-bottom: 0.1rem solid #E4E4E4;
+      border-bottom: 0.1rem solid var(--color-gray-800);
     }
     .nav > .nav-links > a:last-child {
       border-bottom: none;
@@ -150,22 +208,22 @@ html {
   }
   
   .footer p {
-    color: #787878;
-    font-family: "PT Sans", sans-serif;
+    color: var(--color-white);
+    font-family: var(--font-sans);
     text-align: center;
     padding: 1.5rem 0;
     font-size: 0.75rem
   }
   .contact {
-      margin-top: 4rem;
+      margin-top: 0;
       padding: 5rem;
       text-align: center;
-      background-color: #232323;
+      background-color: var(--color-heading);
       background-image: url(../images/footer-bg.png);
       width: 100%;
   }
   .contact p{
-      font-family: "PT Sans", sans-serif;
+      font-family: var(--font-sans);
   }
   .contact-icons {
       display: flex;
@@ -178,14 +236,14 @@ html {
   }
   .icon i{
       font-size: 2rem;
-      color: #ffffff;
+      color: var(--color-white);
   }
   .contact-icons:hover i{
-      color: #e1e1e1;
+      color: var(--color-gray-700);
       transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   }
   .contact-icons i:hover {
-      color: #9b9b9b;
+      color: var(--color-gray-500);
       transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   }
   
@@ -206,7 +264,7 @@ html {
     .m-abt-intro {
         display: flex;
         flex-direction: column;
-        background-color: #F7F8FD;
+        background-color: var(--color-intro-bg);
         padding: 10rem 2rem 3rem 2rem;
       }
     .m-abt-intro .image-profile {
@@ -234,14 +292,36 @@ html {
         gap: 3%;
     }
     .link {
-        color: #0716e6;
+        color: var(--color-text);
     }
     .space {
       padding-bottom: 1rem;
     }
     .bottom-line {
       padding: 3.5rem 0;
-      border-bottom: 1px solid #E4E4E4;
+      border-bottom: 1px solid var(--color-gray-800);
+    }
+
+    .recent-work-section {
+      padding: 2rem 0;
+    }
+
+    .m-abt-recent.recent-work-section {
+      width: 100%;
+    }
+
+    .recent-work-inner {
+      width: 75%;
+      padding-right: 1.25rem;
+    }
+
+    .recent-work-section .card-sub {
+      font-size: 0.9rem;
+    }
+
+    .recent-work-section .recent-cards {
+      grid-template-columns: 1fr;
+      gap: 0.75rem !important;
     }
   }
   /*about page for desktop*/
@@ -263,7 +343,7 @@ html {
       flex-direction: row;
       padding: 12rem 0 6rem 0;
       width: 100%;
-      background-color: #F7F8FD;
+      background-color: var(--color-intro-bg);
       gap: 3%;
       align-items: center;
     }
@@ -278,7 +358,7 @@ html {
     }
     
     .link {
-      color: #0716e6;
+      color: var(--color-text);
     }
     .space {
       padding-bottom: 1rem;
@@ -297,6 +377,11 @@ html {
       width: 67%;
       padding: 4rem 0 1rem 0;
     }
+
+    .abt-recent.recent-work-section {
+      width: 100%;
+      padding: 3rem 0;
+    }
     .abt-recent-multi {
       display: flex;
       flex-direction: row;
@@ -308,6 +393,6 @@ html {
     }
     .bottom-line {
       padding-bottom: 3.5rem;
-      border-bottom: 1px solid #E4E4E4;
+      border-bottom: 1px solid var(--color-gray-800);
     }
   }

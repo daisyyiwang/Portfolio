@@ -12,16 +12,92 @@
 </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body.project-locked {
+        overflow: hidden;
+      }
+      body.project-locked > *:not(#project-password-overlay) {
+        visibility: hidden;
+      }
+      #project-password-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        background: rgba(10, 40, 110, 0.45);
+      }
+      .project-password-card {
+        width: 100%;
+        max-width: 28rem;
+        border-radius: 1rem;
+        background: linear-gradient(160deg, #e6f0ff 0%, #d4e5ff 100%);
+        border: 1px solid #9bbaf2;
+        box-shadow: 0 24px 70px rgba(35, 81, 170, 0.25);
+        padding: 2rem;
+      }
+      .project-password-title {
+        color: #123c91;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      .project-password-copy {
+        color: #335798;
+        margin-bottom: 1rem;
+      }
+      .project-password-input {
+        width: 100%;
+        border: 1px solid #7ea3ea;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        padding: 0.75rem 0.85rem;
+      }
+      .project-password-input:focus {
+        outline: 2px solid #4d78d6;
+        outline-offset: 1px;
+      }
+      .project-password-error {
+        min-height: 1.25rem;
+        margin-top: 0.6rem;
+        color: #ba1b1b;
+        font-size: 0.92rem;
+      }
+      .project-password-actions {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: flex-end;
+        margin-top: 1rem;
+      }
+      .project-password-btn {
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        cursor: pointer;
+        padding: 0.65rem 1rem;
+      }
+      .project-password-btn-primary {
+        color: #ffffff;
+        background: #275fcf;
+      }
+      .project-password-btn-secondary {
+        color: #275fcf;
+        background: #ffffff;
+        border: 1px solid #86aae9;
+      }
+    </style>
     <title>Daisy, Yi Wang | Product Designer</title>
     <link rel="icon" href="../favicon2023.png" type="image/x-icon">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700" rel="stylesheet">
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/site.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/zzzzoo.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/animate.css">
-    <link rel="stylesheet" type="text/css" href="../resources/css/style2.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <script src="../resources/js/access-guard.js"></script>
   </head>
   <body>
     <!--Start of header nav-->

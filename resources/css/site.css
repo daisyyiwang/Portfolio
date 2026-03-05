@@ -1,0 +1,91 @@
+@import url("./reset.css");
+@import url("./style2.css");
+
+:root {
+  --font-sans: "PT Sans", sans-serif;
+  --font-serif: "PT Serif", serif;
+  --font-size-intro-body: 20px;
+
+  --color-text: #2f2f2f;
+  --color-heading: #232323;
+  --color-text-strong: #3e3e3e;
+  --color-text-soft: #4b4b4b;
+  --color-muted: #676767;
+  --color-muted-2: #787878;
+  --color-gray-300: #9d9d9d;
+  --color-gray-400: #979797;
+  --color-gray-500: #9b9b9b;
+  --color-gray-600: #cfcfcf;
+  --color-gray-700: #e1e1e1;
+  --color-gray-800: #e4e4e4;
+  --color-gray-900: #f4f5f7;
+  --color-gray-950: #f9f9f9;
+  --color-gray-975: #fafafa;
+  --color-border: #e4e4e4;
+  --color-surface: #ffffff;
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --color-accent-yellow: #ffde8b;
+  --color-accent-yellow-soft: #fffad5;
+  --color-accent-yellow-warm: #ffebc5;
+  --color-accent-gold: #b2824f;
+  --color-accent-gold-deep: #ad932e;
+  --color-accent-brown: #ab763f;
+  --color-accent-red-soft: #ffae8b;
+  --color-accent-pink: #ffaed5;
+  --color-accent-red: #ee4855;
+  --color-accent-red-deep: #bc473f;
+  --color-accent-green: #9fdb9b;
+  --color-accent-green-soft: #e7fef1;
+  --color-accent-green-strong: #00c648;
+  --color-accent-cyan: #a8dcec;
+  --color-accent-cyan-soft: #d4ecec;
+  --color-accent-blue-soft: #cde2f6;
+  --color-accent-blue-pale: #c6cfff;
+  --color-accent-blue-faint: #d7e7fd;
+  --color-accent-blue: #262fe7;
+  --color-accent-blue-2: #1d9af6;
+  --color-accent-indigo: #5e5ef0;
+  --color-accent-purple: #594dcd;
+  --color-accent-purple-soft: #e1ddfc;
+  --color-accent-purple-mid: #a6a3fb;
+  --color-accent-purple-light: #e8d3ff;
+
+  --color-section-bg: #f5f7fb;
+  --color-section-border: #e3e7ef;
+  --color-intro-bg: #f7f8fd;
+  --color-cream: #fff8f0;
+  --color-cream-2: #f1e2dd;
+  --color-cream-3: #f9efce;
+  --color-cream-4: #e3cfb2;
+  --color-mint: #f4f9f9;
+  --color-beige: #e7e0d3;
+
+  --shadow-button-elevated: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+}
+
+.gray-500 {
+  color: var(--color-muted);
+}
+
+.gray-900 {
+  color: var(--color-heading);
+}
+
+.blue-600 {
+  color: var(--color-accent-blue);
+}

@@ -11,6 +11,7 @@
       gtag('config', 'UA-125029320-1');
     </script> 
     <!-- main.js -->
+    <script src="../resources/js/access-guard.js"></script>
     <script type="module" src="../resources/js/main.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +20,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif" rel="stylesheet">
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../resources/css/style2.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/site.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/about.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
@@ -66,7 +66,7 @@
       </div>
 
       <div>
-        <a class="body-XL">I’m Daisy Wang, a product designer based in the bay area with over 7 years of experience. 
+        <a class="body-XL">I’m Daisy Wang, a product designer based in the bay area with 9+ years of experience. 
         I design both consumer facing and enterprise facing products across devices from desktop, web to mobile. 
       </div>
       <div>
@@ -81,41 +81,46 @@
         </a>
       </div>
     </div>
-    <div class="abt-recent bottom-line">
+    <div class="abt-recent bottom-line recent-work-section">
+      <div class="recent-work-inner">
       <a class="heading-M">Recent product releases</a>
-      <a class="body-XL" href="https://blog.adobe.com/en/publish/2023/05/08/introducing-microsoft-purview-information-protection-mpip-in-acrobat">Microsoft Purview Information Protection/MPIP in Adobe Acrobat</a>
-      <a class="body-XL" href="https://helpx.adobe.com/sign/integrations/microsoft-search-connector-guide.html#:~:text=Adobe%20Acrobat%20Sign%20connector%20for%20Microsoft%20Search%20is%20an%20Acrobat,SharePoint%2C%20and%20Search%20in%20Bing.">Adobe Acrobat Sign Connector for Microsoft Search</a>
-      <a class="body-XL" href="https://www.adobe.com/documentcloud/integrations/microsoft-teams.html">Adobe Acrobat Sign add-in for Microsoft Teams</a>
-    </div>
-    <div class="abt-recent bottom-line">
-      <a class="heading-M">Work experience</a>
-      <div class="abt-recent-multi">
-        <a class="body-XL item">Senior experience designer</a>
-        <a class="body-XL item">Adobe document cloud</a>
-        <a class="body-XL item">April, 2019</a>
+      <div class="recent-cards" style="display:flex;flex-wrap:wrap;gap:1rem;margin-top:.75rem;">
+        <div class="card-frame" style="border:1px solid #E6E6E6;padding:.6rem;border-radius:8px;background:#fff;">
+          <img src="../resources/images/thumb-edit.png" alt="Edit image" style="width:100%;height:140px;object-fit:cover;border-radius:6px;">
+          <div class="card-title body-XL" style="margin-top:.5rem">Unlock edit image tools for Acrobat</div>
+          <div class="card-sub body-S" style="margin-top:.25rem;line-height:1.3;">Enable image editing in PDFs across desktop, web, mobile, and Chrome extension workflows for end-to-end document updates. <a class="read-more-link body-S" href="https://blog.adobe.com/en/publish/2024/06/17/adobe-acrobat-reimagines-documents-multi-format-ai-powered-work" target="_blank">Read more</a></div>
+        </div>
+
+        <div class="card-frame" style="border:1px solid #E6E6E6;padding:.6rem;border-radius:8px;background:#fff;">
+          <img src="../resources/images/thumb-pro-teams.png" alt="Acrobat Pro Teams trial" style="width:100%;height:140px;object-fit:cover;border-radius:6px;">
+          <div class="card-title body-XL" style="margin-top:.5rem">Launch Acrobat Pro free Teams trial</div>
+          <div class="card-sub body-S" style="margin-top:.25rem;line-height:1.3;">Launch a free Teams trial experience with collaboration and admin capabilities tailored for small and mid-size businesses. <a class="read-more-link body-S" href="https://www.adobe.com/acrobat/business/acrobat-pro-teams.html" target="_blank">Read more</a></div>
+        </div>
+
+        <div class="card-frame" style="border:1px solid #E6E6E6;padding:.6rem;border-radius:8px;background:#fff;">
+          <img src="../resources/images/thumb-mpip.jpg" alt="MPIP" style="width:100%;height:140px;object-fit:cover;border-radius:6px;">
+          <div class="card-title body-XL" style="margin-top:.5rem">Enable MPIP protection in Acrobat</div>
+          <div class="card-sub body-S" style="margin-top:.25rem;line-height:1.3;">Add native sensitivity labeling and protection support so enterprise teams can secure PDF content with Microsoft Purview policies. <a class="read-more-link body-S" href="https://blog.adobe.com/en/publish/2023/05/08/introducing-microsoft-purview-information-protection-mpip-in-acrobat" target="_blank">Read more</a></div>
+        </div>
+
+        <div class="card-frame" style="border:1px solid #E6E6E6;padding:.6rem;border-radius:8px;background:#fff;">
+          <img src="../resources/images/thumb-sign-teams.png" alt="Adobe Sign for Teams" style="width:100%;height:140px;object-fit:cover;border-radius:6px;">
+          <div class="card-title body-XL" style="margin-top:.5rem">Embed Adobe Sign in Microsoft Teams</div>
+          <div class="card-sub body-S" style="margin-top:.25rem;line-height:1.3;">Bring signing workflows into Microsoft Teams so users can send, track, and complete agreements without leaving their collaboration space. <a class="read-more-link body-S" href="https://www.adobe.com/acrobat/business/integrations/microsoft-teams.html" target="_blank">Read more</a></div>
+        </div>
+
+        <div class="card-frame" style="border:1px solid #E6E6E6;padding:.6rem;border-radius:8px;background:#fff;">
+          <img src="../resources/images/thumb-office365.png" alt="Adobe x Microsoft 365 integrations" style="width:100%;height:140px;object-fit:cover;border-radius:6px;">
+          <div class="card-title body-XL" style="margin-top:.5rem">Showcase Adobe × Microsoft 365</div>
+          <div class="card-sub body-S" style="margin-top:.25rem;line-height:1.3;">Showcase connected Adobe workflows across Microsoft 365 apps to streamline document tasks across creation, review, and signatures. <a class="read-more-link body-S" href="https://youtu.be/LXC1e-P3XVM?si=IMLbCLuuWy9xVqeP" target="_blank">Read more</a></div>
+        </div>
+
+        <div class="card-frame" style="border:1px solid #E6E6E6;padding:.6rem;border-radius:8px;background:#fff;">
+          <img src="https://cdn.prod.website-files.com/651c6d0a39a8a5ec04e121e1/6542b2167ad8007135ed5012_623f3026581deec907ba8978_Product.jpeg" alt="Adobe Sign x Notarize.com" style="width:100%;height:140px;object-fit:cover;border-radius:6px;">
+          <div class="card-title body-XL" style="margin-top:.5rem">Integrate Notarize.com with Adobe Sign</div>
+          <div class="card-sub body-S" style="margin-top:.25rem;line-height:1.3;">Enable remote online notarization directly within Adobe Sign workflows so users can complete signed and notarized documents in one flow. <a class="read-more-link body-S" href="https://www.notarize.com/blog/notarize-brings-remote-online-notarization-to-adobe-sign" target="_blank">Read more</a></div>
+        </div>
       </div>
-      <div class="abt-recent-multi">
-        <a class="body-XL item">Experience designer</a>
-        <a class="body-XL item">Kohl's Inc.,digital center</a>
-        <a class="body-XL item">Aug, 2016 - April, 2019</a>
-      </div>
-      <div class="abt-recent-multi">
-        <a class="body-XL item">Design intern</a>
-        <a class="body-XL item">Kohl’s Inc., Headquarter</a>
-        <a class="body-XL item">2015 Summer</a>
-      </div>
-    </div>
-    <div class="abt-recent">
-      <a class="heading-M">Education</a>
-      <div class="abt-recent-multi">
-        <a class="body-XL item">M.S. Human Computer Interaction (HCI/d)</a>
-        <a class="body-XL item">Indiana University</a>
-        <a class="body-XL item">2014-2016</a>
-      </div>
-      <div class="abt-recent-multi">
-        <a class="body-XL item">B.A.Journalism</a>
-        <a class="body-XL item">Nanchang University</a>
-        <a class="body-XL item">2009-2013</a>
       </div>
     </div>
     <!--End of about-intro for desktop-->
@@ -153,41 +158,46 @@
             </a>
           </div>
         </div>
-        <div class="m-abt-recent bottom-line">
+        <div class="m-abt-recent bottom-line recent-work-section">
+          <div class="recent-work-inner">
           <a class="heading-M space">Recent product releases</a>
-          <a class="body-M space" href="https://blog.adobe.com/en/publish/2023/05/08/introducing-microsoft-purview-information-protection-mpip-in-acrobat">Microsoft Purview Information Protection/MPIP in Adobe Acrobat</a>
-          <a class="body-M space" href="https://helpx.adobe.com/sign/integrations/microsoft-search-connector-guide.html#:~:text=Adobe%20Acrobat%20Sign%20connector%20for%20Microsoft%20Search%20is%20an%20Acrobat,SharePoint%2C%20and%20Search%20in%20Bing.">Adobe Acrobat Sign Connector for Microsoft Search</a>
-          <a class="body-M space" href="https://www.adobe.com/documentcloud/integrations/microsoft-teams.html">Adobe Acrobat Sign add-in for Microsoft Teams</a>
-        </div>
-        <div class="m-abt-recent bottom-line">
-          <a class="heading-M space">Work experience</a>
-          <div class="m-abt-recent-multi space">
-            <a class="heading-S item">Senior experience designer</a>
-            <a class="body-M item">Adobe document cloud</a>
-            <a class="body-M item">April, 2019</a>
+          <div class="recent-cards" style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.5rem;">
+            <div class="card-frame" style="border:1px solid #E6E6E6;padding:.5rem;border-radius:8px;background:#fff;">
+              <img src="../resources/images/thumb-edit.png" alt="Edit image" style="width:100%;height:110px;object-fit:cover;border-radius:6px;">
+              <div class="card-title body-M" style="margin-top:.4rem">Unlock edit image tools for Acrobat</div>
+              <div class="card-sub body-S" style="margin-top:.2rem;line-height:1.25;">Enable image editing in PDFs across desktop, web, mobile, and Chrome extension workflows. <a class="read-more-link body-S" href="https://blog.adobe.com/en/publish/2024/06/17/adobe-acrobat-reimagines-documents-multi-format-ai-powered-work" target="_blank">Read more</a></div>
+            </div>
+
+            <div class="card-frame" style="border:1px solid #E6E6E6;padding:.5rem;border-radius:8px;background:#fff;">
+              <img src="../resources/images/thumb-pro-teams.png" alt="Acrobat Pro Teams trial" style="width:100%;height:110px;object-fit:cover;border-radius:6px;">
+              <div class="card-title body-M" style="margin-top:.4rem">Launch Acrobat Pro Teams trial</div>
+              <div class="card-sub body-S" style="margin-top:.2rem;line-height:1.25;">Launch a free Teams trial with collaboration and admin capabilities tailored for business users. <a class="read-more-link body-S" href="https://www.adobe.com/acrobat/business/acrobat-pro-teams.html" target="_blank">Read more</a></div>
+            </div>
+
+            <div class="card-frame" style="border:1px solid #E6E6E6;padding:.5rem;border-radius:8px;background:#fff;">
+              <img src="../resources/images/thumb-mpip.jpg" alt="MPIP" style="width:100%;height:110px;object-fit:cover;border-radius:6px;">
+              <div class="card-title body-M" style="margin-top:.4rem">Enable MPIP protection in Acrobat</div>
+              <div class="card-sub body-S" style="margin-top:.2rem;line-height:1.25;">Add native sensitivity labeling and protection support with Microsoft Purview across Acrobat workflows. <a class="read-more-link body-S" href="https://blog.adobe.com/en/publish/2023/05/08/introducing-microsoft-purview-information-protection-mpip-in-acrobat" target="_blank">Read more</a></div>
+            </div>
+
+            <div class="card-frame" style="border:1px solid #E6E6E6;padding:.5rem;border-radius:8px;background:#fff;">
+              <img src="../resources/images/thumb-sign-teams.png" alt="Adobe Sign for Teams" style="width:100%;height:110px;object-fit:cover;border-radius:6px;">
+              <div class="card-title body-M" style="margin-top:.4rem">Embed Adobe Sign in Microsoft Teams</div>
+              <div class="card-sub body-S" style="margin-top:.2rem;line-height:1.25;">Bring e-sign workflows into Teams so agreements can be sent and completed in one place. <a class="read-more-link body-S" href="https://www.adobe.com/acrobat/business/integrations/microsoft-teams.html" target="_blank">Read more</a></div>
+            </div>
+
+            <div class="card-frame" style="border:1px solid #E6E6E6;padding:.5rem;border-radius:8px;background:#fff;">
+              <img src="../resources/images/thumb-office365.png" alt="Adobe x Microsoft 365 integrations" style="width:100%;height:110px;object-fit:cover;border-radius:6px;">
+              <div class="card-title body-M" style="margin-top:.4rem">Showcase Adobe × Microsoft 365</div>
+              <div class="card-sub body-S" style="margin-top:.2rem;line-height:1.25;">Showcase connected Adobe workflows across Microsoft 365 apps for end-to-end document tasks. <a class="read-more-link body-S" href="https://youtu.be/LXC1e-P3XVM?si=IMLbCLuuWy9xVqeP" target="_blank">Read more</a></div>
+            </div>
+
+            <div class="card-frame" style="border:1px solid #E6E6E6;padding:.5rem;border-radius:8px;background:#fff;">
+              <img src="https://cdn.prod.website-files.com/651c6d0a39a8a5ec04e121e1/6542b2167ad8007135ed5012_623f3026581deec907ba8978_Product.jpeg" alt="Adobe Sign x Notarize.com" style="width:100%;height:110px;object-fit:cover;border-radius:6px;">
+              <div class="card-title body-M" style="margin-top:.4rem">Integrate Notarize.com with Adobe Sign</div>
+              <div class="card-sub body-S" style="margin-top:.2rem;line-height:1.25;">Enable remote online notarization in Adobe Sign workflows so users can complete signed and notarized documents in one flow. <a class="read-more-link body-S" href="https://www.notarize.com/blog/notarize-brings-remote-online-notarization-to-adobe-sign" target="_blank">Read more</a></div>
+            </div>
           </div>
-          <div class="m-abt-recent-multi space">
-            <a class="heading-S item">Experience designer</a>
-            <a class="body-M item">Kohl's Inc.,digital center</a>
-            <a class="body-M item">Aug, 2016 - April, 2019</a>
-          </div>
-          <div class="m-abt-recent-multi">
-            <a class="heading-S item">Design intern</a>
-            <a class="body-M item">Kohl’s Inc., Headquarter</a>
-            <a class="body-M item">2015 Summer</a>
-          </div>
-        </div>
-        <div class="m-abt-recent">
-          <a class="heading-M space">Education</a>
-          <div class="m-abt-recent-multi space">
-            <a class="heading-S item">M.S. Human Computer Interaction (HCI/d)</a>
-            <a class="body-M item">Indiana University</a>
-            <a class="body-M item">2014-2016</a>
-          </div>
-          <div class="m-abt-recent-multi">
-            <a class="heading-S item">B.A.Journalism</a>
-            <a class="body-M item">Nanchang University</a>
-            <a class="body-M item">2009-2013</a>
           </div>
         </div>
         <!--End of about-intro for mobile-->

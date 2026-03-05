@@ -18,12 +18,12 @@ font-size: 1.125rem;
 font-size: 1.5625rem;
 }
 .body-XXXL-Serif {
-font-family: PT Sans;
+font-family: var(--font-sans);
 font-size: 1.5625rem;
 }
 .body-S-Serif {
     font-size: 1.5rem;
-    font-family: PT sans;
+    font-family: var(--font-sans);
     font-weight: 500;
 }
 .heading-XS {
@@ -45,12 +45,12 @@ font-weight: 600;
 .heading-L-serif {
     font-size: 1.75rem;
     font-weight: 600;
-    font-family: PT Sans;
+    font-family: var(--font-sans);
 }
 .heading-XL {
     font-size: 2.25rem ;
     font-weight: 600;
-    font-family: PT Sans;
+    font-family: var(--font-sans);
 }
 .heading-XXL {
     font-size: 2.8125rem ;
@@ -60,25 +60,25 @@ font-weight: 600;
     text-align:right;
 }
 .gray-60 {
-    color: #f9f9f9;
+    color: var(--color-gray-950);
 }
 .gray-300 {
-color: #9d9d9d;
+color: var(--color-gray-300);
 }
 .gray-500 {
-color: #676767;
+color: var(--color-muted);
 }
 .gray-700 {
-    color: #3E3E3E;
+    color: var(--color-text-strong);
 }
 .gray-900 {
-    color: #232323;
+    color: var(--color-heading);
 }
 .blue-600 {
-    color: #262FE7;
+    color: var(--color-accent-blue);
 }
 .purple-600 {
-    color: #594DCD;
+    color: var(--color-accent-purple);
 }
 a {
     text-decoration: none;
@@ -107,7 +107,7 @@ text-align: center;
 }
 
 .gold {
-color: #B2824F
+color: var(--color-accent-gold)
 }
 /* End of universal styles*/
 
@@ -115,7 +115,7 @@ color: #B2824F
 .nav {
     padding: 1rem 5rem;
     width: calc(100% - 10rem);
-    background-color: #ffffff;
+    background-color: var(--color-white);
     position: fixed;
     z-index: 10;
     display: flex;
@@ -131,7 +131,7 @@ color: #B2824F
 .nav > .nav-header > .nav-title {
     display: inline-block;
     font-size: 1.375rem;
-    color: #232323;
+    color: var(--color-heading);
     padding: 10px 10px 10px 10px;
 }
 
@@ -151,18 +151,18 @@ color: #B2824F
     display: inline-block;
     padding: 0.25rem 0.5rem;
     text-decoration: none;
-    color: #232323;
+    color: var(--color-heading);
     margin: auto;
 }
 
 .nav > .nav-links > a:hover {
-    color: #000000;
-    background-color:#FFDE8B;
+    color: var(--color-black);
+    background-color:var(--color-accent-yellow);
     border-radius: 2px;
 }
 
 .nav > .nav-links > .highlight {
-    box-shadow:0px -1.25rem 0px 0px #FFDE8B inset;
+    box-shadow:0px -1.25rem 0px 0px var(--color-accent-yellow) inset;
 }
 
 .nav > #nav-check {
@@ -180,7 +180,7 @@ color: #B2824F
         padding: 1.5rem 1rem 1rem 1rem;
     }
     .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-        background-color: #ffffff;
+        background-color: var(--color-white);
     }
     .nav > .nav-btn > label > span {
         display: block;
@@ -189,7 +189,7 @@ color: #B2824F
         margin-bottom: 5px;
         position: relative;
 
-        background: #232323;
+        background: var(--color-heading);
         border-radius: 3px;
 
         z-index: 1;
@@ -211,13 +211,13 @@ color: #B2824F
 
     .nav > #nav-check:checked ~ .nav-btn > label > span {
         transform: rotate(-45deg) translate(0px, -1px);
-        background: #232323;
+        background: var(--color-heading);
     }
 
     .nav > #nav-check:checked ~ .nav-btn > label > span:nth-last-child(3) {
         opacity: 1;
         transform: rotate(45deg) translate(0px, -4px);
-        background: #232323;
+        background: var(--color-heading);
     }
 
     .nav > #nav-check:checked ~ .nav-btn > label > span:nth-last-child(2) {
@@ -229,7 +229,7 @@ color: #B2824F
         position: absolute;
         display: block;
         width: 100%;
-        background-color: #ffffff;
+        background-color: var(--color-white);
         height: 0px;
         transition: all 0.3s ease-in;
         overflow-y: hidden;
@@ -243,7 +243,7 @@ color: #B2824F
         font-weight: 500;
         padding: 1rem 0;
         width: 90%;
-        border-bottom: 0.1rem solid #E4E4E4;
+        border-bottom: 0.1rem solid var(--color-gray-800);
     }
     .nav > .nav-links > a:last-child {
         border-bottom: none;
@@ -267,7 +267,7 @@ color: #B2824F
 /* Start of footer style*/
 
 .background-gray60 {
-    background-color: #f9f9f9;
+    background-color: var(--color-gray-950);
 }
 
 .card {
