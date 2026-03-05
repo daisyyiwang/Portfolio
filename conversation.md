@@ -131,3 +131,27 @@
 **User:** publish this change to the url and sync the updates
 
 **Assistant:** Committed all portfolio updates on branch `2023-update` (`4361a80`) and attempted to push to `origin`, but push failed due to local GitHub authentication (`fatal: could not read Username for 'https://github.com': Device not configured`).
+
+**User:** Add a black filled button style for More about me, with white label, use variant
+
+**Assistant:** Added reusable button variant classes in `resources/css/style.css` (`.btn`, `.btn--filled-black`) and applied them to `More about me` links in `index.html` and `unlock.html` for a black filled button with white label.
+
+**User:** the button should hug the content with 16px paddng and the label should use regular font weight, left aligned, with a radius of 24 px
+
+**Assistant:** Updated `.btn` in `resources/css/style.css` to `padding: 16px`, `font-weight: 400`, `justify-content: flex-start`, and `border-radius: 24px` so the button hugs content with the requested alignment and shape.
+
+**User:** try radius of 40 px, and it should not take the full width of the web page, only hug the label content with 16px padding on left and right
+
+**Assistant:** Updated `.btn` in `resources/css/style.css` to `border-radius: 40px`, `width: fit-content`, and `padding: 12px 16px` so it hugs label content with 16px horizontal padding and does not span full width.
+
+**User:** Try font size of 20px, use variable
+
+**Assistant:** Added `--font-size-button-label: 20px` in `resources/css/site.css` and applied it in `resources/css/style.css` with `font-size: var(--font-size-button-label);` for `.btn`.
+
+**User:** increase the padding between the more about me button and intro content, add 8px, use variant
+
+**Assistant:** Added `--space-intro-button-gap: 8px` in `resources/css/site.css`, created `.btn--intro` variant in `resources/css/style.css` with `margin-top: var(--space-intro-button-gap);`, and applied it to `More about me` buttons in `index.html` and `unlock.html`.
+
+**User:** try 16px label font instead
+
+**Assistant:** Updated `--font-size-button-label` to `16px` in `resources/css/site.css` so button label size changes via variable.

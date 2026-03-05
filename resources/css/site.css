@@ -5,6 +5,8 @@
   --font-sans: "PT Sans", sans-serif;
   --font-serif: "PT Serif", serif;
   --font-size-intro-body: 20px;
+  --font-size-button-label: 16px;
+  --space-intro-button-gap: 8px;
 
   --color-text: #2f2f2f;
   --color-heading: #232323;
