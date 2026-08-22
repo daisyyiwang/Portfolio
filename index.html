@@ -84,7 +84,7 @@
                 <line x1="10" y1="14" x2="21" y2="3"/>
               </svg>
             </div>
-            <p class="body-XL">A fun design journey by leading design across Acrobat and Express, navigating ambiguity and cross functional complexity to make AI powered creative tools accessible for business professionals.</p>
+            <p class="body-XL">A wild ride leading design for Acrobat × Express, navigating change, uncertainty, and AI chaos to make powerful design tools approachable for business pros.</p>
           </div>
 
           <div class="content-right">
@@ -208,5 +208,31 @@
         <p>&copy; 2026 Designed &amp; Coded with ❤️ by Daisy Yi Wang, All Rights Reserved.</p>
       </div>
       </div>
+
+    <!-- Podcast intro floating button -->
+    <div class="podcast-widget" style="display:none;">
+      <div id="podcast-panel" class="podcast-panel" hidden>
+        <p class="heading-XS" style="margin-bottom:.5rem;">2-min intro</p>
+        <audio id="podcast-audio" controls preload="none" style="width:100%;display:block;">
+          <source src="./resources/audio/daisy-intro.m4a" type="audio/mp4">
+          <source src="./resources/audio/daisy-intro.wav" type="audio/wav">
+          Your browser doesn't support inline audio. <a href="./resources/audio/daisy-intro.wav">Download the audio</a>.
+        </audio>
+        <details class="podcast-transcript">
+          <summary class="body-S">View transcript</summary>
+          <p class="body-S">Hi, I'm Daisy Wang, a product designer based in the San Francisco Bay Area with over nine years of experience designing both consumer and enterprise products.</p>
+          <p class="body-S">I currently work at Adobe, where I lead UX for AI-powered creation tools — like Firefly image generation and editing — built into everyday workflows for Acrobat's business users. I'm especially energized by designing with AI right now, and by how closely design and engineering can move together as these tools keep evolving.</p>
+          <p class="body-S">Alongside that, I've led design for complex enterprise systems: Adobe Sign integrations with Microsoft Dynamics 365 and SharePoint, licensing and permissions across Adobe's Admin Console, and Microsoft Purview Information Protection labeling workflows — serving large enterprise customers across education, financial services, construction, and healthcare.</p>
+          <p class="body-S">Before Adobe, I spent several years at Kohl's, designing associate-facing devices and in-store systems — everything from truck unloading to inventory counting to point-of-sale — across stores nationwide. I also led zero-to-one eCommerce design for Kohl's.com, and built Kohl's first design system to help a growing design team scale across offices.</p>
+          <p class="body-S">Across all of this, a few things stay consistent in how I work: I'm grounded in data, driven by results, and deeply inspired by human insights. I care about accessibility — connecting product design with the codebase to build inclusive experiences from spec through shipped code. And I love working close to engineering, especially now, using AI tools throughout my own process — from research synthesis to rapid prototyping.</p>
+          <p class="body-S">Thanks for taking a moment to learn a bit about me — feel free to explore my work below, or reach out anytime.</p>
+        </details>
+      </div>
+      <button type="button" id="podcast-toggle" class="podcast-fab" aria-expanded="false" aria-controls="podcast-panel" aria-label="Play 2 minute audio introduction">
+        <span class="podcast-ring" aria-hidden="true"></span>
+        <i class="fas fa-headphones" aria-hidden="true"></i>
+      </button>
+    </div>
+    <script src="./resources/js/podcast-widget.js" defer></script>
 </body>
 </html>
