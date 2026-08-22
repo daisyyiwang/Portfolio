@@ -162,6 +162,14 @@ img:hover {
 
 .blue-600l {
   color: var(--color-accent-blue-dark);
+  text-decoration: underline;
+}
+
+/* Inline keyword-highlight links used across project pages (e.g.
+   "online shopping and ship to store") -- give text links a visible
+   underline instead of looking like plain body text. */
+.link {
+  text-decoration: underline;
 }
 
 /* mpip's two side-by-side design images: bigger on desktop (.leftright

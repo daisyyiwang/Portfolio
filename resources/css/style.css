@@ -124,6 +124,40 @@ padding-bottom: 0.5rem;
   }
 /* End of Whatamesh gradient CSS*/
 
+.daisy-character {
+  position: absolute;
+  right: 3rem;
+  bottom: 0;
+  width: 22rem;
+  max-width: 26%;
+  height: auto;
+  z-index: 0;
+  transform: scaleX(-1);
+  transition: transform 0.3s ease;
+}
+
+.daisy-character:hover {
+  transform: scaleX(-1) scale(1.08);
+  box-shadow: none;
+  position: absolute;
+}
+
+@media only screen and (max-width: 1024px) {
+  .daisy-character {
+    width: 16rem;
+    max-width: 34%;
+    right: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .daisy-character {
+    width: 10rem;
+    max-width: 42%;
+    right: 1rem;
+  }
+}
+
 /*End of desktop for title and intro section*/
 
 /*mobile for work section*/
