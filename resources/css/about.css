@@ -396,3 +396,16 @@ html {
       border-bottom: 1px solid var(--color-gray-800);
     }
   }
+
+.card-emoji {
+  display: inline-block;
+}
+.abt-fact-card:hover .card-emoji {
+  animation: card-emoji-wiggle 0.4s ease;
+}
+@keyframes card-emoji-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  50% { transform: rotate(12deg); }
+  75% { transform: rotate(-8deg); }
+}
