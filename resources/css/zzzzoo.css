@@ -41,7 +41,7 @@ h2 {
 }
 /*introduction card*/
 .max-width-border {
-  box-shadow: -2px 2px 4px 0 rgba(205,205,205,0.50), 3px 2px 8px 0 rgba(231,231,231,0.50);
+  box-shadow: none;
 }
 .sc-intro {
   display: flex;
@@ -730,7 +730,7 @@ a {
 
 /*Contact section*/
 .footer-parent {
-  background-color: var(--color-heading);
+  background-color: var(--color-footer-bg);
   background-image: url(../images/footer-bg.png);
 }
 
@@ -739,7 +739,7 @@ a {
 }
 
 .footer2 p {
-  color: var(--color-gray-600);
+  color: var(--color-footer-text);
   font-family: var(--font-sans);
   text-align: center;
   padding: 1.5rem 0;
@@ -828,7 +828,7 @@ a {
 }
 
 .leftright video {
-  box-shadow: -2px 2px 4px 0 rgba(205,205,205,0.50), 3px 2px 8px 0 rgba(231,231,231,0.50);
+  box-shadow: var(--shadow-card);
 }
 
 /*smartphones for landscape and portrait for genric left and right walkthrough section*/
@@ -930,7 +930,7 @@ a {
 .tab {
   overflow: hidden;
   border: none;
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
 }
 
 .tab button {

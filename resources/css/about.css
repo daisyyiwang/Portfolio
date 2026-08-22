@@ -101,7 +101,7 @@ html {
       padding: 1.5rem 1rem 1rem 1rem;
     }
     .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      background-color: var(--color-white);
+      background-color: var(--color-surface);
     }
     .nav > .nav-btn > label > span {
       display: block;
@@ -165,7 +165,7 @@ html {
       position: absolute;
       display: block;
       width: 100%;
-      background-color: var(--color-white);
+      background-color: var(--color-surface);
       height: 0px;
       transition: all 0.3s ease-in;
       overflow-y: hidden;
@@ -195,7 +195,7 @@ html {
       height: 160px;
       padding: 0.5rem 0;
       overflow-y: auto;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+      box-shadow: var(--shadow-subtle);
     }
   }
   /* End of Navigation */
@@ -218,7 +218,7 @@ html {
       margin-top: 0;
       padding: 5rem;
       text-align: center;
-      background-color: var(--color-heading);
+      background-color: var(--color-footer-bg);
       background-image: url(../images/footer-bg.png);
       width: 100%;
   }

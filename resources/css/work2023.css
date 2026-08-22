@@ -63,7 +63,7 @@ p {
 /*introduction card*/
 /*smartphones for title and intro section*/
 .max-width-border {
-  box-shadow: -2px 2px 4px 0 rgba(205,205,205,0.50), 3px 2px 8px 0 rgba(231,231,231,0.50);
+  box-shadow: none;
 }
 .sc-intro {
   display: flex;
@@ -603,7 +603,7 @@ p {
   .tab {
     overflow: hidden;
     border: none;
-    background-color: var(--color-white);
+    background-color: var(--color-surface);
   }
   
   .tab button {

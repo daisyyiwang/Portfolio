@@ -48,6 +48,7 @@
   --color-accent-blue-faint: #d7e7fd;
   --color-accent-blue: #262fe7;
   --color-accent-blue-2: #1d9af6;
+  --color-accent-blue-dark: #14229e;
   --color-accent-indigo: #5e5ef0;
   --color-accent-purple: #594dcd;
   --color-accent-purple-soft: #e1ddfc;
@@ -63,8 +64,19 @@
   --color-cream-4: #e3cfb2;
   --color-mint: #f4f9f9;
   --color-beige: #e7e0d3;
+  --color-warm-grey: #d9d2c8;
+  --color-warm-grey-deep: #b7ac9e;
+  --color-hero-light: #fefaf3;
+
+  --color-footer-bg: #232323;
+  --color-footer-text: #e1e1e1;
+  --color-text-on-accent: #2f2f2f;
 
   --shadow-button-elevated: 0 6px 14px rgba(0, 0, 0, 0.12);
+  --shadow-card: -2px 2px 4px 0 rgba(205,205,205,0.50), 3px 2px 8px 0 rgba(231,231,231,0.50);
+  --shadow-card-hover: -2px 2px 40px 0 rgba(205,205,205,0.50), 3px 2px 160px 0 rgba(231,231,231,0.50);
+  --shadow-nav: 3px 2px 8px 0 rgba(231,231,231,0.50);
+  --shadow-subtle: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
 }
 
 html {
@@ -74,11 +86,67 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-text);
+  background-color: var(--color-surface);
 }
 
 a {
   color: inherit;
 }
+
+/* Site-wide image hover microinteraction: a slight zoom + lifted shadow.
+   The nav logo is excluded -- scaling a fixed-position logo on hover
+   reads as a glitch rather than a nice touch. */
+img {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+img:hover {
+  transform: scale(1.045);
+  box-shadow: var(--shadow-card-hover);
+  position: relative;
+  z-index: 2;
+}
+
+.nav-title img:hover {
+  transform: none;
+  box-shadow: none;
+  position: static;
+}
+
+/* Homepage project-card images (.work cards + the "More projects"
+   rows) opt out of the site-wide hover zoom/shadow -- these classes
+   only exist on index.html. */
+.work img:hover,
+.morework-card img:hover,
+.m-morework-card img:hover {
+  transform: none;
+  box-shadow: none;
+  position: static;
+}
+
+/* Project-page cover images (mobile + desktop copies, every project
+   page) opt out of the site-wide hover zoom/shadow. */
+.mobile-intro img:hover,
+.mobile-cover img:hover,
+#cover-image img:hover {
+  transform: none;
+  box-shadow: none;
+  position: static;
+}
+
+/* Opt a specific image out of the site-wide hover zoom/shadow. */
+.no-hover-zoom:hover {
+  transform: none;
+  box-shadow: none;
+  position: static;
+}
+
+/* Project-page hero bands (cover image + title intro section). */
+.hero-assoc, .hero-boss, .hero-inventory, .hero-rewards, .hero-selfcheckout {
+  background-color: var(--color-hero-light);
+}
+.hero-mpip02 { background-color: var(--color-accent-blue-soft); }
+.hero-sit02 { background-color: var(--color-accent-purple-mid); }
 
 .gray-500 {
   color: var(--color-muted);
@@ -91,3 +159,82 @@ a {
 .blue-600 {
   color: var(--color-accent-blue);
 }
+
+.blue-600l {
+  color: var(--color-accent-blue-dark);
+}
+
+/* mpip's two side-by-side design images: bigger on desktop (.leftright
+   is a row there), smaller once .leftright stacks to a column on
+   narrower/vertical screens. */
+.mpip-side-img {
+  max-width: 95%;
+}
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .mpip-side-img {
+    max-width: 55%;
+  }
+}
+
+/* "Respect established user behavior" row: widen the row itself (a
+   modest breakout, same technique as .mpip-last-img) so there's room
+   to roughly double the image and still fit the title on one line. */
+@media only screen and (min-width: 1024px) {
+  .mpip-respect-row {
+    max-width: calc(100% + 10rem);
+    margin-left: -5rem;
+    margin-right: -5rem;
+  }
+  .mpip-respect-img {
+    flex-shrink: 0;
+    max-width: none;
+  }
+  .mpip-respect-img img {
+    width: 27rem;
+    max-width: none;
+  }
+  .mpip-respect-title {
+    white-space: nowrap;
+  }
+}
+
+/* sit02 SSO image: ~1.6x bigger, with a modest row breakout so it has
+   room without crowding the text column. Desktop only. */
+@media only screen and (min-width: 1024px) {
+  .sit-sso-row {
+    max-width: calc(100% + 10rem);
+    margin-left: -5rem;
+    margin-right: -5rem;
+  }
+  .sit-sso-img {
+    flex-shrink: 0;
+    max-width: none;
+  }
+  .sit-sso-img img {
+    width: 32rem;
+    max-width: none;
+  }
+}
+
+/* "Next project" band (shared across every project page): darker,
+   smaller text. */
+.background-gray60 .heading-XS {
+  color: var(--color-heading);
+  font-size: 0.875rem;
+}
+.background-gray60 .heading-L-serif {
+  color: var(--color-heading);
+  font-size: 1.5rem;
+}
+
+/* mpip's last two images: bigger on horizontal/desktop display, a
+   modest breakout past the max-width-box column (not a full-viewport
+   bleed). Unchanged on narrower/vertical screens. */
+@media only screen and (min-width: 1024px) {
+  .mpip-last-img {
+    max-width: calc(100% + 8rem);
+    margin-left: -4rem;
+    margin-right: -4rem;
+  }
+}
+
