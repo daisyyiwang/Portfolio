@@ -223,6 +223,19 @@ padding-bottom: 0.5rem;
   height: auto;
   display: flex;
 }
+
+/* The Acrobat x Express cover art is a square (1:1) asset, unlike the
+   other cards' wide (652x396) covers -- crop it to the same aspect
+   ratio so its rendered height matches the rest of the row. */
+.card-cover-square {
+  aspect-ratio: 652 / 396;
+  overflow: hidden;
+}
+.card-cover-square img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .btn-primary {
   border-radius:1.25rem;
   background-color:var(--color-accent-indigo);

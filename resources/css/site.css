@@ -117,12 +117,18 @@ img:hover {
 }
 
 /* Homepage project-card images (.work cards + the "More projects"
-   rows) opt out of the site-wide hover zoom/shadow -- these classes
-   only exist on index.html. */
+   rows) get a zoom-only hover (no shadow, no lift) instead of the
+   site-wide zoom+shadow effect -- these classes only exist on
+   index.html. */
+.work img,
+.morework-card img,
+.m-morework-card img {
+  transition: transform 0.25s ease;
+}
 .work img:hover,
 .morework-card img:hover,
 .m-morework-card img:hover {
-  transform: none;
+  transform: scale(1.06);
   box-shadow: none;
   position: static;
 }
