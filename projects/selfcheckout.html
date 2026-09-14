@@ -65,6 +65,7 @@
             <div id="project-tag-group">
               <span class="tag-orange">B2C</span>
               <span class="tag-gray">payment</span>
+              <span class="tag-blue">Physical + digital</span>
             </div>
           </div>
           <div class="image-container" id="cover-image">
@@ -95,9 +96,15 @@
       <h2 class="heading-L gray-700">My Role &amp My Team</h2>
       <p class="body-M">Creating this in-store checkout experience was very rewarding and fruitful.
       As the lead experience designer, I worked very closely with customer research,
-      product manager and project planning team. Together we collaboared with a cross-
+      product manager and project planning team. Together we collaborated with a cross-
       functional team of engineer, store operations, business, loss and prevention, etc
       to craft this experience from ideation to implementation.</p>
+      <p class="body-M">This project pushed my practice beyond screens. Self-checkout isn't a
+      single app — it's a monitor, a scanner, a payment terminal, security tags,
+      coupons and physical merchandise all working together in the same few square
+      feet. A big part of my role was orchestrating that whole room: designing how
+      the digital flow on screen connects to the physical hardware and store
+      operations around it, not just what happens inside the UI.</p>
     </div>
 
       <!-- password protection
@@ -236,9 +243,48 @@
             <div class="image-container" id="principle">
               <img src="../resources/images/sc-signinfinal02.svg" alt="final design image cont." />
             </div>
-            <p class="heading-S padding-bottom-1rem">This is how we setup the lab using the same cashier checkout
-              system and an eye-tracking device to learn how our customers
-              interact with the design proposals.</p>
+            <!-- physical prototype section -->
+            <div class="list-style padding-top-bottom-1">
+              <div id="rectangle"></div>
+              <h4>Prototyping beyond the screen</h4>
+            </div>
+            <p class="body-M padding-top-bottom-1">A clickable screen prototype couldn't tell us how self-checkout
+              would actually feel on the sales floor. So instead of testing the flow
+              in isolation, I worked with engineering to rebuild it on real hardware:
+              <span class="ph" data-scroll-class="paragraph-highlight">the same
+              cashier checkout system and monitor already running in Kohl's stores,</span>
+              set up in our research lab alongside an eye-tracking rig. Customers
+              checked out with real merchandise on real hardware, not a laptop screen.</p>
+            <p class="body-M padding-top-bottom-4">That physical setup mattered because most of the hardest questions
+              in this project weren't UI questions, they were room questions:
+              <span class="ph" data-scroll-class="paragraph-highlight">where a
+              customer's attention goes, what they touch first, and how the screen
+              needs to hand off to a tag reader, a locker or a person.</span> Treating
+              the monitor, scanner, payment terminal and physical props as one
+              connected system — instead of designing the screen and hoping the room
+              would cooperate — is what let us test and iterate on department-store
+              questions a grocery self-checkout never has to answer, like:</p>
+            <p class="body-M padding-top-bottom-1">
+              <span class="bold">Clothing racks &amp; security tags</span> — apparel
+              needs its security tag deactivated at checkout, which a grocery scanner
+              was never built for. We used the lab to test where a tag-deactivation
+              pad should physically sit next to the monitor, and how the screen should
+              prompt customers to bring the garment to it without breaking their
+              scanning rhythm.
+              <br/>
+              <span class="bold">When to ask for coupons</span> — as covered above,
+              watching customers move through the physical flow (scan first, look at
+              the screen second) is what told us coupons needed to be surfaced right
+              before payment, not upfront. That's a timing call I could only really
+              validate with real hardware and real shopping behavior, not a clickable
+              mockup.
+              <br/>
+              <span class="bold">Lockers for secured tech</span> — self-checkout can't
+              unlock a case. Rather than design around that gap, I worked with store
+              associates to align on the right scope: the tech department would keep
+              its own checkout workflow and security-tag removal process, and stay out
+              of self-checkout entirely for this MVP.
+            </p>
             <div class="image-container" id="principle">
               <img src="../resources/images/sc-testphoto.svg" alt="testing room image" />
             </div>
