@@ -1,0 +1,15 @@
+---
+import Figure from './Figure.astro';
+interface Props {
+  before: { src: string; alt: string };
+  after: { src: string; alt: string };
+  // Break out of the text column (default) or stay within it.
+  wide?: boolean;
+  labels?: [string, string];
+}
+const { before, after, wide = true, labels = ['Before', 'After'] } = Astro.props;
+---
+<div class:list={['c-compare', { 'c-figure--wide': wide }]}>
+  <Figure src={before.src} alt={before.alt} caption={labels[0]} />
+  <Figure src={after.src} alt={after.alt} caption={labels[1]} />
+</div>

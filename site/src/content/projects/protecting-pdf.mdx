@@ -1,0 +1,86 @@
+---
+title: Protecting PDF across platforms
+company: Adobe Acrobat
+summary: Led design end to end across Acrobat services. 200+ new enterprise users in private release, with a potential of 60M+ seats.
+tags:
+  - { label: B2B, tone: yellow }
+  - { label: Data security, tone: pink }
+cover: /images/mpip-cards.svg
+coverAlt: Acrobat sensitivity-label cards for Microsoft Purview Information Protection
+order: 2
+migrated: true
+meta:
+  role: Lead designer
+  launched: "2023"
+  audience: Enterprise customers
+link:
+  label: More at the Adobe blog
+  href: https://blog.adobe.com/en/publish/2023/05/08/introducing-microsoft-purview-information-protection-mpip-in-acrobat
+next: sign-for-teams
+---
+import Section from '../../components/case/Section.astro';
+import Figure from '../../components/case/Figure.astro';
+import Compare from '../../components/case/Compare.astro';
+import Quote from '../../components/case/Quote.astro';
+import Callout from '../../components/case/Callout.astro';
+
+PDF is the world's most popular business document format. It's also the most common file type stored in SharePoint and OneDrive — and in many cases, PDF files contain sensitive information. Partnering with Microsoft, this integrated experience brings the same classification, labeling and protection from Microsoft Office files to Acrobat. The experience was later nominated as "Security ISV of the Year" by Microsoft in 2023.
+
+<Section eyebrow="My role" title="Lead designer, end to end">
+  <p>I led the design from ideation and iteration to implementation, working with internal and external stakeholders across Acrobat desktop and mobile, in both the new and classic UX frameworks.</p>
+</Section>
+
+<Section eyebrow="Problem & use case" title="A security gap">
+  <p>As the most common file type stored in SharePoint and OneDrive, PDF was not covered by MPIP protection — leaving enterprise users with a broken workflow.</p>
+  <Quote emoji="😵‍💫">"My company has MPIP protection for my Word files, but I have to use another tool to make sure the encryptions are there with my PDFs."</Quote>
+</Section>
+
+<Section eyebrow="Business opportunity" title="MPIP has grown 60% year over year and commands 60 million+ seats.">
+  <Quote emoji="🚧">With 80% of PDFs opened outside of Acrobat, this is a strategic move for Acrobat to tap into Microsoft's knowledge workers.</Quote>
+  <Callout title="What's MPIP?">
+    <p>Microsoft Purview Information Protection (MPIP) is a Microsoft rights-management solution that enables rights-based access to assets, including PDF documents. <a href="https://www.microsoft.com/en-us/security/business/information-protection/microsoft-purview-information-protection" target="_blank" rel="noopener">Visit Microsoft Security for more details<span class="visually-hidden"> (opens in a new tab)</span></a>.</p>
+  </Callout>
+</Section>
+
+<Section eyebrow="Design touchpoints" title="Meet users where they are">
+  <p>After rounds of ideation with cross-partner teams, we decided to place the entry point for this experience under the Protect PDF tool — where Acrobat users already go for any data or file security needs.</p>
+  <Figure src="/images/mpip_design01b.svg" alt="The Protect PDF tool in Acrobat, with the new sensitivity-label option listed alongside existing protection options." />
+  <h3>Nested under an existing tool</h3>
+  <p>After signing in, entitled users can find the MPIP option alongside the other PDF protection options Acrobat offers.</p>
+  <p>Below are some examples of how this experience is supported across dark and light mode within Acrobat.</p>
+  <Figure src="/images/mpip_design02b.svg" alt="Sensitivity-label experience in Acrobat, example one, shown in dark and light mode." />
+  <Figure src="/images/mpip_design03b.svg" alt="Sensitivity-label experience in Acrobat, example two, shown in dark and light mode." />
+  <Figure narrow src="/images/mpip_design04.svg" alt="Sensitivity-label experience in Acrobat, example three." />
+  <h3>Respect established user behavior</h3>
+  <p>Most of our enterprise users were already familiar with the MPIP workflow in the Microsoft ecosystem, so within Acrobat we landed on an experience that feels familiar, yet refreshed for Acrobat users.</p>
+</Section>
+
+<Section eyebrow="Design walkthrough" title="A user-first mindset">
+  <p>When we audited the existing experience in Microsoft products and talked to Acrobat users, it felt outdated and permission-centric rather than user-driven. After working across teams to lay out the detailed workflows, I redesigned the experience to better suit Acrobat users, with a modern look and feel.</p>
+  <Compare wide={false}
+    before={{ src: '/images/mpip_design05.svg', alt: 'Original permission-centric labeling dialog.' }}
+    after={{ src: '/images/mpip_design06.svg', alt: 'Redesigned, user-driven labeling experience in Acrobat.' }}
+  />
+</Section>
+
+<Section eyebrow="Scalable solution" title="Tap across devices">
+  <p>To understand how this experience would carry over to smaller screens, I provided an experience framework and vision early on to start the conversation. We considered different use cases — a document's reader, commenter, owner and co-editor — and went through multiple rounds of iteration to make sure integration features were logically and visually separated from the native experience.</p>
+  <Figure src="/images/mpip_design07.svg" alt="Mobile designs for sensitivity labels across reader, commenter, owner and co-editor roles." />
+</Section>
+
+<Section eyebrow="Design localization" title="Accessible across viewers and languages">
+  <p>PDFs tend to be archived for a long time. One case we considered: when a label was auto-applied, or a viewer no longer supports the MPIP label, how might we help people get timely support and know what to do next?</p>
+  <p>To bridge this gap, I collaborated with the localization team and provided detailed specs for how the experience would be localized into multiple languages.</p>
+  <Figure src="/images/mpip_ilu01.svg" alt="Illustration of a person reading a protected document." caption="Illustration credit: tatianastulbo" />
+  <Figure wide src="/images/mpip_design08.svg" alt="Localized fallback messaging for unsupported labels, shown in several languages." />
+</Section>
+
+<Section eyebrow="Unique challenge" title="Dancing within the pace">
+  <p>How do you design and lead a good partnership experience? We started from a dated experience that had been out with enterprise customers for a while, and needed to work with different engineering and product teams across platforms. After rounds of iteration, the experience launched at Microsoft Ignite 2022 and has continued to improve since.</p>
+  <h3>Have a rationalized design POV</h3>
+  <p>Designing a partnership experience often means double the constraints: user expectations, feasibility and timelines from both products. It's important for the lead designer to hold a solid point of view grounded in our understanding of users and limitations. I really enjoyed collaborating with engineering, product, marketing and customer support — internally and externally — to build a clean experience for users.</p>
+  <h3>Outreach to the design community</h3>
+  <p>While I designed this project, our design team was also revamping the entire Acrobat experience. To keep this work scalable through that transition, I worked closely with multiple design teams so every touchpoint, component and workflow would scale in both the classic and modern frameworks.</p>
+  <h3>Raise the quality bar end to end</h3>
+  <p>The project started with a quick sync while the product team was still drafting roadmaps. As we went deeper, I brought in more stakeholders to align on the overall experience and release strategy. Across three release phases, I incorporated customer feedback so the end-to-end experience always reflected customers' needs.</p>
+</Section>

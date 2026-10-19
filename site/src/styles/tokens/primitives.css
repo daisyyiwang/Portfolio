@@ -1,0 +1,118 @@
+/*
+  Layer 1 — primitives.
+  Raw, theme-agnostic values. Components never read these directly;
+  theme files map them to semantic tokens (layer 2).
+*/
+:root {
+  /* Spacing (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* Layout */
+  --container: 76rem;
+  --container-narrow: 46rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --header-h: 4rem;
+
+  /* Fluid type scale */
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-md: 1.0625rem;
+  --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --text-xl: clamp(1.3125rem, 1.15rem + 0.8vw, 1.75rem);
+  --text-2xl: clamp(1.625rem, 1.3rem + 1.6vw, 2.5rem);
+  --text-3xl: clamp(2.125rem, 1.5rem + 3.2vw, 4rem);
+  --text-4xl: clamp(2.5rem, 1.5rem + 5.2vw, 6rem);
+
+  /* Font families */
+  --ff-system: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ff-system-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ff-fraunces: "Fraunces", Georgia, "Times New Roman", serif;
+  --ff-dm-sans: "DM Sans", system-ui, sans-serif;
+  --ff-caveat: "Caveat", "Comic Sans MS", cursive;
+  --ff-space-grotesk: "Space Grotesk", system-ui, sans-serif;
+  --ff-inter: "Inter", system-ui, sans-serif;
+  --ff-newsreader: "Newsreader", Georgia, "Times New Roman", serif;
+  --ff-instrument-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --ff-archivo: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --ff-inter-tight: "Inter Tight", "Inter", system-ui, sans-serif;
+  --ff-vt323: "VT323", ui-monospace, monospace;
+  --ff-bodoni: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --ff-jost: "Jost", "Futura", "Century Gothic", system-ui, sans-serif;
+  --ff-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Motion */
+  --dur-fast: 150ms;
+  --dur: 250ms;
+  --dur-slow: 500ms;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Stacking */
+  --z-header: 50;
+  --z-switcher: 60;
+
+  /* Palette — neutrals */
+  --gray-0: #ffffff;
+  --gray-50: #f5f5f7;
+  --gray-100: #e8e8ed;
+  --gray-200: #d2d2d7;
+  --gray-400: #86868b;
+  --gray-500: #6e6e73;
+  --gray-700: #424245;
+  --gray-800: #2c2c2e;
+  --gray-850: #1d1d1f;
+  --gray-900: #161617;
+  --gray-1000: #000000;
+
+  /* Palette — Apple-style blue */
+  --blue-400: #2997ff;
+  --blue-500: #0071e3;
+  --blue-600: #0066cc;
+
+  /* Palette — drawn from the Daisy character illustration */
+  --paper-50: #fffdf8;
+  --paper-100: #fbf3e8;
+  --paper-200: #f3e4d2;
+  --ink-900: #1f1a17;
+  --ink-800: #2a231f;
+  --ink-950: #171310;
+  --ink-600: #574c44;
+  --pink-200: #ffd3e4;
+  --pink-300: #ffa9cb;
+  --pink-400: #ff8fc0;
+  --pink-600: #c2185b;
+  --sky-200: #cfe3f6;
+  --sky-500: #3d85c6;
+  --sky-700: #1f5d96;
+  --sun-200: #ffe9a8;
+  --sun-400: #ffd25a;
+  --leaf-200: #cdf0cf;
+  --leaf-400: #8fd694;
+  --clay-200: #ffd9c7;
+  --lilac-200: #e4dcff;
+
+  /* Palette — metal */
+  --steel-0: #f7f8fa;
+  --steel-50: #eef0f3;
+  --steel-100: #e2e5e9;
+  --steel-200: #cdd2d8;
+  --steel-400: #8d96a1;
+  --steel-500: #5d6670;
+  --steel-600: #48505a;
+  --steel-800: #1a1d22;
+  --steel-850: #121418;
+  --steel-900: #0b0c0f;
+  --steel-950: #060708;
+  --volt-400: #d4ff3a;
+  --volt-500: #c2f000;
+  --volt-700: #3f5200;
+}

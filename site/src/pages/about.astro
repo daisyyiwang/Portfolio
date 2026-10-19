@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Button from '../components/Button.astro';
+import Icon from '../components/Icon.astro';
+import { about } from '../data/about';
+import { SITE } from '../config';
+import { sharpImg } from '../lib/imageSize';
+---
+<BaseLayout title="About" manifesto>
+  <div class="container">
+    <section class="c-about-hero" aria-labelledby="about-title">
+      <figure class="c-badge">
+        <span class="c-badge__lanyard" aria-hidden="true"></span>
+        <p class="c-badge__band" aria-hidden="true">{about.badge.org}</p>
+        <img class="c-about-hero__photo c-badge__photo" src={about.photo} alt="Portrait of Daisy smiling among redwood trees" width="250" height="250" />
+        <figcaption class="c-badge__text" aria-hidden="true">
+          <span class="c-badge__name">{about.badge.name}</span>
+          <span class="c-badge__role">{about.badge.role}</span>
+          <span class="c-badge__code"><span class="c-badge__bars"></span>{about.badge.id}</span>
+        </figcaption>
+      </figure>
+      <div class="c-about-hero__text">
+        <p class="eyebrow">About</p>
+        <h1 class="c-about-hero__title" id="about-title">{about.tagline}</h1>
+        <p class="c-about-hero__lead">{about.intro}</p>
+        <div class="c-hero__actions">
+          <Button href={SITE.resume} external icon="file">View resume</Button>
+          <Button href={`mailto:${SITE.email}`} variant="secondary">Say hello</Button>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-section" aria-labelledby="how-title">
+      <SectionHeading eyebrow="How I work" title="What I bring" id="how-title" />
+      <ul class="c-highlights">
+        {about.highlights.map((h) => (
+          <li>
+            <div class="c-highlight">
+              <span class="c-highlight__icon" aria-hidden="true">{h.icon}</span>
+              <h3>{h.title}</h3>
+              <p>{h.body}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="c-section" aria-labelledby="releases-title">
+      <SectionHeading eyebrow="Shipped" title="Recent product releases" id="releases-title" />
+      <ul class="c-grid c-grid--releases">
+        {about.releases.map((r, i) => (
+          <li>
+            <article class="c-card c-release">
+              <div class="c-card__body">
+                <h3 class="c-card__title">
+                  <a class="c-card__link" href={r.href} target="_blank" rel="noopener">
+                    {r.title}<span class="visually-hidden"> (opens in a new tab)</span>
+                    <Icon name="arrow-up-right" class="ext-icon" />
+                  </a>
+                </h3>
+                <p class="c-card__summary">{r.body}</p>
+              </div>
+              <div class="c-card__media">
+                <img src={r.image} alt="" loading="lazy" decoding="async" {...sharpImg(r.image)} />
+              </div>
+            </article>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</BaseLayout>

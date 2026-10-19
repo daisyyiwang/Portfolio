@@ -1,0 +1,117 @@
+---
+// A narrated recording with a caption. Click the poster (or the button) to play it full screen;
+// native controls stay available, including their own full-screen toggle.
+interface Props {
+  src: string;
+  poster: string;
+  title: string;
+  caption: string;
+  duration?: string;
+  width?: number;
+  height?: number;
+}
+const { src, poster, title, caption, duration, width = 1280, height = 712 } = Astro.props;
+---
+<figure class="c-figure c-vfeature" data-vfeature>
+  <div class="c-vfeature__frame">
+    <video src={src} poster={poster} width={width} height={height} controls playsinline preload="none" title={title}></video>
+    <button class="c-vfeature__play" type="button" data-vfeature-play>
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg>
+      <span>Play full screen{duration && <span class="c-vfeature__dur"> · {duration}</span>}</span>
+    </button>
+  </div>
+  <figcaption>{caption}</figcaption>
+</figure>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-vfeature]').forEach((fig) => {
+    const video = fig.querySelector('video')!;
+    const play = fig.querySelector<HTMLButtonElement>('[data-vfeature-play]')!;
+    // Hide native controls behind the poster button until playback starts (kept without JS).
+    video.controls = false;
+    fig.classList.add('is-ready');
+    const start = async () => {
+      fig.classList.add('is-started');
+      video.controls = true;
+      try {
+        const el = video as HTMLVideoElement & { webkitEnterFullscreen?: () => void };
+        if (el.requestFullscreen) await el.requestFullscreen();
+        else el.webkitEnterFullscreen?.();
+      } catch {
+        /* full screen refused: keep playing inline */
+      }
+      video.play().catch(() => {});
+      video.focus();
+    };
+    play.addEventListener('click', start);
+  });
+</script>
+
+<style>
+  .c-vfeature__frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--figure-radius, var(--radius-md));
+    background: #000;
+    box-shadow: 0 0 0 1px var(--color-border);
+  }
+
+  .c-vfeature video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1280 / 712;
+  }
+
+  .c-vfeature__play {
+    display: none;
+  }
+
+  .c-vfeature.is-ready .c-vfeature__play {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: var(--space-2);
+    border: 0;
+    background: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.35));
+    color: #fff;
+    font: inherit;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .c-vfeature__play svg {
+    box-sizing: content-box;
+    padding: 18px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+    box-shadow: 0 6px 24px rgb(0 0 0 / 0.3);
+    transition: transform var(--dur) var(--ease-out);
+  }
+
+  .c-vfeature__play > span {
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm);
+    background: rgb(0 0 0 / 0.55);
+  }
+
+  .c-vfeature__play:hover svg,
+  .c-vfeature__play:focus-visible svg {
+    transform: scale(1.08);
+  }
+
+  .c-vfeature__play:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: -3px;
+  }
+
+  .c-vfeature.is-ready.is-started .c-vfeature__play {
+    display: none;
+  }
+</style>

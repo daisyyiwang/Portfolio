@@ -1,0 +1,28 @@
+---
+import { sharpImg } from '../../lib/imageSize';
+interface Props {
+  src: string;
+  alt: string;
+  caption?: string;
+  wide?: boolean;
+  // Shrink the plate to the image instead of filling the column.
+  fit?: boolean;
+  // For a single dialog or small UI: keep it at a modest, readable size.
+  narrow?: boolean;
+  width?: number;
+  height?: number;
+}
+const { src, alt, caption, wide = false, fit = false, narrow = false } = Astro.props;
+// The cap goes on the plate so the frame hugs the image at its sharp size.
+const { style: sharpStyle, ...img } = sharpImg(src) as { style?: string; width?: number; height?: number };
+const sharpCap = sharpStyle?.match(/(\d+)px/)?.[1];
+const plateStyle = narrow
+  ? `max-width: min(100%, 30rem${sharpCap ? `, ${sharpCap}px` : ''})`
+  : sharpStyle;
+---
+<figure class:list={['c-figure', { 'c-figure--wide': wide, 'c-figure--fit': fit || narrow || Boolean(plateStyle), 'c-figure--narrow': narrow }]}>
+  <div class="c-figure__plate" style={plateStyle}>
+    <img src={src} alt={alt} loading="lazy" decoding="async" {...img} />
+  </div>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>

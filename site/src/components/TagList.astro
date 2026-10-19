@@ -1,0 +1,11 @@
+---
+interface Props {
+  tags: { label: string; tone: string }[];
+}
+const { tags } = Astro.props;
+---
+{tags.length > 0 && (
+  <ul class="c-tags" aria-label="Tags">
+    {tags.map((t) => <li class="c-tag" data-tone={t.tone}>{t.label}</li>)}
+  </ul>
+)}

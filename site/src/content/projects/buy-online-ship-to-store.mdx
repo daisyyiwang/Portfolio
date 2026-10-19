@@ -1,0 +1,103 @@
+---
+title: Buy online, ship to store
+company: Kohl's
+summary: Bridging the gap between online and in-store shopping across four channels.
+tags:
+  - { label: B2C, tone: orange }
+  - { label: eCommerce, tone: blue }
+  - { label: Logistics, tone: purple }
+cover: /images/BOSS2023-card.svg
+coverAlt: Buy online ship to store project cover
+order: 4
+migrated: true
+meta:
+  role: Experience designer
+  launched: Pilot, Aug 2018
+  audience: Shoppers across 4 channels
+next: self-checkout
+---
+import Section from '../../components/case/Section.astro';
+import Figure from '../../components/case/Figure.astro';
+import Compare from '../../components/case/Compare.astro';
+import Split from '../../components/case/Split.astro';
+import Quote from '../../components/case/Quote.astro';
+import ShipToStoreDemo from '../../components/case/ShipToStoreDemo.astro';
+import ShipOptions from '../../components/case/ShipOptions.astro';
+
+Kohl's introduced buy online, ship to store to improve shopping both online and in store. It was an omni-channel project spanning four channels: desktop, mobile browser, native app and tablet.
+
+<Section eyebrow="My role" title="Four verbs">
+  <p>I <strong>explored</strong> content strategies and wireframe concepts to translate this new service for every kind of customer, across channels.</p>
+  <p>I <strong>evaluated</strong> the touchpoints on the customer journey — when customers want to be informed, and in how much detail — with 5 channel designers and 2 product managers.</p>
+  <p>I <strong>examined</strong> whether the experience stayed consistent in store and online, balancing business goals with customer behavior.</p>
+  <p>I <strong>empowered</strong> product and engineering to ship the mobile experience smoothly for the pilot launch and beyond.</p>
+</Section>
+
+<Section eyebrow="Customer review" title="People think it is…">
+  <Quote emoji="🛍️">"Perfect solution to obtaining a blouse in my favourite color where my size wasn't available in store. Efficient and reasonably fast."</Quote>
+  <Quote emoji="📦">"I love it! It was quick, easy, and I was able to get my size even though it was not in stock at the local store."</Quote>
+  <Figure src="/images/boss-cover2.svg" alt="Final ship-to-store experience shown on desktop and mobile." />
+</Section>
+
+<Section eyebrow="Design opportunity" title="Bridge the gap between customers and business">
+  <Split src="/images/boss-kohlsfigure.svg" alt="Illustration representing the Kohl's business.">
+    <p class="c-split__quote">"We have lots of merchandise <strong>sitting in the shopping cart</strong> and never being checked out."</p>
+    <ul>
+      <li>Make more merchandise available to customers</li>
+      <li>Lower the distribution cost</li>
+      <li>Increase store traffic</li>
+    </ul>
+  </Split>
+  <Split reverse src="/images/boss-customerfigure.svg" alt="Illustration representing a Kohl's customer.">
+    <p class="c-split__quote">"I found a really nice pair of boots online the other day, but I don't want to order until I get <strong>free shipping</strong>."</p>
+    <ul>
+      <li>No need to worry about the shipping threshold</li>
+      <li>More choices at Kohl's</li>
+    </ul>
+  </Split>
+</Section>
+
+<Section eyebrow="Design touchpoints" title="Mapping out the customer journey">
+  <p>With the problem space and business value defined, we stepped back to look at the customer journey and find the key touchpoints during online shopping. The simplified map below shows why we started with three pages. Since this was an omni-channel solution, we designed for both desktop and mobile; I've picked three examples from across channels to show how I made design decisions.</p>
+  <Figure wide src="/images/boss-journeymap.svg" alt="Simplified customer journey map highlighting browsing, ordering and confirming as key touchpoints." />
+</Section>
+
+<Section eyebrow="Design walkthrough" title="First stop: browsing">
+  <p>The product matrix page is the first stop when customers consider buying from Kohl's. The goal was simple: <strong>make the service visible from the very beginning, so it can influence purchase decisions.</strong></p>
+  <Figure src="/images/boss-pmp.svg" alt="Product matrix page with ship-to-store availability shown on product tiles." />
+  <p>Mobile has the least room, so we first focused on fitting the experience into mobile. We explored rounds of designs and brought customers into the testing lab for feedback.</p>
+  <Figure src="/images/boss-currentdesign.svg" alt="The product matrix page before the change." caption="Before" />
+  <Figure src="/images/boss-pmpiterations.svg" alt="Mobile concept iterations tested with customers, with rationale for each." caption="Iterations" />
+  <Figure src="/images/boss-pmpfinal.svg" alt="Final mobile product matrix design." caption="Final design" />
+</Section>
+
+<Section eyebrow="Design walkthrough" title="Second stop: placing an order">
+  <p>The product details page helps customers decide to buy. Many Kohl's customers are older or less tech-savvy — something that's easy to overlook in Silicon Valley. Designing this page was a good exercise in empathy.</p>
+  <Figure src="/images/boss-pdp.svg" alt="Product details page showing ship-to-store as a delivery option." />
+  <p>Because of operational constraints, shipping options can't be shown until a size and color are selected. Instead of disabling "Add to Cart", we kept it always enabled and opened the size and color panel when needed. In testing, a disabled button made some customers think they'd done something wrong.</p>
+  <div class="c-split c-split--demo">
+    <ShipToStoreDemo label="Animated product page: tapping Add to Cart without a size opens the size panel; choosing X Small shows the delivery options, and the free store pickup option is selected." />
+    <div class="c-split__text">
+      <h3>Seamless interaction to purchase</h3>
+      <ul>
+        <li><strong>Show</strong> "ship to store" once color and size are selected</li>
+        <li><strong>Display</strong> options as radio buttons</li>
+        <li><strong>Keep</strong> the call to action always active</li>
+      </ul>
+    </div>
+  </div>
+  <p>The delivery card adapts to how precise the date can be:</p>
+  <ShipOptions />
+</Section>
+
+<Section eyebrow="Design walkthrough" title="Last stop: confirming">
+  <p>The order details page keeps the experience seamless end to end. Right after ordering, the most relevant details are available at a glance, ordered by what customers told us matters: where to pick up, when the store is open, and how long the store will hold the package.</p>
+  <Compare wide={false}
+    before={{ src: '/images/boss-orderbefore.svg', alt: 'Order details page before the redesign.' }}
+    after={{ src: '/images/boss-orderfinal.svg', alt: 'Redesigned order details page with pickup location, store hours and hold period up front.' }}
+  />
+</Section>
+
+<Section eyebrow="Design impact" title="Win-win for business and customers">
+  <Figure src="/images/boss-impact.svg" alt="Summary of the pilot's impact for the business and for customers." />
+</Section>

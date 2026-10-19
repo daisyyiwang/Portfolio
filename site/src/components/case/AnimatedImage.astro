@@ -1,0 +1,38 @@
+---
+// An animated image (e.g. a screen recording exported as WebP/GIF) that can be paused.
+// It shows a still poster under reduced motion until the visitor presses Play.
+import { sharpImg } from '../../lib/imageSize';
+interface Props {
+  src: string;
+  poster: string;
+  alt: string;
+  caption?: string;
+  wide?: boolean;
+}
+const { src, poster, alt, caption, wide = false } = Astro.props;
+const img = sharpImg(poster);
+---
+<figure class:list={['c-figure c-anim', { 'c-figure--wide': wide }]} data-anim>
+  <div class="c-figure__plate">
+    <img src={poster} data-src={src} data-poster={poster} alt={alt} loading="lazy" decoding="async" {...img} />
+  </div>
+  <figcaption>
+    <button class="c-anim__toggle" type="button" aria-pressed="false">Play animation</button>
+    {caption && <span>{caption}</span>}
+  </figcaption>
+</figure>
+
+<script>
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll<HTMLElement>('[data-anim]').forEach((fig) => {
+    const img = fig.querySelector('img')!;
+    const btn = fig.querySelector('button')!;
+    const set = (playing: boolean) => {
+      img.src = playing ? img.dataset.src! : img.dataset.poster!;
+      btn.textContent = playing ? 'Pause animation' : 'Play animation';
+      btn.setAttribute('aria-pressed', String(playing));
+    };
+    btn.addEventListener('click', () => set(btn.getAttribute('aria-pressed') !== 'true'));
+    if (!reduce) set(true);
+  });
+</script>

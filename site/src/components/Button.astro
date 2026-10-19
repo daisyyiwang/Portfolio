@@ -1,0 +1,19 @@
+---
+import Icon from './Icon.astro';
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary';
+  external?: boolean;
+  icon?: 'arrow-right' | 'arrow-up-right' | 'file' | 'lock';
+}
+const { href, variant = 'primary', external = false, icon } = Astro.props;
+---
+<a
+  class:list={['c-btn', `c-btn--${variant}`]}
+  href={href}
+  {...(external ? { target: '_blank', rel: 'noopener' } : {})}
+>
+  <slot />
+  {external && <span class="visually-hidden">(opens in a new tab)</span>}
+  {icon && <Icon name={icon} />}
+</a>

@@ -1,0 +1,128 @@
+---
+// The ship-to-store delivery card in its three date variations, rebuilt as text
+// (replaces a low-resolution image). Selected options are shown with a filled radio.
+const variants = [
+  {
+    title: 'One date',
+    options: [
+      { when: 'Today', note: 'Free', detail: 'Pickup at Rancho Santa Margarita 10.1mi', link: 'check other stores' },
+      { when: 'Tue, Nov 29', note: 'Free', detail: 'Pickup at Rancho Santa Margarita 10.1mi', link: 'check other stores', on: true },
+      { when: 'Thu, Dec 1', detail: 'Ship to me', link: 'Free w/$75 purchase', on: true },
+    ],
+  },
+  {
+    title: 'Date range',
+    options: [
+      { when: 'Today', note: 'Free', detail: 'Pickup at Rancho Santa Margarita 10.1mi', link: 'check other stores' },
+      { when: 'Tue, Nov 29 – Mon, Dec 4', note: 'Free', detail: 'Pickup at Rancho Santa Margarita 10.1mi', link: 'check other stores', on: true },
+      { when: 'Tue, Nov 29 – Mon, Dec 4', detail: 'Ship to me', link: 'Free w/$75 purchase', on: true },
+    ],
+  },
+  {
+    title: 'No date',
+    options: [
+      { when: 'Today', note: 'Free', detail: 'Pickup at Rancho Santa Margarita 10.1mi', link: 'check other stores' },
+      { when: 'Ship to Store', note: 'Free', detail: 'Pickup at Rancho Santa Margarita 10.1mi', link: 'check other stores', on: true },
+      { when: 'Ship to Me', link: 'Free w/$75 purchase', on: true },
+    ],
+  },
+];
+---
+<figure class="c-ship">
+  <div class="c-ship__grid">
+    {variants.map((v) => (
+      <div class="c-ship__card">
+        <h4 class="c-ship__title">{v.title}</h4>
+        <ul>
+          {v.options.map((o) => (
+            <li class:list={['c-ship__opt', { 'is-on': o.on }]}>
+              <span class="c-ship__radio" aria-hidden="true"></span>
+              <span>
+                <b>{o.when}</b>{o.note && <>{' '}{o.note}</>}
+                {o.detail && <><br />{o.detail}</>}
+                <br /><span class="c-ship__link">{o.link}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+  <figcaption>The ship-to-store card in three variations, depending on how precise the delivery date is</figcaption>
+</figure>
+
+<style>
+  .c-ship {
+    display: grid;
+    gap: var(--space-3);
+    margin-block: var(--space-4);
+  }
+
+  .c-ship__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+    gap: var(--space-4);
+  }
+
+  .c-ship__card {
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-top: 2px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+
+  .c-ship__title {
+    margin: 0 0 var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .c-ship ul {
+    display: grid;
+    gap: var(--space-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .c-ship__opt {
+    display: grid;
+    grid-template-columns: 1rem minmax(0, 1fr);
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    line-height: 1.4;
+    color: var(--color-text-muted);
+  }
+
+  .c-ship__opt b {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .c-ship__radio {
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.15em;
+    border: 1.5px solid var(--color-border-strong);
+    border-radius: 50%;
+  }
+
+  .c-ship__opt.is-on .c-ship__radio {
+    border-color: var(--color-accent);
+    background: radial-gradient(circle, var(--color-accent) 0 45%, transparent 50%);
+  }
+
+  .c-ship__link {
+    color: var(--color-accent-text);
+  }
+
+  .c-ship figcaption {
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+  }
+</style>

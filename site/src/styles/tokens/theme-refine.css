@@ -1,0 +1,591 @@
+/*
+  Option F — Refine.
+  Inspired by the mood of a retro-futurist corporate drama: sterile office
+  whites and green carpet by day, a phosphor CRT terminal by night, a field
+  of numbers that swell as you pass over them. Original artwork only.
+*/
+:root[data-style="refine"] {
+  /* Type */
+  --font-body: var(--ff-inter);
+  --font-display: var(--ff-inter-tight);
+  --font-mono: var(--ff-mono);
+  --font-accent: var(--ff-vt323);
+  --display-weight: 500;
+  --display-tracking: -0.025em;
+  --display-leading: 1.04;
+  --body-leading: 1.6;
+  --eyebrow-font: var(--ff-mono);
+  --eyebrow-size: var(--text-xs);
+  --eyebrow-transform: uppercase;
+  --eyebrow-tracking: 0.14em;
+
+  /* Shape — institutional, barely rounded */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+
+  /* Buttons */
+  --btn-radius: 3px;
+  --btn-font: var(--ff-inter-tight);
+  --btn-weight: 600;
+  --btn-transform: uppercase;
+  --btn-tracking: 0.1em;
+
+  /* Hero */
+  --hero-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  --hero-statement-size: clamp(2.25rem, 1.4rem + 3.6vw, 4.5rem);
+  --hero-statement-max: 15ch;
+  --hero-title-size: var(--text-lg);
+  --status-display: inline-flex;
+  --mdr-display: grid;
+
+  /* Cards — personnel files */
+  --grid-gap: var(--space-5);
+  --card-padding: clamp(1.25rem, 3vw, 2rem);
+  --card-index-display: block;
+  --card-title-size: var(--text-xl);
+  --card-media-radius: var(--radius-md);
+
+  /* Tags */
+  --tag-radius: 2px;
+  --tag-font: var(--ff-mono);
+  --tag-transform: uppercase;
+  --tag-tracking: 0.06em;
+
+  /* Figures & quotes */
+  --figure-radius: var(--radius-md);
+  --figure-pad: clamp(0.75rem, 2vw, 1.5rem);
+  --quote-radius: var(--radius-md);
+  --quote-font: var(--ff-inter-tight);
+  --about-photo-radius: var(--radius-lg);
+}
+
+/* Day: the office */
+:root[data-style="refine"][data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #eef0ec;
+  --color-bg-alt: #e4e8e3;
+  /* Raised boxes (cards, stats, quotes, diagrams) are a lighter shade of the page, not white. */
+  --color-surface: #f5f6f2;
+  --color-surface-alt: #e4e8e3;
+  --color-text: #10202a;
+  --color-text-muted: #4b5b62;
+  --color-border: #c7cfca;
+  --color-border-strong: #6c7a80;
+  --color-accent: #1f4d3a;
+  --color-on-accent: #f2f5f0;
+  --color-accent-text: #1f5e47;
+  --color-focus: #1f5e47;
+  --color-selection: #bfe3d2;
+  --color-error: #b3261e;
+  --eyebrow-color: var(--color-text-muted);
+  /* Drop-ceiling grid */
+  --page-texture:
+    linear-gradient(rgb(16 32 42 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(16 32 42 / 0.045) 1px, transparent 1px);
+  --page-texture-size: 120px 120px, 120px 120px;
+  --header-bg: rgb(238 240 236 / 0.9);
+  --header-blur: blur(10px);
+  --card-border-hover: #1f4d3a;
+  --card-media-bg: #e9ece7;
+  --tag-border: #9aa6a2;
+  --tag-fg: #33434a;
+  /* Images sit straight on the page; white in them blends into the page tone. */
+  --figure-bg: var(--color-bg);
+  --figure-border: 0;
+  --figure-pad: 0;
+  --quote-bg: var(--color-surface);
+  --quote-border: 1px solid #c7cfca;
+  --about-photo-bg: #e4e8e3;
+  --bezel: #dcd8cc;
+  --bezel-edge: #b8b3a5;
+  --plate-ink: #4f4b41;
+}
+
+/* Night: the terminal */
+:root[data-style="refine"][data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #03161a;
+  --color-bg-alt: #051d22;
+  --color-surface: #072227;
+  --color-surface-alt: #0a2c32;
+  --color-text: #c9f5ef;
+  --color-text-muted: #82b8b1;
+  --color-border: #15434a;
+  --color-border-strong: #2c6b73;
+  --color-accent: #7ff3e6;
+  --color-on-accent: #03161a;
+  --color-accent-text: #7ff3e6;
+  --color-focus: #7ff3e6;
+  --color-selection: #1d5a5c;
+  --color-error: #ff9d8f;
+  --eyebrow-color: var(--color-text-muted);
+  /* Scanlines + tube vignette */
+  --page-texture:
+    radial-gradient(ellipse 120% 80% at 50% 30%, transparent 55%, rgb(0 0 0 / 0.45)),
+    repeating-linear-gradient(to bottom, rgb(127 243 230 / 0.035) 0 1px, transparent 1px 3px);
+  --page-texture-size: 100% 100%, auto;
+  --header-bg: rgb(3 22 26 / 0.85);
+  --header-blur: blur(10px);
+  --card-border-hover: #7ff3e6;
+  --card-shadow-hover: 0 0 0 1px #7ff3e6, 0 0 28px rgb(127 243 230 / 0.18);
+  --card-media-bg: #e6ece9;
+  --tag-border: #2c6b73;
+  --tag-fg: #b4ece5;
+  /* At night, images keep a soft light panel: their dark text and line art need it. */
+  --figure-bg: #d9e3df;
+  --figure-border: 0;
+  --quote-bg: #072227;
+  --quote-border: 1px solid #15434a;
+  --about-photo-bg: #0a2c32;
+  --bezel: #a9a597;
+  --bezel-edge: #7d796c;
+  --plate-ink: #24221d;
+}
+
+/* Phosphor glow on headings at night */
+:root[data-style="refine"][data-theme="dark"] :is(h1, h2, h3, .c-hero__statement) {
+  text-shadow: 0 0 14px rgb(127 243 230 / 0.35);
+}
+
+:root[data-style="refine"] .c-hero__statement-rest {
+  text-shadow: none;
+}
+
+:root[data-style="refine"] .c-hero__statement em {
+  font-style: normal;
+  color: var(--color-accent-text);
+}
+
+:root[data-style="refine"][data-theme="light"] .c-hero__statement em {
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
+:root[data-style="refine"] .c-status {
+  font-family: var(--ff-mono);
+}
+
+/* Hero art: a beige CRT terminal running the number field */
+:root[data-style="refine"] .c-hero__art {
+  width: min(100%, 30rem);
+}
+
+:root[data-style="refine"] .c-hero__art img {
+  display: none;
+}
+
+/* Monitor stand */
+:root[data-style="refine"] .c-hero__art::after {
+  content: "";
+  display: block;
+  width: 34%;
+  height: 2.75rem;
+  margin: 2px auto 0;
+  background: linear-gradient(to bottom, var(--bezel-edge), var(--bezel) 30%, var(--bezel-edge));
+  clip-path: polygon(30% 0, 70% 0, 78% 72%, 100% 80%, 100% 100%, 0 100%, 0 80%, 22% 72%);
+}
+
+/* Maker's plate on the lower bezel */
+.c-mdr__plate {
+  display: none;
+}
+
+:root[data-style="refine"] .c-mdr__plate {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(2.75rem + 2px);
+  font-family: var(--ff-mono);
+  font-size: 0.5625rem;
+  line-height: 16px;
+  letter-spacing: 0.18em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--plate-ink);
+}
+
+:root[data-style="refine"] .c-mdr {
+  position: relative;
+  gap: var(--space-3);
+  padding: 1.25rem 1.25rem 1rem;
+  overflow: hidden;
+  border-radius: 28px / 24px;
+  background: radial-gradient(ellipse at 50% 45%, #0a3a42 0%, #031417 78%);
+  color: #8ff5ea;
+  font-family: var(--ff-vt323);
+  box-shadow:
+    inset 0 0 70px rgb(0 0 0 / 0.85),
+    0 0 0 14px var(--bezel),
+    0 0 0 16px var(--bezel-edge),
+    0 34px 60px rgb(0 0 0 / 0.28);
+  margin: 16px;
+}
+
+:root[data-style="refine"] .c-mdr::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgb(0 0 0 / 0.22) 0 1px, transparent 1px 3px);
+}
+
+.c-mdr__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 1ch;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgb(143 245 234 / 0.45);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+}
+
+.c-mdr__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  cursor: crosshair;
+}
+
+.c-mdr__grid span {
+  display: block;
+  text-align: center;
+  font-size: clamp(1.15rem, 0.8rem + 1.1vw, 1.65rem);
+  line-height: 1.45;
+  text-shadow: 0 0 6px rgb(143 245 234 / 0.65);
+  transform: scale(var(--s, 1));
+  transition: transform 160ms var(--ease-out);
+  animation: mdr-float 5s ease-in-out var(--d) infinite;
+}
+
+.c-mdr__grid span.odd {
+  animation: mdr-jitter 0.9s steps(2) var(--d) infinite;
+}
+
+.c-mdr__grid span.is-binned {
+  animation: mdr-bin 0.7s var(--ease-out) forwards;
+}
+
+@keyframes mdr-bin {
+  30% { translate: 0 -6px; opacity: 1; }
+  100% { translate: 0 140px; opacity: 0; scale: 0.4; }
+}
+
+/* Shown once every bin is full */
+.c-mdr__done {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  background: rgb(3 20 23 / 0.88);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 600ms var(--ease-out), visibility 600ms;
+}
+
+.c-mdr.is-complete .c-mdr__done {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes mdr-float {
+  50% { translate: 0 -3px; }
+}
+
+@keyframes mdr-jitter {
+  0%, 100% { translate: 0 0; }
+  25% { translate: 1px -1px; }
+  75% { translate: -1px 1px; }
+}
+
+.c-mdr__bins {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.5rem 0 0;
+  list-style: none;
+  border-top: 1px solid rgb(143 245 234 / 0.45);
+}
+
+.c-mdr__bins li {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.3rem 0.4rem;
+  border: 1px solid rgb(143 245 234 / 0.5);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.c-mdr__bins b {
+  height: 6px;
+  background: linear-gradient(to right, #8ff5ea var(--p), rgb(143 245 234 / 0.15) var(--p));
+}
+
+.c-mdr__bins small {
+  font-size: 0.9rem;
+}
+
+/* Cards read like personnel files */
+:root[data-style="refine"] .c-card {
+  border-top-width: 4px;
+  border-top-color: var(--color-accent);
+}
+
+:root[data-style="refine"] .c-card__index::before {
+  content: "FILE " / "";
+}
+
+:root[data-style="refine"] .c-card__index::after {
+  content: " — CLEARANCE: OPEN" / "";
+  color: var(--color-accent-text);
+}
+
+:root[data-style="refine"] .c-card--featured {
+  --card-areas: "body media";
+  --card-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  --card-title-size: var(--text-2xl);
+}
+
+:root[data-style="refine"] .c-highlight {
+  border-top: 4px solid var(--color-accent);
+}
+
+:root[data-style="refine"] .c-section__head .eyebrow::before {
+  content: "Dept. · " / "";
+}
+
+:root[data-style="refine"] .c-quote__text {
+  font-weight: 500;
+}
+
+:root[data-style="refine"] .c-footer__title::after {
+  content: " Please enjoy each project equally." / "";
+  display: block;
+  margin-top: var(--space-3);
+  font-family: var(--ff-mono);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  text-shadow: none;
+}
+
+/* Case studies read like files being refined */
+:root[data-style="refine"] {
+  --progress-display: block;
+}
+
+:root[data-style="refine"] .c-case-hero .eyebrow[data-file]::before {
+  content: "File " attr(data-file) " · " / "";
+  color: var(--color-accent-text);
+}
+
+/* About: the portrait becomes an employee ID badge on a lanyard */
+:root[data-style="refine"] .c-badge {
+  position: relative;
+  justify-self: center;
+  display: grid;
+  gap: var(--space-3);
+  width: min(100%, 17rem);
+  margin-top: var(--space-8);
+  padding: 0 var(--space-4) var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  box-shadow: 0 1px 0 var(--color-border), 0 24px 48px rgb(16 32 42 / 0.14);
+  rotate: -2deg;
+  transform-origin: 50% -4rem;
+  transition: rotate var(--dur-slow) var(--ease-spring);
+}
+
+:root[data-style="refine"] .c-badge:hover {
+  rotate: 1deg;
+}
+
+:root[data-style="refine"] .c-badge__lanyard {
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 2.5rem;
+  height: var(--space-8);
+  translate: -50% 0;
+  background:
+    linear-gradient(var(--bezel-edge), var(--bezel-edge)) 50% 100% / 1.4rem 0.9rem no-repeat,
+    repeating-linear-gradient(90deg, var(--color-accent) 0 3px, color-mix(in srgb, var(--color-accent) 80%, #000) 3px 6px) 50% 0 / 1.6rem calc(100% - 0.6rem) no-repeat;
+}
+
+:root[data-style="refine"] .c-badge__lanyard::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.5rem;
+  width: 3rem;
+  height: 0.5rem;
+  translate: -50% 0;
+  border-radius: 999px;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border-strong);
+}
+
+:root[data-style="refine"] .c-badge__band {
+  display: block;
+  margin-inline: calc(-1 * var(--space-4));
+  padding: 1.1rem var(--space-4) 0.5rem;
+  border-radius: 13px 13px 0 0;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-family: var(--ff-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+:root[data-style="refine"] .c-badge__photo {
+  width: 100%;
+  padding: 0;
+  border-radius: var(--radius-md);
+  background: var(--about-photo-bg);
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+:root[data-style="refine"] .c-badge__text {
+  display: grid;
+  gap: 0.2rem;
+}
+
+:root[data-style="refine"] .c-badge__name {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+:root[data-style="refine"] .c-badge__role {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+:root[data-style="refine"] .c-badge__code {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: var(--space-3);
+  font-family: var(--ff-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  color: var(--color-text-muted);
+}
+
+:root[data-style="refine"] .c-badge__bars {
+  height: 2.25rem;
+  background: repeating-linear-gradient(90deg,
+    var(--color-text) 0 2px, transparent 2px 4px, var(--color-text) 4px 5px, transparent 5px 8px,
+    var(--color-text) 8px 11px, transparent 11px 12px, var(--color-text) 12px 13px, transparent 13px 17px);
+}
+
+@media (max-width: 48rem) {
+  :root[data-style="refine"] .c-badge {
+    width: min(100%, 15rem);
+  }
+}
+
+:root[data-style="refine"][data-theme="dark"] .c-notfound__code {
+  text-shadow: 0 0 24px rgb(127 243 230 / 0.5);
+}
+
+/* Unlock reads like a clearance check */
+:root[data-style="refine"] .c-unlock__card {
+  border-top: 4px solid var(--color-accent);
+}
+
+:root[data-style="refine"] .c-unlock__card .eyebrow::before {
+  content: "Clearance required · " / "";
+}
+
+:root[data-style="refine"] .c-footer--manifesto .c-footer__title::after {
+  content: none;
+}
+
+:root[data-style="refine"] .c-values {
+  counter-reset: value;
+}
+
+:root[data-style="refine"] .c-values__item::before {
+  counter-increment: value;
+  content: "0" counter(value) / "";
+  font-family: var(--ff-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  color: var(--color-accent-text);
+}
+
+/* Earlier work: archived files, with a small thumbnail */
+:root[data-style="refine"] .c-archive__item {
+  --archive-columns: 6.5rem minmax(0, 1fr) auto;
+  padding-block: var(--space-4);
+}
+
+:root[data-style="refine"] .c-archive__thumb {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--card-media-bg);
+}
+
+:root[data-style="refine"] .c-archive__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6%;
+  filter: grayscale(1);
+  transition: filter var(--dur) var(--ease-out);
+}
+
+:root[data-style="refine"] .c-archive__item:hover .c-archive__thumb img,
+:root[data-style="refine"] .c-archive__item:focus-within .c-archive__thumb img {
+  filter: none;
+}
+
+:root[data-style="refine"] .c-archive__index {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-family: var(--ff-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+:root[data-style="refine"] .c-archive__index::before {
+  content: "File " / "";
+}
+
+:root[data-style="refine"] .c-archive__index::after {
+  content: " — Clearance: archived" / "";
+}
+
+:root[data-style="refine"] .c-archive__item:hover {
+  background: var(--color-surface);
+}
+
+@media (max-width: 40rem) {
+  :root[data-style="refine"] .c-archive__item {
+    --archive-columns: 4.5rem minmax(0, 1fr) auto;
+    gap: var(--space-2) var(--space-4);
+  }
+
+  :root[data-style="refine"] .c-archive__index::after {
+    content: none;
+  }
+}

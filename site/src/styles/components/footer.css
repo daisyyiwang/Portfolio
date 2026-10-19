@@ -1,0 +1,83 @@
+/* Footer */
+.c-footer {
+  margin-top: var(--space-10);
+  padding-block: var(--space-9) var(--space-6);
+  border-top: 1px solid var(--color-border);
+  background: var(--footer-bg, transparent);
+}
+
+.c-footer__cta {
+  display: grid;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.c-footer__title {
+  font-size: var(--text-3xl);
+}
+
+.c-footer__email {
+  justify-self: start;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--display-weight);
+  color: var(--color-accent-text);
+  overflow-wrap: anywhere;
+}
+
+.c-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.c-social {
+  display: flex;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Manifesto (home page) */
+.c-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c-values__item {
+  display: grid;
+  gap: var(--space-1);
+  padding-top: var(--space-4);
+  border-top: 2px solid var(--color-accent);
+}
+
+.c-values__title {
+  font-size: var(--text-2xl);
+}
+
+.c-values__item p {
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}
+
+.c-footer__lead {
+  max-width: 36rem;
+  margin-top: var(--space-4);
+  font-size: var(--text-lg);
+}
+
+@media (max-width: 40rem) {
+  .c-values {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-4);
+  }
+}

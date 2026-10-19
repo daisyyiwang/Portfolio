@@ -1,0 +1,33 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import TagList from './TagList.astro';
+import Icon from './Icon.astro';
+import { projectHref } from '../lib/projects';
+import { sharpImg } from '../lib/imageSize';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+  index: number;
+  headingLevel?: 'h2' | 'h3';
+}
+const { project, index, headingLevel: H = 'h3' } = Astro.props;
+const p = project.data;
+const { href, external } = projectHref(project);
+---
+<article class:list={['c-card', { 'c-card--featured': p.featured }]}>
+  <div class="c-card__body">
+    <span class="c-card__index" aria-hidden="true">{String(index).padStart(2, '0')}</span>
+    <p class="eyebrow">{p.company}</p>
+    <H class="c-card__title">
+      <a class="c-card__link" href={href} {...(external ? { target: '_blank', rel: 'noopener' } : {})}>
+        {p.title}
+        {external && <><span class="visually-hidden"> (opens in a new tab)</span><Icon name="arrow-up-right" class="ext-icon" /></>}
+      </a>
+    </H>
+    <p class="c-card__summary">{p.summary}</p>
+    <TagList tags={p.tags} />
+  </div>
+  <div class="c-card__media">
+    <img src={p.cover} alt="" loading={index > 2 ? 'lazy' : 'eager'} decoding="async" {...sharpImg(p.cover)} />
+  </div>
+</article>

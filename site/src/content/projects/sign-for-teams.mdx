@@ -1,0 +1,84 @@
+---
+title: Adobe Acrobat Sign for Microsoft Teams
+company: Adobe Acrobat Sign
+summary: Get documents signed without leaving the place your team already collaborates.
+tags:
+  - { label: B2B, tone: yellow }
+  - { label: Integration, tone: green }
+cover: /images/sit-card.svg
+coverAlt: Adobe Acrobat Sign for Microsoft Teams project cover
+order: 3
+migrated: true
+meta:
+  role: Lead designer
+  launched: "2022"
+  audience: SMB & enterprise customers
+link:
+  label: More at Adobe.com
+  href: https://www.adobe.com/acrobat/business/integrations/microsoft-teams.html
+next: buy-online-ship-to-store
+---
+import Section from '../../components/case/Section.astro';
+import Figure from '../../components/case/Figure.astro';
+import Compare from '../../components/case/Compare.astro';
+import Split from '../../components/case/Split.astro';
+import Points from '../../components/case/Points.astro';
+import Callout from '../../components/case/Callout.astro';
+
+Microsoft launched Teams in 2017 as its business communication platform, bringing chat, video calls and Office files into one place. When the pandemic moved the workplace online, we partnered with Teams to bring Adobe Acrobat Sign in as an eSign solution built right into Teams.
+
+<Section eyebrow="My role" title="From zero to MVP, and beyond">
+  <p>I led the design conversation from zero to MVP, and continued to support the overall integration product strategy — catching the pandemic train when everyone went online for signatures.</p>
+</Section>
+
+<Section eyebrow="Experience problem" title="Start from user needs">
+  <p>After auditing the existing experience and working with the research team to identify the fundamental user needs for this add-in, we distilled the key problems the MVP had to address.</p>
+  <Figure src="/images/sit_design01.svg" alt="Audit of the original Acrobat Sign add-in in Microsoft Teams, annotated with experience problems." />
+  <Points emoji="😵‍💫" items={[
+    '<strong>Defaults to an unfamiliar</strong> chat experience',
+    '<strong>Missing onboarding</strong> or guidance for first-time users',
+    '<strong>Lack of consistency</strong> with the Acrobat Sign web experience',
+    'Nested tabs and <strong>inherent IA issues</strong> caused by the iframe',
+    '<strong>Not optimized</strong> for Microsoft Teams',
+    '<strong>Limited mobile</strong> support',
+  ]} />
+</Section>
+
+<Callout title="Design goal">
+  <p>Make the Adobe Acrobat Sign for Microsoft Teams personal app a central hub for getting signatures, tracking agreement status and discovering the value of Acrobat Sign.</p>
+</Callout>
+
+<Section eyebrow="Design touchpoints" title="Remove friction first">
+  <Split src="/images/sit_design02.png" alt="Single sign-on screen for enterprise users inside Microsoft Teams.">
+    <h3>Enable SSO for enterprise users</h3>
+    <p>One piece of feedback we heard again and again was the hassle of signing in multiple times across integrations. Before the full design solution landed, I worked closely with engineering to prioritize SSO for enterprise users.</p>
+  </Split>
+  <Split reverse src="/images/sit_design03.svg" alt="New home tab listing recent agreements with quick actions.">
+    <h3>Check agreement status at a glance</h3>
+    <p>In the new home tab, people can check their most recent agreements and act on them directly, instead of being sent to the unfamiliar chat experience.</p>
+  </Split>
+</Section>
+
+<Section eyebrow="Information architecture" title="Simplify the navigation">
+  <p>The add-in was first built as a basic iframe, nesting the Acrobat Sign app inside Teams' own navigation. Simple tasks like requesting a signature could take three or four layers to reach. We worked closely with our Microsoft partners across design, product and engineering to fix this. With the updated proposal, people can move through their current task and backtrack without losing context.</p>
+  <Compare wide={false}
+    before={{ src: '/images/sit_design04.svg', alt: 'Original navigation: the Acrobat Sign app nested several layers deep inside Teams tabs.' }}
+    after={{ src: '/images/sit_design05.svg', alt: 'Updated navigation: a flatter structure with clear back paths.' }}
+  />
+</Section>
+
+<Section eyebrow="Design with a long-term vision" title="Establishing the vision while building the MVP">
+  <p>Microsoft Teams opened its mobile experience to integration partners later on. On a smaller screen, people engage differently — especially with critical, time-sensitive agreements, where mobile is the place to monitor signature status and have quick chats. With that in focus, I adjusted the mobile experience to match.</p>
+  <Figure src="/images/sit_design06.png" alt="MVP mobile design for the agreement status section." caption="MVP for the agreement status section" />
+  <Figure src="/images/sit_design07.png" alt="Ideal future mobile design for the agreement status section." caption="Ideal experience for the agreement status section" />
+</Section>
+
+<Section eyebrow="Scalable solution" title="Responsive framework">
+  <p>Working with engineering, we defined the breakpoints for the experience and provided a UI framework with detailed specs for how each screen flows across sizes.</p>
+  <Figure wide src="/images/sit_design08.png" alt="Responsive layout specs showing how screens reflow across breakpoints." />
+</Section>
+
+<Section eyebrow="Unique needs" title="Optimize for the Microsoft Teams use case">
+  <p>While leading this experience, I also collaborated on bringing Acrobat into Microsoft Teams, so the two add-ins would feel like one. We reviewed every available tool and aligned the roadmap with our partners, weighing feasibility, timeline and experience.</p>
+  <Figure src="/images/sit_design09.png" alt="Side-by-side of the Acrobat and Acrobat Sign add-ins in Teams with a shared experience." />
+</Section>

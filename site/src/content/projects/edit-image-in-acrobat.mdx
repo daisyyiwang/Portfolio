@@ -1,0 +1,171 @@
+---
+title: Edit image in Acrobat
+company: Adobe Acrobat × Express
+summary: Designing across ambiguity, emerging AI tools and organizational complexity — how one feature scales into a system.
+tags:
+  - { label: Recent work, tone: red }
+  - { label: AI, tone: purple }
+  - { label: B2B, tone: yellow }
+cover: /images/express-cover.svg
+coverAlt: Edit image in Acrobat — a photo being edited with Insert object, Remove object and Remove background tools
+order: 1
+featured: true
+migrated: true
+meta:
+  role: Lead designer
+  whenLabel: Team
+  launched: 12 teams · 5 time zones
+  audience: Business professionals
+next: protecting-pdf
+---
+import Section from '../../components/case/Section.astro';
+import Figure from '../../components/case/Figure.astro';
+import Compare from '../../components/case/Compare.astro';
+import Split from '../../components/case/Split.astro';
+import Points from '../../components/case/Points.astro';
+import Callout from '../../components/case/Callout.astro';
+import Stats from '../../components/case/Stats.astro';
+import AnimatedImage from '../../components/case/AnimatedImage.astro';
+import VideoFeature from '../../components/case/VideoFeature.astro';
+
+Acrobat is desktop-focused and document-first. Adobe Express is web and mobile, and design-first. The ask was simple: when someone wants to edit an image in a PDF, send them to Express. Getting there meant designing across three layers at once — the technology, the process and the experience.
+
+<Stats items={[
+  { value: '10×', label: 'MAU growth' },
+  { value: '1.5×', label: 'MAU increase in the Acrobat Chrome extension' },
+  { value: '+4%', label: 'export rate within 2 weeks of the accessibility update' },
+]} />
+
+<Section eyebrow="Context" title="The ask was simple: send people to Express">
+  <Figure narrow src="/images/edit-image/ei-d-handoff.webp" alt="Diagram: Acrobat (desktop focused, document-first) hands off to Adobe Express (web/mobile, design-first) to edit and stylize." caption="The plan: when someone wants to edit an image in a PDF, route them to Express." />
+  <p><strong>Market context:</strong> Express had only just shipped a dedicated, Firefly-powered web and mobile experience in 2024, years after its 2021–22 rebrand. Canva, meanwhile, had turned its free plan into pandemic-era hypergrowth, reaching ~135M monthly users by 2023. Express needed distribution, fast — and Acrobat's install base was the fastest lever available.</p>
+</Section>
+
+<Section eyebrow="#1 Tech layer" title="But the hand-off broke the document">
+  <Figure fit src="/images/edit-image/ei-broken-pdf.webp" alt="An original PDF next to the same PDF after converting through Express: the text block on the converted copy is visibly garbled." caption="Original PDF → converted PDF: the round trip lost fidelity" />
+</Section>
+
+<Section eyebrow="#1 Tech layer" title="Understanding the use cases with user research">
+  <p>Why might Acrobat users need to edit images in their PDFs? Acrobat users are diverse, and so are their image-editing use cases. The common theme: they're editing images in a PDF that</p>
+  <ul>
+    <li>they have shared for review,</li>
+    <li>they're adapting from a previous document, or</li>
+    <li>they received as a PDF and need to edit.</li>
+  </ul>
+  <Stats items={[
+    { value: '400B+', label: 'PDFs opened per year' },
+    { value: '16B', label: 'documents edited' },
+    { value: '~20%', label: 'of documents contain an image' },
+  ]} />
+  <p>Qualitatively, we baselined how people used competitors to edit images before converting back to PDF.</p>
+</Section>
+
+<Section eyebrow="#1 Tech layer" title="Two products, two backends. One broken workflow.">
+  <p>The real issue wasn't discoverability or polish — it was <strong>architectural</strong>. Every hand-off between Acrobat and Express was a chance to lose fidelity.</p>
+  <Figure fit src="/images/edit-image/ei-d-backends.webp" alt="Diagram: Acrobat backend converts and re-imports to the Express backend; fidelity is lost here." />
+  <p>How I navigate complex tech and workflow constraints: with a deep understanding of how it works, and of the use cases.</p>
+</Section>
+
+<Section eyebrow="#1 Tech layer" title="Bring Express to Acrobat, not Acrobat to Express">
+  <Figure fit src="/images/edit-image/ei-d-sdk.webp" alt="Diagram: the Express backend delivers its tools into the Acrobat backend through an SDK. No hand-off, no conversion, no broken files." />
+  <p><strong>The MVP:</strong> wrap Express's most valuable, most-used tools as an SDK, embedded directly inside Acrobat. No export. No re-import. No broken files.</p>
+</Section>
+
+<Section eyebrow="#2 Process & experience layers" title="Three layers, one crowded canvas">
+  <p>I started from understanding the <strong>tech layer</strong>, while grounding the experience in real use cases through close collaboration with partners across Acrobat and Express. As the <strong>lead designer</strong>, my job was to connect the three layers and keep iterating on the design process, so we evolved together toward a seamless end-to-end experience.</p>
+  <Figure narrow src="/images/edit-image/ei-d-layers.webp" alt="Diagram: #1 Tech layer (done), with the Process/DACI layer and Experience layer still in progress. Aligning on the tech layer first bought the chance to move the design forward through process and experience complexities." />
+  <Figure fit src="/images/edit-image/ei-d-teams.webp" alt="Team map: the lead designer (12 teams, 5 time zones) connects the Acrobat core team, the Acrobat × Express team (my team), the Express embed team and the Express core team, each with design, product and engineering." />
+</Section>
+
+<Callout title="Designing the end-to-end journey">
+  <p><strong>Discover → Edit → Apply → Monetize → Scale.</strong> The rest of this case study follows that journey.</p>
+</Callout>
+
+<Section eyebrow="Discover" title="Entry point: Acrobat was already crowded">
+  <p>Most people came to Acrobat only to view or sign a PDF. The first placement was buried under "Add image" and a right-click menu. <strong>Result:</strong> the tool existed, but almost nobody found it.</p>
+  <Figure fit src="/images/edit-image/ei-entry-before.webp" alt="First placement: Edit image tucked into Acrobat's side panel, and in a long right-click menu." caption="Before: the side panel and the right-click menu" />
+  <h3>People naturally select the image they want to edit</h3>
+  <p><strong>Solution:</strong> I moved the entry point to the moment of image selection — contextual and in-flow. <strong>Result:</strong> it became the primary traffic source for the feature.</p>
+  <Figure fit src="/images/edit-image/ei-entry-after.webp" alt="After: selecting an image in a PDF opens a contextual panel with Edit image at the top." caption="After: a contextual panel drives traffic" />
+</Section>
+
+<Section eyebrow="Edit" title="Challenge #1: Acrobat users don't know what to do with a brush 🖌️">
+  <p>Remove object and Generative fill both relied on a brush to pick out an area first — not a familiar concept for non-designers.</p>
+  <Points emoji="🔍" items={[
+    'Generative fill is <strong>confusing</strong> to Acrobat users.',
+    'Business professionals are <strong>not confident</strong> in their design skills.',
+    'Acrobat users are <strong>not familiar with the concept of a brush</strong>.',
+    '<strong>Writing prompts</strong> to visualize things is challenging for Acrobat users.',
+  ]} />
+  <Compare wide={false}
+    before={{ src: '/images/edit-image/ei-brush-before.webp', alt: 'Before: a single Generative fill tool with brush size and a prompt field.' }}
+    after={{ src: '/images/edit-image/ei-brush-after.webp', alt: 'After: a simpler Remove object tool with just a brush size and a Remove button.' }}
+  />
+  <p>What changed:</p>
+  <ul>
+    <li>Split one tool into two that better match use cases: <strong>Remove object</strong> and <strong>Insert object</strong>.</li>
+    <li>Updated the copy to match users' expectations.</li>
+    <li>Removed the prompt field from Remove object to reduce complexity.</li>
+  </ul>
+  <Figure fit src="/images/edit-image/ei-remove-object.webp" alt="The latest Remove object experience: Crop, Eraser, Remove and Insert in a contextual toolbar above the image." caption="Latest iteration: more contextual, easier to work with, and more generative results with credit usage in mind" />
+</Section>
+
+<Section eyebrow="Edit" title="Challenge #2: Reorder the image editing tools based on data">
+  <p>The module went through three versions, each led by what the last one measured. Usage data optimized the tools' hierarchy for business professionals; user insights refined the interaction details.</p>
+  <Figure fit src="/images/edit-image/ei-module.webp" alt="The edit image module powered by Adobe Express, with Generative fill, Remove background, Erase and Crop." />
+  <Figure fit src="/images/edit-image/ei-module-versions.webp" alt="Versions 1, 2 and 3 of the edit image module side by side, with the tools reorganized in each." caption="V1 → V2 → V3, each improving rMAU and export rate" />
+</Section>
+
+<Section eyebrow="Apply" title="Challenge #3: A working AI tool isn't enough if it breaks the layout">
+  <p>The missing piece of the end-to-end workflow was applying the image back to the PDF.</p>
+  <h3>Crop should resize the canvas itself</h3>
+  <p>After cropping an image in the edit image module, users expect the canvas to resize too — not leave ghost space when the image goes back into the PDF. <strong>Result:</strong> users can apply the resized image inside the PDF layout, with no extra canvas after cropping.</p>
+  <Figure fit src="/images/edit-image/ei-crop-canvas.webp" alt="Left: a cropped image leaves unwanted negative space. Right: that negative space blocks image placement at the top of the page." />
+</Section>
+
+<Section eyebrow="Monetize" title="How might we monetize AI usage and unify it across Document Cloud and Creative Cloud?">
+  <p>I worked with design teams across products to reconcile generative modals and product plans, so AI usage could be monetized consistently across Acrobat plans, Express plans and Creative Cloud All Apps.</p>
+  <Figure fit src="/images/edit-image/ei-monetize.webp" alt="Matrix mapping generative features against Acrobat, Express and Creative Cloud plans, beside an Insert object dialog with a credits message." />
+</Section>
+
+<Section eyebrow="Scale" title="Not everything could be a priority">
+  <p>I used an effort/value framework with product, engineering and partner teams to separate quick wins from major projects, and to consciously prioritize work based on impact and cost.</p>
+  <Figure fit src="/images/edit-image/ei-d-priority.webp" alt="Effort/value matrix: quick wins (high value, low effort), major projects (high value, high effort), fill-ins (low value, low effort) and thankless tasks (low value, high effort)." />
+  <h3>AI-powered design deliverables</h3>
+  <p>I combined AI prototypes with detailed Figma designs to quickly validate ideas, explore multiple directions and iterate — using Claude and Figma MCP, grounded in Adobe Spectrum standards, product assets and real test data.</p>
+  <VideoFeature
+    src="/videos/ei-ai-walkthrough.mp4"
+    poster="/images/edit-image/ei-ai-walkthrough-poster.jpg"
+    title="Design process with AI: Edit image for the Acrobat Chrome extension"
+    duration="3 min"
+    caption="Walkthrough (3 min, narrated): instead of static mocks and meeting-heavy reviews, I shared live, clickable AI prototypes, so Express and Acrobat partners could try real interactions on their own schedule across time zones."
+  />
+</Section>
+
+<Section eyebrow="Scale" title="Edit image outgrew Acrobat desktop">
+  <Figure fit src="/images/edit-image/ei-d-surfaces.webp" alt="Diagram: the Acrobat Chrome extension, Acrobat mobile (iOS and Android), Acrobat web, and Acrobat desktop and Reader all use one edit image module." />
+  <h3>Acrobat in the Chrome extension</h3>
+  <p>I led the end-to-end product lifecycle — roadmap planning, ideation, experimentation, validation and implementation — driving a <strong>1.5× increase in MAU</strong>.</p>
+  <AnimatedImage src="/images/edit-image/ei-chrome.webp" poster="/images/edit-image/ei-chrome-poster.jpg" alt="Screen recording of the Acrobat Chrome extension working with images found on Google Images." />
+  <h3>Edit image in the Acrobat mobile app</h3>
+  <Split src="/images/edit-image/ei-mobile.webp" alt="Acrobat mobile: a photo being edited with Remove object and adjustment sliders.">
+    <p>I designed the 0→1 experience that introduced the edit image module to Acrobat mobile and expanded creative use cases there.</p>
+    <p><strong>Result:</strong> after launch, mobile became the primary growth driver for image file workflows.</p>
+  </Split>
+</Section>
+
+<Section eyebrow="Scale" title="Craft with accessibility in mind">
+  <p>I established a 0→1 accessibility design QA process, working closely with product, engineering, product equity and the design library team.</p>
+  <Split src="/images/edit-image/ei-a11y-email.webp" alt="An image in a Gmail message, where the Edit image entry point appears.">
+    <p>The entry point appears on images in Gmail and WhatsApp, so its menu had to meet accessibility standards wherever it showed up.</p>
+    <p><strong>Result:</strong> after updating the components to be WCAG AA compliant, we saw a <strong>4% increase in export rate within 2 weeks</strong>.</p>
+  </Split>
+  <Compare wide={false} labels={['Current production', 'Proposed design']}
+    before={{ src: '/images/edit-image/ei-a11y-current.webp', alt: 'Current production: a grey menu with Hide for now and Preferences above the Edit image pill.' }}
+    after={{ src: '/images/edit-image/ei-a11y-proposed.webp', alt: 'Proposed design: a higher-contrast menu with a clear blue highlight on Hide for now.' }}
+  />
+</Section>
+
+<Section eyebrow="Outcome" title="10× MAU growth, and a design process built to scale it 📈">
+  <p>What started as a simple hand-off became a shared module across desktop, web, mobile and Chrome — designed by aligning the tech layer first, then iterating the process and experience together with 12 teams across 5 time zones.</p>
+</Section>

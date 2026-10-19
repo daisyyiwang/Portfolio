@@ -1,0 +1,414 @@
+---
+// Re-creation of the Kohl's product page prototype recording (replaces a 180×320 video).
+// Matches the original flow: tap Add to Cart without a size → the size panel opens →
+// pick X Small → delivery options replace the detail rows → tap the store pickup option.
+// Pausable; shows the end state under reduced motion.
+interface Props {
+  label: string;
+}
+const { label } = Astro.props;
+const sizes = ['X Small', 'Small', 'Medium', 'Large', 'X Large'];
+---
+<figure class="c-boss" data-boss>
+  <div class="c-boss__phone" role="img" aria-label={label}>
+    <div class="c-boss__screen" aria-hidden="true">
+      <div class="c-boss__bar"><span>●●●●● InVision</span><span>8:00 PM</span><span>100%</span></div>
+      <div class="c-boss__nav">
+        <svg viewBox="0 0 16 16" width="16" height="16"><path d="M10.5 2.5L5 8l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        <span class="c-boss__icons">
+          <svg viewBox="0 0 16 16" width="16" height="16"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.5" /><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+          <svg viewBox="0 0 16 16" width="16" height="16"><path d="M1.5 2h2l1.6 8h7.4l1.5-6H4.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" /><circle cx="6" cy="13.3" r="1.1" fill="currentColor" /><circle cx="11.5" cy="13.3" r="1.1" fill="currentColor" /></svg>
+        </span>
+      </div>
+
+      <div class="c-boss__body">
+        <p class="c-boss__sale">SALE $21.99</p>
+        <p class="c-boss__small">Original $32.00</p>
+        <p class="c-boss__small">IN STOCK</p>
+        <p class="c-boss__stars">★★★★<span>★</span> <small>(53)</small></p>
+
+        <div class="c-boss__price">
+          <div>
+            <p><b>Your Price <span class="c-boss__purple">$17.59</span></b></p>
+            <p>use <b class="c-boss__purple">WAVES</b> at checkout</p>
+            <p class="c-boss__small">offer ends October 28 <u>details</u></p>
+          </div>
+          <span class="c-boss__badge">20%<small>OFF</small></span>
+        </div>
+
+        <div class="c-boss__row">
+          <span>Size</span>
+          <span class="c-boss__swap"><span class="c-boss__before">Select a Size</span><span class="c-boss__after">X SMALL</span></span>
+        </div>
+        <div class="c-boss__row">
+          <span>Color<small>12 colors available</small></span>
+          <span>Ivory <i class="c-boss__swatch"></i></span>
+        </div>
+        <div class="c-boss__row c-boss__row--last">
+          <span>Quantity</span>
+          <span class="c-boss__qty"><span>−</span>1<span class="c-boss__plus">+</span></span>
+        </div>
+
+        <div class="c-boss__lower">
+          <div class="c-boss__details">
+            <div class="c-boss__link"><span><b class="c-boss__qa">?</b>2 Questions &amp; 2 Answers</span><span>›</span></div>
+            <div class="c-boss__link"><b>Product Details</b><span>⌄</span></div>
+            <div class="c-boss__link"><b>Shipping &amp; Returns</b><span>⌄</span></div>
+            <div class="c-boss__share"><span>⇪ SHARE</span><span>▣ REGISTRY</span><span>☰ LIST</span></div>
+          </div>
+          <div class="c-boss__options">
+            <div class="c-boss__opt c-boss__opt--store">
+              <i class="c-boss__radio"><i></i></i>
+              <p><b>Thu, Dec 1</b> Free<br />Pickup at Rancho Santa Margarita <small>10.1mi</small><br /><span class="c-boss__green">check other stores</span></p>
+            </div>
+            <div class="c-boss__opt c-boss__opt--home">
+              <i class="c-boss__radio"><i></i></i>
+              <p><b>Thu, Dec 1</b><br />Ship to me<br /><span class="c-boss__green">Free w/$75 purchase</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-boss__cta"><span class="c-boss__btn">Add to Cart</span></div>
+
+      <div class="c-boss__sheet">
+        <p class="c-boss__sheet-head">Select a Size</p>
+        <p class="c-boss__sheet-note">Not sure about the size? See the <span class="c-boss__green">Cuddl Duds Size Chart</span></p>
+        {sizes.map((s, i) => <p class:list={['c-boss__size', { 'c-boss__size--pick': i === 0 }]}>{s.toUpperCase()}</p>)}
+      </div>
+
+      <i class="c-boss__tap c-boss__tap--1"></i>
+      <i class="c-boss__tap c-boss__tap--2"></i>
+      <i class="c-boss__tap c-boss__tap--3"></i>
+    </div>
+  </div>
+  <figcaption>
+    <button class="c-anim__toggle" type="button" aria-pressed="false" data-boss-toggle>Pause animation</button>
+  </figcaption>
+</figure>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-boss]').forEach((fig) => {
+    const btn = fig.querySelector<HTMLButtonElement>('[data-boss-toggle]')!;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      fig.classList.add('is-static');
+      btn.hidden = true;
+      return;
+    }
+    btn.addEventListener('click', () => {
+      const paused = fig.classList.toggle('is-paused');
+      btn.textContent = paused ? 'Play animation' : 'Pause animation';
+      btn.setAttribute('aria-pressed', String(paused));
+    });
+  });
+</script>
+
+<style>
+  .c-boss {
+    --k-green: #2e7d32;
+    --k-ink: #1f1f1f;
+    --k-muted: #616161;
+    --k-line: #e6e6e6;
+    --k-purple: #7b2a8f;
+    --k-red: #d32f2f;
+    --t: 10s;
+    --sheet-top: 323px;
+    display: grid;
+    justify-items: center;
+    gap: var(--space-3);
+    margin: 0;
+  }
+
+  .c-boss__phone {
+    width: min(100%, 17.5rem);
+    padding: 10px;
+    border-radius: 36px;
+    background: #16242b;
+    outline: 1px solid var(--color-border-strong);
+    outline-offset: -1px;
+    box-shadow: 0 18px 40px rgb(16 32 42 / 0.18);
+  }
+
+  .c-boss__screen {
+    position: relative;
+    height: 34rem;
+    overflow: hidden;
+    border-radius: 27px;
+    background: #fff;
+    color: var(--k-ink);
+    font-family: var(--ff-inter);
+    font-size: 11.5px;
+    line-height: 1.35;
+  }
+
+  .c-boss__screen p { margin: 0; }
+  .c-boss__screen small { font-size: 10px; }
+
+  .c-boss__bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 14px 0;
+    font-size: 9.5px;
+    font-weight: 600;
+  }
+
+  .c-boss__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px 9px;
+    border-bottom: 1px solid var(--k-line);
+  }
+
+  .c-boss__icons { display: inline-flex; gap: 12px; }
+
+  .c-boss__body {
+    display: grid;
+    gap: 3px;
+    padding: 10px 14px 0;
+  }
+
+  .c-boss__sale { color: var(--k-red); font-weight: 700; font-size: 14px; }
+  .c-boss__small { color: var(--k-muted); font-size: 10px; letter-spacing: 0.02em; }
+  .c-boss__stars { font-size: 13px; letter-spacing: 1px; }
+  .c-boss__stars span { background: linear-gradient(90deg, var(--k-ink) 50%, #bdbdbd 50%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .c-boss__stars small { color: var(--k-muted); letter-spacing: 0; }
+  .c-boss__purple { color: var(--k-purple); }
+  .c-boss__green { color: var(--k-green); }
+
+  .c-boss__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+    padding: 8px 0;
+    border-block: 1px solid var(--k-line);
+  }
+
+  .c-boss__price b { font-size: 12.5px; }
+  .c-boss__price u { color: var(--k-ink); font-weight: 600; }
+
+  .c-boss__badge {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    color: var(--k-purple);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .c-boss__badge small { font-size: 8px; }
+
+  .c-boss__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 34px;
+    border-bottom: 1px solid var(--k-line);
+    color: var(--k-muted);
+  }
+
+  .c-boss__row small { display: block; font-size: 8.5px; color: #757575; }
+  .c-boss__row > span:last-child { display: inline-flex; align-items: center; gap: 6px; }
+
+  .c-boss__swatch {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    background: #f6f3ec;
+  }
+
+  .c-boss__qty {
+    gap: 14px !important;
+    padding: 3px 10px;
+    border: 1px solid #d0d0d0;
+    color: var(--k-ink);
+  }
+
+  .c-boss__qty > span:first-child { color: #9e9e9e; }
+  .c-boss__plus { color: var(--k-green); font-weight: 700; }
+
+  .c-boss__swap { display: inline-grid !important; }
+  .c-boss__before,
+  .c-boss__after { grid-area: 1 / 1; text-align: right; }
+  .c-boss__after { opacity: 0; animation: boss-in var(--t) infinite; }
+  .c-boss__before { animation: boss-out var(--t) infinite; }
+
+  /* The area under Quantity: detail rows, replaced by delivery options once a size is picked */
+  .c-boss__lower { display: grid; }
+
+  .c-boss__details,
+  .c-boss__options { grid-area: 1 / 1; }
+
+  .c-boss__details { animation: boss-out var(--t) infinite; }
+
+  .c-boss__options {
+    display: grid;
+    gap: 12px;
+    align-content: start;
+    padding-top: 12px;
+    opacity: 0;
+    animation: boss-in var(--t) infinite;
+  }
+
+  .c-boss__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 30px;
+    font-size: 10.5px;
+  }
+
+  .c-boss__link > span:first-child { display: inline-flex; align-items: center; gap: 8px; color: var(--k-muted); }
+
+  .c-boss__qa {
+    display: inline-grid;
+    place-items: center;
+    width: 18px;
+    height: 16px;
+    border-radius: 3px;
+    background: var(--k-ink);
+    color: #fff;
+    font-size: 10px;
+  }
+
+  .c-boss__share {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid var(--k-line);
+    font-size: 9px;
+    font-weight: 600;
+  }
+
+  .c-boss__opt {
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr);
+    gap: 8px;
+    align-items: start;
+    color: var(--k-muted);
+    font-size: 10.5px;
+  }
+
+  .c-boss__opt b { color: var(--k-ink); font-weight: 600; }
+
+  .c-boss__radio {
+    display: grid;
+    place-items: center;
+    width: 15px;
+    height: 15px;
+    margin-top: 1px;
+    border: 1.5px solid #9e9e9e;
+    border-radius: 50%;
+  }
+
+  .c-boss__radio i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--k-green);
+  }
+
+  /* "Ship to me" starts selected; tapping the store pickup option selects it */
+  .c-boss__opt--home .c-boss__radio i { animation: boss-home var(--t) infinite; }
+  .c-boss__opt--store .c-boss__radio i { transform: scale(0); animation: boss-store var(--t) infinite; }
+
+  .c-boss__cta {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 14px 16px;
+    background: #fff;
+  }
+
+  .c-boss__btn {
+    display: block;
+    padding: 10px 0;
+    background: var(--k-green);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  /* Inline size panel: covers everything below Quantity, like the original */
+  .c-boss__sheet {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: var(--sheet-top);
+    bottom: 0;
+    background: #fff;
+    clip-path: inset(0 0 100% 0);
+    animation: boss-sheet var(--t) infinite;
+  }
+
+  .c-boss__sheet-head {
+    padding: 9px 14px;
+    background: #f0f0f0;
+    font-weight: 700;
+  }
+
+  .c-boss__sheet-note {
+    padding: 9px 20px;
+    color: var(--k-muted);
+    font-size: 10px;
+  }
+
+  .c-boss__size {
+    padding: 9px 22px;
+    border-bottom: 1px solid var(--k-line);
+    font-size: 11px;
+    letter-spacing: 0.03em;
+  }
+
+  .c-boss__size--pick { animation: boss-pick var(--t) infinite; }
+
+  /* Tap indicators: a soft white ring, like the prototype tool's touch marker */
+  .c-boss__tap {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 0.45);
+    border: 1.5px solid rgb(0 0 0 / 0.18);
+    box-shadow: 0 1px 6px rgb(0 0 0 / 0.15);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .c-boss__tap--1 { left: 50%; top: calc(100% - 33px); animation: boss-tap-1 var(--t) infinite; }
+  .c-boss__tap--2 { left: 55%; top: calc(var(--sheet-top) + 80px); animation: boss-tap-2 var(--t) infinite; }
+  .c-boss__tap--3 { left: 60%; top: calc(var(--sheet-top) + 32px); animation: boss-tap-3 var(--t) infinite; }
+
+  /* Timeline (10s loop) */
+  @keyframes boss-tap-1 { 0%, 10% { opacity: 0; transform: scale(0.5); } 12% { opacity: 1; transform: scale(1); } 16%, 100% { opacity: 0; transform: scale(1.3); } }
+  @keyframes boss-sheet { 0%, 15% { clip-path: inset(0 0 100% 0); } 19%, 34% { clip-path: inset(0 0 0 0); } 37%, 100% { clip-path: inset(0 0 100% 0); } }
+  @keyframes boss-tap-2 { 0%, 25% { opacity: 0; transform: scale(0.5); } 27% { opacity: 1; transform: scale(1); } 32%, 100% { opacity: 0; transform: scale(1.3); } }
+  @keyframes boss-pick { 0%, 27% { background: transparent; } 29%, 34% { background: #e8f5e9; } 36%, 100% { background: transparent; } }
+  @keyframes boss-in { 0%, 36% { opacity: 0; } 40%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
+  @keyframes boss-out { 0%, 36% { opacity: 1; } 40%, 93% { opacity: 0; } 97%, 100% { opacity: 1; } }
+  @keyframes boss-tap-3 { 0%, 58% { opacity: 0; transform: scale(0.5); } 60% { opacity: 1; transform: scale(1); } 66%, 100% { opacity: 0; transform: scale(1.3); } }
+  @keyframes boss-store { 0%, 61% { transform: scale(0); } 63%, 93% { transform: scale(1); } 97%, 100% { transform: scale(0); } }
+  @keyframes boss-home { 0%, 61% { transform: scale(1); } 63%, 93% { transform: scale(0); } 97%, 100% { transform: scale(1); } }
+
+  .c-boss.is-paused * { animation-play-state: paused !important; }
+
+  /* Reduced motion: end state, no animation */
+  .c-boss.is-static * { animation: none !important; }
+  .c-boss.is-static .c-boss__before,
+  .c-boss.is-static .c-boss__details { opacity: 0; }
+  .c-boss.is-static .c-boss__after,
+  .c-boss.is-static .c-boss__options { opacity: 1; }
+  .c-boss.is-static .c-boss__opt--store .c-boss__radio i { transform: none; }
+  .c-boss.is-static .c-boss__opt--home .c-boss__radio i { transform: scale(0); }
+  .c-boss.is-static .c-boss__tap,
+  .c-boss.is-static .c-boss__sheet { display: none; }
+</style>

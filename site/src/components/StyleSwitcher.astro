@@ -1,0 +1,28 @@
+---
+// Prototype-only control for comparing the three visual directions.
+import { STYLES } from '../config';
+---
+<fieldset class="c-switcher" data-style-switcher>
+  <legend>Direction</legend>
+  {STYLES.map((s, i) => (
+    <label class="c-switcher__opt" title={s.hint}>
+      <input type="radio" name="site-style" value={s.id} />
+      <span>{String.fromCharCode(65 + i)}<span class="c-switcher__name"> · {s.label}</span></span>
+    </label>
+  ))}
+</fieldset>
+
+<script>
+  const root = document.documentElement;
+  const inputs = document.querySelectorAll<HTMLInputElement>('[data-style-switcher] input');
+  inputs.forEach((input) => {
+    input.checked = input.value === root.dataset.style;
+    input.addEventListener('change', () => {
+      root.dataset.style = input.value;
+      try { localStorage.setItem('portfolio_style', input.value); } catch {}
+      const url = new URL(location.href);
+      url.searchParams.set('style', input.value);
+      history.replaceState(null, '', url);
+    });
+  });
+</script>

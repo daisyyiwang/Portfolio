@@ -1,0 +1,100 @@
+---
+title: Store inventory management for Kohl's associates
+company: Kohl's connected store
+summary: Efficient and accurate inventory management for department stores.
+tags:
+  - { label: B2B, tone: yellow }
+  - { label: Logistics, tone: purple }
+cover: /images/inventorycover.svg
+coverAlt: Store inventory project cover
+order: 7
+archive: true
+migrated: true
+meta:
+  role: Lead designer
+  launched: May 2017
+  audience: Associates in 1,100+ stores
+next: rewards
+---
+import Section from '../../components/case/Section.astro';
+import Figure from '../../components/case/Figure.astro';
+import Gallery from '../../components/case/Gallery.astro';
+import Quote from '../../components/case/Quote.astro';
+import Stats from '../../components/case/Stats.astro';
+import Video from '../../components/case/Video.astro';
+import Toolkit from '../../components/case/Toolkit.astro';
+
+To simplify inventory management, in 2016 Kohl's moved its inventory counting from a dedicated RF device to a smart enterprise mobile device, the Bluebird. This is the story of how I made that transition as easy as possible for associates in over 1,100 stores.
+
+<Section eyebrow="My role" title="Leading UX through full release">
+  <p>I led the UX design process from November 2016 to full release in May 2017, alongside a researcher, a design manager, a project manager and engineers building for Bluebird on Windows 10.</p>
+  <Figure src="/images/ic-rolescreen.svg" alt="Final inventory counting screens on the Bluebird device." />
+</Section>
+
+<Section eyebrow="User research" title="Understand the terms, the device and today's experience">
+  <p>We lacked domain knowledge in inventory management, so we needed to learn the counting process thoroughly — and quickly. Early on, we ran contextual inquiries with store associates to understand the challenges and opportunities in their day-to-day work, and to see how complex inventory management really is.</p>
+</Section>
+
+<Section eyebrow="Experience mapping" title="Spot the common ground">
+  <Figure src="/images/ic-coreflow.svg" alt="Core inventory counting flow." />
+  <p>From day one, the team agreed this was a <strong>transitional</strong> experience, not something new from scratch. Keeping the Bluebird experience as close as possible to the RF device would reduce retraining for associates. That early decision shaped the quality of the result throughout.</p>
+  <Figure wide src="/images/ic-currentscreen.png" alt="The current experience flow on the RF device." caption="Current experience flow" />
+  <p>Some challenges of inventory counting we discovered:</p>
+  <Figure src="/images/ic-challenge.png" alt="Summary of the challenges found in the current counting process." />
+</Section>
+
+<Section eyebrow="Design highlights" title="Propose an upgraded experience">
+  <div class="c-features">
+    <div class="c-features__item">
+      <Video src="/videos/ic-clip01.mp4" label="Screen recording: starting a count with a workload estimate in one tap." />
+      <h3>A clear start</h3>
+      <p>Associates see a clear estimate of the workload in 1 tap, instead of tapping 3 times to reach the "ready to scan" screen.</p>
+    </div>
+    <div class="c-features__item">
+      <Video src="/videos/ic-movie02.mp4" label="Screen recording: scanning continues while an error is flagged." />
+      <h3>Scan in the know</h3>
+      <p>A one-handed design, so associates keep scanning without stopping, even when an error occurs.</p>
+    </div>
+    <div class="c-features__item">
+      <Video src="/videos/ic-movie03.mp4" label="Screen recording: reviewing scanned items before submitting a count." />
+      <h3>Submit with clear confirmation</h3>
+      <p>Instead of tapping 4 times without knowing exactly what they're selecting, associates review what they scanned before submitting — no more rescanning everything because of one miss or double scan.</p>
+    </div>
+  </div>
+  <Figure src="/images/ic-beforeafter.png" alt="Counting screens before (RF device) and after (Bluebird), from start to submission." caption="Before and after" />
+</Section>
+
+<Section eyebrow="Design iteration" title="Going back to end users">
+  <Gallery columns={4} items={[
+    { src: '/images/ic-store01.png', alt: 'Understand: the Bluebird device at its login screen.' },
+    { src: '/images/ic-store02.png', alt: 'Listen: a testing session at a table with the device and notes.' },
+    { src: '/images/ic-store03.png', alt: 'Iterate: an associate trying the prototype.' },
+    { src: '/images/ic-store04.png', alt: 'Emphasize: an associate working through the counting flow.' },
+  ]} />
+  <p>Within 2 weeks, with my research partner, we tested the design in 2 stores with 3 associates in different roles. One associate loved it so much she ended the test by saying "I like it!" three times. 😉</p>
+  <Stats items={[
+    { value: '100%', label: 'pass rate on the main flow' },
+    { value: '80%', label: 'overall success on key experience measures' },
+  ]} />
+  <Figure src="/images/ic-process.png" alt="How the counting screens evolved through testing, with notes on each change." caption="Design evolution" />
+  <h3>Save the count first</h3>
+  <p>Putting the design in front of associates showed us right away that we'd overlooked their environment. With merchandise everywhere, things get misplaced. With the existing design, fixing that meant asking a store manager to reopen the count.</p>
+  <Quote emoji="👖">"With so many boxes and merchandise around, things often get misplaced. A sweater ends up in the shoe department; a missing pair of jeans gets 'rescued' from the T-shirt pile."</Quote>
+  <p>To save the back and forth, I introduced a <strong>Save</strong> function: associates can save each completed count, keep going, and submit all counts together once everything is scanned.</p>
+  <Figure src="/images/ic-save.png" alt="Saved counts list, shown after tapping into saved counts so associates can pick up where they left off." />
+</Section>
+
+<Section eyebrow="Design reflection" title="Story to be continued">
+  <h3>Design the user experience, not just the feature</h3>
+  <p>Part of the work was educating partners about user experience, rather than racing feature releases. We were first given 2 weeks, to leave time for development. The conversation opened up when we shared what we'd learned from associates in stores and how it shaped the design. We realized how big the gap was between store associates and people in the office — and the photos and insights built trust between teams and started a real conversation about timeline and features.</p>
+  <h3>Design for Bluebird on Windows 10</h3>
+  <p>Designing for Bluebird, a retail-only enterprise device, was new to me. After handoff there was a lot of back and forth with engineering, and I read through the Windows 10 developer docs to get the experience right.</p>
+  <p>Afterwards, I created a Bluebird pattern library to support other designers. Our team went on to design more than 10 Bluebird apps, and the process and library reached more and more people at Kohl's.</p>
+  <Figure wide src="/images/ic-wiresample.svg" alt="Sample of the design deliverable: annotated wireframes." caption="Design deliverable sample" />
+</Section>
+
+<Toolkit groups={[
+  { title: 'Tools', items: ['Paper & pencil', 'Sketch', 'InVision'] },
+  { title: 'Methods', items: ['Contextual inquiry', 'Usability testing'] },
+  { title: 'Skills', items: ['Systems thinking', 'Presentation', 'UX research', 'Storytelling', 'Experience mapping', 'Rapid prototyping'] },
+]} />

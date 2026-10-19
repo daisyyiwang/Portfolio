@@ -1,0 +1,273 @@
+/*
+  Option E — Prism.
+  Swiss / Bauhaus modern: primary-colour blocks, expanded grotesk type,
+  circles and quarter-circles as the graphic language. The hero artwork is
+  pure CSS geometry, so no illustration is needed.
+*/
+:root[data-style="prism"] {
+  /* Type */
+  --font-body: var(--ff-archivo);
+  --font-display: var(--ff-archivo);
+  --font-mono: var(--ff-mono);
+  --font-accent: var(--ff-archivo);
+  --display-weight: 800;
+  --display-tracking: -0.035em;
+  --display-leading: 0.98;
+  --body-leading: 1.55;
+  --eyebrow-font: var(--ff-archivo);
+  --eyebrow-size: var(--text-xs);
+  --eyebrow-transform: uppercase;
+  --eyebrow-tracking: 0.14em;
+
+  /* Shape — square blocks, round accents */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+
+  /* Buttons */
+  --btn-radius: 999px;
+  --btn-weight: 700;
+  --btn-border-width: 2px;
+  --btn-hover-transform: translateY(-2px);
+
+  /* Hero */
+  --hero-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  --hero-statement-size: clamp(2.5rem, 1.3rem + 4.4vw, 5.5rem);
+  --hero-statement-max: 15ch;
+  --hero-title-size: var(--text-lg);
+
+  /* Cards — solid colour blocks */
+  --grid-gap: 0;
+  --card-border-width: 0;
+  --card-padding: clamp(1.5rem, 4vw, 3rem);
+  --card-title-size: var(--text-2xl);
+  --card-media-ratio: 4 / 3;
+  --card-media-hover: scale(1.04);
+  --card-hover-transform: none;
+
+  /* Tags */
+  --tag-radius: 999px;
+
+  /* Figures & quotes */
+  --figure-radius: 0;
+  --figure-pad: clamp(0.75rem, 2vw, 1.5rem);
+  --quote-radius: 0;
+  --quote-weight: 700;
+  --about-photo-radius: 50%;
+
+  /* Primary palette (same in both modes) */
+  --prism-blue: #1f3fff;
+  --prism-red: #ff4422;
+  --prism-yellow: #ffc61a;
+}
+
+:root[data-style="prism"][data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f2f2f0;
+  --color-surface: #f2f2f0;
+  --color-surface-alt: #f2f2f0;
+  --color-text: #0a0a0a;
+  --color-text-muted: #4d4d4d;
+  --color-border: #0a0a0a;
+  --color-border-strong: #0a0a0a;
+  --color-accent: var(--prism-blue);
+  --color-on-accent: #ffffff;
+  --color-accent-text: var(--prism-blue);
+  --color-focus: var(--prism-blue);
+  --color-selection: #ffe08a;
+  --color-error: #c4161c;
+  --eyebrow-color: var(--color-text);
+  --prism-ink: #0a0a0a;
+  --tag-border: currentColor;
+  --tag-fg: var(--color-text);
+  --figure-bg: #f2f2f0;
+  --card-media-bg: #ffffff;
+  --about-photo-bg: var(--prism-yellow);
+}
+
+:root[data-style="prism"][data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #0d0d12;
+  --color-bg-alt: #16161d;
+  --color-surface: #17171f;
+  --color-surface-alt: #1f1f29;
+  --color-text: #f5f5f5;
+  --color-text-muted: #b4b4bd;
+  --color-border: #f5f5f5;
+  --color-border-strong: #f5f5f5;
+  --color-accent: var(--prism-yellow);
+  --color-on-accent: #0a0a0a;
+  --color-accent-text: var(--prism-yellow);
+  --color-focus: var(--prism-yellow);
+  --color-selection: #2b3bb3;
+  --color-error: #ff8a7a;
+  --eyebrow-color: var(--color-text);
+  --prism-ink: #f5f5f5;
+  --tag-border: currentColor;
+  --tag-fg: var(--color-text);
+  --figure-bg: #ececea;
+  --card-media-bg: #ffffff;
+  --about-photo-bg: var(--prism-blue);
+}
+
+/* Hero: CSS-only Bauhaus composition in a 2×2 grid */
+:root[data-style="prism"] .c-hero__art {
+  aspect-ratio: 1;
+  width: min(100%, 28rem);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 0 100%, var(--prism-red) 0 70.5%, transparent 71%) 0 0 / 50% 50% no-repeat,
+    radial-gradient(circle, var(--prism-ink) 0 33%, transparent 33.5%) 100% 0 / 50% 50% no-repeat,
+    linear-gradient(var(--prism-yellow), var(--prism-yellow)) 100% 0 / 50% 50% no-repeat,
+    radial-gradient(circle at 50% 0, var(--prism-blue) 0 50%, transparent 50.5%) 0 100% / 50% 50% no-repeat,
+    linear-gradient(var(--prism-blue), var(--prism-blue)) 100% 100% / 50% 50% no-repeat;
+}
+
+:root[data-style="prism"] .c-hero__art img {
+  display: none;
+}
+
+/* A slowly turning bow-tie of quarter-circles (stops under reduced motion) */
+:root[data-style="prism"] .c-hero__art::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: conic-gradient(var(--prism-yellow) 0 25%, transparent 0 50%, var(--prism-yellow) 0 75%, transparent 0);
+  transform-origin: 50% 50%;
+  animation: prism-turn 24s linear infinite;
+}
+
+@keyframes prism-turn {
+  to { transform: rotate(360deg); }
+}
+
+:root[data-style="prism"] .c-hero__statement em {
+  font-style: normal;
+  color: var(--color-accent-text);
+}
+
+:root[data-style="prism"][data-theme="light"] .c-hero__statement em {
+  color: var(--prism-blue);
+}
+
+:root[data-style="prism"] .c-hero__intro {
+  border-left: 6px solid var(--prism-red);
+  padding-left: var(--space-5);
+}
+
+/* Section titles: big, tight, with a circle bullet */
+:root[data-style="prism"] .c-section__title {
+  font-size: var(--text-3xl);
+}
+
+:root[data-style="prism"] .c-section__head .eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 0.6em;
+  vertical-align: -0.1em;
+  border-radius: 50%;
+  background: var(--prism-red);
+}
+
+/* Project cards cycle through colour blocks; each block re-maps its own text tokens */
+:root[data-style="prism"] .c-grid--projects > li:nth-child(4n + 1) .c-card {
+  --card-bg: var(--prism-blue);
+  --color-text: #ffffff;
+  --color-text-muted: #dfe4ff;
+  --tag-fg: #ffffff;
+}
+
+:root[data-style="prism"] .c-grid--projects > li:nth-child(4n + 2) .c-card {
+  --card-bg: var(--prism-yellow);
+  --color-text: #0a0a0a;
+  --color-text-muted: #2a2a2a;
+  --tag-fg: #0a0a0a;
+}
+
+:root[data-style="prism"] .c-grid--projects > li:nth-child(4n + 3) .c-card {
+  --card-bg: var(--prism-red);
+  --color-text: #0a0a0a;
+  --color-text-muted: #1f1f1f;
+  --tag-fg: #0a0a0a;
+}
+
+:root[data-style="prism"] .c-grid--projects > li:nth-child(4n + 4) .c-card {
+  --card-bg: var(--color-surface);
+}
+
+:root[data-style="prism"] .c-card {
+  color: var(--color-text);
+}
+
+:root[data-style="prism"] .c-card .eyebrow {
+  color: var(--color-text);
+}
+
+/* Media framed by a quarter-circle corner */
+:root[data-style="prism"] .c-card__media {
+  border-radius: 0 0 0 clamp(4rem, 12vw, 9rem);
+}
+
+:root[data-style="prism"] .c-grid--projects > li:nth-child(even) .c-card__media {
+  border-radius: 0 clamp(4rem, 12vw, 9rem) 0 0;
+}
+
+:root[data-style="prism"] .c-card--featured {
+  --card-areas: "body media";
+  --card-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  --card-title-size: var(--text-3xl);
+}
+
+:root[data-style="prism"] .c-release {
+  --card-padding: 0;
+  --card-media-ratio: 16 / 9;
+  border: 2px solid var(--color-border);
+}
+
+:root[data-style="prism"] .c-release .c-card__body {
+  padding: 0 var(--space-5) var(--space-5);
+}
+
+:root[data-style="prism"] .c-grid--releases {
+  --grid-gap: var(--space-5);
+}
+
+:root[data-style="prism"] .c-highlights > li:nth-child(1) .c-highlight { border-top: 10px solid var(--prism-blue); }
+:root[data-style="prism"] .c-highlights > li:nth-child(2) .c-highlight { border-top: 10px solid var(--prism-red); }
+:root[data-style="prism"] .c-highlights > li:nth-child(3) .c-highlight { border-top: 10px solid var(--prism-yellow); }
+:root[data-style="prism"] .c-highlights > li:nth-child(4) .c-highlight { border-top: 10px solid var(--color-text); }
+
+:root[data-style="prism"] .c-highlight {
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  background: var(--color-surface);
+}
+
+:root[data-style="prism"] .c-quote {
+  border-left: 10px solid var(--prism-yellow);
+}
+
+:root[data-style="prism"] .c-callout {
+  border-left: 10px solid var(--prism-blue);
+}
+
+:root[data-style="prism"] .c-case-hero__title {
+  font-size: var(--text-4xl);
+  max-width: 14ch;
+}
+
+:root[data-style="prism"] .c-footer {
+  border-top: 10px solid var(--prism-blue);
+}
+
+:root[data-style="prism"] .c-footer__title {
+  font-size: var(--text-4xl);
+}

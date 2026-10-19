@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import { ACCESS_GUARD, SITE } from '../config';
+const { storageKey, password } = ACCESS_GUARD;
+---
+<BaseLayout title="Unlock" guard={false}>
+  <div class="container c-unlock">
+    <div class="c-unlock__card">
+      <p class="eyebrow">Protected portfolio</p>
+      <h1 class="c-unlock__title">Enter password</h1>
+      <p>Some work here is under NDA. <a href={`mailto:${SITE.email}`}>Contact me</a> for the password.</p>
+      <form id="unlock-form" class="c-field" novalidate>
+        <label for="unlock-password">Password</label>
+        <input
+          id="unlock-password"
+          class="c-input"
+          type="password"
+          autocomplete="current-password"
+          required
+          aria-describedby="unlock-error"
+        />
+        <p id="unlock-error" class="c-error" aria-live="polite"></p>
+        <button class="c-btn c-btn--primary" type="submit"><Icon name="lock" /> Unlock portfolio</button>
+      </form>
+    </div>
+  </div>
+</BaseLayout>
+
+<script is:inline define:vars={{ storageKey, password }}>
+  (function () {
+    var form = document.getElementById('unlock-form');
+    var input = document.getElementById('unlock-password');
+    var error = document.getElementById('unlock-error');
+    var params = new URLSearchParams(location.search);
+    var next = params.get('next') || '/';
+    // Only allow same-site paths as redirect targets.
+    if (next.charAt(0) !== '/' || next.charAt(1) === '/') next = '/';
+    if (params.get('reset') === '1') { try { localStorage.removeItem(storageKey); } catch (e) {} }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (input.value === password) {
+        try { localStorage.setItem(storageKey, 'true'); } catch (err) {}
+        location.replace(next);
+        return;
+      }
+      input.setAttribute('aria-invalid', 'true');
+      error.textContent = 'Incorrect password. Please try again.';
+      input.focus();
+      input.select();
+    });
+  })();
+</script>

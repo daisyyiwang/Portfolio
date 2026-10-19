@@ -1,0 +1,101 @@
+---
+title: In-store self-checkout
+company: Kohl's
+summary: Self-checkout for department stores, designed for customers and associates alike.
+tags:
+  - { label: B2C, tone: orange }
+  - { label: Payment, tone: gray }
+  - { label: Physical + digital, tone: blue }
+cover: /images/SC-card.svg
+coverAlt: In-store self checkout project cover
+order: 5
+migrated: true
+meta:
+  role: Lead designer
+  launched: Oct 2018
+  audience: In-store shoppers & associates
+next: edit-image-in-acrobat
+---
+import Section from '../../components/case/Section.astro';
+import Figure from '../../components/case/Figure.astro';
+import Split from '../../components/case/Split.astro';
+import Stats from '../../components/case/Stats.astro';
+import Callout from '../../components/case/Callout.astro';
+
+How many times have you been frustrated by long lines in a store? What if you could use self-checkout in a department store, just like at the grocery store?
+
+<Section eyebrow="My role & my team" title="Orchestrating the whole room">
+  <p>As lead experience designer, I worked closely with customer research, product management and project planning. Together we collaborated with engineering, store operations, business, loss prevention and more to take this experience from idea to launch.</p>
+  <p>This project pushed my practice beyond screens. Self-checkout isn't a single app — it's a monitor, a scanner, a payment terminal, security tags, coupons and physical merchandise working together in a few square feet. A big part of my role was designing how the on-screen flow connects to the hardware and store operations around it.</p>
+</Section>
+
+<Section eyebrow="Design principles" title="Looking at the core experience">
+  <p>Communication was the hardest part at the start: at least 8 core teams across 2 locations, and — <strong>unlike most projects — store-related teams on top of product, research and engineering.</strong> To set a good foundation, I first aligned on design expectations by sharing three design principles with core partners and walking through the main flow. It brought everyone on board and set an open tone from day one.</p>
+  <Figure src="/images/sc-principle.svg" alt="The three design principles shared with partner teams." />
+  <p>Our research team then surveyed customers about their expectations and concerns. Together with a competitive analysis, it surfaced two main concerns:</p>
+  <Stats items={[
+    { value: '72%', label: 'had difficulty finding an associate for help' },
+    { value: '56%', label: 'needed an associate because coupons were hard to apply' },
+  ]} />
+  <Figure src="/images/sc-coreflow.svg" alt="Core self-checkout flow from scanning to payment." />
+</Section>
+
+<Section eyebrow="Overview" title="Design highlights">
+  <Split src="/images/sc-01.svg" alt="Self-checkout welcome screen.">
+    <h3>At first glance</h3>
+    <p>A clean, clear start screen so customers can begin scanning right away.</p>
+  </Split>
+  <Split reverse src="/images/sc-02.svg" alt="Scanning screen with running total and offers.">
+    <h3>Checking out</h3>
+    <p>Offers can be applied at any time, with a clear pricing story for a joyful, efficient checkout.</p>
+  </Split>
+  <Split src="/images/sc-03.svg" alt="Order confirmation screen celebrating rewards earned.">
+    <h3>End with a celebration</h3>
+    <p>Celebrate what customers earned at Kohl's, with a clear summary of their purchase.</p>
+  </Split>
+</Section>
+
+<Section eyebrow="Design decisions" title="When and how to sign in as a rewards member?">
+  <Figure src="/images/sc-proposal.svg" alt="Early concepts showing three sign-in methods on a side panel." />
+  <p>There are three ways customers can identify themselves as rewards members, so early concepts all showed the three methods on a side panel. But lab testing showed that:</p>
+  <ol>
+    <li>Most customers are <strong>used to signing in with a phone number.</strong></li>
+    <li>They usually start without looking at the screen — <strong>they simply start scanning.</strong></li>
+  </ol>
+  <p>That meant most customers would struggle to apply coupons — the top concern from our early survey. So I re-examined the flow and proposed something different:</p>
+  <Figure src="/images/sc-flow.svg" alt="Revised flow: sign-in appears after scanning begins, and a coupon reminder appears before payment." />
+  <p>The new design shows sign-in after scanning starts, and reminds customers to apply coupons once they're ready to pay. Feedback was very positive. It makes sure that:</p>
+  <ol>
+    <li>Customers can <strong>start checking out right away</strong>, without too much up front.</li>
+    <li>Sign-in is <strong>always available</strong> while checking out.</li>
+    <li>Coupons are surfaced <strong>proactively</strong>, right before payment.</li>
+  </ol>
+  <Figure src="/images/sc-signinfinal.svg" alt="Final sign-in design during scanning." />
+  <p>Once signed in, available Kohl's Cash and coupons appear clearly on the right panel.</p>
+  <Figure src="/images/sc-signinfinal02.svg" alt="Final design showing Kohl's Cash and coupons on the right panel." />
+</Section>
+
+<Section eyebrow="Design decisions" title="Prototyping beyond the screen">
+  <p>A clickable prototype couldn't tell us how self-checkout would feel on the sales floor. So I worked with engineering to rebuild the flow on real hardware: <strong>the same checkout system and monitor already running in Kohl's stores</strong>, set up in our research lab with an eye-tracking rig. Customers checked out with real merchandise, not a laptop.</p>
+  <p>The hardest questions weren't UI questions — they were room questions: <strong>where attention goes, what people touch first, and how the screen hands off to a tag reader, a locker or a person.</strong> Treating the monitor, scanner, payment terminal and props as one system let us answer department-store questions a grocery self-checkout never has to:</p>
+  <ul>
+    <li><strong>Clothing racks & security tags</strong> — apparel needs its tag deactivated at checkout. We tested where the deactivation pad should sit beside the monitor, and how the screen should prompt customers without breaking their scanning rhythm.</li>
+    <li><strong>When to ask for coupons</strong> — watching people scan first and look second is what told us coupons belonged right before payment. Only real hardware and real shopping behavior could validate that timing.</li>
+    <li><strong>Lockers for secured tech</strong> — self-checkout can't unlock a case. I worked with store associates to scope it out: the tech department keeps its own checkout and tag-removal process for this MVP.</li>
+  </ul>
+  <Figure src="/images/sc-testphoto.svg" alt="The research lab set up with in-store checkout hardware and an eye-tracking rig." />
+</Section>
+
+<Section eyebrow="Design decisions" title="How to clearly show and celebrate earned rewards?">
+  <p>Kohl's is known for Kohl's Cash — many customers shop specifically to earn or spend it. But its calculations were the main complaint about self-checkout. I worked closely with marketing to list every Kohl's Cash scenario and iterated until savings felt easy, clear and delightful.</p>
+  <Figure src="/images/sc-senario.svg" alt="User flow map of Kohl's Cash scenarios." />
+  <p>This flow map helped product, engineering and marketing agree on how many scenarios we needed to design, and made it much clearer how to serve customers with different preferences.</p>
+  <Figure src="/images/sc-earnkc.svg" alt="Final designs for showing earned Kohl's Cash during and after checkout." />
+  <p>Customers see their savings throughout scanning. When they finish, a dialog tells them how much Kohl's Cash they earned, and the confirmation screen celebrates it once more.</p>
+  <Figure src="/images/sc-pilot.svg" alt="Pilot testing in store: a customer checking out with a handful of coupons." />
+  <p>A common scene from the pilot: a customer arrives with all her coupons and wants to be sure she's maximized them and earned her rewards. During the pilot rollout:</p>
+  <Stats items={[
+    { value: '92%', label: 'of customers were likely or very likely to use it again' },
+    { value: '75%', label: 'said checkout was quick or very quick' },
+  ]} />
+</Section>

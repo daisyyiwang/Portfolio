@@ -1,0 +1,67 @@
+---
+import Icon from './Icon.astro';
+import { SITE } from '../config';
+
+const path = Astro.url.pathname;
+const isWork = path === '/' || path.startsWith('/work');
+const isAbout = path.startsWith('/about');
+---
+<header class="c-header">
+  <div class="container c-header__inner">
+    <a class="c-logo" href="/">
+      <span class="c-logo__mark" aria-hidden="true"></span>
+      <span class="c-logo__name">Daisy Wang</span>
+      <span class="visually-hidden">— home</span>
+    </a>
+    <nav class="c-nav" aria-label="Main">
+      <ul class="c-nav__list" id="primary-nav" data-open="false">
+        <li><a class="c-nav__link" href="/#work" aria-current={isWork ? 'page' : undefined}>Work</a></li>
+        <li><a class="c-nav__link" href="/about/" aria-current={isAbout ? 'page' : undefined}>About</a></li>
+        <li>
+          <a class="c-nav__link" href={SITE.resume} target="_blank" rel="noopener">
+            Resume <span class="visually-hidden">(PDF, opens in a new tab)</span>
+            <Icon name="arrow-up-right" class="ext-icon" />
+          </a>
+        </li>
+      </ul>
+      <button class="c-icon-btn c-theme-toggle" type="button" aria-pressed="false" data-theme-toggle>
+        <span class="visually-hidden">Dark theme</span>
+        <Icon name="moon" class="icon-moon" />
+        <Icon name="sun" class="icon-sun" />
+      </button>
+      <button class="c-icon-btn c-menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle>
+        <span class="visually-hidden">Menu</span>
+        <Icon name="menu" />
+      </button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const root = document.documentElement;
+  const themeBtn = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
+  const sync = () => themeBtn?.setAttribute('aria-pressed', String(root.dataset.theme === 'dark'));
+  sync();
+  themeBtn?.addEventListener('click', () => {
+    root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem('portfolio_theme', root.dataset.theme); } catch {}
+    sync();
+  });
+
+  const menuBtn = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const list = document.getElementById('primary-nav');
+  const setOpen = (open: boolean) => {
+    menuBtn?.setAttribute('aria-expanded', String(open));
+    list?.setAttribute('data-open', String(open));
+  };
+  menuBtn?.addEventListener('click', () => setOpen(menuBtn.getAttribute('aria-expanded') !== 'true'));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menuBtn?.getAttribute('aria-expanded') === 'true') {
+      setOpen(false);
+      menuBtn.focus();
+    }
+  });
+  list?.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).closest('a')) setOpen(false);
+  });
+</script>

@@ -1,0 +1,51 @@
+---
+import Icon from './Icon.astro';
+import { SITE, FOOTER_MANIFESTO } from '../config';
+
+interface Props {
+  // The home page closes with the design manifesto; other pages keep the short sign-off.
+  manifesto?: boolean;
+}
+const { manifesto = false } = Astro.props;
+const m = FOOTER_MANIFESTO;
+---
+<footer class:list={['c-footer', { 'c-footer--manifesto': manifesto }]}>
+  <div class="container">
+    {manifesto ? (
+      <div class="c-footer__cta">
+        <p class="eyebrow">Get in touch</p>
+        <h2 class="c-footer__title">{m.title}</h2>
+        <ul class="c-values">
+          {m.values.map((v) => (
+            <li class="c-values__item">
+              <h3 class="c-values__title">{v.title}</h3>
+              <p>{v.body}</p>
+            </li>
+          ))}
+        </ul>
+        <p class="c-footer__lead">{m.closing}</p>
+        <a class="c-footer__email" href={`mailto:${SITE.email}`}>{SITE.email}</a>
+      </div>
+    ) : (
+      <div class="c-footer__cta">
+        <p class="eyebrow">Get in touch</p>
+        <h2 class="c-footer__title">Let's make something thoughtful.</h2>
+        <a class="c-footer__email" href={`mailto:${SITE.email}`}>{SITE.email}</a>
+      </div>
+    )}
+    <div class="c-footer__bottom">
+      <p>&copy; {new Date().getFullYear()} Designed &amp; coded by Daisy Yi Wang.</p>
+      <ul class="c-social">
+        <li>
+          <a class="c-icon-btn" href={`mailto:${SITE.email}`}><Icon name="mail" label="Email" /></a>
+        </li>
+        <li>
+          <a class="c-icon-btn" href={SITE.linkedin} target="_blank" rel="noopener"><Icon name="linkedin" label="LinkedIn (opens in a new tab)" /></a>
+        </li>
+        <li>
+          <a class="c-icon-btn" href={SITE.dribbble} target="_blank" rel="noopener"><Icon name="dribbble" label="Dribbble (opens in a new tab)" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>

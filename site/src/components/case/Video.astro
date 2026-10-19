@@ -1,0 +1,18 @@
+---
+// Short muted loop with native controls (so it can always be paused).
+// It only starts playing on its own when the visitor allows motion.
+interface Props {
+  src: string;
+  label: string;
+  width?: number;
+  height?: number;
+}
+const { src, label, width, height } = Astro.props;
+---
+<video class="c-video" src={src} aria-label={label} width={width} height={height} muted loop playsinline controls preload="metadata" data-autoplay></video>
+
+<script>
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll<HTMLVideoElement>('video[data-autoplay]').forEach((v) => v.play().catch(() => {}));
+  }
+</script>

@@ -1,0 +1,64 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TagList from '../../components/TagList.astro';
+import Button from '../../components/Button.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import { sharpImg } from '../../lib/imageSize';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects', (p) => p.data.migrated);
+  return projects.map((project) => ({ params: { slug: project.id }, props: { project } }));
+}
+
+const { project } = Astro.props;
+const p = project.data;
+const { Content } = await render(project);
+const next = p.next ? await getEntry('projects', p.next) : undefined;
+---
+<BaseLayout title={p.title} description={p.summary}>
+  <div class="c-progress" aria-hidden="true">
+    <span class="c-progress__bar"></span>
+    <span class="c-progress__label">File {String(p.order).padStart(2, '0')} · <span class="c-progress__pct"></span> refined</span>
+  </div>
+  <article>
+    <header class="c-case-hero">
+      <div class="container">
+        <div class="c-case-hero__text">
+          <p class="eyebrow" data-file={String(p.order).padStart(2, '0')}>{p.company}</p>
+          <h1 class="c-case-hero__title">{p.title}</h1>
+          <p class="c-case-hero__summary">{p.summary}</p>
+          <TagList tags={p.tags} />
+        </div>
+        {p.meta && (
+          <dl class="c-case-meta">
+            <div><dt class="eyebrow">Role</dt><dd>{p.meta.role}</dd></div>
+            <div><dt class="eyebrow">{p.meta.whenLabel}</dt><dd>{p.meta.launched}</dd></div>
+            <div><dt class="eyebrow">Audience</dt><dd>{p.meta.audience}</dd></div>
+            {p.link && <div><dt class="eyebrow">Read more</dt><dd><a href={p.link.href} target="_blank" rel="noopener">{p.link.label}<span class="visually-hidden"> (opens in a new tab)</span></a></dd></div>}
+          </dl>
+        )}
+        <figure class="c-figure c-case-cover">
+          <div class="c-figure__plate"><img src={p.cover} alt={p.coverAlt} {...sharpImg(p.cover)} /></div>
+        </figure>
+      </div>
+    </header>
+
+    <div class="container--narrow c-prose">
+      <Content />
+    </div>
+  </article>
+
+  {next && (
+    <section class="c-section c-next" aria-labelledby="next-title">
+      <div class="container">
+        <SectionHeading eyebrow="Next project" title="Keep reading" id="next-title" />
+        <ul class="c-grid" style="--grid-columns: minmax(0, 1fr)">
+          <li><ProjectCard project={{ ...next, data: { ...next.data, featured: true } }} index={next.data.order} /></li>
+        </ul>
+        <p style="margin-top: var(--space-6)"><Button href="/#work" variant="secondary">All work</Button></p>
+      </div>
+    </section>
+  )}
+</BaseLayout>

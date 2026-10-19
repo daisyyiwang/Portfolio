@@ -1,0 +1,51 @@
+/* Buttons */
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: 0 var(--space-5);
+  border: var(--btn-border-width, 1px) solid transparent;
+  border-radius: var(--btn-radius, var(--radius-md));
+  font-family: var(--btn-font, var(--font-body));
+  font-size: var(--text-sm);
+  font-weight: var(--btn-weight, 600);
+  letter-spacing: var(--btn-tracking, 0);
+  text-transform: var(--btn-transform, none);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+}
+
+.c-btn--primary {
+  background: var(--btn-primary-bg, var(--color-accent));
+  color: var(--btn-primary-fg, var(--color-on-accent));
+  border-color: var(--btn-primary-border, transparent);
+  box-shadow: var(--btn-primary-shadow, none);
+}
+
+.c-btn--primary:hover {
+  background: var(--btn-primary-bg-hover, var(--btn-primary-bg, var(--color-accent)));
+  box-shadow: var(--btn-primary-shadow-hover, var(--btn-primary-shadow, none));
+  transform: var(--btn-hover-transform, none);
+  text-decoration: none;
+}
+
+.c-btn--secondary {
+  background: var(--btn-secondary-bg, transparent);
+  color: var(--btn-secondary-fg, var(--color-text));
+  border-color: var(--btn-secondary-border, var(--color-border-strong));
+}
+
+.c-btn--secondary:hover {
+  border-color: var(--color-text);
+  transform: var(--btn-hover-transform, none);
+  text-decoration: none;
+}
+
+.c-btn svg {
+  width: 1em;
+  height: 1em;
+}

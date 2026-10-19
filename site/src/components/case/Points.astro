@@ -1,0 +1,14 @@
+---
+// A list of short findings or principles, set larger than body text.
+interface Props {
+  items: string[];
+  emoji?: string;
+}
+const { items, emoji } = Astro.props;
+---
+<div class="c-points">
+  {emoji && <span class="c-quote__emoji" aria-hidden="true">{emoji}</span>}
+  <ul>
+    {items.map((item) => <li set:html={item} />)}
+  </ul>
+</div>

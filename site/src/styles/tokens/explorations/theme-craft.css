@@ -1,0 +1,295 @@
+/*
+  Option B — Craft.
+  Bold colour and paper texture, hand-drawn marks and wobbly edges that
+  echo the Daisy character illustration (pink, sky blue, ink, cream).
+*/
+:root[data-style="craft"] {
+  /* Type */
+  --font-body: var(--ff-dm-sans);
+  --font-display: var(--ff-fraunces);
+  --font-mono: var(--ff-mono);
+  --font-accent: var(--ff-caveat);
+  --display-weight: 700;
+  --display-tracking: -0.01em;
+  --display-leading: 1.08;
+  --body-leading: 1.6;
+  --eyebrow-font: var(--ff-caveat);
+  --eyebrow-size: 1.375rem;
+  --eyebrow-transform: none;
+  --eyebrow-tracking: 0;
+
+  /* Shape — slightly irregular, hand-cut corners */
+  --radius-sm: 10px 12px 9px 13px;
+  --radius-md: 16px 22px 14px 20px / 20px 14px 22px 16px;
+  --radius-lg: 26px 34px 24px 38px / 34px 24px 38px 26px;
+
+  /* Header */
+  --header-blur: none;
+
+  /* Buttons — ink with a hard offset shadow */
+  --btn-radius: var(--radius-md);
+  --btn-border-width: 2px;
+  --btn-weight: 700;
+  --btn-hover-transform: translate(-2px, -2px);
+
+  /* Hero */
+  --hero-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  --hero-statement-size: clamp(2rem, 1.3rem + 2.6vw, 3.5rem);
+  --hero-statement-max: 22ch;
+  --hero-title-size: var(--text-xl);
+  --hero-note-display: block;
+  --hero-note: "↙ hi, that's me!";
+  --em-style: italic;
+
+  /* Cards — chunky outlined blocks with offset shadow, alternating rows */
+  --grid-columns: minmax(0, 1fr);
+  --grid-gap: var(--space-7);
+  --card-border-width: 2.5px;
+  --card-padding: clamp(1.25rem, 3vw, 2.5rem);
+  --card-gap: clamp(1.5rem, 4vw, 3.5rem);
+  --card-areas: "body media";
+  --card-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  --card-title-size: var(--text-2xl);
+  --card-media-radius: var(--radius-md);
+  --card-hover-transform: translate(-4px, -4px) rotate(-0.4deg);
+  --card-media-hover: scale(1.04) rotate(1deg);
+
+  /* Tags */
+  --tag-radius: 999px;
+
+  /* Figures & quotes */
+  --figure-radius: var(--radius-lg);
+  --figure-pad: clamp(0.75rem, 2vw, 1.5rem);
+  --quote-radius: var(--radius-lg);
+  --quote-font: var(--ff-fraunces);
+  --quote-weight: 600;
+  --about-photo-radius: 46% 54% 50% 50% / 55% 45% 55% 45%;
+}
+
+:root[data-style="craft"][data-theme="light"] {
+  color-scheme: light;
+  --color-bg: var(--paper-100);
+  --color-bg-alt: var(--paper-200);
+  --color-surface: var(--paper-50);
+  --color-surface-alt: var(--sun-200);
+  --color-text: var(--ink-900);
+  --color-text-muted: var(--ink-600);
+  --color-border: var(--ink-900);
+  --color-border-strong: var(--ink-900);
+  --color-accent: var(--ink-900);
+  --color-on-accent: var(--paper-50);
+  --color-accent-text: var(--pink-600);
+  --color-focus: var(--sky-700);
+  --color-selection: var(--pink-300);
+  --color-error: #b3261e;
+  --eyebrow-color: var(--pink-600);
+  --hard-shadow: var(--ink-900);
+  --page-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .12 0 0 0 0 .1 0 0 0 0 .09 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --page-texture-opacity: 0.16;
+  --header-bg: var(--paper-100);
+  --header-border: var(--ink-900);
+  --btn-primary-shadow: 4px 4px 0 var(--pink-400);
+  --btn-primary-shadow-hover: 6px 6px 0 var(--pink-400);
+  --btn-secondary-bg: var(--paper-50);
+  --btn-secondary-border: var(--ink-900);
+  --tag-border: var(--ink-900);
+  --tag-fg: var(--ink-900);
+  --figure-bg: var(--paper-50);
+  --figure-border: 2px solid var(--ink-900);
+  --quote-bg: var(--sun-200);
+  --quote-border: 2px solid var(--ink-900);
+  --quote-shadow: 6px 6px 0 var(--ink-900);
+  --about-photo-bg: var(--pink-300);
+  --footer-bg: var(--ink-900);
+}
+
+:root[data-style="craft"][data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #1b1613;
+  --color-bg-alt: var(--ink-950);
+  --color-surface: #28211c;
+  --color-surface-alt: #352a22;
+  --color-text: var(--paper-100);
+  --color-text-muted: #d6c8ba;
+  --color-border: var(--paper-200);
+  --color-border-strong: var(--paper-100);
+  --color-accent: var(--pink-400);
+  --color-on-accent: var(--ink-900);
+  --color-accent-text: var(--pink-400);
+  --color-focus: var(--sun-400);
+  --color-selection: var(--pink-600);
+  --color-error: #ffb4ab;
+  --eyebrow-color: var(--pink-400);
+  --hard-shadow: var(--pink-400);
+  --page-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .9 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --page-texture-opacity: 0.08;
+  --header-bg: #1b1613;
+  --header-border: var(--paper-200);
+  --btn-primary-border: var(--pink-400);
+  --btn-primary-shadow: 4px 4px 0 var(--sky-500);
+  --btn-primary-shadow-hover: 6px 6px 0 var(--sky-500);
+  --btn-secondary-bg: transparent;
+  --btn-secondary-border: var(--paper-100);
+  --tag-border: transparent;
+  --tag-fg: var(--ink-900);
+  --figure-bg: var(--paper-50);
+  --figure-border: 2px solid var(--paper-200);
+  --quote-bg: #352a22;
+  --quote-border: 2px solid var(--paper-200);
+  --quote-shadow: 6px 6px 0 var(--pink-400);
+  --about-photo-bg: var(--pink-400);
+  --footer-bg: var(--ink-950);
+}
+
+:root[data-style="craft"] :is(h1, h2, h3, .c-hero__statement, .c-quote__text, .c-footer__email) {
+  font-variation-settings: "SOFT" 100;
+}
+
+/* Tag tones: pastel chips with ink text in both modes */
+:root[data-style="craft"] .c-tag { background: var(--paper-50); }
+:root[data-style="craft"] .c-tag[data-tone="red"] { background: var(--clay-200); }
+:root[data-style="craft"] .c-tag[data-tone="orange"] { background: var(--clay-200); }
+:root[data-style="craft"] .c-tag[data-tone="yellow"] { background: var(--sun-200); }
+:root[data-style="craft"] .c-tag[data-tone="pink"] { background: var(--pink-200); }
+:root[data-style="craft"] .c-tag[data-tone="green"] { background: var(--leaf-200); }
+:root[data-style="craft"] .c-tag[data-tone="blue"] { background: var(--sky-200); }
+:root[data-style="craft"] .c-tag[data-tone="purple"] { background: var(--lilac-200); }
+:root[data-style="craft"] .c-tag[data-tone="gray"] { background: var(--paper-200); }
+:root[data-style="craft"] .c-tag { font-weight: 600; border-width: 1.5px; }
+
+/* Hand-drawn squiggle under emphasised words */
+:root[data-style="craft"] .c-hero__statement em,
+:root[data-style="craft"] .c-scribble {
+  padding-bottom: 0.08em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'%3E%3Cpath d='M2 9 C 30 3, 55 13, 85 7 S 140 2, 165 8 S 192 10, 198 5' fill='none' stroke='%23ff8fc0' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E")
+    left bottom / 100% 0.32em no-repeat;
+}
+
+/* Hero: character on a hand-cut blob with stipple dots */
+:root[data-style="craft"] .c-hero__art::before {
+  content: "";
+  position: absolute;
+  inset: 8% -4% 2% 6%;
+  z-index: -1;
+  background: var(--sun-400);
+  border-radius: 58% 42% 46% 54% / 48% 56% 44% 52%;
+  transform: rotate(-6deg);
+}
+
+:root[data-style="craft"] .c-hero__art::after {
+  content: "";
+  position: absolute;
+  top: -6%;
+  right: -2%;
+  width: 40%;
+  aspect-ratio: 1;
+  z-index: -1;
+  background-image: radial-gradient(var(--color-text) 1.6px, transparent 1.8px);
+  background-size: 12px 12px;
+  border-radius: 50%;
+  opacity: 0.55;
+}
+
+:root[data-style="craft"] .c-hero__note {
+  position: absolute;
+  left: -14%;
+  top: 4%;
+  font-family: var(--ff-caveat);
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--color-text);
+  transform: rotate(-8deg);
+}
+
+/* Cards */
+:root[data-style="craft"] .c-card {
+  --card-shadow: 8px 8px 0 var(--card-shadow-c, var(--pink-400));
+  --card-shadow-hover: 12px 12px 0 var(--card-shadow-c, var(--pink-400));
+}
+
+:root[data-style="craft"] .c-grid > li:nth-child(4n + 1) .c-card { --card-shadow-c: var(--pink-400); --card-media-bg: var(--pink-200); }
+:root[data-style="craft"] .c-grid > li:nth-child(4n + 2) .c-card { --card-shadow-c: var(--sky-500); --card-media-bg: var(--sky-200); }
+:root[data-style="craft"] .c-grid > li:nth-child(4n + 3) .c-card { --card-shadow-c: var(--sun-400); --card-media-bg: var(--sun-200); }
+:root[data-style="craft"] .c-grid > li:nth-child(4n + 4) .c-card { --card-shadow-c: var(--leaf-400); --card-media-bg: var(--leaf-200); }
+
+:root[data-style="craft"] .c-grid--projects > li:nth-child(even) .c-card {
+  --card-areas: "media body";
+  --card-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+}
+
+:root[data-style="craft"] .c-card__media {
+  border: 2px solid var(--color-border);
+}
+
+:root[data-style="craft"] .c-card__body {
+  align-self: center;
+}
+
+:root[data-style="craft"] .c-grid--releases {
+  --grid-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  --grid-gap: var(--space-6);
+}
+
+:root[data-style="craft"] .c-highlight {
+  box-shadow: 6px 6px 0 var(--hard-shadow);
+}
+
+:root[data-style="craft"] .c-highlights > li:nth-child(2) .c-highlight { transform: rotate(0.6deg); }
+:root[data-style="craft"] .c-highlights > li:nth-child(3) .c-highlight { transform: rotate(-0.5deg); }
+
+/* Section titles get a hand-written aside feel */
+:root[data-style="craft"] .c-section__title {
+  font-size: var(--text-3xl);
+}
+
+:root[data-style="craft"] .c-archive {
+  border-top: 2px dashed var(--color-border);
+}
+
+:root[data-style="craft"] .c-archive__item {
+  border-bottom: 2px dashed var(--color-border);
+}
+
+/* Footer: inverted ink block */
+:root[data-style="craft"] .c-footer {
+  border-top: 0;
+  color: var(--paper-100);
+  --color-text: var(--paper-100);
+  --color-text-muted: #d6c8ba;
+  --color-accent-text: var(--pink-400);
+  --color-border: var(--paper-200);
+  --color-border-strong: var(--paper-100);
+  --color-focus: var(--sun-400);
+  --eyebrow-color: var(--pink-400);
+}
+
+:root[data-style="craft"] .c-footer__title {
+  color: var(--paper-100);
+}
+
+:root[data-style="craft"] .c-figure__plate {
+  box-shadow: 6px 6px 0 var(--hard-shadow);
+}
+
+:root[data-style="craft"] .c-case-meta {
+  border-block: 2px dashed var(--color-border);
+}
+
+:root[data-style="craft"] .c-callout {
+  border-left-width: 6px;
+  border-left-color: var(--pink-400);
+}
+
+@media (max-width: 48rem) {
+  :root[data-style="craft"] .c-grid--projects > li:nth-child(even) .c-card {
+    --card-areas: "body" "media";
+    --card-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 56rem) {
+  :root[data-style="craft"] .c-hero__note {
+    left: 0;
+    top: -8%;
+  }
+}

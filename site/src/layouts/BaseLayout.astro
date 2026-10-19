@@ -1,0 +1,97 @@
+---
+import '../styles/tokens/primitives.css';
+import '../styles/tokens/theme-refine.css';
+import '../styles/base.css';
+import '../styles/components/index.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import StyleSwitcher from '../components/StyleSwitcher.astro';
+import { SITE, GA4_ID, ACCESS_GUARD, STYLES, DEFAULT_STYLE, SHOW_STYLE_SWITCHER } from '../config';
+
+interface Props {
+  title?: string;
+  description?: string;
+  guard?: boolean;
+  manifesto?: boolean;
+}
+const { title, description = SITE.description, guard = ACCESS_GUARD.enabled, manifesto = false } = Astro.props;
+const pageTitle = title ? `${title} | ${SITE.name}` : SITE.title;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const styleIds = STYLES.map((s) => s.id);
+const guardKey = ACCESS_GUARD.storageKey;
+---
+<!doctype html>
+<html lang="en" data-style={DEFAULT_STYLE} data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/og.png', Astro.site).href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Daisy, Yi Wang — product designer. A retro terminal showing a field of numbers." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#eef0ec" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#03161a" media="(prefers-color-scheme: dark)" />
+    {guard && (
+      <script is:inline define:vars={{ guardKey }}>
+        // Password gate: same storage key as the current site, so an unlock carries over.
+        try {
+          if (localStorage.getItem(guardKey) !== 'true') {
+            location.replace('/unlock/?next=' + encodeURIComponent(location.pathname + location.search + location.hash));
+          }
+        } catch (e) {}
+      </script>
+    )}
+    <script is:inline define:vars={{ styleIds, DEFAULT_STYLE }}>
+      // Apply direction + theme before first paint to avoid a flash.
+      (function () {
+        var d = document.documentElement, s, t;
+        try { s = localStorage.getItem('portfolio_style'); t = localStorage.getItem('portfolio_theme'); } catch (e) {}
+        var q = new URLSearchParams(location.search).get('style');
+        if (styleIds.indexOf(q) > -1) { s = q; try { localStorage.setItem('portfolio_style', q); } catch (e) {} }
+        d.dataset.style = styleIds.indexOf(s) > -1 ? s : DEFAULT_STYLE;
+        var mq = matchMedia('(prefers-color-scheme: dark)');
+        d.dataset.theme = t === 'dark' || t === 'light' ? t : (mq.matches ? 'dark' : 'light');
+        mq.addEventListener('change', function (e) {
+          var saved; try { saved = localStorage.getItem('portfolio_theme'); } catch (err) {}
+          if (!saved) d.dataset.theme = e.matches ? 'dark' : 'light';
+        });
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Inter+Tight:wght@400..700&family=JetBrains+Mono:wght@400..600&family=VT323&display=swap"
+    />
+    {GA4_ID && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}></script>
+        <script is:inline define:vars={{ GA4_ID }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', GA4_ID);
+        </script>
+      </>
+    )}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <SiteFooter manifesto={manifesto} />
+    {SHOW_STYLE_SWITCHER && <StyleSwitcher />}
+  </body>
+</html>

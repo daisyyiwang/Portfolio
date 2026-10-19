@@ -1,0 +1,10 @@
+---
+interface Props {
+  emoji?: string;
+}
+const { emoji } = Astro.props;
+---
+<blockquote class="c-quote">
+  {emoji ? <span class="c-quote__emoji" aria-hidden="true">{emoji}</span> : <span />}
+  <p class="c-quote__text"><slot /></p>
+</blockquote>

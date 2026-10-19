@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Icon from './Icon.astro';
+import { projectHref } from '../lib/projects';
+interface Props {
+  projects: CollectionEntry<'projects'>[];
+}
+const { projects } = Astro.props;
+---
+<ul class="c-archive">
+  {projects.map((project) => {
+    const { href, external } = projectHref(project);
+    return (
+      <li class="c-archive__item">
+        <div class="c-archive__thumb" aria-hidden="true">
+          <img src={project.data.cover} alt="" loading="lazy" decoding="async" />
+        </div>
+        <div>
+          <span class="c-archive__index" aria-hidden="true">{String(project.data.order).padStart(2, '0')}</span>
+          <h3 class="c-archive__title">
+            <a class="c-card__link" href={href} {...(external ? { target: '_blank', rel: 'noopener' } : {})}>
+              {project.data.title}
+              {external && <span class="visually-hidden"> (opens in a new tab)</span>}
+            </a>
+          </h3>
+          <p class="c-archive__meta">{project.data.company}</p>
+        </div>
+        <Icon name={external ? 'arrow-up-right' : 'arrow-right'} class="c-archive__arrow" />
+      </li>
+    );
+  })}
+</ul>

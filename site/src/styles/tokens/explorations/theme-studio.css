@@ -1,0 +1,164 @@
+/*
+  Option A — Studio.
+  Calm, Apple-like: generous whitespace, system type, soft product tiles,
+  one restrained blue accent.
+*/
+:root[data-style="studio"] {
+  /* Type */
+  --font-body: var(--ff-system);
+  --font-display: var(--ff-system-display);
+  --font-mono: var(--ff-mono);
+  --font-accent: var(--ff-system-display);
+  --display-weight: 600;
+  --display-tracking: -0.022em;
+  --display-leading: 1.07;
+  --body-leading: 1.55;
+  --eyebrow-font: var(--ff-system);
+  --eyebrow-size: var(--text-sm);
+  --eyebrow-transform: none;
+  --eyebrow-tracking: 0;
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 28px;
+
+  /* Page */
+  --page-texture: none;
+
+  /* Header — frosted glass */
+  --header-blur: saturate(180%) blur(20px);
+
+  /* Buttons — pills */
+  --btn-radius: 980px;
+  --btn-weight: 500;
+  --btn-hover-transform: none;
+
+  /* Hero — centred, type-led */
+  --hero-columns: minmax(0, 1fr);
+  --hero-align: center;
+  --hero-justify: center;
+  --hero-art-display: none;
+  --hero-pad-top: clamp(4rem, 10vw, 9rem);
+  --hero-title-size: var(--text-lg);
+  --hero-statement-max: 20ch;
+  --hero-statement-size: clamp(2.5rem, 1.4rem + 4.6vw, 5.25rem);
+
+  /* Sections */
+  --section-head-justify: center;
+  --section-head-align: center;
+
+  /* Cards — product tiles */
+  --grid-gap: var(--space-4);
+  --card-border-width: 0;
+  --card-padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1.25rem, 3vw, 2.5rem) 0;
+  --card-align: center;
+  --card-justify: center;
+  --card-title-size: var(--text-2xl);
+  --card-media-ratio: 16 / 10;
+  --card-media-radius: 0;
+  --card-media-hover: scale(1.03);
+  --card-gap: var(--space-6);
+
+  /* Tags — quiet text chips */
+  --tag-border: transparent;
+  --tag-radius: 999px;
+
+  /* Figures & quotes */
+  --figure-radius: var(--radius-lg);
+  --figure-pad: clamp(1rem, 3vw, 2.5rem);
+  --quote-radius: var(--radius-lg);
+}
+
+:root[data-style="studio"][data-theme="light"] {
+  color-scheme: light;
+  --color-bg: var(--gray-0);
+  --color-bg-alt: var(--gray-50);
+  --color-surface: var(--gray-50);
+  --color-surface-alt: var(--gray-50);
+  --color-text: var(--gray-850);
+  --color-text-muted: var(--gray-500);
+  --color-border: var(--gray-200);
+  --color-border-strong: var(--gray-400);
+  --color-accent: var(--blue-500);
+  --color-on-accent: var(--gray-0);
+  --color-accent-text: var(--blue-600);
+  --color-focus: var(--blue-500);
+  --color-selection: #b4d7ff;
+  --color-error: #d70015;
+  --eyebrow-color: var(--color-text-muted);
+  --header-bg: rgb(255 255 255 / 0.78);
+  --header-border: rgb(0 0 0 / 0.08);
+  --tag-bg: var(--gray-0);
+  --tag-fg: var(--gray-700);
+  --figure-bg: var(--gray-50);
+  --card-media-bg: transparent;
+}
+
+:root[data-style="studio"][data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: var(--gray-1000);
+  --color-bg-alt: var(--gray-900);
+  --color-surface: var(--gray-900);
+  --color-surface-alt: var(--gray-850);
+  --color-text: var(--gray-50);
+  --color-text-muted: #a1a1a6;
+  --color-border: var(--gray-800);
+  --color-border-strong: var(--gray-500);
+  --color-accent: var(--blue-500);
+  --color-on-accent: var(--gray-0);
+  --color-accent-text: var(--blue-400);
+  --color-focus: var(--blue-400);
+  --color-selection: #0a4b8c;
+  --color-error: #ff6961;
+  --eyebrow-color: var(--color-text-muted);
+  --header-bg: rgb(22 22 23 / 0.8);
+  --header-border: rgb(255 255 255 / 0.08);
+  --tag-bg: var(--gray-800);
+  --tag-fg: var(--gray-100);
+  /* Case-study artwork has light backgrounds baked in, so plates stay light. */
+  --figure-bg: var(--gray-100);
+  --card-media-bg: transparent;
+}
+
+/* Hero: the first sentence's emphasis gets a soft gradient, Apple-keynote style */
+:root[data-style="studio"] .c-hero__statement em {
+  background: linear-gradient(90deg, #0071e3, #7d4cdb 55%, #e0457b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+:root[data-style="studio"][data-theme="dark"] .c-hero__statement em {
+  background-image: linear-gradient(90deg, #2997ff, #b18cff 55%, #ff7aa8);
+}
+
+:root[data-style="studio"] .c-card {
+  overflow: hidden;
+}
+
+/* Tiles: media bleeds to the bottom edge of the card */
+:root[data-style="studio"] .c-card__media {
+  margin-inline: calc(-1 * clamp(0.25rem, 1vw, 1rem));
+}
+
+:root[data-style="studio"] .c-card--featured {
+  --card-title-size: var(--text-3xl);
+}
+
+:root[data-style="studio"] .c-card--featured .c-card__media {
+  aspect-ratio: 21 / 9;
+}
+
+:root[data-style="studio"] .c-release {
+  --card-padding: 0;
+  --card-media-radius: 0;
+}
+
+:root[data-style="studio"] .c-release .c-card__body {
+  padding: 0 var(--space-5) var(--space-5);
+}
+
+:root[data-style="studio"] .c-archive__title {
+  font-weight: 600;
+}

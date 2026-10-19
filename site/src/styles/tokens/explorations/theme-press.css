@@ -1,0 +1,239 @@
+/*
+  Option D — Press.
+  Editorial / print: newsprint paper, high-contrast serif display, hairline
+  and double rules, one signal-red accent. No illustration — type is the art.
+*/
+:root[data-style="press"] {
+  /* Type */
+  --font-body: var(--ff-newsreader);
+  --font-display: var(--ff-instrument-serif);
+  --font-mono: var(--ff-mono);
+  --font-accent: var(--ff-instrument-serif);
+  --display-weight: 400;
+  --display-tracking: -0.015em;
+  --display-leading: 1;
+  --body-leading: 1.55;
+  --eyebrow-font: var(--ff-inter);
+  --eyebrow-size: 0.75rem;
+  --eyebrow-transform: uppercase;
+  --eyebrow-tracking: 0.16em;
+
+  /* Shape — print has no rounded corners */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+
+  /* Buttons */
+  --btn-radius: 0;
+  --btn-font: var(--ff-inter);
+  --btn-weight: 600;
+  --btn-transform: uppercase;
+  --btn-tracking: 0.12em;
+
+  /* Hero — full-width headline, no artwork */
+  --hero-columns: minmax(0, 1fr);
+  --hero-art-display: none;
+  --hero-pad-top: var(--space-7);
+  --hero-title-size: var(--text-md);
+  --hero-statement-size: clamp(2.75rem, 1.2rem + 6.4vw, 7.25rem);
+  --hero-statement-max: 17ch;
+  --em-style: italic;
+
+  /* Cards — ruled columns, no boxes */
+  --grid-gap: var(--space-7) var(--space-6);
+  --card-bg: transparent;
+  --card-border-width: 0;
+  --card-padding: var(--space-5) 0 0;
+  --card-index-display: block;
+  --card-title-size: var(--text-2xl);
+  --card-media-radius: 0;
+  --card-media-ratio: 4 / 3;
+  --card-media-hover: scale(1.02);
+
+  /* Tags */
+  --tag-bg: transparent;
+  --tag-border: transparent;
+  --tag-radius: 0;
+  --tag-font: var(--ff-inter);
+  --tag-transform: uppercase;
+  --tag-tracking: 0.1em;
+
+  /* Figures & quotes */
+  --figure-radius: 0;
+  --figure-pad: clamp(0.75rem, 2vw, 1.5rem);
+  --quote-bg: transparent;
+  --quote-radius: 0;
+  --quote-font: var(--ff-instrument-serif);
+  --quote-weight: 400;
+  --about-photo-radius: 0;
+}
+
+:root[data-style="press"][data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #f4f1ea;
+  --color-bg-alt: #ebe6dc;
+  --color-surface: #f4f1ea;
+  --color-surface-alt: #ebe6dc;
+  --color-text: #141311;
+  --color-text-muted: #55514a;
+  --color-border: #141311;
+  --color-border-strong: #141311;
+  --color-accent: #141311;
+  --color-on-accent: #f4f1ea;
+  --color-accent-text: #b3221a;
+  --color-focus: #b3221a;
+  --color-selection: #f7c9c1;
+  --color-error: #b3221a;
+  --eyebrow-color: #b3221a;
+  --header-bg: #f4f1ea;
+  --tag-fg: #55514a;
+  --figure-bg: #e7e2d7;
+  --card-media-bg: #e7e2d7;
+  --about-photo-bg: #e7e2d7;
+}
+
+:root[data-style="press"][data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #121110;
+  --color-bg-alt: #1b1a18;
+  --color-surface: #121110;
+  --color-surface-alt: #1e1c1a;
+  --color-text: #ece8df;
+  --color-text-muted: #aaa498;
+  --color-border: #ece8df;
+  --color-border-strong: #ece8df;
+  --color-accent: #ece8df;
+  --color-on-accent: #121110;
+  --color-accent-text: #ff6b5a;
+  --color-focus: #ff6b5a;
+  --color-selection: #6e231c;
+  --color-error: #ff8a7d;
+  --eyebrow-color: #ff6b5a;
+  --header-bg: #121110;
+  --tag-fg: #aaa498;
+  --figure-bg: #e7e2d7;
+  --card-media-bg: #e7e2d7;
+  --about-photo-bg: #e7e2d7;
+}
+
+/* Masthead rules */
+:root[data-style="press"] .c-header {
+  border-bottom: 3px double var(--color-border);
+}
+
+:root[data-style="press"] .c-hero__kicker {
+  justify-self: stretch;
+  padding-block: var(--space-2);
+  border-block: 1px solid var(--color-border);
+}
+
+:root[data-style="press"] .c-hero__title {
+  font-family: var(--ff-inter);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+:root[data-style="press"] .c-hero__statement em {
+  color: var(--color-accent-text);
+}
+
+:root[data-style="press"] .c-hero__intro {
+  font-size: var(--text-lg);
+  color: var(--color-text);
+}
+
+:root[data-style="press"] .c-section__head {
+  padding-top: var(--space-3);
+  border-top: 3px double var(--color-border);
+}
+
+:root[data-style="press"] .c-section__title,
+:root[data-style="press"] .c-footer__title {
+  font-style: italic;
+  font-size: var(--text-3xl);
+}
+
+/* Cards: a heavy rule on top instead of a box */
+:root[data-style="press"] .c-card {
+  border: 0;
+  border-top: 2px solid var(--color-border);
+}
+
+:root[data-style="press"] .c-card__index {
+  font-family: var(--ff-instrument-serif);
+  font-size: var(--text-xl);
+  font-style: italic;
+  color: var(--color-accent-text);
+}
+
+:root[data-style="press"] .c-card__index::before {
+  content: "No. " / "";
+}
+
+:root[data-style="press"] .c-card__media img {
+  filter: grayscale(1) contrast(1.05);
+  transition: filter var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+}
+
+:root[data-style="press"] .c-card:hover .c-card__media img,
+:root[data-style="press"] .c-card:focus-within .c-card__media img {
+  filter: none;
+}
+
+:root[data-style="press"] .c-card--featured {
+  --card-areas: "body media";
+  --card-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  --card-title-size: var(--text-3xl);
+}
+
+:root[data-style="press"] .c-release {
+  --card-padding: var(--space-4) 0 0;
+}
+
+:root[data-style="press"] .c-highlight {
+  border: 0;
+  border-top: 2px solid var(--color-border);
+  padding-inline: 0;
+  background: transparent;
+}
+
+:root[data-style="press"] .c-tag {
+  padding-inline: 0 0.6em;
+}
+
+:root[data-style="press"] .c-quote {
+  border-block: 1px solid var(--color-border);
+  padding-inline: 0;
+}
+
+:root[data-style="press"] .c-quote__text {
+  font-style: italic;
+  font-size: var(--text-2xl);
+}
+
+:root[data-style="press"] .c-callout {
+  border-left-color: var(--color-accent-text);
+}
+
+:root[data-style="press"] .c-case-hero__title {
+  font-size: var(--text-4xl);
+  max-width: 16ch;
+}
+
+:root[data-style="press"] .c-case-meta {
+  border-top: 3px double var(--color-border);
+}
+
+/* Drop cap on the first paragraph of a case study */
+:root[data-style="press"] .c-prose > p:first-child::first-letter {
+  float: left;
+  margin: 0.06em 0.1em 0 0;
+  font-family: var(--ff-instrument-serif);
+  font-size: 4.2em;
+  line-height: 0.8;
+  color: var(--color-accent-text);
+}
+
+:root[data-style="press"] .c-footer {
+  border-top: 3px double var(--color-border);
+}

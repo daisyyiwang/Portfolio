@@ -1,0 +1,115 @@
+/* About page */
+.c-about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+  gap: var(--space-8);
+  align-items: center;
+  padding-block: var(--space-8);
+}
+
+.c-about-hero__photo {
+  justify-self: center;
+  width: min(100%, 18rem);
+  border-radius: var(--about-photo-radius, 50%);
+  background: var(--about-photo-bg, var(--color-surface-alt));
+  padding: var(--space-4);
+}
+
+.c-about-hero__text {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.c-about-hero__title {
+  font-size: var(--text-3xl);
+}
+
+.c-about-hero__lead {
+  font-size: var(--text-xl);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 48rem) {
+  .c-about-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .c-about-hero__photo {
+    width: 12rem;
+  }
+}
+
+.c-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-highlight {
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+  padding: var(--space-6);
+  background: var(--card-bg, var(--color-surface));
+  border: var(--card-border-width, 1px) solid var(--card-border, var(--color-border));
+  border-radius: var(--card-radius, var(--radius-lg));
+  box-shadow: var(--card-shadow, none);
+}
+
+.c-highlight__icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.c-highlight h3 {
+  font-size: var(--text-lg);
+}
+
+.c-highlight p {
+  color: var(--color-text-muted);
+}
+
+.c-release {
+  --card-padding: var(--space-4);
+  --card-gap: var(--space-4);
+  --card-areas: "media" "body";
+  --card-columns: minmax(0, 1fr);
+  /* The source thumbnails are 720–1920px wide: keep them small and uncropped so they stay sharp. */
+  --card-media-ratio: 16 / 10;
+  --card-media-fit: contain;
+  --card-media-hover: none;
+  --card-title-size: var(--text-lg);
+  --card-align: left;
+  --card-justify: start;
+}
+
+.c-grid--releases {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+}
+
+.c-release .c-card__media img {
+  padding: 4%;
+}
+
+.c-release .c-card__summary {
+  font-size: var(--text-sm);
+}
+
+.c-release .c-card__body {
+  padding-inline: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+
+/* Photo wrapper; directions can dress it up as an ID badge */
+.c-badge {
+  display: contents;
+}
+
+.c-badge__lanyard,
+.c-badge__band,
+.c-badge__text {
+  display: none;
+}

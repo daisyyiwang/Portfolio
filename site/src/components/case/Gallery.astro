@@ -1,0 +1,20 @@
+---
+// A grid of smaller images, each with an optional caption.
+import { sharpImg } from '../../lib/imageSize';
+interface Props {
+  items: { src: string; alt: string; caption?: string }[];
+  columns?: 2 | 3 | 4;
+  wide?: boolean;
+}
+const { items, columns = 2, wide = false } = Astro.props;
+---
+<ul class:list={['c-gallery', { 'c-figure--wide': wide }]} style={`--gallery-columns: ${columns}`}>
+  {items.map((item) => (
+    <li>
+      <figure class="c-figure">
+        <div class="c-figure__plate"><img src={item.src} alt={item.alt} loading="lazy" decoding="async" {...sharpImg(item.src)} /></div>
+        {item.caption && <figcaption>{item.caption}</figcaption>}
+      </figure>
+    </li>
+  ))}
+</ul>

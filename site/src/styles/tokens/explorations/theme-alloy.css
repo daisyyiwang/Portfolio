@@ -1,0 +1,313 @@
+/*
+  Option C — Alloy.
+  Brushed metal and chrome, hairline grids, sharp corners and mono labels,
+  one electric "volt" accent — softened by a handwritten signature and
+  first-person status line.
+*/
+:root[data-style="alloy"] {
+  /* Type */
+  --font-body: var(--ff-inter);
+  --font-display: var(--ff-space-grotesk);
+  --font-mono: var(--ff-mono);
+  --font-accent: var(--ff-caveat);
+  --display-weight: 600;
+  --display-tracking: -0.035em;
+  --display-leading: 1;
+  --body-leading: 1.6;
+  --eyebrow-font: var(--ff-mono);
+  --eyebrow-size: var(--text-xs);
+  --eyebrow-transform: uppercase;
+  --eyebrow-tracking: 0.12em;
+
+  /* Shape — machined, near-square */
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+
+  --header-blur: saturate(140%) blur(16px);
+
+  /* Buttons */
+  --btn-radius: 2px;
+  --btn-font: var(--ff-mono);
+  --btn-weight: 600;
+  --btn-transform: uppercase;
+  --btn-tracking: 0.08em;
+
+  /* Hero */
+  --hero-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  --hero-statement-size: clamp(2.25rem, 1.3rem + 3.6vw, 4.5rem);
+  --hero-statement-max: 18ch;
+  --hero-title-size: var(--text-lg);
+  --hero-note-display: block;
+  --hero-note: "FIG.01 — DAISY, MID-CRITIQUE";
+  --signature-display: block;
+  --status-display: inline-flex;
+
+  /* Cards */
+  --grid-gap: 1px;
+  --card-border-width: 1px;
+  --card-radius: 0;
+  --card-padding: clamp(1.25rem, 3vw, 2rem);
+  --card-index-display: block;
+  --card-title-size: var(--text-xl);
+  --card-media-radius: 2px;
+  --card-media-hover: scale(1.03);
+
+  /* Tags */
+  --tag-radius: 2px;
+  --tag-font: var(--ff-mono);
+  --tag-transform: uppercase;
+  --tag-tracking: 0.06em;
+
+  /* Figures & quotes */
+  --figure-radius: 2px;
+  --figure-pad: clamp(0.75rem, 2vw, 1.5rem);
+  --quote-radius: 2px;
+  --quote-font: var(--ff-space-grotesk);
+  --about-photo-radius: 2px;
+}
+
+:root[data-style="alloy"][data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: var(--steel-900);
+  --color-bg-alt: var(--steel-950);
+  --color-surface: var(--steel-850);
+  --color-surface-alt: var(--steel-800);
+  --color-text: var(--steel-50);
+  --color-text-muted: #9aa3ad;
+  --color-border: #262a31;
+  --color-border-strong: #4a515b;
+  --color-accent: var(--volt-400);
+  --color-on-accent: var(--steel-900);
+  --color-accent-text: var(--volt-400);
+  --color-focus: var(--volt-400);
+  --color-selection: #4a5a10;
+  --color-error: #ff8a80;
+  --eyebrow-color: var(--color-text-muted);
+  --chrome: linear-gradient(180deg, #ffffff 0%, #d7dbe0 42%, #8d96a1 68%, #eef0f3 100%);
+  --page-texture:
+    radial-gradient(ellipse 80% 50% at 70% -10%, rgb(212 255 58 / 0.08), transparent 60%),
+    linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+  --page-texture-size: 100% 100%, 64px 64px, 64px 64px;
+  --header-bg: rgb(11 12 15 / 0.72);
+  --header-border: #1f2329;
+  --card-bg: linear-gradient(180deg, #15181d 0%, #0e1013 100%);
+  --card-border: #262a31;
+  --card-border-hover: #5d6670;
+  --card-media-bg: var(--steel-100);
+  --btn-primary-bg: var(--volt-400);
+  --btn-primary-fg: var(--steel-900);
+  --btn-primary-shadow-hover: 0 0 0 4px rgb(212 255 58 / 0.22), 0 0 32px rgb(212 255 58 / 0.25);
+  --tag-border: #3a4049;
+  --tag-fg: #c9ced6;
+  --figure-bg: var(--steel-100);
+  --figure-border: 1px solid #262a31;
+  --quote-bg: var(--steel-850);
+  --quote-border: 1px solid #262a31;
+  --about-photo-bg: var(--steel-100);
+}
+
+:root[data-style="alloy"][data-theme="light"] {
+  color-scheme: light;
+  --color-bg: var(--steel-50);
+  --color-bg-alt: var(--steel-100);
+  --color-surface: var(--steel-0);
+  --color-surface-alt: var(--steel-100);
+  --color-text: var(--steel-900);
+  --color-text-muted: var(--steel-600);
+  --color-border: #c3c9d0;
+  --color-border-strong: var(--steel-500);
+  --color-accent: var(--steel-900);
+  --color-on-accent: var(--volt-400);
+  --color-accent-text: var(--volt-700);
+  --color-focus: var(--volt-700);
+  --color-selection: var(--volt-400);
+  --color-error: #b3261e;
+  --eyebrow-color: var(--color-text-muted);
+  --chrome: linear-gradient(180deg, #0b0c0f 0%, #3c434c 55%, #0b0c0f 100%);
+  /* Brushed aluminium: fine vertical grain + faint grid */
+  --page-texture:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 0.5) 0 1px, transparent 1px 3px),
+    linear-gradient(rgb(11 12 15 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(11 12 15 / 0.045) 1px, transparent 1px);
+  --page-texture-size: auto, 64px 64px, 64px 64px;
+  --header-bg: rgb(238 240 243 / 0.78);
+  --header-border: #c3c9d0;
+  --card-bg: linear-gradient(180deg, #fbfcfd 0%, #e9ecf0 100%);
+  --card-border: #c3c9d0;
+  --card-border-hover: var(--steel-900);
+  --card-media-bg: var(--steel-0);
+  --btn-primary-bg: var(--steel-900);
+  --btn-primary-fg: var(--volt-400);
+  --btn-primary-shadow-hover: 0 0 0 4px rgb(194 240 0 / 0.45);
+  --tag-border: var(--steel-400);
+  --tag-fg: var(--steel-600);
+  --figure-bg: var(--steel-0);
+  --figure-border: 1px solid #c3c9d0;
+  --quote-bg: var(--steel-0);
+  --quote-border: 1px solid #c3c9d0;
+  --about-photo-bg: var(--steel-0);
+}
+
+/* Chrome headline */
+:root[data-style="alloy"] .c-hero__statement,
+:root[data-style="alloy"] .c-case-hero__title,
+:root[data-style="alloy"] .c-about-hero__title,
+:root[data-style="alloy"] .c-footer__title {
+  background: var(--chrome);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+:root[data-style="alloy"] .c-hero__statement em {
+  font-style: normal;
+  color: var(--color-accent-text);
+  -webkit-text-fill-color: var(--color-accent-text);
+}
+
+:root[data-style="alloy"][data-theme="light"] .c-hero__statement em {
+  color: var(--steel-900);
+  -webkit-text-fill-color: var(--steel-900);
+  background: linear-gradient(transparent 62%, var(--volt-400) 62% 92%, transparent 92%);
+}
+
+/* Eyebrows read like code comments */
+:root[data-style="alloy"] .eyebrow::before {
+  content: "// " / "";
+  color: var(--color-accent-text);
+}
+
+:root[data-style="alloy"] .c-card .eyebrow::before {
+  content: none;
+}
+
+/* Hero art: monochrome character in a machined frame */
+:root[data-style="alloy"] .c-hero__art {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border-strong);
+  background: var(--card-bg);
+}
+
+:root[data-style="alloy"] .c-hero__art img {
+  filter: grayscale(1) contrast(1.15) brightness(1.02);
+  mix-blend-mode: var(--art-blend, normal);
+}
+
+:root[data-style="alloy"][data-theme="dark"] .c-hero__art img {
+  filter: grayscale(1) invert(1) contrast(1.1);
+  --art-blend: screen;
+}
+
+:root[data-style="alloy"] .c-hero__note {
+  margin-top: var(--space-3);
+  font-family: var(--ff-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+/* Corner brackets on framed elements */
+:root[data-style="alloy"] .c-hero__art::before,
+:root[data-style="alloy"] .c-hero__art::after,
+:root[data-style="alloy"] .c-card::before,
+:root[data-style="alloy"] .c-card::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 0 solid var(--color-accent-text);
+  pointer-events: none;
+  transition: width var(--dur) var(--ease-out), height var(--dur) var(--ease-out);
+}
+
+:root[data-style="alloy"] .c-hero__art::before,
+:root[data-style="alloy"] .c-card::before {
+  top: -1px;
+  left: -1px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+:root[data-style="alloy"] .c-hero__art::after,
+:root[data-style="alloy"] .c-card::after {
+  right: -1px;
+  bottom: -1px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+}
+
+:root[data-style="alloy"] .c-card:hover::before,
+:root[data-style="alloy"] .c-card:hover::after {
+  width: 28px;
+  height: 28px;
+}
+
+/* Cards tile into a seamless panel (1px gaps read as hairlines) */
+:root[data-style="alloy"] .c-grid {
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+}
+
+:root[data-style="alloy"] .c-grid .c-card {
+  border-color: transparent;
+}
+
+:root[data-style="alloy"] .c-grid .c-card:hover {
+  border-color: var(--card-border-hover);
+}
+
+:root[data-style="alloy"] .c-card--featured {
+  --card-areas: "body media";
+  --card-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  --card-title-size: var(--text-2xl);
+}
+
+:root[data-style="alloy"] .c-card__index::after {
+  content: " /";
+  color: var(--color-accent-text);
+}
+
+:root[data-style="alloy"] .c-highlights {
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+}
+
+:root[data-style="alloy"] .c-highlight {
+  border: 0;
+  border-radius: 0;
+}
+
+:root[data-style="alloy"] .c-highlight__icon {
+  filter: grayscale(1);
+}
+
+:root[data-style="alloy"] .c-archive__title {
+  font-family: var(--ff-space-grotesk);
+}
+
+:root[data-style="alloy"] .c-archive__meta {
+  font-family: var(--ff-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+:root[data-style="alloy"] .c-quote__emoji {
+  filter: grayscale(1);
+}
+
+:root[data-style="alloy"] .c-callout {
+  border-radius: 0;
+}
+
+:root[data-style="alloy"] .c-footer__email {
+  font-family: var(--ff-mono);
+  font-size: var(--text-lg);
+}
+
+:root[data-style="alloy"] .c-footer__email::after {
+  content: " ↗" / "";
+}

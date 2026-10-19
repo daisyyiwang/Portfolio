@@ -1,0 +1,96 @@
+---
+import Button from './Button.astro';
+
+// Decorative number field for the Refine direction (deterministic, so builds are stable).
+let seed = 7;
+const rand = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const digits = Array.from({ length: 84 }, () => ({ n: Math.floor(rand() * 10), odd: rand() < 0.08, d: (rand() * 4).toFixed(2) }));
+// Progress bins: the areas of practice the portfolio is "refining".
+const bins = [
+  { label: 'AI', p: 72 },
+  { label: 'B2B', p: 91 },
+  { label: 'B2C', p: 38 },
+  { label: 'A11Y', p: 64 },
+  { label: 'DATA', p: 100 },
+];
+---
+<section class="c-hero" aria-labelledby="hero-title">
+  <div class="container c-hero__inner">
+    <div class="c-hero__text">
+      <p class="eyebrow c-hero__kicker">Product designer · San Jose, CA</p>
+      <h1 class="c-hero__title" id="hero-title">Daisy, Yi Wang</h1>
+      <p class="c-hero__statement">
+        To me, good design is an <em>ongoing conversation</em><span class="c-hero__statement-rest">—between designers, users, and the world we're shaping together.</span>
+      </p>
+      <p class="c-hero__intro">
+        9+ years leading the design of AI-powered, data-driven products at scale. Right now, I'm helping business
+        professionals create more, and stay on brand, with AI tools at Adobe.
+      </p>
+      <p class="c-status">Now: AI creation tools @ Adobe</p>
+      <div class="c-hero__actions">
+        <Button href="#work" icon="arrow-right">See my work</Button>
+        <Button href="/about/" variant="secondary">More about me</Button>
+      </div>
+      <p class="c-hero__signature" aria-hidden="true">— Daisy</p>
+    </div>
+    <div class="c-hero__art" aria-hidden="true">
+      <span class="c-hero__note"></span>
+      <div class="c-mdr" data-mdr-screen>
+        <p class="c-mdr__head"><span>DAISY_W.portfolio</span><span><span data-mdr-pct>87</span>% complete</span></p>
+        <div class="c-mdr__grid" data-mdr>
+          {digits.map((x) => <span class:list={{ odd: x.odd }} style={`--d:${x.d}s`}>{x.n}</span>)}
+        </div>
+        <ol class="c-mdr__bins">
+          {bins.map((b) => <li style={`--p:${b.p}%`}><span>{b.label}</span><b></b><small>{b.p}%</small></li>)}
+        </ol>
+        <p class="c-mdr__done">Refinement complete. Thank you for your diligence.</p>
+      </div>
+      <span class="c-mdr__plate">DW-2026 · Product Design</span>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Refine: digits swell as the cursor passes over them; clicking a cluster
+  // "refines" it, nudging the completion counter towards 100%.
+  // Purely decorative (the monitor is aria-hidden), so it is pointer-only.
+  const grid = document.querySelector<HTMLElement>('[data-mdr]');
+  const screen = document.querySelector<HTMLElement>('[data-mdr-screen]');
+  const pct = document.querySelector<HTMLElement>('[data-mdr-pct]');
+  if (grid && screen && pct && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const cells = [...grid.children] as HTMLElement[];
+    const near = (e: PointerEvent, radius: number) =>
+      cells.map((c) => {
+        const r = c.getBoundingClientRect();
+        return { c, d: Math.hypot(e.clientX - (r.left + r.width / 2), e.clientY - (r.top + r.height / 2)) };
+      }).filter((x) => x.d < radius);
+
+    grid.addEventListener('pointermove', (e) => {
+      cells.forEach((c) => c.style.setProperty('--s', '1'));
+      for (const { c, d } of near(e, 70)) c.style.setProperty('--s', (1 + ((70 - d) / 70) * 1.1).toFixed(2));
+    });
+    grid.addEventListener('pointerleave', () => cells.forEach((c) => c.style.setProperty('--s', '1')));
+
+    let value = Number(pct.textContent);
+    grid.addEventListener('click', (e) => {
+      const hit = near(e as PointerEvent, 48).map((x) => x.c).filter((c) => !c.classList.contains('is-binned'));
+      if (!hit.length || value === 100) return;
+      hit.forEach((c) => c.classList.add('is-binned'));
+      setTimeout(() => hit.forEach((c) => {
+        c.textContent = String(Math.floor(Math.random() * 10));
+        c.classList.remove('is-binned');
+      }), 1400);
+      value = Math.min(100, value + Math.max(1, Math.round(hit.length / 2)));
+      pct.textContent = String(value);
+      if (value === 100) {
+        screen.classList.add('is-complete');
+        // Back to work after a short pause.
+        setTimeout(() => {
+          screen.classList.remove('is-complete');
+          value = 87;
+          pct.textContent = String(value);
+        }, 6000);
+      }
+    });
+  }
+</script>

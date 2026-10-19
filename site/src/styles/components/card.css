@@ -1,0 +1,194 @@
+/* Project cards + grid */
+.c-section {
+  padding-block: var(--section-pad, var(--space-9));
+}
+
+.c-section__head {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+  justify-items: var(--section-head-justify, start);
+  text-align: var(--section-head-align, left);
+}
+
+.c-section__title {
+  font-size: var(--text-2xl);
+}
+
+.c-section__desc {
+  color: var(--color-text-muted);
+  max-width: 40rem;
+}
+
+.c-grid {
+  display: grid;
+  grid-template-columns: var(--grid-columns, repeat(2, minmax(0, 1fr)));
+  gap: var(--grid-gap, var(--space-5));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-card {
+  position: relative;
+  display: grid;
+  grid-template-areas: var(--card-areas, "body" "media");
+  grid-template-columns: var(--card-columns, minmax(0, 1fr));
+  align-content: start;
+  gap: var(--card-gap, var(--space-5));
+  height: 100%;
+  padding: var(--card-padding, var(--space-6));
+  background: var(--card-bg, var(--color-surface));
+  border: var(--card-border-width, 1px) solid var(--card-border, var(--color-border));
+  border-radius: var(--card-radius, var(--radius-lg));
+  box-shadow: var(--card-shadow, none);
+  text-align: var(--card-align, left);
+  transition: transform var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out),
+    border-color var(--dur) var(--ease-out);
+}
+
+.c-card:hover,
+.c-card:focus-within {
+  transform: var(--card-hover-transform, none);
+  box-shadow: var(--card-shadow-hover, var(--card-shadow, none));
+  border-color: var(--card-border-hover, var(--card-border, var(--color-border)));
+}
+
+.c-card__body {
+  grid-area: body;
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+  justify-items: var(--card-justify, start);
+}
+
+.c-card__index {
+  display: var(--card-index-display, none);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.c-card__title {
+  font-size: var(--card-title-size, var(--text-xl));
+}
+
+/* Stretched link: the whole card is clickable, but only the title is announced. */
+.c-card__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.c-card__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.c-card__link:focus-visible {
+  outline: none;
+}
+
+.c-card:has(.c-card__link:focus-visible) {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+.c-card__summary {
+  color: var(--color-text-muted);
+  max-width: 34rem;
+}
+
+.ext-icon {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.3em;
+  vertical-align: baseline;
+}
+
+.c-card__media {
+  grid-area: media;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--card-media-radius, var(--radius-md));
+  background: var(--card-media-bg, transparent);
+  aspect-ratio: var(--card-media-ratio, 16 / 10);
+}
+
+.c-card__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: var(--card-media-fit, contain);
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+
+.c-card:hover .c-card__media img {
+  transform: var(--card-media-hover, none);
+}
+
+.c-card--featured {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 48rem) {
+  .c-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .c-card {
+    grid-template-areas: "body" "media";
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Archive list */
+.c-archive {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.c-archive__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--archive-columns, minmax(0, 1fr) auto);
+  align-items: center;
+  gap: var(--space-2) var(--space-5);
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.c-archive__thumb,
+.c-archive__index {
+  display: none;
+}
+
+.c-archive__title {
+  font-size: var(--text-lg);
+}
+
+.c-archive__meta {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.c-archive__item:hover .c-archive__arrow {
+  transform: translateX(4px);
+}
+
+.c-archive__arrow {
+  width: 20px;
+  height: 20px;
+  color: var(--color-text-muted);
+  transition: transform var(--dur) var(--ease-out);
+}
+
+/* Raster card images carry a max-width (half their pixel width); keep them centred. */
+.c-card__media img[style*="max-width"] {
+  margin: auto;
+}

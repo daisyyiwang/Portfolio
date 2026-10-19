@@ -1,0 +1,89 @@
+---
+title: Mapping out the associates' experience in store
+company: Kohl's · UX strategy & data visualization
+summary: Understand the interrelationship between people, process, payroll and devices.
+tags:
+  - { label: B2B, tone: yellow }
+  - { label: Logistics, tone: purple }
+cover: /images/assoc-interactive.png
+coverAlt: Interactive map plotting one associate's walking path through a store during a shift
+order: 6
+archive: true
+migrated: true
+meta:
+  role: Experience designer
+  whenLabel: Timeline
+  launched: Oct 2016 – Apr 2017
+  audience: In-store · Data visualization
+next: store-inventory
+---
+import Section from '../../components/case/Section.astro';
+import Figure from '../../components/case/Figure.astro';
+import Callout from '../../components/case/Callout.astro';
+import Stats from '../../components/case/Stats.astro';
+import Toolkit from '../../components/case/Toolkit.astro';
+
+A cross-functional team travelled to stores across Kohl's regions to shadow and track a day in the life of Kohl's sales associates. The journey showed us how dynamic the store environment is and how flexible and fantastic our associates are — and it uncovered many opportunities to improve associates' work lives and customers' shopping experience.
+
+<Section eyebrow="My role" title="From research plan to the boardroom">
+  <p>I was part of a core team of 12 experience designers, store operations engineers and UX researchers. I was involved end to end: the research plan, in-store data collection, analysis, visualization and stakeholder presentations.</p>
+  <p>We delivered an associate journey map, an interactive map and two storyboards, used by the executive leadership team to inform priorities, decisions and future annual capital planning.</p>
+</Section>
+
+<Callout title="Goals">
+  <ol>
+    <li>Understand how associates in different roles spend their shift on the sales floor.</li>
+    <li>Identify friction in processes, to improve technology for associates and drive in-store conversion.</li>
+    <li>Understand the interrelationship between people, process, payroll, equipment and technology.</li>
+  </ol>
+</Callout>
+
+<Section eyebrow="In-store research" title="Step 1: Shadowing">
+  <Figure src="/images/assoc-shadow.svg" alt="Research at a glance: 4 territories, 12 stores, 35 associates, 420 hours of data." />
+  <p>Following the research plan, we split into 4 groups, each with a UX researcher, a designer and a store operations engineer. Each group covered one territory and observed 3 stores, shadowing associates across three shifts from around 9am to 9pm, in different roles and departments.</p>
+  <p>We captured insights, notes and questions on a form we designed beforehand, and ended each shift with a short interview about the associate's day-to-day work.</p>
+  <Figure src="/images/assoc-notesample.svg" alt="Sample of the shadowing form, with task, time and location notes." caption="The shadowing form" />
+</Section>
+
+<Section eyebrow="Affinity diagram" title="Step 2: Data analysis">
+  <Stats items={[
+    { value: '420', label: 'hours of in-store work observed' },
+    { value: '12', label: 'stores across 4 territories' },
+    { value: '35', label: 'associates shadowed and interviewed' },
+  ]} />
+  <p>That was a lot of data to clean up — notes, time and location stamps for every task, and all the photos from the shadowing sessions. Back in the office, I helped design the affinity-diagram poster that brought most of our notes together. Members of 2 design studios and 3 teams went through every store's data, one by one. Analysis took about a month.</p>
+  <Figure src="/images/assoc-ad.png" alt="Affinity diagram poster organizing notes and photos store by store." />
+</Section>
+
+<Section eyebrow="Design solution" title="Step 3: Information visualization">
+  <p>With the data organized, the design team explored ways to present it to stakeholders, going back and forth with research to keep it easy to understand and accurate. We delivered three pieces, each capturing the associate experience at a different scale:</p>
+  <ul>
+    <li>An <strong>associate journey map</strong> giving a high-level view of daily tasks.</li>
+    <li>An <strong>interactive map</strong> zooming into one store, one associate, one typical shift.</li>
+    <li>Two <strong>visual boards</strong> digesting the pain points for store associates.</li>
+  </ul>
+  <p>For confidentiality, only screenshots and highlights are shown.</p>
+  <Figure wide src="/images/assoc-map.png" alt="Associate journey map showing time spent on each task by role, how tasks spread across the day, and key insights." />
+  <Figure src="/images/assoc-cards.png" alt="Profile cards for every associate we shadowed, covering role, department, timeline, store size and location." />
+  <p>Every associate we shadowed is documented in the journey map. These cards show what we factored in: roles, departments, timelines, store sizes and locations.</p>
+  <Figure src="/images/assoc-interactive.png" alt="Interactive map tracing one associate's walking path through a store, with each task as a point coloured by frustration." />
+  <p>I designed the interactive map in Axure to show one associate's shift at one store. It traces their walking path, with each point a task. Colour shows whether the associate felt frustrated, and clicking a point reveals the task, emotions and highlights.</p>
+  <Figure src="/images/assoc-visualboard.png" alt="Visual boards turning observation notes and stories into associates' daily tasks and struggles." />
+</Section>
+
+<Section eyebrow="Presentations" title="Step 4: Stakeholder share-outs and iterations">
+  <p>Presenting the journey map was a great learning experience. With so many stories in it, I prepared different versions for different audiences. For store operations, who know associates' daily struggles well, I focused on the data patterns and on the design team's insights and recommendations. For product and business teams, I leaned into associates' stories and frustrations, to show how technology could better support their jobs.</p>
+  <p>After each presentation we reflected on the questions and updated the map — 8 versions in total.</p>
+</Section>
+
+<Section eyebrow="Reflection" title="Experience impact, and what's beyond">
+  <p>I feel fortunate to have been part of such a foundational project, and grateful that Kohl's took the time and resources to step back and think about the bigger picture before moving forward.</p>
+  <p>The project wrapped in early 2017, but partners kept coming back for its data, stories and insights. It became a showcase for user-centered thinking, our research team continued with sub-topic projects based on it, and it helped the design team prioritize future work and helped new designers empathize with associates.</p>
+  <p>It's hard to put an exact KPI on the impact. But everyone who worked on it was very proud of what we did.</p>
+</Section>
+
+<Toolkit groups={[
+  { title: 'Tools', items: ['Paper & pencil', 'Axure', 'Sketch', 'Google Slides', 'Camera', 'Sneakers'] },
+  { title: 'Methods', items: ['Shadowing', 'Interviews', 'Affinity diagram', 'Data visualization', 'Love letters'] },
+  { title: 'Skills', items: ['Systems thinking', 'Presentation', 'UX research', 'Experience mapping', 'Storytelling'] },
+]} />

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="469px" height="129px" viewBox="0 0 469 129" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="inventory-count" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="WorkPiece_Sample" transform="translate(-105.000000, -2161.000000)">
+            <g id="Group-10" transform="translate(105.000000, 2160.000000)">
+                <g id="Group-4" transform="translate(107.000000, 0.429889)">
+                    <rect id="Rectangle-3-Copy" stroke="#FCCF88" fill="#FFEBC5" x="0.5" y="1.18608334" width="71" height="127"></rect>
+                    <rect id="Rectangle-9-Copy-8" fill="#FFFFFF" x="1" y="27" width="70" height="16"></rect>
+                    <rect id="Rectangle-9-Copy-9" fill="#FFFFFF" transform="translate(36.000000, 75.294606) scale(1, -1) translate(-36.000000, -75.294606) " x="4.03754151" y="57.8307801" width="63.924917" height="34.9276516"></rect>
+                    <circle id="Oval" fill="#FFFFFF" cx="12" cy="108" r="8"></circle>
+                    <circle id="Oval-Copy" fill="#FFFFFF" cx="36" cy="108" r="8"></circle>
+                    <circle id="Oval-Copy-2" fill="#FFFFFF" cx="60" cy="108" r="8"></circle>
+                    <text id="Ready-to-scan-UPC" font-family="PTSans-Regular, PT Sans" font-size="5" font-weight="normal" letter-spacing="0.3013393" fill="#000000">
+                        <tspan x="13.5" y="19.7584317">Ready to scan UPC</tspan>
+                    </text>
+                </g>
+                <g id="Group-3" transform="translate(0.000000, 0.429889)">
+                    <rect id="Rectangle-3" stroke="#FCCF88" fill="#FFEBC5" x="0.58522188" y="1.18608334" width="71" height="127"></rect>
+                    <rect id="Rectangle-8" stroke="#FCCF88" x="0.58522188" y="15.2584317" width="71" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-4" stroke="#FCCF88" x="0.58522188" y="59.2584317" width="71" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-2" stroke="#FCCF88" x="0.58522188" y="37.2584317" width="71" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-5" stroke="#FCCF88" x="0.58522188" y="81.2584317" width="71" height="11"></rect>
+                    <rect id="Rectangle-8-Copy" stroke="#FCCF88" x="0.58522188" y="26.2584317" width="71" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-6" stroke="#FCCF88" x="0.58522188" y="70.2584317" width="71" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-3" stroke="#FCCF88" x="0.58522188" y="48.2584317" width="71" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-7" stroke="#FCCF88" x="0.58522188" y="92.2584317" width="71" height="11"></rect>
+                    <rect id="Rectangle-9" fill="#FFFFFF" x="5" y="18.7584317" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy" fill="#FFFFFF" x="5" y="30" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-2" fill="#FFFFFF" x="5" y="41" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-3" fill="#FFFFFF" x="5" y="52" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-4" fill="#FFFFFF" x="5" y="63" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-5" fill="#FFFFFF" x="5" y="74" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-6" fill="#FFFFFF" x="5" y="85" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-7" fill="#FFFFFF" x="5" y="96" width="47" height="4"></rect>
+                    <text id="Inventory-counting-l" font-family="PTSans-Regular, PT Sans" font-size="5" font-weight="normal" letter-spacing="0.3013393" fill="#000000">
+                        <tspan x="8.58522188" y="11">Inventory counting list</tspan>
+                    </text>
+                </g>
+                <g id="Group-6" transform="translate(319.000000, 0.429889)">
+                    <rect id="Rectangle-3-Copy-3" stroke="#FCCF88" fill="#FFEBC5" x="1" y="1.18608334" width="71" height="127"></rect>
+                    <rect id="Rectangle-8-Copy-8" stroke="#FCCF88" x="1.5" y="26.2584317" width="70.5" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-9" stroke="#FCCF88" x="1.5" y="70.2584317" width="70.5" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-10" stroke="#FCCF88" x="1.5" y="48.2584317" width="70.5" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-11" stroke="#FCCF88" x="1.5" y="92.2584317" width="70.5" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-12" stroke="#FCCF88" x="1.5" y="37.2584317" width="70.5" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-13" stroke="#FCCF88" x="1.5" y="81.2584317" width="70.5" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-14" stroke="#FCCF88" x="1.5" y="59.2584317" width="70.5" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-15" stroke="#FCCF88" x="1.5" y="103.258432" width="70.5" height="11"></rect>
+                    <rect id="Rectangle-8-Copy-16" stroke="#FCCF88" x="122.290812" y="57.0084317" width="27" height="11"></rect>
+                    <rect id="Rectangle-9-Copy-10" fill="#FFFFFF" x="5.91477812" y="29.7584317" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-18" fill="#FFFFFF" x="52.9147781" y="10.1207841" width="16" height="9.75843172"></rect>
+                    <rect id="Rectangle-9-Copy-11" fill="#FFFFFF" x="5.91477812" y="41" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-12" fill="#FFFFFF" x="5.91477812" y="52" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-13" fill="#FFFFFF" x="5.91477812" y="63" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-14" fill="#FFFFFF" x="5.91477812" y="74" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-15" fill="#FFFFFF" x="5.91477812" y="85" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-16" fill="#FFFFFF" x="5.91477812" y="96" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-17" fill="#FFFFFF" x="5.91477812" y="107" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-21" fill="#FFFFFF" x="5" y="117" width="28" height="9"></rect>
+                    <rect id="Rectangle-9-Copy-22" fill="#FFFFFF" x="40" y="117" width="28" height="9"></rect>
+                    <text id="Review-Count" font-family="PTSans-Regular, PT Sans" font-size="5" font-weight="normal" letter-spacing="0.3013393" fill="#000000">
+                        <tspan x="5" y="16">Review Count</tspan>
+                    </text>
+                    <text id="Submit" font-family="PTSans-Bold, PT Sans" font-size="5" font-weight="bold" letter-spacing="0.3013393" fill="#000000">
+                        <tspan x="127.290812" y="64.0084317">Submit</tspan>
+                    </text>
+                </g>
+                <g id="Group-5" transform="translate(213.000000, 0.429889)">
+                    <rect id="Rectangle-3-Copy-2" stroke="#FCCF88" fill="#FFEBC5" x="0.5" y="1.18608334" width="71" height="127"></rect>
+                    <g id="Group-2" transform="translate(1.000000, 15.000000)">
+                        <rect id="Rectangle-9-Copy-8" fill="#FFFFFF" x="0" y="12" width="70" height="16"></rect>
+                        <circle id="Oval" fill="#FFFFFF" cx="11" cy="93" r="8"></circle>
+                        <circle id="Oval-Copy" fill="#FFFFFF" cx="35" cy="93" r="8"></circle>
+                        <circle id="Oval-Copy-2" fill="#FFFFFF" cx="59" cy="93" r="8"></circle>
+                        <text id="Item-Accepted" font-family="PTSans-Regular, PT Sans" font-size="5" font-weight="normal" letter-spacing="0.3013393" fill="#000000">
+                            <tspan x="17.5" y="4.75843172">Item Accepted</tspan>
+                        </text>
+                    </g>
+                    <rect id="Rectangle-3-Copy-2" stroke="#FCCF88" x="8.5" y="64.5" width="55" height="23"></rect>
+                    <rect id="Rectangle-9-Copy-10" fill="#FFFFFF" x="12.5" y="68" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-19" fill="#FFFFFF" x="12.5" y="74.2946059" width="47" height="4"></rect>
+                    <rect id="Rectangle-9-Copy-20" fill="#FFFFFF" x="12.5" y="80.2946059" width="47" height="4"></rect>
+                </g>
+                <g id="Group-7" transform="translate(66.000000, 4.429889)">
+                    <path d="M0.0436424905,6 C6.60435388,2.5 34.2530662,-3.5 45.5,6" id="Path-7" stroke="#38D568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M45.6264149,3.19029708 C46.2649293,3.06781239 48.3823557,7.68151703 48.1264149,8.19029708 C47.8704741,8.69907713 43.5160086,8.67140519 43.1264149,8.19029708 C42.7368212,7.70918897 44.9879005,3.31278177 45.6264149,3.19029708 Z" id="Triangle" fill="#38D568" transform="translate(45.614594, 5.874740) rotate(129.000000) translate(-45.614594, -5.874740) "></path>
+                </g>
+                <g id="Group-7-Copy" transform="translate(203.412791, 46.060370) scale(1, -1) translate(-203.412791, -46.060370) translate(178.412791, 41.060370)">
+                    <path d="M0.0436424905,6 C6.60435388,2.5 34.2530662,-3.5 45.5,6" id="Path-7" stroke="#38D568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M45.6264149,3.19029708 C46.2649293,3.06781239 48.3823557,7.68151703 48.1264149,8.19029708 C47.8704741,8.69907713 43.5160086,8.67140519 43.1264149,8.19029708 C42.7368212,7.70918897 44.9879005,3.31278177 45.6264149,3.19029708 Z" id="Triangle" fill="#38D568" transform="translate(45.614594, 5.874740) rotate(129.000000) translate(-45.614594, -5.874740) "></path>
+                </g>
+                <g id="Group-7-Copy-3" transform="translate(414.000000, 91.429889) scale(1, -1) translate(-414.000000, -91.429889) translate(387.000000, 59.429889)">
+                    <path d="M0.0436424905,2.27373675e-13 C42,22 13,53.5 50,59.5" id="Path-7" stroke="#38D568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M50.7224448,57.4228097 C51.3609592,57.300325 53.4783856,61.9140297 53.2224448,62.4228097 C52.966504,62.9315898 48.6120385,62.9039178 48.2224448,62.4228097 C47.8328511,61.9417016 50.0839304,57.5452944 50.7224448,57.4228097 Z" id="Triangle" fill="#38D568" transform="translate(50.710624, 60.107252) rotate(105.000000) translate(-50.710624, -60.107252) "></path>
+                </g>
+                <g id="Group-7-Copy-2" transform="translate(276.505261, 104.136053)">
+                    <path d="M0.0436424905,6 C6.60435388,2.5 34.2530662,-3.5 45.5,6" id="Path-7" stroke="#38D568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M45.6264149,3.19029708 C46.2649293,3.06781239 48.3823557,7.68151703 48.1264149,8.19029708 C47.8704741,8.69907713 43.5160086,8.67140519 43.1264149,8.19029708 C42.7368212,7.70918897 44.9879005,3.31278177 45.6264149,3.19029708 Z" id="Triangle" fill="#38D568" transform="translate(45.614594, 5.874740) rotate(129.000000) translate(-45.614594, -5.874740) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

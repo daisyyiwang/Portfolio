@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ArchiveList from '../components/ArchiveList.astro';
+import { getProjects } from '../lib/projects';
+
+const { live, archive } = await getProjects();
+---
+<BaseLayout manifesto>
+  <Hero />
+  <section class="c-section" id="work" aria-labelledby="work-title">
+    <div class="container">
+      <SectionHeading eyebrow="Selected work" title="Projects I've led" id="work-title" />
+      <ul class="c-grid c-grid--projects">
+        {live.map((project, i) => (
+          <li class:list={{ 'c-card--featured': project.data.featured }}>
+            <ProjectCard project={project} index={i + 1} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+  <section class="c-section" aria-labelledby="archive-title">
+    <div class="container">
+      <SectionHeading eyebrow="Archive" title="Earlier work" id="archive-title">
+        Retail and omnichannel projects from my time at Kohl's.
+      </SectionHeading>
+      <ArchiveList projects={archive} />
+    </div>
+  </section>
+</BaseLayout>

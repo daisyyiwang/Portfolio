@@ -1,0 +1,15 @@
+---
+// Tools, methods and skills used on a project.
+interface Props {
+  groups: { title: string; items: string[] }[];
+}
+const { groups } = Astro.props;
+---
+<div class="c-toolkit">
+  {groups.map((g) => (
+    <div class="c-toolkit__group">
+      <h3 class="eyebrow">{g.title}</h3>
+      <ul>{g.items.map((i) => <li>{i}</li>)}</ul>
+    </div>
+  ))}
+</div>

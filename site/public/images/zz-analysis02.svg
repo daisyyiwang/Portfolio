@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="666px" height="395px" viewBox="0 0 666 395" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.37501 17 0.37501 17 9.41604614 0 9.41604614"></polygon>
+        <polygon id="path-3" points="0 0.10746 29 0.10746 29 8.94195557 0 8.94195557"></polygon>
+        <polygon id="path-5" points="0 0.10746 85 0.10746 85 8.94195557 0 8.94195557"></polygon>
+        <polygon id="path-7" points="0 0.941955566 25 0.941955566 25 3.7539 0 3.7539"></polygon>
+        <polygon id="path-9" points="0 0.941955566 30 0.941955566 30 3.4521 0 3.4521"></polygon>
+        <polygon id="path-11" points="0 0.941955566 49 0.941955566 49 3.4521 0 3.4521"></polygon>
+    </defs>
+    <g id="Artboard-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-58" transform="translate(2.000000, 2.000000)">
+            <polygon id="Fill-1" fill="#B2824F" points="0 21.7422 192.7852 21.7422 192.7852 9.99999997e-06 0 9.99999997e-06"></polygon>
+            <polygon id="Fill-3" fill="#B2824F" points="192.7852 21.7422 350.1485 21.7422 350.1485 9.99999997e-06 192.7852 9.99999997e-06"></polygon>
+            <polygon id="Fill-4" fill="#B2824F" points="350.1484 21.7422 450.1484 21.7422 450.1484 9.99999997e-06 350.1484 9.99999997e-06"></polygon>
+            <polygon id="Fill-5" fill="#B2824F" points="450.1484 21.7422 579.1547 21.7422 579.1547 9.99999997e-06 450.1484 9.99999997e-06"></polygon>
+            <polygon id="Fill-6" fill="#B2824F" points="579.1547 21.7422 661.64845 21.7422 661.64845 9.99999997e-06 579.1547 9.99999997e-06"></polygon>
+            <polygon id="Fill-7" fill="#FFFFFF" points="0 70.6377 192.7852 70.6377 192.7852 21.74219 0 21.74219"></polygon>
+            <polygon id="Fill-8" fill="#FFFFFF" points="192.7852 70.6377 350.1485 70.6377 350.1485 21.74219 192.7852 21.74219"></polygon>
+            <polygon id="Fill-9" fill="#FFFFFF" points="350.1484 70.6377 450.1484 70.6377 450.1484 21.74219 350.1484 21.74219"></polygon>
+            <polygon id="Fill-10" fill="#FFFFFF" points="450.1484 70.6377 579.1547 70.6377 579.1547 21.74219 450.1484 21.74219"></polygon>
+            <polygon id="Fill-11" fill="#FFFFFF" points="579.1547 70.6377 661.64845 70.6377 661.64845 21.74219 579.1547 21.74219"></polygon>
+            <polygon id="Fill-12" fill-opacity="0.1884" fill="#FFECBF" points="0 101.3359 192.7852 101.3359 192.7852 70.63766 0 70.63766"></polygon>
+            <polygon id="Fill-13" fill-opacity="0.1884" fill="#FFECBF" points="192.7852 101.3359 350.1485 101.3359 350.1485 70.63766 192.7852 70.63766"></polygon>
+            <polygon id="Fill-14" fill-opacity="0.1884" fill="#FFECBF" points="350.1484 101.3359 450.1484 101.3359 450.1484 70.63766 350.1484 70.63766"></polygon>
+            <polygon id="Fill-15" fill-opacity="0.1884" fill="#FFECBF" points="450.1484 101.3359 579.1547 101.3359 579.1547 70.63766 450.1484 70.63766"></polygon>
+            <polygon id="Fill-16" fill-opacity="0.1884" fill="#FFECBF" points="579.1547 101.3359 661.64845 101.3359 661.64845 70.63766 579.1547 70.63766"></polygon>
+            <polygon id="Fill-17" fill="#FFFFFF" points="0 132.0342 192.7852 132.0342 192.7852 101.33596 0 101.33596"></polygon>
+            <polygon id="Fill-18" fill="#FFFFFF" points="192.7852 162.7324 350.1485 162.7324 350.1485 101.33592 192.7852 101.33592"></polygon>
+            <polygon id="Fill-19" fill="#FFFFFF" points="350.1484 162.7324 450.1484 162.7324 450.1484 101.33592 350.1484 101.33592"></polygon>
+            <polygon id="Fill-20" fill="#FFFFFF" points="450.1484 162.7324 579.1547 162.7324 579.1547 101.33592 450.1484 101.33592"></polygon>
+            <polygon id="Fill-21" fill="#FFFFFF" points="579.1547 162.7324 661.64845 162.7324 661.64845 101.33592 579.1547 101.33592"></polygon>
+            <polygon id="Fill-22" fill="#FFFFFF" points="0 162.7324 192.7852 162.7324 192.7852 132.03416 0 132.03416"></polygon>
+            <polygon id="Fill-23" fill-opacity="0.1884" fill="#FFECBF" points="0 193.4307 192.7852 193.4307 192.7852 162.73246 0 162.73246"></polygon>
+            <polygon id="Fill-24" fill-opacity="0.1884" fill="#FFECBF" points="192.7852 193.4307 350.1485 193.4307 350.1485 162.73246 192.7852 162.73246"></polygon>
+            <polygon id="Fill-25" fill-opacity="0.1884" fill="#FFECBF" points="350.1484 193.4307 450.1484 193.4307 450.1484 162.73246 350.1484 162.73246"></polygon>
+            <polygon id="Fill-26" fill-opacity="0.1884" fill="#FFECBF" points="450.1484 193.4307 579.1547 193.4307 579.1547 162.73246 450.1484 162.73246"></polygon>
+            <polygon id="Fill-27" fill-opacity="0.1884" fill="#FFECBF" points="579.1547 193.4307 661.64845 193.4307 661.64845 162.73246 579.1547 162.73246"></polygon>
+            <polygon id="Fill-28" fill="#FFFFFF" points="0 224.1289 192.7852 224.1289 192.7852 193.43066 0 193.43066"></polygon>
+            <polygon id="Fill-29" fill="#FFFFFF" points="192.7852 224.1289 350.1485 224.1289 350.1485 193.43066 192.7852 193.43066"></polygon>
+            <polygon id="Fill-30" fill="#FFFFFF" points="350.1484 224.1289 450.1484 224.1289 450.1484 193.43066 350.1484 193.43066"></polygon>
+            <polygon id="Fill-31" fill="#FFFFFF" points="450.1484 224.1289 579.1547 224.1289 579.1547 193.43066 450.1484 193.43066"></polygon>
+            <polygon id="Fill-32" fill="#FFFFFF" points="579.1547 224.1289 661.64845 224.1289 661.64845 193.43066 579.1547 193.43066"></polygon>
+            <polygon id="Fill-33" fill-opacity="0.1884" fill="#FFECBF" points="0 254.8271 192.7852 254.8271 192.7852 224.12886 0 224.12886"></polygon>
+            <polygon id="Fill-34" fill-opacity="0.1884" fill="#FFECBF" points="192.7852 254.8271 350.1485 254.8271 350.1485 224.12886 192.7852 224.12886"></polygon>
+            <polygon id="Fill-35" fill-opacity="0.1884" fill="#FFECBF" points="350.1484 254.8271 450.1484 254.8271 450.1484 224.12886 350.1484 224.12886"></polygon>
+            <polygon id="Fill-36" fill-opacity="0.1884" fill="#FFECBF" points="450.1484 254.8271 579.1547 254.8271 579.1547 224.12886 450.1484 224.12886"></polygon>
+            <polygon id="Fill-37" fill-opacity="0.1884" fill="#FFECBF" points="579.1547 254.8271 661.64845 254.8271 661.64845 224.12886 579.1547 224.12886"></polygon>
+            <polygon id="Fill-38" fill="#FFFFFF" points="0 285.5254 192.7852 285.5254 192.7852 254.82716 0 254.82716"></polygon>
+            <polygon id="Fill-39" fill="#FFFFFF" points="192.7852 285.5254 350.1485 285.5254 350.1485 254.82716 192.7852 254.82716"></polygon>
+            <polygon id="Fill-40" fill="#FFFFFF" points="350.1484 285.5254 450.1484 285.5254 450.1484 254.82716 350.1484 254.82716"></polygon>
+            <polygon id="Fill-41" fill="#FFFFFF" points="450.1484 285.5254 579.1547 285.5254 579.1547 254.82716 450.1484 254.82716"></polygon>
+            <polygon id="Fill-42" fill="#FFFFFF" points="579.1547 285.5254 661.64845 285.5254 661.64845 254.82716 579.1547 254.82716"></polygon>
+            <polygon id="Fill-43" fill-opacity="0.1884" fill="#FFECBF" points="0 330.02539 192.7852 330.02539 192.7852 285.52539 0 285.52539"></polygon>
+            <polygon id="Fill-44" fill-opacity="0.1884" fill="#FFECBF" points="192.7852 330.02539 350.1485 330.02539 350.1485 285.52539 192.7852 285.52539"></polygon>
+            <polygon id="Fill-45" fill-opacity="0.1884" fill="#FFECBF" points="350.1484 330.02539 450.1484 330.02539 450.1484 285.52539 350.1484 285.52539"></polygon>
+            <polygon id="Fill-46" fill-opacity="0.1884" fill="#FFECBF" points="450.1484 330.02539 579.1547 330.02539 579.1547 285.52539 450.1484 285.52539"></polygon>
+            <polygon id="Fill-47" fill-opacity="0.1884" fill="#FFECBF" points="579.1547 330.02539 661.64845 330.02539 661.64845 285.52539 579.1547 285.52539"></polygon>
+            <polygon id="Fill-48" fill="#FFFFFF" points="0 360.72363 192.7852 360.72363 192.7852 330.02539 0 330.02539"></polygon>
+            <polygon id="Fill-49" fill="#FFFFFF" points="192.7852 360.72363 350.1485 360.72363 350.1485 330.02539 192.7852 330.02539"></polygon>
+            <polygon id="Fill-50" fill="#FFFFFF" points="350.1484 360.72363 450.1484 360.72363 450.1484 330.02539 350.1484 330.02539"></polygon>
+            <polygon id="Fill-51" fill="#FFFFFF" points="450.1484 360.72363 579.1547 360.72363 579.1547 330.02539 450.1484 330.02539"></polygon>
+            <polygon id="Fill-52" fill="#FFFFFF" points="579.1547 360.72363 661.64845 360.72363 661.64845 330.02539 579.1547 330.02539"></polygon>
+            <polygon id="Fill-53" fill-opacity="0.1884" fill="#FFECBF" points="0 391.421875 192.7852 391.421875 192.7852 360.723635 0 360.723635"></polygon>
+            <polygon id="Fill-54" fill-opacity="0.1884" fill="#FFECBF" points="192.7852 391.421875 350.1485 391.421875 350.1485 360.723635 192.7852 360.723635"></polygon>
+            <polygon id="Fill-55" fill-opacity="0.1884" fill="#FFECBF" points="350.1484 391.421875 450.1484 391.421875 450.1484 360.723635 350.1484 360.723635"></polygon>
+            <polygon id="Fill-56" fill-opacity="0.1884" fill="#FFECBF" points="450.1484 391.421875 579.1547 391.421875 579.1547 360.723635 450.1484 360.723635"></polygon>
+            <polygon id="Fill-57" fill-opacity="0.1884" fill="#FFECBF" points="579.1547 391.421875 661.64845 391.421875 661.64845 360.723635 579.1547 360.723635"></polygon>
+        </g>
+        <text id="Observation" font-family="PTSans-Bold, PT Sans" font-size="9" font-weight="bold" fill="#FFFFFF">
+            <tspan x="4" y="16.4160461">Observation</tspan>
+        </text>
+        <text id="Judgment" font-family="PTSans-Bold, PT Sans" font-size="9" font-weight="bold" fill="#FFFFFF">
+            <tspan x="197" y="16.4160461">Judgment</tspan>
+        </text>
+        <text id="Value" font-family="PTSans-Bold, PT Sans" font-size="9" font-weight="bold" letter-spacing="-0.513" fill="#FFFFFF">
+            <tspan x="355" y="16.4160461">V</tspan>
+            <tspan x="359.392" y="16.4160461">alue</tspan>
+        </text>
+        <text id="Concepts" font-family="PTSans-Bold, PT Sans" font-size="9" font-weight="bold" letter-spacing="-0.324" fill="#FFFFFF">
+            <tspan x="455" y="16.4160461">C</tspan>
+            <tspan x="459.383" y="16.4160461">on</tspan>
+            <tspan x="469.121" y="16.4160461" letter-spacing="-0.153">c</tspan>
+            <tspan x="472.712" y="16.4160461">epts</tspan>
+        </text>
+        <g id="Group-66" transform="translate(586.000000, 2.000000)">
+            <g id="Group-64" transform="translate(12.000000, 0.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-63"></g>
+                <text id="Key-" mask="url(#mask-2)" font-family="PTSans-Bold, PT Sans" font-size="9" font-weight="bold" letter-spacing="-0.048" fill="#FFFFFF">
+                    <tspan x="0" y="7.41604614">K</tspan>
+                    <tspan x="5.1" y="7.41604614" letter-spacing="0.258">e</tspan>
+                    <tspan x="9.804" y="7.41604614" letter-spacing="0.06">y</tspan>
+                    <tspan x="13.842" y="7.41604614"> </tspan>
+                </text>
+            </g>
+            <text id="Metaphor" font-family="PTSans-Bold, PT Sans" font-size="9" font-weight="bold" fill="#FFFFFF">
+                <tspan x="0" y="18.4160461">Metaphor</tspan>
+            </text>
+        </g>
+        <g id="Group-69" transform="translate(4.000000, 36.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Most-customers-choose-shopping-without-a-">
+                <tspan x="0" y="7.94195557">Most customers choose shopping without a </tspan>
+            </text>
+            <text id="shopping-cart.">
+                <tspan x="0" y="16.9419556">shopping cart.</tspan>
+            </text>
+        </g>
+        <g id="Group-75" transform="translate(197.000000, 27.000000)" font-size="7" font-weight="normal">
+            <text id="It’s-difficult-to-control-the-direction-" font-family="PTSerif-Regular, PT Serif" fill="#000000">
+                <tspan x="0" y="7.94195557">It</tspan>
+                <tspan x="5.061" y="7.94195557" letter-spacing="-0.203">’</tspan>
+                <tspan x="6.699" y="7.94195557">s difficult to control the direction </tspan>
+            </text>
+            <text id="of-shopping-cart." font-family="PTSerif-Regular, PT Serif" fill="#000000">
+                <tspan x="0" y="16.9419556">of shopping cart.</tspan>
+            </text>
+            <text id="-" font-family="LucidaGrande, Lucida Grande"></text>
+            <text id="The-shopping-cart-itself-is-too-heavy-" font-family="PTSerif-Regular, PT Serif" fill="#000000">
+                <tspan x="0" y="25.9419556">The shopping cart itself is too hea</tspan>
+                <tspan x="105.532" y="25.9419556" letter-spacing="0.21">v</tspan>
+                <tspan x="109.501" y="25.9419556">y </tspan>
+            </text>
+            <text id="to-handle." font-family="PTSerif-Regular, PT Serif" fill="#000000">
+                <tspan x="0" y="34.9419556">to handle.</tspan>
+            </text>
+        </g>
+        <text id="Efficiency" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal" fill="#000000">
+            <tspan x="355" y="47.9419556">Efficiency</tspan>
+        </text>
+        <g id="Group-79" transform="translate(455.000000, 36.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Lightweight/-Portable-">
+                <tspan x="0" y="7.94195557">Lightweight/ </tspan>
+                <tspan x="41.559" y="7.94195557" letter-spacing="-0.21">P</tspan>
+                <tspan x="45.311" y="7.94195557">ortable </tspan>
+            </text>
+            <text id="shopping-cart">
+                <tspan x="0" y="16.9419556">shopping cart</tspan>
+            </text>
+        </g>
+        <text id="“Agile-carts”" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal" letter-spacing="-0.875" fill="#000000">
+            <tspan x="585" y="47.9419556">“</tspan>
+            <tspan x="586.568" y="47.9419556" letter-spacing="-0.252">A</tspan>
+            <tspan x="590.845" y="47.9419556">gile carts”</tspan>
+        </text>
+        <g id="Group-83" transform="translate(4.000000, 80.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Most-shopping-carts-in-store-are-not-well-">
+                <tspan x="0" y="7.94195557">Most shopping carts in store are not well-</tspan>
+            </text>
+            <text id="maintained.(functional-&amp;-cleanness)">
+                <tspan x="0" y="16.9419556">maintained.(functional &amp; cleanness)</tspan>
+            </text>
+        </g>
+        <text id="Cleanness-is-an-issue." font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal" fill="#000000">
+            <tspan x="197" y="96.9419556">Cleanness is an issue.</tspan>
+        </text>
+        <text id="Cleanness" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal" fill="#000000">
+            <tspan x="355" y="96.9419556">Cleanness</tspan>
+        </text>
+        <text id="Better-maintained-service" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal" fill="#000000">
+            <tspan x="455" y="96.9419556">Better maintained service</tspan>
+        </text>
+        <g id="Group-89" transform="translate(593.000000, 80.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="“Green-">
+                <tspan x="0" y="7.94195557">“Green </tspan>
+            </text>
+            <text id="carts”">
+                <tspan x="2" y="16.9419556">carts”</tspan>
+            </text>
+        </g>
+        <g id="Group-92" transform="translate(4.000000, 111.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Customers-will-hang-stuff-on-the-shopping-cart-">
+                <tspan x="0" y="7.94195557">Customers will hang stuff on the shopping cart </tspan>
+            </text>
+            <text id="instead-of-put-them-in-it.">
+                <tspan x="0" y="16.9419556">instead of put them in it.</tspan>
+            </text>
+        </g>
+        <g id="Group-98" transform="translate(197.000000, 109.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Compared-to-the-deep/opaque-bag-in-">
+                <tspan x="0" y="7.94195557">Compared to the deep/opaque bag in </tspan>
+            </text>
+            <text id="the-shopping-cart,-kids-seat/Handles-">
+                <tspan x="0" y="16.9419556">the shopping cart</tspan>
+                <tspan x="54.593" y="16.9419556" letter-spacing="-0.28">,</tspan>
+                <tspan x="56.014" y="16.9419556"> kids seat/Handles </tspan>
+            </text>
+            <text id="are-easier-to-reach-and-see.-">
+                <tspan x="0" y="25.9419556">are easier to reach and see</tspan>
+                <tspan x="81.886" y="25.9419556" letter-spacing="-0.28">.</tspan>
+                <tspan x="83.279" y="25.9419556"> </tspan>
+            </text>
+            <text id="Therefore,-customers-choose-there-to-">
+                <tspan x="0" y="34.9419556">Therefore</tspan>
+                <tspan x="30.646" y="34.9419556" letter-spacing="-0.28">,</tspan>
+                <tspan x="32.067" y="34.9419556"> customers choose there to </tspan>
+            </text>
+            <text id="put-their-stuff.">
+                <tspan x="0" y="43.9419556">put their stuff.</tspan>
+            </text>
+        </g>
+        <g id="Group-101" transform="translate(355.000000, 122.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Efficiency-&amp;-">
+                <tspan x="0" y="7.94195557">Efficiency &amp; </tspan>
+            </text>
+            <text id="cleanness">
+                <tspan x="0" y="16.9419556">cleanness</tspan>
+            </text>
+        </g>
+        <g id="Group-107" transform="translate(455.000000, 109.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Design-some-tiers/hooks-">
+                <tspan x="0" y="7.94195557">Design some tiers/hooks </tspan>
+            </text>
+            <text id="within-the-shopping-bag-to-">
+                <tspan x="0" y="16.9419556">within the shopping bag to </tspan>
+            </text>
+            <text id="help-customers-with-more-">
+                <tspan x="0" y="25.9419556">help customers with more </tspan>
+            </text>
+            <text id="efficient-shopping-">
+                <tspan x="0" y="34.9419556">efficient shopping </tspan>
+            </text>
+            <text id="experience.">
+                <tspan x="0" y="43.9419556">experience.</tspan>
+            </text>
+        </g>
+        <g id="Group-110" transform="translate(587.000000, 122.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="“Organizer-">
+                <tspan x="0" y="7.94195557">“Organizer </tspan>
+            </text>
+            <text id="carts”">
+                <tspan x="8" y="16.9419556">carts”</tspan>
+            </text>
+        </g>
+        <g id="Group-113" transform="translate(4.000000, 142.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Customers-will-use-kid-seat-as-a-place-to-put-">
+                <tspan x="0" y="7.94195557">Customers will use kid seat as a place to put </tspan>
+            </text>
+            <text id="their-personal-belongings/things-to-buy.">
+                <tspan x="0" y="16.9419556">their personal belongings/things to bu</tspan>
+                <tspan x="119.224" y="16.9419556" letter-spacing="-0.287">y</tspan>
+                <tspan x="122.185" y="16.9419556">.</tspan>
+            </text>
+        </g>
+        <g id="Group-116" transform="translate(4.000000, 172.000000)" fill="#000000" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold">
+            <text id="Customers-let-their-kids-to-sit-in-the-">
+                <tspan x="0" y="7.94195557">Customers let their kids to sit in the </tspan>
+            </text>
+            <text id="shopping-cart.">
+                <tspan x="0" y="16.9419556">shopping cart.</tspan>
+            </text>
+        </g>
+        <g id="Group-119" transform="translate(197.000000, 172.000000)" fill="#000000" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold">
+            <text id="Customers-with-kid-can’t-walk-will-">
+                <tspan x="0" y="7.94195557">Customers with kid can’t walk will </tspan>
+            </text>
+            <text id="usually-choose-a-shopping-cart.">
+                <tspan x="0" y="16.9419556">usually choose a shopping cart.</tspan>
+            </text>
+        </g>
+        <g id="Group-124" transform="translate(355.000000, 165.000000)">
+            <g id="Group-121">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Clip-120"></g>
+                <text id="Relax-&amp;-" mask="url(#mask-4)" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                    <tspan x="0" y="6.94195557">Relax &amp; </tspan>
+                </text>
+            </g>
+            <text id="Efficiency-&amp;-" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                <tspan x="0" y="15.9419556">Efficiency &amp; </tspan>
+            </text>
+            <text id="Family" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                <tspan x="0" y="24.9419556">Family</tspan>
+            </text>
+        </g>
+        <g id="Group-129" transform="translate(455.000000, 165.000000)">
+            <g id="Group-126">
+                <mask id="mask-6" fill="white">
+                    <use xlink:href="#path-5"></use>
+                </mask>
+                <g id="Clip-125"></g>
+                <text id="Design-a-playful-area-for-" mask="url(#mask-6)" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                    <tspan x="0" y="6.94195557">Design a playful area for </tspan>
+                </text>
+            </g>
+            <text id="kids-either-in-store-or-in-" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                <tspan x="0" y="15.9419556">kids either in-store or in </tspan>
+            </text>
+            <text id="the-shopping-cart." font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                <tspan x="0" y="24.9419556">the shopping cart.</tspan>
+            </text>
+        </g>
+        <g id="Group-132" transform="translate(591.000000, 172.000000)" fill="#000000" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold">
+            <text id="“Kids-">
+                <tspan x="4" y="7.94195557">“Kids </tspan>
+            </text>
+            <text id="section”">
+                <tspan x="0" y="16.9419556">section”</tspan>
+            </text>
+        </g>
+        <g id="Group-135" transform="translate(4.000000, 203.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Customers-will-put-their-personal-belongings-in-">
+                <tspan x="0" y="7.94195557">Customers will put their personal belongings in </tspan>
+            </text>
+            <text id="the-shopping-cart.">
+                <tspan x="0" y="16.9419556">the shopping cart.</tspan>
+            </text>
+        </g>
+        <g id="Group-139" transform="translate(197.000000, 195.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Customers-with-heavy-personal-">
+                <tspan x="0" y="7.94195557">Customers with hea</tspan>
+                <tspan x="61.782" y="7.94195557" letter-spacing="0.21">v</tspan>
+                <tspan x="65.751" y="7.94195557">y personal </tspan>
+            </text>
+            <text id="items-will-usually-choose-a-shopping-">
+                <tspan x="0" y="16.9419556">items will usually choose a shopping </tspan>
+            </text>
+            <text id="cart.">
+                <tspan x="0" y="25.9419556">cart.</tspan>
+            </text>
+        </g>
+        <text id="Relax-&amp;-Efficiency" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal" fill="#000000">
+            <tspan x="355" y="219.941956">Relax &amp; Efficiency</tspan>
+        </text>
+        <g id="Group-146" transform="translate(455.000000, 195.000000)">
+            <text id="Design-a-specific-section-for-" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal" fill="#000000">
+                <tspan x="0" y="7.94195557">Design a specific section for </tspan>
+            </text>
+            <text id="personal-belongings-either-" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal" fill="#000000">
+                <tspan x="0" y="16.9419556">personal belongings either </tspan>
+            </text>
+            <text id="in-the-cart-or-storage-box-" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal" fill="#000000">
+                <tspan x="0" y="25.9419556">in the cart or storage box </tspan>
+            </text>
+            <g id="Group-145" transform="translate(0.000000, 27.000000)">
+                <mask id="mask-8" fill="white">
+                    <use xlink:href="#path-7"></use>
+                </mask>
+                <g id="Clip-144"></g>
+                <text id="in-store" mask="url(#mask-8)" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal" fill="#000000">
+                    <tspan x="0" y="7.94195557">in-store</tspan>
+                </text>
+            </g>
+        </g>
+        <g id="Group-149" transform="translate(591.000000, 203.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="“Deposit-">
+                <tspan x="0" y="7.94195557">“Deposit </tspan>
+            </text>
+            <text id="section”">
+                <tspan x="0" y="16.9419556">section”</tspan>
+            </text>
+        </g>
+        <g id="Group-152" transform="translate(4.000000, 234.000000)" fill="#000000" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold">
+            <text id="Kids-are-very-happy-when-sitting-in-the-">
+                <tspan x="0" y="7.94195557">Kids are very happy when sitting in the </tspan>
+            </text>
+            <text id="shopping-cart-first.">
+                <tspan x="0" y="16.9419556">shopping cart first.</tspan>
+            </text>
+        </g>
+        <g id="Group-158" transform="translate(197.000000, 226.000000)">
+            <text id="Kids-like-to-play-with-the-" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                <tspan x="0" y="7.94195557">Kids like to play with the </tspan>
+            </text>
+            <text id="shopping-cart.-The-movement-of-" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                <tspan x="0" y="16.9419556">shopping cart</tspan>
+                <tspan x="46.095" y="16.9419556" letter-spacing="-0.245">.</tspan>
+                <tspan x="47.677" y="16.9419556"> The movement of </tspan>
+            </text>
+            <text id="shopping-cart-makes-them-" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                <tspan x="0" y="25.9419556">shopping cart makes them </tspan>
+            </text>
+            <g id="Group-157" transform="translate(0.000000, 27.000000)">
+                <mask id="mask-10" fill="white">
+                    <use xlink:href="#path-9"></use>
+                </mask>
+                <g id="Clip-156"></g>
+                <text id="exciting." mask="url(#mask-10)" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                    <tspan x="0" y="7.94195557">exciting.</tspan>
+                </text>
+            </g>
+        </g>
+        <g id="Group-161" transform="translate(355.000000, 234.000000)" fill="#000000" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold">
+            <text id="Entertainment-&amp;-">
+                <tspan x="0" y="7.94195557">Entertainment &amp; </tspan>
+            </text>
+            <text id="Family">
+                <tspan x="0" y="16.9419556">Family</tspan>
+            </text>
+        </g>
+        <g id="Group-167" transform="translate(455.000000, 226.000000)">
+            <text id="Design-concepts-" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                <tspan x="0" y="7.94195557">Design concepts </tspan>
+            </text>
+            <text id="connecting-with-the-" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                <tspan x="0" y="16.9419556">connecting with the </tspan>
+            </text>
+            <text id="movement-and-the-" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                <tspan x="0" y="25.9419556">movement and the </tspan>
+            </text>
+            <g id="Group-166" transform="translate(0.000000, 27.000000)">
+                <mask id="mask-12" fill="white">
+                    <use xlink:href="#path-11"></use>
+                </mask>
+                <g id="Clip-165"></g>
+                <text id="shopping-cart." mask="url(#mask-12)" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+                    <tspan x="0" y="7.94195557">shopping cart.</tspan>
+                </text>
+            </g>
+        </g>
+        <text id="“Fun-Cart”" font-family="PTSerif-Bold, PT Serif" font-size="7" font-weight="bold" fill="#000000">
+            <tspan x="586" y="250.941956">“Fun Cart”</tspan>
+        </text>
+        <g id="Group-171" transform="translate(4.000000, 265.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Customers-will-bring-their-strollers-if-they-have-">
+                <tspan x="0" y="7.94195557">Customers will bring their strollers if they have </tspan>
+            </text>
+            <text id="infants.">
+                <tspan x="0" y="16.9419556">infants.</tspan>
+            </text>
+        </g>
+        <g id="Group-174" transform="translate(197.000000, 265.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="The-kids-seat-of-shopping-cart-in-">
+                <tspan x="0" y="7.94195557">The kids seat of shopping cart in-</tspan>
+            </text>
+            <text id="store-have-age-limitations.">
+                <tspan x="0" y="16.9419556">store have age limitations.</tspan>
+            </text>
+        </g>
+        <g id="Group-177" transform="translate(355.000000, 265.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Family-&amp;-Kid-">
+                <tspan x="0" y="7.94195557">Family &amp; Kid-</tspan>
+            </text>
+            <text id="friendly">
+                <tspan x="0" y="16.9419556">friendly</tspan>
+            </text>
+        </g>
+        <g id="Group-180" transform="translate(455.000000, 265.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Design-a-smaller-and-more-">
+                <tspan x="0" y="7.94195557">Design a smaller and more </tspan>
+            </text>
+            <text id="secure-cart-seat-for-infants">
+                <tspan x="0" y="16.9419556">secure cart seat for infants</tspan>
+            </text>
+        </g>
+        <g id="Group-183" transform="translate(584.000000, 265.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="“infant-">
+                <tspan x="8" y="7.94195557">“infan</tspan>
+                <tspan x="27.67" y="7.94195557" letter-spacing="-0.28">t</tspan>
+                <tspan x="29.707" y="7.94195557">-</tspan>
+            </text>
+            <text id="friendly-cart”">
+                <tspan x="0" y="16.9419556">friendly cart”</tspan>
+            </text>
+        </g>
+        <g id="Group-189" transform="translate(4.000000, 291.000000)" font-size="7" font-weight="normal">
+            <text id="Customers-will-drop-the-shopping-cart-outside-of-" font-family="PTSerif-Regular, PT Serif" fill="#000000">
+                <tspan x="0" y="7.94195557">Customers will drop the shopping cart outside of </tspan>
+            </text>
+            <text id="fitting-room." font-family="PTSerif-Regular, PT Serif" fill="#000000">
+                <tspan x="0" y="16.9419556">fitting room.</tspan>
+            </text>
+            <text id="-" font-family="LucidaGrande, Lucida Grande"></text>
+            <text id="There-is-no-shopping-cart-return-area-in-the-" font-family="PTSerif-Regular, PT Serif" fill="#000000">
+                <tspan x="0" y="25.9419556">There is no shopping cart return area in the </tspan>
+            </text>
+            <text id="parking-lot." font-family="PTSerif-Regular, PT Serif" fill="#000000">
+                <tspan x="0" y="34.9419556">parking lot.</tspan>
+            </text>
+        </g>
+        <g id="Group-193" transform="translate(197.000000, 300.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Our-customers-assume-they-can-">
+                <tspan x="0" y="7.94195557">Our customers assume they can </tspan>
+            </text>
+            <text id="return-the-shopping-cart-in-the-">
+                <tspan x="0" y="16.9419556">return the shopping cart in the </tspan>
+            </text>
+            <text id="parking-lot.">
+                <tspan x="0" y="25.9419556">parking lot.</tspan>
+            </text>
+        </g>
+        <g id="Group-197" transform="translate(355.000000, 300.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Family,-">
+                <tspan x="0" y="7.94195557">Famil</tspan>
+                <tspan x="17.598" y="7.94195557" letter-spacing="-0.287">y</tspan>
+                <tspan x="20.559" y="7.94195557" letter-spacing="-0.28">,</tspan>
+                <tspan x="21.98" y="7.94195557"> </tspan>
+            </text>
+            <text id="Convenience-&amp;-">
+                <tspan x="0" y="16.9419556">Convenience &amp; </tspan>
+            </text>
+            <text id="Efficiency">
+                <tspan x="0" y="25.9419556">Efficiency</tspan>
+            </text>
+        </g>
+        <g id="Group-200" transform="translate(455.000000, 309.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Add-a-cart-return-section-in-">
+                <tspan x="0" y="7.94195557">Add a cart return section in </tspan>
+            </text>
+            <text id="the-parking-lot.">
+                <tspan x="0" y="16.9419556">the parking lot.</tspan>
+            </text>
+        </g>
+        <g id="Group-203" transform="translate(586.000000, 309.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="“Return-the-">
+                <tspan x="0" y="7.94195557">“Return the </tspan>
+            </text>
+            <text id="cart”">
+                <tspan x="11" y="16.9419556">cart”</tspan>
+            </text>
+        </g>
+        <g id="Group-206" transform="translate(4.000000, 340.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Customers-with-kid-can’t-walk-alone-are-fast-">
+                <tspan x="0" y="7.94195557">Customers with kid can’t walk alone are fast </tspan>
+            </text>
+            <text id="shoppers(can-be-less-than-6-minutes)">
+                <tspan x="0" y="16.9419556">shoppers(can be less than 6 minutes)</tspan>
+            </text>
+        </g>
+        <g id="Group-209" transform="translate(197.000000, 340.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="This-group-of-customers-have-better/">
+                <tspan x="0" y="7.94195557">This group of customers have better/</tspan>
+            </text>
+            <text id="worse-in-store-shopping-experience.">
+                <tspan x="0" y="16.9419556">worse in-store shopping experience.</tspan>
+            </text>
+        </g>
+        <g id="Group-212" transform="translate(355.000000, 340.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Family,-Efficiency-">
+                <tspan x="0" y="7.94195557">Famil</tspan>
+                <tspan x="17.598" y="7.94195557" letter-spacing="-0.287">y</tspan>
+                <tspan x="20.559" y="7.94195557" letter-spacing="-0.28">,</tspan>
+                <tspan x="21.98" y="7.94195557"> Efficiency </tspan>
+            </text>
+            <text id="&amp;-Kid-friendly">
+                <tspan x="0" y="16.9419556">&amp; Kid-friendly</tspan>
+            </text>
+        </g>
+        <g id="Group-216" transform="translate(455.000000, 332.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Come-up-with-a-customer-">
+                <tspan x="0" y="7.94195557">Come up with a customer </tspan>
+            </text>
+            <text id="journey-map-for-this-group-">
+                <tspan x="0" y="16.9419556">journey map for this group </tspan>
+            </text>
+            <text id="of-customers">
+                <tspan x="0" y="25.9419556">of customers</tspan>
+            </text>
+        </g>
+        <g id="Group-220" transform="translate(586.000000, 332.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="“Journey-">
+                <tspan x="5" y="7.94195557">“Journey </tspan>
+            </text>
+            <text id="map-for-fast-">
+                <tspan x="0" y="16.9419556">map for fast </tspan>
+            </text>
+            <text id="shoppers”">
+                <tspan x="3" y="25.9419556">shoppers”</tspan>
+            </text>
+        </g>
+        <g id="Group-223" transform="translate(4.000000, 370.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="If-they-are-with-kids,-customers-will-not-use-">
+                <tspan x="0" y="7.94195557">If they are with kids</tspan>
+                <tspan x="61.712" y="7.94195557" letter-spacing="-0.28">,</tspan>
+                <tspan x="63.133" y="7.94195557"> customers will not use </tspan>
+            </text>
+            <text id="fitting-room-to-try-on-products.">
+                <tspan x="0" y="16.9419556">fitting room to try on products.</tspan>
+            </text>
+        </g>
+        <g id="Group-226" transform="translate(197.000000, 370.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="They-cannot-leave-the-kids-alone-">
+                <tspan x="0" y="7.94195557">They cannot leave the kids alone </tspan>
+            </text>
+            <text id="outside-of-the-fitting-room.">
+                <tspan x="0" y="16.9419556">outside of the fitting room.</tspan>
+            </text>
+        </g>
+        <text id="Family" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal" fill="#000000">
+            <tspan x="355" y="386.941956">Family</tspan>
+        </text>
+        <g id="Group-230" transform="translate(455.000000, 370.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="Design-a-fitting-room-for-">
+                <tspan x="0" y="7.94195557">Design a fitting room for </tspan>
+            </text>
+            <text id="family-shoppers">
+                <tspan x="0" y="16.9419556">family shoppers</tspan>
+            </text>
+        </g>
+        <g id="Group-233" transform="translate(584.000000, 370.000000)" fill="#000000" font-family="PTSerif-Regular, PT Serif" font-size="7" font-weight="normal">
+            <text id="“Family-">
+                <tspan x="8" y="7.94195557">“Family </tspan>
+            </text>
+            <text id="fitting-room”">
+                <tspan x="0" y="16.9419556">fitting room”</tspan>
+            </text>
+        </g>
+        <g id="Group-316" transform="translate(1.000000, 1.000000)">
+            <path d="M193.7852,0.5 L193.7852,63.2627" id="Stroke-234" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M193.7852,63.2627 L193.7852,72.1377" id="Stroke-236" stroke="#FFFFFF" stroke-linejoin="bevel"></path>
+            <path d="M193.7852,72.1377 L193.7852,133.0342" id="Stroke-238" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M193.7852,133.0342 L193.7852,163.7324" id="Stroke-240" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M193.7852,163.7324 L193.7852,392.9219" id="Stroke-242" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M351.1484,0.5 L351.1484,63.2627" id="Stroke-244" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M351.1484,63.2627 L351.1484,72.1377" id="Stroke-246" stroke="#FFFFFF" stroke-linejoin="bevel"></path>
+            <path d="M351.1484,72.1377 L351.1484,133.0342" id="Stroke-248" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M351.1484,133.0342 L351.1484,164.2324" id="Stroke-250" stroke="#FFFFFF" stroke-linejoin="bevel"></path>
+            <path d="M351.1484,164.2324 L351.1484,392.9219" id="Stroke-252" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M451.1484,0.5 L451.1484,63.2627" id="Stroke-254" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M451.1484,63.2627 L451.1484,72.1377" id="Stroke-256" stroke="#FFFFFF" stroke-linejoin="bevel"></path>
+            <path d="M451.1484,72.1377 L451.1484,133.0342" id="Stroke-258" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M451.1484,133.0342 L451.1484,164.2324" id="Stroke-260" stroke="#FFFFFF" stroke-linejoin="bevel"></path>
+            <path d="M451.1484,164.2324 L451.1484,392.9219" id="Stroke-262" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M580.1547,0.5 L580.1547,63.2627" id="Stroke-264" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M580.1547,63.2627 L580.1547,72.1377" id="Stroke-266" stroke="#FFFFFF" stroke-linejoin="bevel"></path>
+            <path d="M580.1547,72.1377 L580.1547,133.0342" id="Stroke-268" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M580.1547,133.0342 L580.1547,164.2324" id="Stroke-270" stroke="#FFFFFF" stroke-linejoin="bevel"></path>
+            <path d="M580.1547,164.2324 L580.1547,392.9219" id="Stroke-272" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M0.5,22.74219 L663.1484,22.74219" id="Stroke-274" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M0.5,71.6377 L663.1484,71.6377" id="Stroke-276" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M0.5,102.3359 L663.1484,102.3359" id="Stroke-278" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M0.5,133.0342 L194.2852,133.0342" id="Stroke-280" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M0.5,163.7324 L663.1484,163.7324" id="Stroke-282" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M0.5,194.4307 L663.1484,194.4307" id="Stroke-284" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M0.5,225.1289 L663.1484,225.1289" id="Stroke-286" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M0.5,255.8271 L663.1484,255.8271" id="Stroke-288" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M0.5,286.5254 L663.1484,286.5254" id="Stroke-290" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M0.5,331.0254 L663.1484,331.0254" id="Stroke-292" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M0.5,361.7236 L663.1484,361.7236" id="Stroke-294" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M1,0.5 L1,63.2627" id="Stroke-296" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M1,63.2627 L1,72.1377" id="Stroke-298" stroke="#FFFFFF" stroke-linejoin="bevel"></path>
+            <path d="M1,72.1377 L1,392.9219" id="Stroke-300" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M662.6484,0.5 L662.6484,63.2627" id="Stroke-302" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M662.6484,63.2627 L662.6484,72.1377" id="Stroke-304" stroke="#FFFFFF" stroke-linejoin="bevel"></path>
+            <path d="M662.6484,72.1377 L662.6484,133.0342" id="Stroke-306" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M662.6484,133.0342 L662.6484,164.2324" id="Stroke-308" stroke="#FFFFFF" stroke-linejoin="bevel"></path>
+            <path d="M662.6484,164.2324 L662.6484,392.9219" id="Stroke-310" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M0.5,1 L663.1484,1" id="Stroke-312" stroke="#E0E0E0" stroke-width="0.75"></path>
+            <path d="M0.5,392.4219 L663.1484,392.4219" id="Stroke-314" stroke="#E0E0E0" stroke-width="0.75"></path>
+        </g>
+    </g>
+</svg>
