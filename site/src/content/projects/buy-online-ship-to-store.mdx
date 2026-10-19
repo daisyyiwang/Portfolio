@@ -1,11 +1,11 @@
 ---
 title: Buy online, ship to store
 company: Kohl's
-summary: Bridging the gap between online and in-store shopping across four channels.
+summary: Helping shoppers choose where and when to pick up, and arrive confident — from online to in store, across four channels.
 tags:
   - { label: B2C, tone: orange }
-  - { label: eCommerce, tone: blue }
-  - { label: Logistics, tone: purple }
+  - { label: Omni-channel, tone: blue }
+  - { label: Location & time, tone: green }
 cover: /images/BOSS2023-card.svg
 coverAlt: Buy online ship to store project cover
 order: 4
@@ -17,6 +17,7 @@ meta:
 next: self-checkout
 ---
 import Section from '../../components/case/Section.astro';
+import Callout from '../../components/case/Callout.astro';
 import Figure from '../../components/case/Figure.astro';
 import Compare from '../../components/case/Compare.astro';
 import Split from '../../components/case/Split.astro';
@@ -25,6 +26,16 @@ import ShipToStoreDemo from '../../components/case/ShipToStoreDemo.astro';
 import ShipOptions from '../../components/case/ShipOptions.astro';
 
 Kohl's introduced buy online, ship to store to improve shopping both online and in store. It was an omni-channel project spanning four channels: desktop, mobile browser, native app and tablet.
+
+At its core, this was a question of **where and when**: helping someone choose a store and a date that work for them, then giving them everything they need to show up with confidence.
+
+<Callout title="Design themes">
+  <ul>
+    <li><strong>Choosing where and when</strong> — location and date options shown at the moment of decision, in plain language.</li>
+    <li><strong>A confirmation that gets people there</strong> — where to go, when it's open, and how long it will wait for them.</li>
+    <li><strong>One experience across online and in person</strong> — consistent across 4 digital channels and the store itself.</li>
+  </ul>
+</Callout>
 
 <Section eyebrow="My role" title="Four verbs">
   <p>I <strong>explored</strong> content strategies and wireframe concepts to translate this new service for every kind of customer, across channels.</p>
@@ -71,8 +82,8 @@ Kohl's introduced buy online, ship to store to improve shopping both online and 
   <Figure src="/images/boss-pmpfinal.svg" alt="Final mobile product matrix design." caption="Final design" />
 </Section>
 
-<Section eyebrow="Design walkthrough" title="Second stop: placing an order">
-  <p>The product details page helps customers decide to buy. Many Kohl's customers are older or less tech-savvy — something that's easy to overlook in Silicon Valley. Designing this page was a good exercise in empathy.</p>
+<Section eyebrow="Design walkthrough" title="Second stop: choosing where and when">
+  <p>The product details page is where customers decide how and where to get their item. Many Kohl's customers are older or less tech-savvy — something that's easy to overlook in Silicon Valley — so every option had to be clear without extra effort. Designing this page was a good exercise in empathy.</p>
   <Figure src="/images/boss-pdp.svg" alt="Product details page showing ship-to-store as a delivery option." />
   <p>Because of operational constraints, shipping options can't be shown until a size and color are selected. Instead of disabling "Add to Cart", we kept it always enabled and opened the size and color panel when needed. In testing, a disabled button made some customers think they'd done something wrong.</p>
   <div class="c-split c-split--demo">
@@ -86,12 +97,12 @@ Kohl's introduced buy online, ship to store to improve shopping both online and 
       </ul>
     </div>
   </div>
-  <p>The delivery card adapts to how precise the date can be:</p>
+  <p>The delivery card adapts to how precise the date can be, so customers always know what to expect — even when we can't promise an exact day:</p>
   <ShipOptions />
 </Section>
 
-<Section eyebrow="Design walkthrough" title="Last stop: confirming">
-  <p>The order details page keeps the experience seamless end to end. Right after ordering, the most relevant details are available at a glance, ordered by what customers told us matters: where to pick up, when the store is open, and how long the store will hold the package.</p>
+<Section eyebrow="Design walkthrough" title="Last stop: a confirmation that gets them there">
+  <p>The order details page bridges the online order and the in-person visit. Right after ordering, the details customers need before they leave home are available at a glance, ordered by what they told us matters: where to pick up, when the store is open, and how long the store will hold the package.</p>
   <Compare wide={false}
     before={{ src: '/images/boss-orderbefore.svg', alt: 'Order details page before the redesign.' }}
     after={{ src: '/images/boss-orderfinal.svg', alt: 'Redesigned order details page with pickup location, store hours and hold period up front.' }}

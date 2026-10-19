@@ -1,9 +1,10 @@
 ---
 title: In-store self-checkout
 company: Kohl's
-summary: Self-checkout for department stores, designed for customers and associates alike.
+summary: An in-person service where screen, hardware and staff work as one — designed for customers and associates alike.
 tags:
   - { label: B2C, tone: orange }
+  - { label: Service design, tone: green }
   - { label: Payment, tone: gray }
   - { label: Physical + digital, tone: blue }
 cover: /images/SC-card.svg
@@ -24,6 +25,16 @@ import Callout from '../../components/case/Callout.astro';
 
 How many times have you been frustrated by long lines in a store? What if you could use self-checkout in a department store, just like at the grocery store?
 
+This was an in-person service as much as a screen: customers, associates, hardware and the room itself all had to work together.
+
+<Callout title="Design themes">
+  <ul>
+    <li><strong>In-person and digital as one service</strong> — the screen, scanner, payment terminal and store layout designed together.</li>
+    <li><strong>Designing for both sides</strong> — customers checking out, and the associates who support them.</li>
+    <li><strong>Knowing when to bring in a person</strong> — clear hand-offs to staff, and scoping out what self-service shouldn't do.</li>
+  </ul>
+</Callout>
+
 <Section eyebrow="My role & my team" title="Orchestrating the whole room">
   <p>As lead experience designer, I worked closely with customer research, product management and project planning. Together we collaborated with engineering, store operations, business, loss prevention and more to take this experience from idea to launch.</p>
   <p>This project pushed my practice beyond screens. Self-checkout isn't a single app — it's a monitor, a scanner, a payment terminal, security tags, coupons and physical merchandise working together in a few square feet. A big part of my role was designing how the on-screen flow connects to the hardware and store operations around it.</p>
@@ -32,7 +43,7 @@ How many times have you been frustrated by long lines in a store? What if you co
 <Section eyebrow="Design principles" title="Looking at the core experience">
   <p>Communication was the hardest part at the start: at least 8 core teams across 2 locations, and — <strong>unlike most projects — store-related teams on top of product, research and engineering.</strong> To set a good foundation, I first aligned on design expectations by sharing three design principles with core partners and walking through the main flow. It brought everyone on board and set an open tone from day one.</p>
   <Figure src="/images/sc-principle.svg" alt="The three design principles shared with partner teams." />
-  <p>Our research team then surveyed customers about their expectations and concerns. Together with a competitive analysis, it surfaced two main concerns:</p>
+  <p>Our research team then surveyed customers about their expectations and concerns. Together with a competitive analysis, it surfaced two main concerns — both about moments where people needed help from a person:</p>
   <Stats items={[
     { value: '72%', label: 'had difficulty finding an associate for help' },
     { value: '56%', label: 'needed an associate because coupons were hard to apply' },
@@ -81,7 +92,7 @@ How many times have you been frustrated by long lines in a store? What if you co
   <ul>
     <li><strong>Clothing racks & security tags</strong> — apparel needs its tag deactivated at checkout. We tested where the deactivation pad should sit beside the monitor, and how the screen should prompt customers without breaking their scanning rhythm.</li>
     <li><strong>When to ask for coupons</strong> — watching people scan first and look second is what told us coupons belonged right before payment. Only real hardware and real shopping behavior could validate that timing.</li>
-    <li><strong>Lockers for secured tech</strong> — self-checkout can't unlock a case. I worked with store associates to scope it out: the tech department keeps its own checkout and tag-removal process for this MVP.</li>
+    <li><strong>Lockers for secured tech</strong> — self-checkout can't unlock a case. I worked with store associates to scope it out: the tech department keeps its own checkout and tag-removal process for this MVP. Knowing what <em>not</em> to automate kept the experience trustworthy.</li>
   </ul>
   <Figure src="/images/sc-testphoto.svg" alt="The research lab set up with in-store checkout hardware and an eye-tracking rig." />
 </Section>
