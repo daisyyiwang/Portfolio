@@ -7,8 +7,8 @@ export const about = {
   intro: "Hi there! 👋 I'm Daisy Wang, a product designer based in the Bay Area, California.",
   highlights: [
     { icon: '⏳', title: '9 years', body: 'Designing both B2C and B2B products across desktop, mobile, web and extensions, at any scale.' },
-    { icon: '🤖', title: 'AI in practice', body: 'Using AI for design workshops, user research, rapid prototyping, share-outs and design QA — and building functional products with AI tools.' },
-    { icon: '📊', title: 'Data driven', body: 'Deeply grounded in business context, leading user-centered design from 0→1 and scaling solutions to support 3× growth.' },
+    { icon: '🤖', title: 'AI in practice', body: 'Using AI across the design process: workshops, user research, rapid prototyping, scaling design components, documentation and design QA, plus building functional products with AI tools.' },
+    { icon: '📊', title: 'Data driven', body: 'Deeply grounded in business context, leading design from 0→1 with users at the center, and scaling solutions for sustainable and scalable growth.' },
     { icon: '♿', title: 'Accessibility in mind', body: 'An accessibility advocate connecting product design with the codebase, building inclusive experiences from spec through shipped code.' },
   ],
   releases: [
