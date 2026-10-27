@@ -1,0 +1,70 @@
+---
+import Icon from '../Icon.astro';
+import { ACCESS_GUARD, SITE } from '../../config';
+const { storageKey, password } = ACCESS_GUARD;
+---
+<div class="c-locked" data-locked-root>
+  <div data-locked-content tabindex="-1" hidden>
+    <slot />
+  </div>
+  <aside class="c-locked__gate" data-locked-gate>
+    <p class="eyebrow"><Icon name="lock" /> Rest of this case study is under NDA</p>
+    <p>Enter the password to keep reading. You only need it once: it unlocks every Adobe case study on this site. <a href={`mailto:${SITE.email}`}>Contact me</a> if you don't have it.</p>
+    <form data-locked-form novalidate>
+      <label for="locked-password">Password</label>
+      <input
+        id="locked-password"
+        class="c-input"
+        type="password"
+        autocomplete="current-password"
+        required
+        aria-describedby="locked-error"
+      />
+      <p id="locked-error" class="c-error" data-locked-error aria-live="polite"></p>
+      <button class="c-btn c-btn--primary" type="submit"><Icon name="lock" /> Unlock</button>
+    </form>
+  </aside>
+</div>
+
+<script is:inline define:vars={{ storageKey, password }}>
+  (function () {
+    document.querySelectorAll('[data-locked-root]').forEach(function (root) {
+      var content = root.querySelector('[data-locked-content]');
+      var gate = root.querySelector('[data-locked-gate]');
+      var form = root.querySelector('[data-locked-form]');
+      var input = form.querySelector('input');
+      var error = root.querySelector('[data-locked-error]');
+
+      function reveal() {
+        content.hidden = false;
+        gate.hidden = true;
+      }
+
+      try {
+        if (localStorage.getItem(storageKey) === 'true') reveal();
+      } catch (e) {}
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (input.value === password) {
+          try {
+            localStorage.setItem(storageKey, 'true');
+          } catch (err) {}
+          reveal();
+          // Unlock every other gated section already on this page, if any.
+          document.querySelectorAll('[data-locked-root]').forEach(function (other) {
+            other.querySelector('[data-locked-content]').hidden = false;
+            other.querySelector('[data-locked-gate]').hidden = true;
+          });
+          // The form is gone; move focus to the revealed content.
+          content.focus({ preventScroll: true });
+        } else {
+          input.setAttribute('aria-invalid', 'true');
+          error.textContent = 'Incorrect password. Please try again.';
+          input.focus();
+          input.select();
+        }
+      });
+    });
+  })();
+</script>

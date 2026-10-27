@@ -26,9 +26,10 @@ export const FOOTER_MANIFESTO = {
 // GA4 measurement ID, e.g. 'G-XXXXXXXXXX'. Analytics is skipped while empty.
 export const GA4_ID = '';
 
-// Client-side password gate (same behaviour and storage key as the current site).
+// Client-side password. `enabled` gates whole pages behind /unlock; it's off, so only the
+// <LockedSection> parts of the Adobe case studies ask for it. Unlocking once unlocks them all.
 export const ACCESS_GUARD = {
-  enabled: true,
+  enabled: false,
   storageKey: 'portfolio_unlocked',
   password: 'daisy!',
 };

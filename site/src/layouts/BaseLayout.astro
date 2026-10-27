@@ -14,7 +14,7 @@ interface Props {
   guard?: boolean;
   manifesto?: boolean;
 }
-const { title, description = SITE.description, guard = ACCESS_GUARD.enabled, manifesto = false } = Astro.props;
+const { title, description = SITE.description, guard = ACCESS_GUARD.enabled, manifesto = true } = Astro.props;
 const pageTitle = title ? `${title} | ${SITE.name}` : SITE.title;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const styleIds = STYLES.map((s) => s.id);

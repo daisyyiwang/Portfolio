@@ -7,9 +7,9 @@ const { storageKey, password } = ACCESS_GUARD;
 <BaseLayout title="Unlock" guard={false}>
   <div class="container c-unlock">
     <div class="c-unlock__card">
-      <p class="eyebrow">Protected portfolio</p>
+      <p class="eyebrow">Adobe case studies</p>
       <h1 class="c-unlock__title">Enter password</h1>
-      <p>Some work here is under NDA. <a href={`mailto:${SITE.email}`}>Contact me</a> for the password.</p>
+      <p>Parts of the Adobe case studies are under NDA. Enter the password once to read them in full. <a href={`mailto:${SITE.email}`}>Contact me</a> for the password.</p>
       <form id="unlock-form" class="c-field" novalidate>
         <label for="unlock-password">Password</label>
         <input
@@ -21,7 +21,7 @@ const { storageKey, password } = ACCESS_GUARD;
           aria-describedby="unlock-error"
         />
         <p id="unlock-error" class="c-error" aria-live="polite"></p>
-        <button class="c-btn c-btn--primary" type="submit"><Icon name="lock" /> Unlock portfolio</button>
+        <button class="c-btn c-btn--primary" type="submit"><Icon name="lock" /> Unlock</button>
       </form>
     </div>
   </div>

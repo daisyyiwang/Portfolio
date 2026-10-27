@@ -27,6 +27,7 @@ import Callout from '../../components/case/Callout.astro';
 import Stats from '../../components/case/Stats.astro';
 import AnimatedImage from '../../components/case/AnimatedImage.astro';
 import VideoFeature from '../../components/case/VideoFeature.astro';
+import LockedSection from '../../components/case/LockedSection.astro';
 
 Acrobat is desktop-focused and document-first. Adobe Express is web and mobile, and design-first. The ask was simple: when someone wants to edit an image in a PDF, send them to Express. Getting there meant designing across three layers at once — the technology, the process and the experience.
 
@@ -40,6 +41,8 @@ Acrobat is desktop-focused and document-first. Adobe Express is web and mobile, 
   <Figure narrow src="/images/edit-image/ei-d-handoff.webp" alt="Diagram: Acrobat (desktop focused, document-first) hands off to Adobe Express (web/mobile, design-first) to edit and stylize." caption="The plan: when someone wants to edit an image in a PDF, route them to Express." />
   <p><strong>Market context:</strong> Express had only just shipped a dedicated, Firefly-powered web and mobile experience in 2024, years after its 2021–22 rebrand. Canva, meanwhile, had turned its free plan into pandemic-era hypergrowth, reaching ~135M monthly users by 2023. Express needed distribution, fast — and Acrobat's install base was the fastest lever available.</p>
 </Section>
+
+<LockedSection>
 
 <Section eyebrow="#1 Tech layer" title="But the hand-off broke the document">
   <Figure fit src="/images/edit-image/ei-broken-pdf.webp" alt="An original PDF next to the same PDF after converting through Express: the text block on the converted copy is visibly garbled." caption="Original PDF → converted PDF: the round trip lost fidelity" />
@@ -169,3 +172,5 @@ Acrobat is desktop-focused and document-first. Adobe Express is web and mobile, 
 <Section eyebrow="Outcome" title="10× MAU growth, and a design process built to scale it 📈">
   <p>What started as a simple hand-off became a shared module across desktop, web, mobile and Chrome — designed by aligning the tech layer first, then iterating the process and experience together with 12 teams across 5 time zones.</p>
 </Section>
+
+</LockedSection>

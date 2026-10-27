@@ -169,6 +169,45 @@
   margin-top: var(--space-8);
 }
 
+/* Inline per-section password gate for NDA'd Adobe case studies */
+[data-locked-content]:focus {
+  outline: none;
+}
+
+.c-locked__gate {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-7) var(--space-6);
+  margin-block: var(--space-7);
+  background: var(--card-bg, var(--color-surface));
+  border: var(--card-border-width, 1px) solid var(--card-border, var(--color-border));
+  border-radius: var(--card-radius, var(--radius-lg));
+}
+
+.c-locked__gate .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.c-locked__gate form {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 24rem;
+}
+
+.c-locked__gate label {
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.c-locked__gate button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  justify-self: start;
+}
+
 /* Image + text side by side */
 .c-split {
   display: grid;
