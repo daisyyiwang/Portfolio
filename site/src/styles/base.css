@@ -22,6 +22,11 @@
   box-sizing: border-box;
 }
 
+/* Keep `hidden` working on elements whose class sets a display value. */
+[hidden] {
+  display: none !important;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
