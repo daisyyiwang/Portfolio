@@ -328,6 +328,12 @@
   background: var(--figure-bg, transparent);
 }
 
+.c-video--wide {
+  width: 100%;
+  border-radius: var(--figure-radius, var(--radius-md));
+  background: transparent;
+}
+
 /* Reading-progress readout (opt-in per direction; needs scroll-driven animations) */
 @property --read {
   syntax: "<integer>";

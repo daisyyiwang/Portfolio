@@ -1,0 +1,236 @@
+---
+// Two products joined by a hairline arrow, drawn in HTML so it stays light and crisp.
+// `back` points the arrow right-to-left; `broken` dashes it and colours the note as a warning.
+interface End {
+  logo: string;
+  name: string;
+  meta?: string[];
+}
+interface Props {
+  from: End;
+  to: End;
+  label: string;
+  note?: string;
+  back?: boolean;
+  broken?: boolean;
+  footnote?: string;
+  caption?: string;
+  alt: string;
+}
+const { from, to, label, note, back = false, broken = false, footnote, caption, alt } = Astro.props;
+---
+<figure class="c-lflow" role="group" aria-label={alt}>
+  <div class="c-lflow__row" aria-hidden="true">
+    {[from, null, to].map((end) =>
+      end ? (
+        <div class="c-lflow__end">
+          <img src={end.logo} alt="" width="40" height="40" loading="lazy" decoding="async" />
+          <b>{end.name}</b>
+          {end.meta && (
+            <ul>
+              {end.meta.map((m) => <li>{m}</li>)}
+            </ul>
+          )}
+        </div>
+      ) : (
+        <div class:list={['c-lflow__link', { 'is-back': back, 'is-broken': broken }]}>
+          <span class="c-lflow__label">{label}</span>
+          <span class="c-lflow__line"></span>
+          {note && <span class="c-lflow__note">{note}</span>}
+        </div>
+      ),
+    )}
+  </div>
+  {footnote && <p class="c-lflow__foot" aria-hidden="true">{footnote}</p>}
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  .c-lflow {
+    display: grid;
+    gap: var(--space-4);
+    width: 100%;
+    max-width: 40rem;
+    margin: var(--space-6) auto;
+  }
+
+  .c-lflow__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(7rem, 1.1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-6) var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--figure-radius, var(--radius-md));
+    background: var(--color-surface);
+  }
+
+  .c-lflow__end {
+    display: grid;
+    justify-items: center;
+    gap: var(--space-2);
+    text-align: center;
+  }
+
+  .c-lflow__end img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .c-lflow__end b {
+    font-family: var(--font-display);
+    font-size: var(--text-base);
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .c-lflow__end ul {
+    display: grid;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* Beat the article's list styles */
+  .c-lflow .c-lflow__end li {
+    margin: 0;
+    padding: 0;
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    color: var(--color-text-muted);
+  }
+
+  .c-lflow .c-lflow__end li::before {
+    content: none;
+  }
+
+  .c-lflow__link {
+    display: grid;
+    gap: var(--space-2);
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+    text-wrap: balance;
+    color: var(--color-text-muted);
+  }
+
+  /* 1px line with an open chevron head */
+  .c-lflow__line {
+    position: relative;
+    height: 1px;
+    background: currentColor;
+  }
+
+  .c-lflow__line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin: 50% 50%;
+  }
+
+  .c-lflow__link.is-back .c-lflow__line::after {
+    right: auto;
+    left: 0;
+    transform: translateY(-50%) rotate(-135deg);
+  }
+
+  .c-lflow__link.is-broken .c-lflow__line {
+    background: repeating-linear-gradient(90deg, currentColor 0 5px, transparent 5px 9px);
+  }
+
+  .c-lflow__note {
+    color: var(--color-error);
+  }
+
+  .c-lflow__foot {
+    margin: 0;
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .c-lflow__foot::before {
+    content: "✓";
+    margin-right: var(--space-2);
+    color: var(--color-accent-text);
+    font-weight: 600;
+  }
+
+  .c-lflow figcaption {
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  /* Narrow screens: stack the ends and turn the arrow downward */
+  @media (max-width: 30rem) {
+    .c-lflow__row {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-3);
+      padding: var(--space-5) var(--space-4);
+    }
+
+    .c-lflow__link {
+      grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+      align-items: center;
+      gap: var(--space-3);
+      min-height: 4.5rem;
+    }
+
+    .c-lflow__label {
+      text-align: right;
+    }
+
+    .c-lflow__note {
+      text-align: left;
+    }
+
+    .c-lflow__line {
+      grid-column: 2;
+      grid-row: 1;
+      width: 1px;
+      height: 100%;
+    }
+
+    .c-lflow__link .c-lflow__line::after {
+      top: auto;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%) rotate(135deg);
+    }
+
+    .c-lflow__link.is-back .c-lflow__line::after {
+      top: 0;
+      bottom: auto;
+      left: auto;
+      right: 50%;
+      transform: translateX(50%) rotate(-45deg);
+    }
+
+    .c-lflow__link.is-broken .c-lflow__line {
+      background: repeating-linear-gradient(180deg, currentColor 0 5px, transparent 5px 9px);
+    }
+
+    .c-lflow__label,
+    .c-lflow__note {
+      grid-row: 1;
+    }
+
+    .c-lflow__label {
+      grid-column: 1;
+    }
+
+    .c-lflow__note {
+      grid-column: 3;
+    }
+  }
+</style>

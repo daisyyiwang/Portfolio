@@ -1,15 +1,29 @@
 ---
 // Short muted loop with native controls (so it can always be paused).
 // It only starts playing on its own when the visitor allows motion.
+// `wide` fills the content column (desktop UI) instead of the narrow phone size;
+// `caption` wraps it in a figure.
 interface Props {
   src: string;
   label: string;
   width?: number;
   height?: number;
+  poster?: string;
+  wide?: boolean;
+  caption?: string;
 }
-const { src, label, width, height } = Astro.props;
+const { src, label, width, height, poster, wide = false, caption } = Astro.props;
+// Never show a wide clip larger than half its pixel width, so it stays sharp on 2× screens.
+const cap = wide && width ? `max-width: min(100%, ${Math.round(width / 2)}px)` : undefined;
 ---
-<video class="c-video" src={src} aria-label={label} width={width} height={height} muted loop playsinline controls preload="metadata" data-autoplay></video>
+{caption ? (
+  <figure class="c-figure">
+    <video class:list={['c-video', { 'c-video--wide': wide }]} src={src} poster={poster} aria-label={label} width={width} height={height} style={cap} muted loop playsinline controls preload="metadata" data-autoplay></video>
+    <figcaption>{caption}</figcaption>
+  </figure>
+) : (
+  <video class:list={['c-video', { 'c-video--wide': wide }]} src={src} poster={poster} aria-label={label} width={width} height={height} style={cap} muted loop playsinline controls preload="metadata" data-autoplay></video>
+)}
 
 <script>
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {

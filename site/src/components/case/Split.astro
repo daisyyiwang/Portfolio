@@ -1,17 +1,24 @@
 ---
 // Image beside a short block of text; stacks on small screens.
+// Pass `video` to show a muted loop instead, with `src` as its poster.
 import { sharpImg } from '../../lib/imageSize';
+import Video from './Video.astro';
 interface Props {
   src: string;
   alt: string;
+  video?: string;
   reverse?: boolean;
 }
-const { src, alt, reverse = false } = Astro.props;
+const { src, alt, video, reverse = false } = Astro.props;
 const img = sharpImg(src);
 ---
 <div class:list={['c-split', { 'c-split--reverse': reverse }]}>
   <div class="c-figure__plate c-split__media">
-    <img src={src} alt={alt} loading="lazy" decoding="async" {...img} />
+    {video ? (
+      <Video src={video} poster={src} label={alt} width={img.width} height={img.height} wide />
+    ) : (
+      <img src={src} alt={alt} loading="lazy" decoding="async" {...img} />
+    )}
   </div>
   <div class="c-split__text">
     <slot />

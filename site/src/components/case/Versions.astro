@@ -1,0 +1,85 @@
+---
+// Design iterations in one row, labelled V1, V2, … Panels share a height, so each
+// column is sized by its image's aspect ratio. Stays a row on small screens.
+import { imageSize } from '../../lib/imageSize';
+interface Item {
+  src: string;
+  alt: string;
+  note?: string;
+}
+interface Props {
+  items: Item[];
+  caption?: string;
+}
+const { items, caption } = Astro.props;
+const sized = items.map((it) => {
+  const s = imageSize(it.src);
+  return { ...it, w: s?.width, h: s?.height, ratio: s ? s.width / s.height : 1 };
+});
+const columns = sized.map((it) => `${it.ratio.toFixed(3)}fr`).join(' ');
+---
+<figure class="c-figure c-versions">
+  <ol class="c-versions__row" style={`grid-template-columns: ${columns}`}>
+    {sized.map((it, i) => (
+      <li>
+        <span class="c-versions__tag">V{i + 1}</span>
+        <div class="c-figure__plate">
+          <img src={it.src} alt={it.alt} width={it.w} height={it.h} loading="lazy" decoding="async" />
+        </div>
+        {it.note && <span class="c-versions__note">{it.note}</span>}
+      </li>
+    ))}
+  </ol>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  .c-versions__row {
+    display: grid;
+    align-items: start;
+    gap: clamp(var(--space-2), 1.5vw, var(--space-4));
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .c-versions__row li {
+    display: grid;
+    gap: var(--space-2);
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .c-versions__row li::before {
+    content: none;
+  }
+
+  .c-versions__tag {
+    justify-self: start;
+    padding: 0.1rem 0.45rem;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+  }
+
+  /* No plate padding: it would shrink the narrow panels more than the wide one */
+  .c-versions .c-figure__plate {
+    padding: 0;
+    box-shadow: 0 0 0 1px var(--color-border);
+  }
+
+  .c-versions img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .c-versions__note {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+</style>
